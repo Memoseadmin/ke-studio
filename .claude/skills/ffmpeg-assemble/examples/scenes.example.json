@@ -1,0 +1,17 @@
+{
+ "output": "render/EXAMPLE/long.mp4",
+ "size": [1920, 1080], "fps": 30, "wpm": 150, "mode": "auto",
+ "scenes": [
+  {"id": "S01", "title": "Hook",
+   "narration": "This is the opening line of the episode. It sets up one question.\n\nA second paragraph adds one more sentence.",
+   "screen": {"heading": "One question", "lines": ["shown as a text overlay"]},
+   "plate": "flat illustration of a steaming pot, no text",
+   "image": null, "image_vertical": null, "audio": null},
+  {"id": "S02", "title": "Numbers",
+   "narration": "Numbers go on screen as overlays, never inside generated images.",
+   "screen": {"bars": [{"label": "A", "value": 81, "display": "81"}, {"label": "B", "value": 79.2, "display": "79.2", "highlight": true}],
+              "note": "Source: example only", "order": ["bars", "note"]},
+   "bottom_bar": "Affiliate links · I may earn a commission",
+   "image": null, "audio": null}
+ ]
+}

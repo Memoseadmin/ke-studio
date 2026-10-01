@@ -1,0 +1,14 @@
+{
+ "manifest": "render/EXAMPLE/long.manifest.json",
+ "size": [1080, 1920], "fps": 30, "wpm": 150, "max_seconds": 60, "mode": "auto",
+ "ai_label": {"text": "AI voice & images", "seconds": 1.0},
+ "shorts": [
+  {"id": "short-1", "output": "render/EXAMPLE/short-1.mp4", "hook": "ONE QUESTION",
+   "segments": [
+    {"role": "hook", "scene": "S01", "text": "Here is the hook line."},
+    {"scene": "S01", "paragraphs": [1], "exclude_sentences": [-1]},
+    {"role": "cta", "scene": "S02", "text": "Full episode: link in my profile."}],
+   "disclosure_bar": "Affiliate link · I may earn a commission",
+   "end_card": {"text": "Shown on screen only, not narrated.", "seconds": 2}}
+ ]
+}
