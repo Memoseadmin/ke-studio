@@ -13,3 +13,8 @@ if ! { command -v python3.12 >/dev/null 2>&1 || python3 -c 'import sys; sys.exit
 fi
 python3 -m pip install -q --upgrade yt-dlp || echo "WARN: yt-dlp 설치 실패(last30days YouTube 수집)"
 command -v node >/dev/null 2>&1 || echo "WARN: node 없음(last30days 요구 bin)"
+# --- muapi-cli(이미지·영상 생성 중계 API, 공급자 후보. 2026-10-01 대표 허용) : Python 3.12 venv에 설치. npm 패키지는 Linux 바이너리가 없어 pip 경로 사용 ---
+if command -v python3.12 >/dev/null 2>&1; then
+  [ -x "$HOME/.venvs/muapi/bin/muapi" ] || { python3.12 -m venv "$HOME/.venvs/muapi" && "$HOME/.venvs/muapi/bin/pip" install -q muapi-cli; } || echo "WARN: muapi-cli 설치 실패"
+  "$HOME/.venvs/muapi/bin/muapi" --version 2>/dev/null || true
+fi

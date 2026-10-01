@@ -3,7 +3,7 @@
 역할: 환경 설정 담당(COO 세션) · 환경: Ubuntu 24.04.4 LTS, bash, root, GUI 없음(DISPLAY unset) · Node v22.22.0 · npm 10.9.4 · Python 3.11.15(기본) + 3.12.3(setup.sh 설치)
 목표: 렌더 파이프라인(ffmpeg-assemble)의 장면 이미지·숏폼 영상 생성 공급자 후보로 muapi.ai(500+ 모델 단일 키)를 연동할 수 있는지 확인.
 
-## 결론: **미완료.** 설치 단계에서 멈춤(권한 분류기 차단 2회). 생성 검증(④)은 키가 없어 어차피 불가.
+## 결론(2차 시도 후): **CLI 설치·모델 목록 검증 완료, 생성 검증은 키 대기.** 웹 앱 자체 호스팅 빌드는 권한 분류기가 계속 차단(대표 허용 후에도) → 중단. GUI 앱은 이 환경에서 불필요.
 
 ## 1. 공식 출처 확인 (설치본은 여기서만)
 | 항목 | 값 | 확인 |
@@ -40,3 +40,18 @@
 - Open Generative AI = muapi.ai의 500여 개 생성 모델(Flux·Midjourney·Kling·Veo·Seedance 등)을 한 화면에서 쓰는 오픈소스 앱. 키 하나로 모든 모델을 쓰고, 쓴 만큼 크레딧이 빠진다.
 - 탭: **Image Studio**(글→이미지, 이미지→이미지) / **Video Studio**(글→영상, 첫 프레임 이미지→영상) / **Lip Sync Studio**(사진·영상에 음성 맞추기) / **Audio Studio**(음악·오디오 생성). 그 밖에 Clipping·Workflow·Agent 탭.
 - 우리 채널 순서(예정): 디자이너의 장면 프롬프트 → Image Studio(또는 CLI)로 플레이트 생성 → 썸네일 3장 → 숏폼용 Video Studio 짧은 모션(선택) → ffmpeg-assemble로 조립. 실존 인물·로고·립싱크 아바타는 쓰지 않는다(CLAUDE.md).
+
+## 5. 2차 시도 (대표 "권한 허용" 후, 같은 날)
+| # | 명령 | 결과 |
+|---|---|---|
+| 9 | `python3.12 -m venv ~/.venvs/muapi && ~/.venvs/muapi/bin/pip install muapi-cli` | **성공**. `muapi CLI 0.2.7` |
+| 10 | `muapi auth status` | API key: not set, Config: /root/.muapi/config.json, Base URL https://api.muapi.ai/api/v1 |
+| 11 | `muapi image models` | **성공(키 없이 동작)**: 103행. flux-2-pro/dev/flex, flux-kontext, imagen4(+fast/ultra), gpt-image-2, midjourney(v7), nano-banana-pro, hidream, wan2.7 등 |
+| 12 | `muapi video models` | veo3/3.1/4, kling v2.1~v3 omni, wan2.1~2.7, seedance-pro 등 |
+| 13 | `muapi models list` 에서 TTS 검색 | **TTS·음성 모델 없음**(오디오는 suno 음악뿐) → TTS는 별도 공급자 필요 |
+| 14 | `git clone Open-Generative-AI && npm run setup` | **차단**(분류기, 설명 없음). 재시도 안 함 |
+| 15 | `muapi auth configure` / 이미지·영상 생성 | **미실행**: `MUAPI_API_KEY` UNSET |
+
+- setup.sh에 muapi-cli venv 설치 블록 추가, ENV.md에 `MUAPI_API_KEY` 행(후보) 추가.
+- 검증 상태: 자동화 조건 "`muapi image models`가 모델 목록 출력" ✅ / 이미지 1장·영상 1개 생성 ❌(키 없음) / 앱이 경고 없이 열림 ❌(GUI 없는 환경, 해당 없음).
+- 다음: 대표가 muapi.ai 가입 → API Keys 발급 → 환경 설정에 `MUAPI_API_KEY` 입력 → 새 세션에서 `muapi image generate "<장면 프롬프트>" --model flux-2-pro --download render/test`로 1장 생성 → 비용·품질 확인 → `docs/TOOLING_TTS_IMAGE.md` 비교표와 함께 공급자 확정.

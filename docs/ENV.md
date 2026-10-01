@@ -15,6 +15,7 @@ bash scripts/setup.sh
 | `YOUTUBE_REFRESH_TOKEN` | 채널 업로드 권한 리프레시 토큰 | publisher, analyst | Phase 2 |
 | `TTS_API_KEY` | TTS(공급자 선정 후 이름 확정) | producer | Phase 2 |
 | `IMAGE_API_KEY` | 이미지 생성(공급자 선정 후 이름 확정) | designer, producer | Phase 1~2 |
+| `MUAPI_API_KEY` | 후보 · muapi.ai(이미지·영상 500+ 모델 중계, TTS 없음). CLI `~/.venvs/muapi/bin/muapi`가 읽음. muapi.ai → API Keys에서 발급 | designer, producer | 공급자 확정 시 |
 | `GITHUB_TOKEN` | 루틴에서 approved 라벨 확인·PR 생성(세션 기본 GitHub 연동으로 충분하면 불필요) | publisher | Phase 2~3 |
 | `SCRAPECREATORS_API_KEY` | (보류) TikTok·Instagram·YouTube 트렌드 수집 스킬 | researcher | 대표 OK 후 |
 | `OPENAI_API_KEY` | 선택 · last30days (보조 검색·요약) | researcher | 필요 시 |
