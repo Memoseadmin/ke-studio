@@ -168,7 +168,7 @@ KR
 
 | # | 원본 구간 | 훅 첫 2초: 화면 / 내레이션 | 길이 | 프로필 링크 허브 유도 문구 |
 |---|---|---|---|---|
-| 1 | S01 첫 문장 + S03 1~3문단(재회 문단 생략) | `ONE LINE, TWO MEANINGS` / "2001. She offers him ramyeon." · "In Korea, it means more than noodles." | 약 55초 | "Two more scenes, plus sources, in the full episode. Link in my profile." |
+| 1 | S01 첫 문장 + S03 1~3문단(재회 문단 생략) | `ONE LINE, TWO MEANINGS` / (내레이션 2줄 낭독 안 함 — 아래 "숏폼 1 편집안 확인") | 57.6초(확정안, 150wpm 추정·TTS 실측 교체) | "Two more scenes, plus sources, in the full episode. Link in my profile." — 낭독 없이 마지막 4초 화면 카드 |
 | 2 | S05 ("Now picture the job…" 문단 생략) | `JJAPAGURI → RAM-DON` / "Parasite's noodles needed a new word." · "So the translator made one up: ram-don." | 약 55초 | "The other two scenes are in the full episode. Link in my profile." |
 | 3 | S06 ("Think about that…" 문단 생략) | `DEMON HUNTERS, CUP RAMYEON` / "Netflix's most-watched film ever" · "still makes time for cup ramyeon." | 약 58초 | "Full episode with sources: link in my profile." |
 | 4 | S07 + S08 (S07 둘째 문단·S08 마지막 문장 생략) | `RAMYEON YOU CAN VISIT` / "Not every ramyeon scene is scripted." · "Some you can step into in Seoul." | 약 60초 | "The full story is in the episode linked in my profile." |
@@ -176,10 +176,16 @@ KR
 
 컷별 주의
 - 공통: 장면은 9:16 네이티브로 생성(design-system §4). 영화·애니 스틸, 로고·패키지, 실존 인물 닮은 얼굴 금지. 자막 Pretendard Bold, 상단 220px·하단 480px·우측 140px 글자 금지. 마지막 1초에 AI 고지 "AI voice & images".
-- 1: 배우 이름은 텍스트로만. 대사 함의는 "stay a little longer" 수준(research §5).
+- 1: 배우 이름은 텍스트로만. 대사 함의는 "stay a little longer" 수준(research §5). 편집안: 훅 = 상단 화면 문구만(내레이션 없음), CTA = 마지막 4초 무음 엔드 카드(낭독 없음), AI 라벨 마지막 1초 유지.
 - 3: 헌트릭스·Netflix/Sony IP 연상 이미지 금지(무지 컵 3개). 그룹명 표기는 공식 표기 확인 후.
 - 4: 라면 라이브러리 수치는 2024년 기준. "visit"를 쓰므로 운영 여부가 중요: **2026-07 기준 운영 확인**(체인 단위, research.md F19 운영 현황 메모 S42~S47, 최신 S44 2026-07-27). 홍대 1호만 따로 본 2026년 근거는 S42(2026-02) 1곳뿐(단일).
 - 5: 처음부터 끝까지 하단 고지 바 "Affiliate link · I may earn a commission"(Pretendard 40px 이상). 안전·건강·가격·"best/authentic" 표현 금지. "heats up fast"는 대본 S11 문장 그대로만.
+
+### 숏폼 1 편집안 확인(2026-10-01, Phase 3)
+- 결정: producer 편집안(render-log §6 1번, shorts.en.json short-1) **승인**. 원본 구간 S01 1문장 + S03 1~3문단 144단어 = 57.6초를 그대로 두고, 훅 내레이션 2줄과 CTA 낭독을 뺀다. 훅은 상단 `ONE LINE, TWO MEANINGS`만, CTA는 마지막 4초 화면 카드(낭독 없음), AI 라벨 마지막 1초 유지.
+- 근거 1: 첫 2초 훅은 화면 문구만으로 서는 게 아니라 S01 첫 문장이 곧 낭독 훅이다("In a Korean film from 2001, a woman asks a man: 'Do you want to eat some ramyeon?'"). 연도·대사 인용이 첫 문장에 있고, 뺀 내레이션 2줄("2001. She offers him ramyeon." / "In Korea, it means more than noodles.")은 S01 1문장과 S03 2문단이 이미 말하는 내용의 반복이라 잃는 정보가 없다. 화면 문구 + 낭독 + 부엌 장면이 첫 1초에 동시에 들어간다.
+- 근거 2: 대안(S03 3문단 문장을 줄여 훅 내레이션을 살리는 안)은 3문단의 마무리 문장("You can say it out loud and still leave the other person room to answer…" 19단어)을 빼야 54.8초가 되는데, 반복 훅을 얻으려고 문단의 핵심 문장을 버리는 교환이라 손해다. S01 문장을 빼는 안은 60.4초로 불가. 숏폼 1은 상품·제휴 언급이 없어 CTA 화면 카드만으로 고지 의무가 없다(risk.md:162). 60초 대비 여유 2.4초는 숏폼 1~4 중 가장 넓다.
+- producer 지시: shorts.en.json short-1 변경 없음(segments·end_card 4초·hook 그대로). "notes"의 "Needs marketer confirmation"만 "Confirmed by marketer 2026-10-01"로 바꿔도 된다. 확인 사항 1개: shorts_cut.py는 엔드 카드를 마지막 4초에 **덧씌우므로**(총 길이에 더하지 않음) 카드가 S03 3문단 마지막 문장 낭독(약 10단어)과 겹친다. 자막(y 1400)은 카드(y 600~1090) 밖이라 가려지지 않는다 — 최종 렌더 컨택트 시트에서 마지막 문장 자막이 보이는지만 확인. 뺀 내레이션 2줄은 캡션·캐러셀 문구로만 재사용(§6·§7 변경 없음).
 
 ## 6. 플랫폼별 캡션과 게시 시각
 
@@ -199,7 +205,7 @@ KR
 
 **컷 3 (S06)**
 - Shorts 제목: `KPop Demon Hunters' cup ramyeon, and what came next` / 설명: `Full episode on the channel. AI voice and AI-generated images. #ramyeon #kpopdemonhunters #koreanfood`
-- TikTok: `Early in KPop Demon Hunters, the three members of Huntrix eat cup ramyeon. Nongshim made 1,000 limited sets modeled on the scene. In Jul–Aug 2025, foreign customers' payments at CU rose 185%, with ramyeon up 99% (Korea Herald). Full episode via the link in my profile. AI voice and AI-generated images. #ramyeon #kpopdemonhunters #koreanfood #cupnoodles`
+- TikTok: `Early in KPop Demon Hunters, the three members of HUNTR/X eat cup ramyeon. Nongshim made 1,000 limited sets modeled on the scene. In Jul–Aug 2025, foreign customers' payments at CU rose 185%, with ramyeon up 99% (Korea Herald). Full episode via the link in my profile. AI voice and AI-generated images. #ramyeon #kpopdemonhunters #koreanfood #cupnoodles`
 - Reels: `A film about demon hunters still makes time for cup ramyeon. Then the real world answered. Full episode and sources: link in bio. AI voice and AI-generated images. #ramyeon #kpopdemonhunters #koreanfood #cupnoodles`
 
 **컷 4 (S07+S08)**
@@ -251,7 +257,7 @@ KR
 | 1 표지 | **3 FILMS, 1 NOODLE** / 작게: Why ramyeon keeps showing up on Korean screens | 썸네일 3안 플레이트(필름 스트립 3컷 + 면 한 가닥)를 4:5 네이티브로 재생성. paper 배경, red 강조, 노란 시그니처 바 |
 | 2 | **2001 · ONE FINE SPRING DAY** / "Ramyeon meogeullaeyo?" / An offer of food that became a playful invitation to stay a little longer. | 썸네일 2안 플레이트(밤 부엌, 냄비, 그릇 2개, 살짝 열린 문). 인물·실루엣 없음. night 배경 |
 | 3 | **2019 · PARASITE** / Jjapaguri = Chapagetti + Neoguri / In the English subtitles: "ram-don" (ramyeon + udon), a word made up by translator Darcy Paquet. | 무지 봉지 2개(크라프트·오프화이트) + 노란 더하기 → 그릇 하나. 빨강+검정 봉지 등 브랜드 연상 금지 |
-| 4 | **KPOP DEMON HUNTERS** / Early in the film, Huntrix eat cup ramyeon. / Nongshim made 1,000 limited sets modeled on the scene (pre-orders Aug 28, 2025). | 무지 흰 컵 3개에서 김. 캐릭터·아이돌 3인조 무대·호랑이·까치 모티프 금지 |
+| 4 | **KPOP DEMON HUNTERS** / Early in the film, HUNTR/X eat cup ramyeon. / Nongshim made 1,000 limited sets modeled on the scene (pre-orders Aug 28, 2025). | 무지 흰 컵 3개에서 김. 캐릭터·아이돌 3인조 무대·호랑이·까치 모티프 금지 |
 | 5 | **WHY RAMYEON?** / 79.2 servings per person in 2024, 2nd after Vietnam (81) / About 1.5 a week. Familiar enough to say a lot without a word. / 작게: WINA, via Korea Times | 프로그램으로 그린 막대 2개(청자 #6FA89B 보조색), 그릇 아이콘 1.5개 |
 | 6 | **OFF SCREEN** / GS25, Feb 10–11, 2020: about +60% (Asia Economy) / CU, Jul–Aug 2025: foreign payments +185%, ramyeon +99% (Korea Herald) | 프로그램 차트 카드 2개. 편의점 간판·브랜드 색 금지, 상호는 글자로만 |
 | 7 마지막 | **FULL EPISODE + SOURCES** / Link in profile | 썸네일 1안 냄비(스포트라이트) 작게 + 노란 시그니처 바. CTA는 이것 하나만 |
@@ -291,3 +297,4 @@ Ramyeon keeps showing up on Korean screens. 3 films, 3 different jobs for one no
 | 6.5 제휴 표(수수료율 출처·추정치, 계산식) | 충족 |
 | 캐러셀 5~7장, 마지막 장 허브 유도 | 7장, 충족 |
 | 사실은 대본 문장만, 효능·건강·가격·낚시 없음 | 충족(숏폼 4 운영 여부 2026-07 기준 확인, S44) |
+| 숏폼 1 60초 이내 + 첫 2초 훅 성립 + CTA 유도 유지(Phase 3 확인) | 충족(57.6초, 훅=화면 문구+S01 첫 문장 낭독, CTA=마지막 4초 화면 카드, shorts.en.json 변경 없음, risk.md:162 고지 의무 없음) |
