@@ -17,6 +17,22 @@ bash scripts/setup.sh
 | `IMAGE_API_KEY` | 이미지 생성(공급자 선정 후 이름 확정) | designer, producer | Phase 1~2 |
 | `GITHUB_TOKEN` | 루틴에서 approved 라벨 확인·PR 생성(세션 기본 GitHub 연동으로 충분하면 불필요) | publisher | Phase 2~3 |
 | `SCRAPECREATORS_API_KEY` | (보류) TikTok·Instagram·YouTube 트렌드 수집 스킬 | researcher | 대표 OK 후 |
+| `OPENAI_API_KEY` | 선택 · last30days (보조 검색·요약) | researcher | 필요 시 |
+| `XAI_API_KEY` | 선택 · last30days (X 검색, 쿠키 대신) | researcher | 필요 시 |
+| `X_BEARER_TOKEN` | 선택 · last30days (X API v2 app-only) | researcher | 필요 시 |
+| `OPENROUTER_API_KEY` | 선택 · last30days | researcher | 필요 시 |
+| `PERPLEXITY_API_KEY` | 선택 · last30days (웹 검색) | researcher | 필요 시 |
+| `PARALLEL_API_KEY` | 선택 · last30days (웹 검색) | researcher | 필요 시 |
+| `BRAVE_API_KEY` | 선택 · last30days (웹 검색) | researcher | 필요 시 |
+| `APIFY_API_TOKEN` | 선택 · last30days | researcher | 필요 시 |
+| `AUTH_TOKEN` | 선택 · last30days (X 브라우저 쿠키, 비권장) | researcher | 필요 시 |
+| `CT0` | 선택 · last30days (X 브라우저 쿠키, 비권장) | researcher | 필요 시 |
+| `BSKY_HANDLE` | 선택 · last30days (Bluesky) | researcher | 필요 시 |
+| `BSKY_APP_PASSWORD` | 선택 · last30days (Bluesky 앱 비밀번호) | researcher | 필요 시 |
+| `TRUTHSOCIAL_TOKEN` | 선택 · last30days (Truth Social) | researcher | 필요 시 |
+| `XIAOHONGSHU_API_BASE` | 선택 · last30days (샤오훙수 API 주소, 비밀 아님) | researcher | 필요 시 |
+
+last30days는 키 없이도 Reddit·HN·Polymarket·GitHub·웹을 수집한다. 위 "선택" 키와 `SCRAPECREATORS_API_KEY`(TikTok·Instagram 추가)는 모두 선택이며, 목록은 스킬 SKILL.md의 `optionalEnv`를 그대로 옮긴 것이다.
 
 ## 규칙
 - 키 값은 저장소·로그·PR·채팅에 절대 출력하지 않는다. `.env` 파일은 만들지도 읽지도 않는다.

@@ -13,6 +13,7 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 | social-media-skills | https://github.com/charlie947/social-media-skills | 8cefb5b6d03757885faa6918bd8bfaef202a83db | MIT | 17 |
 | design | https://github.com/anthropics/knowledge-work-plugins (design/) | da38ec1ee89d41e5380e652a97382695003396e7 | Apache-2.0 | 7 |
 | example-skills | https://github.com/anthropics/skills (skills/canvas-design, skills/theme-factory만) | 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4 | Apache-2.0 | 2 |
+| last30days | https://github.com/mvanhorn/last30days-skill (skills/last30days) | 5103ba478b380552207a3754b74c7655d64208cd | MIT | 1 |
 
 ## 포함 스킬
 - **finance**: audit-support close-management financial-statements journal-entry journal-entry-prep reconciliation sox-testing variance-analysis 
@@ -21,6 +22,7 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 - **social-media-skills**: analytics-dashboard content-matrix gemini-carousel gemini-infographic graphic-designer hook-generator newsletter-voice niche-research pinned-comment post-formatter post-scorer post-writer profile-optimizer quote-post reels-scripting voice-builder youtube-thumbnail 
 - **design**: accessibility-review design-critique design-handoff design-system research-synthesis user-research ux-copy (폴더명 예: `design-design-system`)
 - **example-skills**: canvas-design theme-factory (anthropics/skills 마켓플레이스의 `example-skills` 플러그인 중 이 2개만)
+- **last30days**: last30days (폴더명 `last30days-last30days`)
 
 ## 직원별 지정 스킬 (.claude/agents/*.md의 skills:)
 | 직원 | 스킬 |
@@ -55,6 +57,7 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 - **social-media-skills**: SNS 도구 17종. 마케터·리서처가 숏폼 훅, 캡션, 썸네일 아이디어, 주간 화제 수집에 쓴다.
 - **design**: 디자인 점검 도구 7종. 디자이너가 썸네일·화면 비평, 디자인 규칙 정리, 짧은 문구(UX 카피) 다듬기에 쓴다.
 - **example-skills**: canvas-design(글자 중심 썸네일·카드뉴스를 PNG/PDF로, 무료 글꼴 포함)과 theme-factory(색·글꼴 테마 10종).
+- **last30days**: 트렌드 조사 도구. 리서처가 "지난 30일간 사람들이 이 주제에 대해 실제로 뭐라고 하는지"를 Reddit·HN·YouTube 등에서 모을 때 쓴다.
 
 ## Phase 1-0 추가 설치 (2026-10-01, 대표 OK: SKILL_CANDIDATES "OK 시 순서" 1번)
 - 접두어는 기존 규칙(플러그인 매니페스트의 plugin `name`, 예: marketingskills 저장소 → `marketing-skills`)을 따름. canvas-design·theme-factory는 anthropics/skills 마켓플레이스의 `example-skills` 플러그인 소속.
@@ -66,9 +69,15 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 | design-{accessibility-review, design-critique, design-handoff, design-system, research-synthesis, user-research, ux-copy} | 7 × 1 | 차이 0 | 없음 | 새 세션에서 로드 예정(설치 담당 세션에 Skill 도구 없음) |
 | example-skills-canvas-design | 83 | 차이 0 | 없음 | 새 세션에서 로드 예정 |
 | example-skills-theme-factory | 13 | 차이 0 | 없음 | 새 세션에서 로드 예정 |
+| last30days-last30days | 135 (17MB) | 차이 0 | 없음 | 새 세션에서 로드 예정 |
 
-### 보류 (복사하지 않음, 대표 판단 필요)
-| 후보 | 이유 | 선택지 |
+### last30days 설치 메모
+- **예외: 데모 mp3 1개 강제 커밋, 대표 결정 2026-10-01**(COO가 전달). `assets/claude-code-rap.mp3`(2,354,231 bytes)만 `.gitignore`의 `*.mp3`에 걸려 `git add -f`로 그 경로 하나만 추가. `.gitignore`는 수정하지 않음. `git check-ignore --no-index`로 확인한 무시 대상은 이 파일 1개뿐.
+- 필요 키 없음(Reddit·HN·Polymarket·GitHub·웹은 무료). 선택 키 14개 + `SCRAPECREATORS_API_KEY`는 docs/ENV.md에 "선택"으로 표시.
+- 첫 실행 setup 마법사(브라우저 쿠키 읽기, CLI 자동 설치)는 쓰지 않는다. 대신 scripts/setup.sh 끝에 Python 3.12+ 확보(없으면 uv로 설치), yt-dlp 설치, node 확인을 추가.
+- 스킬 폴더의 `agents/openai.yaml`은 Codex용 설정으로 스킬 폴더 안에 원본 그대로 둠(Claude 직원 파일 아님, `.claude/agents/`로 복사하지 않음). 저장소 루트에 `commands/`·`agents/` 없음.
+
+### 보류 (복사하지 않음)
+| 후보 | 상태 | 이유 / 메모 |
 |---|---|---|
-| mvanhorn/last30days-skill @5103ba478b380552207a3754b74c7655d64208cd (MIT) | 스킬 폴더(135파일, 17MB)에 `assets/claude-code-rap.mp3`(데모용) 포함 → 저장소 `.gitignore`의 `*.mp3`에 걸려 커밋 시 빠짐 = 원본 그대로 원칙과 "오디오 커밋 금지"가 충돌 | ① 그 파일만 예외로 강제 커밋 ② mp3 제외를 예외로 기록하고 설치 ③ 설치 안 함. 설치 시 Python ≥3.12 필요, 키는 전부 선택(예: `SCRAPECREATORS_API_KEY`, `XAI_API_KEY`, `OPENAI_API_KEY`, `BRAVE_API_KEY`) |
-| glebis/claude-skills `elevenlabs-tts` @7524dff0c54bb85645b6bb2b0c6c148f4f7c3e29 (MIT) | 스킬 폴더에 `.env.example` 포함(비밀 파일 패턴 `.env*`, `.gitignore`의 `.env.*`에도 걸림, 내용은 열어 보지 않음). 폴더 구조도 `skills/*/`가 아니라 폴더 자체가 플러그인(`.claude-plugin/`, 자체 `.gitignore` 포함) | ① `.env.example` 제외를 예외로 기록하고 설치 ② 설치 안 함. 필요 키 `ELEVENLABS_API_KEY`, pip `elevenlabs==2.23.0`, `python-dotenv==1.0.0` |
+| glebis/claude-skills `elevenlabs-tts` @7524dff0c54bb85645b6bb2b0c6c148f4f7c3e29 (MIT) | TTS 공급자 결정 후 설치(HANDOFF 대표 결정 대기 4번) | 스킬 폴더에 `.env.example` 포함(비밀 파일 패턴 `.env*`, `.gitignore`의 `.env.*`에도 걸림, 내용은 열어 보지 않음). 폴더 자체가 플러그인(`.claude-plugin/`, 자체 `.gitignore`). 필요 키 `ELEVENLABS_API_KEY`, pip `elevenlabs==2.23.0`, `python-dotenv==1.0.0` |
