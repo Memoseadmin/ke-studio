@@ -1,0 +1,168 @@
+{
+ "episode": "EP001",
+ "source": "episodes/EP001/marketing.md §5 (EN, 9:16)",
+ "manifest": "render/EP001/long.manifest.json",
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "wpm": 150,
+ "max_seconds": 60,
+ "mode": "auto",
+ "mockup_label": "MOCKUP — final AI plate pending",
+ "ai_label": {
+  "text": "AI voice & images",
+  "seconds": 1.0
+ },
+ "shorts": [
+  {
+   "id": "short-1",
+   "output": "render/EP001/short-1.mp4",
+   "hook": "ONE LINE, TWO MEANINGS",
+   "segments": [
+    {
+     "scene": "S01",
+     "sentences": [
+      1
+     ]
+    },
+    {
+     "scene": "S03",
+     "paragraphs": [
+      1,
+      2,
+      3
+     ]
+    }
+   ],
+   "end_card": {
+    "text": "Two more scenes, plus sources, in the full episode. Link in my profile.",
+    "seconds": 4
+   },
+   "notes": "Cut plan as written (hook narration 12 + source 144 + CTA 13 = 169 words = 67.6s @150wpm) exceeds 60s. Kept the source range S01 sentence 1 + S03 paragraphs 1-3 (144 words = 57.6s); the hook stays as top text, the CTA is a silent on-screen end card (last 4s). Needs marketer confirmation."
+  },
+  {
+   "id": "short-2",
+   "output": "render/EP001/short-2.mp4",
+   "hook": "JJAPAGURI → RAM-DON",
+   "segments": [
+    {
+     "role": "hook",
+     "scene": "S05",
+     "text": "Parasite's noodles needed a new word. So the translator made one up: ram-don."
+    },
+    {
+     "scene": "S05",
+     "paragraphs": [
+      1,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "role": "cta",
+     "scene": "S05",
+     "text": "The other two scenes are in the full episode. Link in my profile."
+    }
+   ]
+  },
+  {
+   "id": "short-3",
+   "output": "render/EP001/short-3.mp4",
+   "hook": "DEMON HUNTERS, CUP RAMYEON",
+   "segments": [
+    {
+     "role": "hook",
+     "scene": "S06",
+     "text": "Netflix's most-watched film ever still makes time for cup ramyeon."
+    },
+    {
+     "scene": "S06",
+     "paragraphs": [
+      1,
+      3,
+      4
+     ]
+    },
+    {
+     "role": "cta",
+     "scene": "S06",
+     "text": "Full episode with sources: link in my profile."
+    }
+   ]
+  },
+  {
+   "id": "short-4",
+   "output": "render/EP001/short-4.mp4",
+   "hook": "RAMYEON YOU CAN VISIT",
+   "segments": [
+    {
+     "role": "hook",
+     "scene": "S07",
+     "text": "Not every ramyeon scene is scripted. Some you can step into in Seoul."
+    },
+    {
+     "scene": "S07",
+     "paragraphs": [
+      1
+     ]
+    },
+    {
+     "scene": "S08",
+     "exclude_sentences": [
+      -1
+     ]
+    },
+    {
+     "role": "cta",
+     "scene": "S08",
+     "text": "The full story is in the episode linked in my profile."
+    }
+   ]
+  },
+  {
+   "id": "short-5",
+   "output": "render/EP001/short-5.mp4",
+   "hook": "THE YELLOW RAMYEON POT",
+   "disclosure_bar": "Affiliate link · I may earn a commission",
+   "segments": [
+    {
+     "role": "hook",
+     "scene": "S11",
+     "screen": {
+      "heading": "yangeun naembi",
+      "lines": [
+       "yellow aluminum ramyeon pot"
+      ]
+     },
+     "text": "Korea's go-to pot for ramyeon is named after an older alloy."
+    },
+    {
+     "scene": "S11",
+     "screen": {
+      "heading": "yangeun naembi",
+      "lines": [
+       "yellow aluminum ramyeon pot"
+      ]
+     },
+     "paragraphs": [
+      3
+     ]
+    },
+    {
+     "role": "cta",
+     "scene": "S11",
+     "screen": {
+      "heading": "yangeun naembi",
+      "lines": [
+       "yellow aluminum ramyeon pot"
+      ]
+     },
+     "text": "Quick note: the pot link in my profile is an affiliate link, so I may earn a commission. The full episode is there too."
+    }
+   ]
+  }
+ ]
+}
