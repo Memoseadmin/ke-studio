@@ -81,3 +81,17 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 | 후보 | 상태 | 이유 / 메모 |
 |---|---|---|
 | glebis/claude-skills `elevenlabs-tts` @7524dff0c54bb85645b6bb2b0c6c148f4f7c3e29 (MIT) | TTS 공급자 결정 후 설치(HANDOFF 대표 결정 대기 4번) | 스킬 폴더에 `.env.example` 포함(비밀 파일 패턴 `.env*`, `.gitignore`의 `.env.*`에도 걸림, 내용은 열어 보지 않음). 폴더 자체가 플러그인(`.claude-plugin/`, 자체 `.gitignore`). 필요 키 `ELEVENLABS_API_KEY`, pip `elevenlabs==2.23.0`, `python-dotenv==1.0.0` |
+
+## 자체 작성(사내) 스킬 (2026-10-01, Phase 2 EP001, producer 작성)
+외부 원본이 없는 사내 스킬이라 "복사 설치·원본 무수정" 규칙의 대상이 아니다. 고칠 때는 이 저장소에서 PR로 바꾸고 SKILL.md의 사용법도 함께 갱신한다.
+
+| 팩 | 출처 | 커밋 SHA | 라이선스 | 스킬 수 |
+|---|---|---|---|---|
+| 사내 · ffmpeg-assemble | 자체 작성 `.claude/skills/ffmpeg-assemble/` (SKILL.md, scripts/assemble.py·kemedia.py·script_to_scenes.py, examples/) | 외부 원본 없음(이 저장소 커밋 이력이 기준) | 사내 전용(KE Studio) | 1 |
+| 사내 · shorts-cut | 자체 작성 `.claude/skills/shorts-cut/` (SKILL.md, scripts/shorts_cut.py, examples/) | 외부 원본 없음(이 저장소 커밋 이력이 기준) | 사내 전용(KE Studio) | 1 |
+
+- 의존: Python 3.9+, Pillow, ffmpeg/ffprobe(`scripts/setup.sh` 기존 항목, setup.sh 변경 없음). API 키·네트워크 불필요. shorts-cut은 `ffmpeg-assemble/scripts/kemedia.py`(공용 모듈)를 불러 쓴다.
+- 폰트: 지정 폰트(Anton·Pretendard·Black Han Sans)를 `fc-list`로 찾고 없으면 설치된 대체 폰트(Liberation Sans, OFL 1.1 / WenQuanYi Zen Hei, GPL-2 + 폰트 임베딩 예외)를 쓴다. 쓴 폰트와 라이선스는 매니페스트에 기록된다.
+- 사용 직원: producer. `.claude/agents/producer.md`의 `skills:` 지정은 COO 결정(이번에는 수정하지 않음).
+- 검증: EP001 목업 렌더(롱폼 1 + 숏폼 5, 결과는 `episodes/EP001/render-log.md`). 실제 모드(플레이트+TTS+음악)는 임시 폴더의 합성 테스트 소재로만 확인했다.
+- 한눈에 보기: **ffmpeg-assemble**은 장면 목록을 롱폼 영상과 자막 파일로 묶는 도구, **shorts-cut**은 그 장면에서 문단·문장을 골라 60초 이하 세로 숏폼을 만드는 도구다.
