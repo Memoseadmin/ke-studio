@@ -62,7 +62,7 @@ Chapters
 7:53 Bring the scene home (affiliate links)
 9:08 Wrap-up
 
-AI disclosure: This video uses an AI-generated voice and AI-generated images. No film or TV footage is used. The script was drafted with AI assistance, and the facts were reviewed by a person before publishing.
+AI disclosure: This video uses an AI-generated voice and AI-generated images. No film or TV footage is used. The script was drafted with AI assistance.
 
 [2.3 Sources 블록을 여기에 붙임]
 ```
@@ -82,7 +82,7 @@ AI disclosure: This video uses an AI-generated voice and AI-generated images. No
 챕터
 [KR 음성 실측 후 기입. EN 타임코드와 다름]
 
-AI 고지: 이 영상은 AI 음성과 AI 생성 이미지를 사용했습니다. 영화·방송 화면은 쓰지 않았습니다. 대본은 AI의 도움을 받아 작성했고, 사실 관계는 게시 전에 사람이 검수했습니다.
+AI 고지: 이 영상은 AI 음성과 AI 생성 이미지를 사용했습니다. 영화·방송 화면은 쓰지 않았습니다. 대본은 AI의 도움을 받아 작성했습니다.
 
 [2.3 출처 블록을 여기에 붙임]
 ```
@@ -101,7 +101,10 @@ Per-capita consumption, WINA (Korea Times): https://www.koreatimes.co.kr/amp/sou
 2025 exports (Korea Times): https://www.koreatimes.co.kr/amp/economy/20260112/koreas-food-exports-hit-record-high-in-2025
 H1 2026 exports (Asia Economy): https://view.asiae.co.kr/en/article/2026070311543606879
 Han River ramyeon: https://www.mt.co.kr/en/living/2026/08/31/2026083111130096276
+Han River ramyeon on I Live Alone and Running Man (Korea Times): https://www.koreatimes.co.kr/www/culture/2024/09/135_368003.html
 Ramyeon Library: https://www.mcst.go.kr/english/policy/kocis/newsView.jsp?pSeq=219
+Ramyeon Library, 68% foreign sales (JoongAng Daily): https://www.koreajoongangdaily.com/business/cu-cooks-up-expansion-of-ramyeon-libraries-nationwide/12063729
+Shin Ramyun launch (Oct 1986) and beef-soup origin (Wikipedia): https://en.wikipedia.org/wiki/Shin_Ramyun
 Shin Ramyun at 40: https://view.asiae.co.kr/en/article/2026012811502681596
 Shin Ramyun Rosé, 100+ countries: https://www.koreajoongangdaily.com/business/instant-noodle-maker-nongshim-to-open-new-sales-branch-in-russia-as-shin-ramyun-turns-40/12616517
 Yangeun naembi: https://www.segye.com/newsView/20260408510782
@@ -122,7 +125,9 @@ Gamescom 2026 booth (Korea Times): https://www.koreatimes.co.kr/business/compani
 - 쿠팡: 활동 채널(YouTube·Instagram·TikTok·링크 허브 URL)을 파트너스에 먼저 등록해야 한다는 안내가 있음(제3자, §8). 쿠키 24시간(PLAN).
 - 링크 허브 페이지 맨 위에도 고지: EN 허브 = 위 EN 첫 줄 + Amazon Associate 문장 / KR 허브 = 쿠팡 지정 문구.
 - KR판 형태 미정: (a) 별도 KR 업로드 또는 (b) 같은 영상에 한국어 "번역된 제목·설명" 추가. 대표/COO 결정.
-- legal-reviewer 확인: KR 영상 **첫머리** 고지 필요 여부(현재 대본은 S11 앞뒤 낭독), YouTube "변경되거나 합성된 콘텐츠" 체크 여부, AI 고지 마지막 문장은 PR에 인간 검수 기록이 있을 때만 유지.
+- legal-reviewer 확인: YouTube "변경되거나 합성된 콘텐츠" 체크 여부.
+- KR 업로드 메모(risk.md §6 #1, BLOCK 1c): YouTube 유료 프로모션 체크 여부(협찬 아님, 제휴만이면 해당 여부 대표 판단). 영상 시작·끝·S11에 쿠팡 고지 낭독+자막(대본 반영, script.kr.md는 writer 담당).
+- AI 고지(risk.md §6 #7): EN "the facts were reviewed by a person before publishing", KR "사실 관계는 게시 전에 사람이 검수했습니다"를 뺐다. 대표 사실 검수 기록이 PR에 남으면 이 문장을 다시 넣을 수 있음.
 
 ## 3. 태그 (EN 15개)
 
@@ -173,7 +178,7 @@ KR
 - 공통: 장면은 9:16 네이티브로 생성(design-system §4). 영화·애니 스틸, 로고·패키지, 실존 인물 닮은 얼굴 금지. 자막 Pretendard Bold, 상단 220px·하단 480px·우측 140px 글자 금지. 마지막 1초에 AI 고지 "AI voice & images".
 - 1: 배우 이름은 텍스트로만. 대사 함의는 "stay a little longer" 수준(research §5).
 - 3: 헌트릭스·Netflix/Sony IP 연상 이미지 금지(무지 컵 3개). 그룹명 표기는 공식 표기 확인 후.
-- 4: 라면 라이브러리 수치는 2024년 기준. "visit"를 쓰므로 **게시 전 2026년 현재 운영 여부 확인**, 확인 못 하면 화면 문구를 `RAMYEON ON THE HAN RIVER`로 교체.
+- 4: 라면 라이브러리 수치는 2024년 기준. "visit"를 쓰므로 운영 여부가 중요: **2026-07 기준 운영 확인**(체인 단위, research.md F19 운영 현황 메모 S42~S47, 최신 S44 2026-07-27). 홍대 1호만 따로 본 2026년 근거는 S42(2026-02) 1곳뿐(단일).
 - 5: 처음부터 끝까지 하단 고지 바 "Affiliate link · I may earn a commission"(Pretendard 40px 이상). 안전·건강·가격·"best/authentic" 표현 금지. "heats up fast"는 대본 S11 문장 그대로만.
 
 ## 6. 플랫폼별 캡션과 게시 시각
@@ -285,4 +290,4 @@ Ramyeon keeps showing up on Korean screens. 3 films, 3 different jobs for one no
 | 게시 시각 시간대 명시, 근거 없으면 가설 | 충족(ET·PT·KST, 전부 가설) |
 | 6.5 제휴 표(수수료율 출처·추정치, 계산식) | 충족 |
 | 캐러셀 5~7장, 마지막 장 허브 유도 | 7장, 충족 |
-| 사실은 대본 문장만, 효능·건강·가격·낚시 없음 | 충족(숏폼 4 운영 여부만 게시 전 확인 필요) |
+| 사실은 대본 문장만, 효능·건강·가격·낚시 없음 | 충족(숏폼 4 운영 여부 2026-07 기준 확인, S44) |
