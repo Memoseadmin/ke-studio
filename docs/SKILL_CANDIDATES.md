@@ -25,3 +25,8 @@
 1. 복사 설치(같은 절차·diff 검증): design 팩, canvas-design, theme-factory, last30days, elevenlabs-tts
 2. 직접 작성: youtube-upload, ffmpeg-assemble, shorts-cut, kr-trend-radar (Phase 1~2에서 필요해질 때)
 3. 보류: nano-banana(시크릿 파일 문제 결정 필요), ScrapeCreators(유료 키)
+
+## 검토 후 보류 (2026-10-01, COO)
+| 스킬 | 출처 | 커밋 SHA | 라이선스 | 판정 | 이유 |
+|---|---|---|---|---|---|
+| h3-prompt-writing (MiniMax H3 영상+음성 생성 프롬프트 가이드) | https://github.com/MiniMax-AI/MiniMax-H3 (skills/h3-prompt-writing: SKILL.md 40행, references/base-en.txt 222행, ref-en.txt 341행, agents/openai.yaml) | d21241f0a4b3acbb34c97dae47fa417b7065e438 | MiniMax H3 Community License Agreement(HF LICENSE) | **설치 불가(복사 안 함)** | 라이선스 I.5 "Excluded Territories = EU·UK·**대한민국**·미국", V.4 "그 밖의 지역에서 MiniMax H3 Works(Materials=모델+Documentation)와 **그 Outputs를** 사용·복제·배포·표시 금지". 우리는 한국에서 운영하고 시청자가 미국·EU라 문서 복사도, 생성 영상 공개도 허가 범위 밖. 공식 API(platform.minimax.io)·muapi 경유는 별도 약관이므로 쓰려면 legal-reviewer가 그 약관의 지역 조항을 먼저 확인. `npx skills add`는 외부 코드 실행이라 우리 규칙(복사 설치)과도 어긋남. 같은 저장소의 paper-collage-explainer·papercraft-stop-motion-explainer 스킬도 동일 사유로 보류 |
