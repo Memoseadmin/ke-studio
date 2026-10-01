@@ -1,0 +1,24 @@
+# EP001 publish.log — 승인 게이트 미통과, 업로드 시도 없음
+# 형식: 시각 | 플랫폼 | 상태 | 영상 URL/ID | 비고/오류
+
+## Phase 2 (세션 2026-10-01) — 승인 게이트
+2026-10-01T07:01:37Z | GATE | STOP | - | PR #1 (https://github.com/Memoseadmin/ke-studio/pull/1, head ep/EP001) open, 라벨 0개
+2026-10-01T07:01:37Z | GATE | STOP | - | 확인 방법: GitHub MCP search_pull_requests(repo=Memoseadmin/ke-studio, is:open) → labels 없음, comments 0 / pull_request_read get_comments·get_reviews·get_review_comments → 각 0건
+2026-10-01T07:01:37Z | GATE | STOP | - | approved 라벨 없음 → 업로드 중단(규칙대로 동작). publisher 직원은 실행하지 않음(COO가 게이트 확인 후 기록)
+2026-10-01T07:01:37Z | YouTube | SKIPPED | - | 게이트 미통과. 비공개 업로드 포함 어떤 업로드도 하지 않음
+2026-10-01T07:01:37Z | TikTok | SKIPPED | - | 게이트 미통과
+2026-10-01T07:01:37Z | Instagram | SKIPPED | - | 게이트 미통과
+
+## 환경변수 (docs/ENV.md 기준, 값 출력 없음)
+YOUTUBE_CLIENT_ID       UNSET
+YOUTUBE_CLIENT_SECRET   UNSET
+YOUTUBE_REFRESH_TOKEN   UNSET
+TTS_API_KEY             UNSET
+IMAGE_API_KEY           UNSET
+GITHUB_TOKEN            SET
+# → 라벨이 붙어도 현재는 YouTube API 업로드 불가. 그때는 수동 업로드 패키지로 대체.
+
+## 업로드 전 남은 조건 (risk.md 기준)
+- approved 라벨
+- FIX 1b 쿠팡 고지 공식 원문 대조 / FIX 5 최종 이미지·보이스·음악 라이선스 / FIX 7 실제 제휴 링크·계정
+- 현재 렌더는 목업(render-log.md 참조) → 공개용 아님
