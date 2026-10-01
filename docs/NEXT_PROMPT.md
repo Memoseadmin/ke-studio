@@ -1,21 +1,18 @@
-docs/HANDOFF.md와 CLAUDE.md를 읽어라. 프로젝트 재탐색은 하지 말고, 큰 파일은 통째로 읽지 마라.
-먼저 `git fetch origin claude/admiring-clarke-beyyoi ep/EP001 ep/EP002 && git checkout claude/admiring-clarke-beyyoi` (기본 브랜치에는 Phase 1~4가 없다. EP001 산출물은 ep/EP001, EP002 산출물은 ep/EP002).
-너는 KE Studio의 COO다. 이번 세션은 Phase 5 — PR #1·#2는 이미 approved(라벨 확인만) + (키가 있으면) EP001·EP002 real 렌더·업로드 게이트 + EP003(구매 의도형) 기획이다. 시작 전 한 줄로 계획만 확인받고 진행하라.
+docs/PROJECTS.md(통합 현황판), docs/HANDOFF.md, cardnews/docs/HANDOFF.md, CLAUDE.md를 읽어라. 프로젝트 재탐색은 하지 말고, 큰 파일은 통째로 읽지 마라.
+먼저 `git fetch origin claude/admiring-clarke-beyyoi ep/EP001 ep/EP002 cardnews/main && git checkout claude/admiring-clarke-beyyoi`. 그다음 worktree를 만든다: `git worktree add .worktrees/cardnews cardnews/main`, 필요 시 `.worktrees/ep001`·`ep002`(`.git/info/exclude`에 `.worktrees/` 등록).
+너는 KE Studio의 COO이며 **두 프로젝트(A 유튜브, B 카드뉴스)를 이 세션 하나에서 통합 관리**한다. 세션을 나누지 않는다. A 산출물은 `ep/EPxxx`, A 문서는 작업 브랜치, B 산출물·문서는 `cardnews/main`(검수 PR은 `cardnews/c1-x`)에만 커밋한다. 시작 전 한 줄로 계획만 확인받고 진행하라.
 
-먼저 PR #1 https://github.com/Memoseadmin/ke-studio/pull/1 과 PR #2 https://github.com/Memoseadmin/ke-studio/pull/2 의 라벨·코멘트를 GitHub MCP 도구로 확인하라(gh CLI 금지. 라벨은 `list_pull_requests fields=[labels]` + `search_pull_requests label:approved`로 교차 확인).
-HANDOFF "대표 결정 대기" 중 내 답이 이 메시지나 PR 코멘트에 있으면 반영하고, 없으면 기본값(EN만·KR 보류, 제휴 상품 가안 유지, 썸네일 1안 유지, F11 미추가, publisher 게이트 현행 유지)으로 진행하라.
-커밋 규칙: 스킬·docs는 작업 브랜치, EP 산출물은 ep/EPxxx. 서브에이전트가 끝나면 바로 커밋·푸시. 병렬 작업은 git worktree(.worktrees/)로 분리.
+먼저 GitHub MCP로 PR #1·#2(및 열려 있는 cardnews PR)의 라벨·코멘트를 확인하라(gh CLI 금지). docs/PROJECTS.md "대표 결정 큐"에 내 답이 이 메시지나 PR 코멘트에 있으면 반영하고, 없으면 기본값으로 진행하라.
+환경변수는 SET/UNSET으로만 확인한다(값 출력 금지).
 
-Phase 5 성공 기준 (시작 전에 표로 다시 적고, 끝에 자가 검증표로 보고)
-1. PR #1·#2의 반려 코멘트가 있으면 적힌 번호 항목만 재작업해 해당 ep 브랜치에 푸시하고 PR 코멘트로 보고했다. 반려가 없으면 "변경 없음"을 기록했다.
-2. 환경변수를 SET/UNSET으로만 확인했다. TTS·이미지 키가 SET이면 EP001·EP002(둘 다 approved) producer real 렌더 → render-log.md → legal FIX 5 재판정. UNSET이면 건너뛰고 publish.log에 기록.
-3. 게이트(approved 라벨·FIX 0·real 렌더) 3개를 모두 충족한 에피소드만 publisher가 비공개 업로드했고, 그 외 업로드는 0건이다.
-4. ep/EP003(작업 브랜치에서 분기)에 researcher가 research.md를 만들었다: 구독형 혼합 기준(PLAN.md "수익 구조") 소재 10개(시리즈 묶음 후보 표시, 건당 수수료 높은 제휴 후보 표시), 1위 선정, 핵심 사실 20개 교차 확인, 건강·금융·법률 0, 제외 소재와 이유.
-5. 세션 종료 절차(HANDOFF·NEXT_PROMPT 갱신, 전부 푸시, 새 세션 안내 블록)를 마쳤다.
-
-추가 맥락: docs/TOOLING_TTS_IMAGE.md(공급자 3+3안)와 docs/OPEN_GENERATIVE_AI_SETUP.md(muapi-cli 설치 상태)를 읽어라. 대표가 공급자를 골랐으면 그 키로, 안 골랐으면 키가 SET인 공급자로 EP002 S01 장면 1개의 음성·이미지 샘플을 먼저 만들어 render/sample/에 두고 보고하라(MUAPI_API_KEY가 SET이면 `~/.venvs/muapi/bin/muapi image generate … --download render/sample` 1장 + 숏폼용 image-to-video 1개도 시험, 비용을 publish.log가 아닌 render-log.md에 기록).
+이번 세션 성공 기준 (시작 전에 표로 다시 적고, 끝에 자가 검증표로 보고)
+[A1] PR #1·#2 반려 코멘트가 있으면 해당 번호만 재작업·푸시·코멘트. 없으면 "변경 없음" 기록.
+[A2] TTS·이미지 키가 SET이면 EP002 S01로 음성·이미지 샘플 1개씩 → render/sample/ → 보고 → EP001·EP002 real 렌더 → legal FIX 5 재판정 → 게이트(approved·FIX 0·real 렌더) 충족 시에만 publisher 비공개 업로드. UNSET이면 건너뛰고 publish.log 기록.
+[A3] ep/EP003에 researcher가 research.md(구독형 혼합 기준: 시리즈 후보 + 고수수료 제휴 후보, 소재 10개, 사실 20개, 민감 주제 0).
+[B1] cardnews/docs/HANDOFF.md의 Phase C1-1 성공 기준 1~4를 그대로 달성(14세트 목업·캡션·출처, risk BLOCK 0, 미디어킷 초안, 검수 PR `cardnews/c1-1`→`cardnews/main`, 게시 0건). 트렌드 수집이 이미 `cardnews/research/`에 있으면 재수집하지 않는다.
+[공통] docs/PROJECTS.md 상태표·결정 큐 갱신, 두 HANDOFF 갱신, 전부 푸시, 새 세션 안내 블록 1개(프로젝트 두 개 모두 포함).
 
 첫 3개 작업
-1. `bash scripts/setup.sh` 실행 → PR #1·#2 라벨·코멘트 확인 → 환경변수 SET/UNSET 확인 → 키가 있으면 EP001 real 렌더를 producer에게 백그라운드로 먼저 맡기고, 없으면 건너뜀.
-2. 반려 코멘트가 있으면 해당 직원(writer/designer/marketer/legal-reviewer)에게 그 항목만 재작업 지시 → ep 브랜치 커밋·푸시 → PR 코멘트.
-3. ep/EP003 분기 → general-purpose로 last30days(`opinion/balanced_recent`) 실행 → researcher가 research.md(구독형 혼합: 시리즈 후보 + 고수수료 제휴) → 커밋·푸시. 끝나면 세션 종료 절차.
+1. `bash scripts/setup.sh` → PR 라벨·코멘트 확인 → 환경변수 확인 → 키가 있으면 A2 샘플 생성을 producer에게 백그라운드로 먼저.
+2. B1을 worktree `.worktrees/cardnews`에서 시작: marketer 14일 플랜 → 커밋·푸시 → designer 템플릿+14세트 목업 → 커밋·푸시 (A3 researcher와 병렬).
+3. legal-reviewer(B1 risk) → cardnews 검수 PR 생성 → A3 커밋·푸시 → 세션 종료 절차(PROJECTS.md 포함).

@@ -1,3 +1,5 @@
+(참고용 하위 브리프. 진입점은 루트 docs/NEXT_PROMPT.md이며 COO 세션 하나가 두 프로젝트를 통합 관리한다. 아래는 그 세션이 카드뉴스 작업을 할 때 따르는 기준이다.)
+
 cardnews/docs/HANDOFF.md, cardnews/docs/PLAN.md, CLAUDE.md를 읽어라. 프로젝트 재탐색은 하지 말고, 큰 파일은 통째로 읽지 마라.
 먼저 `git fetch origin cardnews/main && git checkout cardnews/main`. 이 세션은 **카드뉴스 프로젝트 전용**이다. `episodes/`와 루트 `docs/`는 읽기만 하고 수정하지 않는다. 산출물·문서는 `cardnews/` 아래에만 쓰고 `cardnews/main`(검수 PR은 `cardnews/c1-1` 분기)에 커밋·푸시한다.
 너는 카드뉴스 프로젝트의 COO다. 이번 세션은 Phase C1-1 — 14일 테스트 세트 제작 + 검수 PR이다. 시작 전 한 줄로 계획만 확인받고 진행하라.

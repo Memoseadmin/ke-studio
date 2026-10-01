@@ -16,7 +16,7 @@ KE Studio: Korea Explained 채널의 기획→대본→디자인→마케팅→�
 - 대표 답: EN만 진행·KR 보류. 제휴 구조 설명(Amazon Associates 가입은 대표 몫).
 - `docs/TOOLING_TTS_IMAGE.md`: TTS·이미지 공급자 3+3안(출처 61건). COO 추천 = ElevenLabs Creator + Gemini Nano Banana 2(≈48,000원/월) / 가성비 = Google Chirp3 + Recraft V4(≈8,000원/월). 비주얼 방향 "민화 플랫 × 한지 질감". **대표 선택 대기.**
 - `docs/OPEN_GENERATIVE_AI_SETUP.md`: 대표가 준 설치 템플릿을 클라우드 기준으로 수행. muapi-cli 0.2.7 설치(venv, setup.sh 반영), `muapi image models` 103개 출력 ✅. muapi에 TTS 없음. 계정·키 없어 생성 검증 ❌, 웹 앱 빌드는 분류기 차단. ENV.md에 `MUAPI_API_KEY` 후보 행.
-- **카드뉴스 프로젝트 분리(대표 결정)**: 협찬·광고 수익 목표, 별도 세션·브랜치 `cardnews/main`, 문서 `cardnews/docs/`(PLAN·HANDOFF·NEXT_PROMPT). 본 채널 세션은 `cardnews/` 수정 금지. HANDOFF의 "인스타 캐러셀 2주 테스트" 항목은 그 프로젝트로 이관.
+- **카드뉴스 프로젝트 분리(대표 결정)**: 협찬·광고 수익 목표, 별도 폴더·브랜치 `cardnews/main`이되 **관리는 이 COO 세션 하나가 통합**(docs/PROJECTS.md 현황판, 진입점은 루트 NEXT_PROMPT 하나), 문서 `cardnews/docs/`(PLAN·HANDOFF·NEXT_PROMPT). 본 채널 세션은 `cardnews/` 수정 금지. HANDOFF의 "인스타 캐러셀 2주 테스트" 항목은 그 프로젝트로 이관.
 - MiniMax H3 `h3-prompt-writing` 스킬: 대표 요청으로 검토 → **설치 불가**(라이선스가 한국·미국·EU 제외, 출력물 표시도 금지). docs/SKILL_CANDIDATES.md에 기록. H3를 쓰려면 공식 API 약관 지역 조항을 legal-reviewer가 먼저 확인.
 - `scripts/youtube_auth.py`: 대표 PC에서 1회 실행해 YOUTUBE_* 3개를 얻는 스크립트(미테스트, 실행은 대표 PC).
 
