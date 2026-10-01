@@ -1,7 +1,7 @@
 # 스킬 팩 등록부
 
 설치 방식: 임시 디렉터리에 clone → LICENSE·README 확인 → `skills/*/`를 `.claude/skills/<팩>-<스킬>/`로 원본 그대로 복사(`diff -r` 차이 0 확인). 네 팩 모두 `commands/`·`agents/` 폴더가 없어 복사할 커맨드·에이전트는 없음. finance·legal의 `.mcp.json`·`CONNECTORS.md`(외부 커넥터 설정)는 복사하지 않음. 설치 스크립트는 실행하지 않음.
-폴더명은 `<팩>-<스킬>`이지만 SKILL.md의 `name`은 원본 그대로이므로, 호출할 때 쓰는 이름은 원본 이름(예: `variance-analysis`)이다.
+SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill 도구는 **폴더명**으로 등록한다(확인: 세션 스킬 목록에 `finance-variance-analysis` 등으로 표시). 호출·에이전트 지정은 폴더명을 쓴다.
 
 설치일: 2026-10-01
 
@@ -21,13 +21,13 @@
 ## 직원별 지정 스킬 (.claude/agents/*.md의 skills:)
 | 직원 | 스킬 |
 |---|---|
-| researcher | niche-research |
-| writer | copywriting, copy-editing, video |
-| designer | youtube-thumbnail, graphic-designer, image |
-| marketer | copywriting, social, video, hook-generator, post-writer, reels-scripting, pinned-comment |
-| publisher | post-formatter |
-| legal-reviewer | review-contract, legal-risk-assessment, compliance-check |
-| analyst | variance-analysis |
+| researcher | social-media-skills-niche-research |
+| writer | marketing-skills-copywriting, marketing-skills-copy-editing, marketing-skills-video |
+| designer | social-media-skills-youtube-thumbnail, social-media-skills-graphic-designer, marketing-skills-image |
+| marketer | marketing-skills-copywriting, -social, -video; social-media-skills-hook-generator, -post-writer, -reels-scripting, -pinned-comment |
+| publisher | social-media-skills-post-formatter |
+| legal-reviewer | legal-review-contract, legal-legal-risk-assessment, legal-compliance-check |
+| analyst | finance-variance-analysis |
 
 ## 연결 검증
 (아래 검증 결과 섹션 참조)
