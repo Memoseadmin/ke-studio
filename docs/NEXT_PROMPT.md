@@ -10,7 +10,7 @@ Phase 5 성공 기준 (시작 전에 표로 다시 적고, 끝에 자가 검증�
 1. PR #1·#2의 반려 코멘트가 있으면 적힌 번호 항목만 재작업해 해당 ep 브랜치에 푸시하고 PR 코멘트로 보고했다. 반려가 없으면 "변경 없음"을 기록했다.
 2. 환경변수를 SET/UNSET으로만 확인했다. TTS·이미지 키가 SET이면 EP001·EP002(둘 다 approved) producer real 렌더 → render-log.md → legal FIX 5 재판정. UNSET이면 건너뛰고 publish.log에 기록.
 3. 게이트(approved 라벨·FIX 0·real 렌더) 3개를 모두 충족한 에피소드만 publisher가 비공개 업로드했고, 그 외 업로드는 0건이다.
-4. ep/EP003(작업 브랜치에서 분기)에 researcher가 research.md를 만들었다: 구매 의도형 소재 10개, 1위 선정, 핵심 사실 20개 교차 확인, 건강·금융·법률 0, 제외 소재와 이유.
+4. ep/EP003(작업 브랜치에서 분기)에 researcher가 research.md를 만들었다: 구독형 혼합 기준(PLAN.md "수익 구조") 소재 10개(시리즈 묶음 후보 표시, 건당 수수료 높은 제휴 후보 표시), 1위 선정, 핵심 사실 20개 교차 확인, 건강·금융·법률 0, 제외 소재와 이유.
 5. 세션 종료 절차(HANDOFF·NEXT_PROMPT 갱신, 전부 푸시, 새 세션 안내 블록)를 마쳤다.
 
 추가 맥락: docs/TOOLING_TTS_IMAGE.md(공급자 3+3안)와 docs/OPEN_GENERATIVE_AI_SETUP.md(muapi-cli 설치 상태)를 읽어라. 대표가 공급자를 골랐으면 그 키로, 안 골랐으면 키가 SET인 공급자로 EP002 S01 장면 1개의 음성·이미지 샘플을 먼저 만들어 render/sample/에 두고 보고하라(MUAPI_API_KEY가 SET이면 `~/.venvs/muapi/bin/muapi image generate … --download render/sample` 1장 + 숏폼용 image-to-video 1개도 시험, 비용을 publish.log가 아닌 render-log.md에 기록).
@@ -18,4 +18,4 @@ Phase 5 성공 기준 (시작 전에 표로 다시 적고, 끝에 자가 검증�
 첫 3개 작업
 1. `bash scripts/setup.sh` 실행 → PR #1·#2 라벨·코멘트 확인 → 환경변수 SET/UNSET 확인 → 키가 있으면 EP001 real 렌더를 producer에게 백그라운드로 먼저 맡기고, 없으면 건너뜀.
 2. 반려 코멘트가 있으면 해당 직원(writer/designer/marketer/legal-reviewer)에게 그 항목만 재작업 지시 → ep 브랜치 커밋·푸시 → PR 코멘트.
-3. ep/EP003 분기 → general-purpose로 last30days(`opinion/balanced_recent`) 실행 → researcher가 research.md(구매 의도형) → 커밋·푸시. 끝나면 세션 종료 절차.
+3. ep/EP003 분기 → general-purpose로 last30days(`opinion/balanced_recent`) 실행 → researcher가 research.md(구독형 혼합: 시리즈 후보 + 고수수료 제휴) → 커밋·푸시. 끝나면 세션 종료 절차.

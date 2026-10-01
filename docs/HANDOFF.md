@@ -18,6 +18,8 @@ KE Studio: Korea Explained 채널의 기획→대본→디자인→마케팅→�
 - `docs/OPEN_GENERATIVE_AI_SETUP.md`: 대표가 준 설치 템플릿을 클라우드 기준으로 수행. muapi-cli 0.2.7 설치(venv, setup.sh 반영), `muapi image models` 103개 출력 ✅. muapi에 TTS 없음. 계정·키 없어 생성 검증 ❌, 웹 앱 빌드는 분류기 차단. ENV.md에 `MUAPI_API_KEY` 후보 행.
 - `scripts/youtube_auth.py`: 대표 PC에서 1회 실행해 YOUTUBE_* 3개를 얻는 스크립트(미테스트, 실행은 대표 PC).
 
+- **전략 결정(대표, 2026-10-01): 구독형 혼합.** 서사형 60~70% + 구매 의도형 30~40%, 게이트 = 90일 내 구독 1,000명 + 첫 제휴 매출 1건 + 월 비용 20만원. 수익 3겹(제휴→YPP 광고→멤버십). PLAN.md·CLAUDE.md·analyst.md 반영 완료. EP003부터 적용: 시리즈 기획(예: "한국이 금지했던 것들")과 건당 수수료 높은 제휴(여행·eSIM·숙소).
+
 ## 완료 (Phase 4, 성공 기준 5/5)
 1. ep/EP002 writer: script.en.md S01~S13, 낭독문 1,580단어(wc -w 실측), 사실 18건 전부 F번호 출처, 금지 수치 0, 제휴 2개 S12에만, 고지·AI 라벨 낭독 포함. script.kr.md 1:1.
 2. designer: 썸네일 3안 목업(WHO WROTE THESE? / 4 LETTERS VANISHED / WHY OCTOBER 9?) + scene-prompts S01~S13. marketer: 제목 5안, EN 설명란(첫 줄 고지), 태그 15, 숏폼 5개(42~55초), 캡션, 캐러셀 7장, 제휴 표(Amazon 4.5%/4.0%).
@@ -43,5 +45,5 @@ KE Studio: Korea Explained 채널의 기획→대본→디자인→마케팅→�
 ## 다음 할 일 (Phase 5 — 승인·키 대기 처리 + EP003 기획)
 1. PR #1·#2는 approved. 새 코멘트만 확인 → 키 SET이면 바로 EP001·EP002 real 렌더 → legal FIX 5 재판정 → FIX 7(링크)까지 끝나면 publisher 비공개 업로드.
 2. 키 SET이면 EP001(승인 시 EP002도) producer real 렌더 → render-log → legal FIX 5 재판정 → 게이트 충족 시 publisher 비공개 업로드.
-3. EP003 기획: 구매 의도형(50:50 비율 유지). researcher가 last30days·niche-research로 소재 10개 → research.md → ep/EP003 분기.
+3. EP003 기획(구독형 혼합 기준): 서사형 시리즈 1편 또는 구매 의도형 1편을 researcher가 제안(소재 10개, 시리즈 묶음 가능성·건당 수수료 높은 제휴 후보 표시) → research.md → ep/EP003 분기.
 4. (여유 시) analyst 주간 리포트 템플릿을 reports/에 1회 돌려 보기(데이터 0이라 형식 확인만).
