@@ -6,9 +6,9 @@ KE Studio: Korea Explained 채널의 기획→대본→디자인→마케팅→�
 
 ## 현재 상태
 - 작업 브랜치 `claude/admiring-clarke-beyyoi`(새 세션은 이걸 체크아웃). EP001 산출물 `ep/EP001`, EP002 산출물 `ep/EP002`.
-- **PR #1 (EP001)** https://github.com/Memoseadmin/ke-studio/pull/1 : 라벨 0·코멘트 0·리뷰 0(Phase 4 시작 시 확인). 승인 대기. risk v4 BLOCK 0 / FIX 3(1b·5·7).
-- **PR #2 (EP002)** https://github.com/Memoseadmin/ke-studio/pull/2 : Phase 4에 생성. 검수 시트 ①~⑧. risk v1.1 BLOCK 0 / FIX 3(1b·5·7) / PASS 10. 승인 대기.
-- 업로드 0건(두 편 모두). 환경변수는 GITHUB_TOKEN만 SET, TTS·이미지·YouTube 키 UNSET → real 렌더·업로드 미실행(두 publish.log에 기록).
+- **PR #1 (EP001)** https://github.com/Memoseadmin/ke-studio/pull/1 : **approved 라벨 부착됨**(대표가 Phase 4 끝에 채팅으로 승인 → COO가 라벨 부착). risk v4 BLOCK 0 / FIX 3(1b·5·7).
+- **PR #2 (EP002)** https://github.com/Memoseadmin/ke-studio/pull/2 : Phase 4에 생성, **approved 라벨 부착됨**(동일). risk v1.1 BLOCK 0 / FIX 3(1b·5·7) / PASS 10.
+- 업로드 0건(두 편 모두). 게이트 1(approved)만 충족, 게이트 2(FIX 0)·3(real 렌더) 미충족. GITHUB_TOKEN만 SET, TTS·이미지·YouTube 키 UNSET(두 publish.log에 기록). 승인됐으니 AI 라벨의 "human-reviewed" 문구 재삽입은 다음 세션에서 판단.
 - 대표 답변(Phase 4 채팅): **EN만 진행, KR판 보류**. 제휴 구조 설명함(Amazon Associates 가입은 대표 몫, 링크는 아직 자리표시자).
 - 영상 파일은 어디에도 없다. EP001 재렌더는 `episodes/EP001/render-input/*.json` + ffmpeg-assemble·shorts-cut.
 
@@ -28,14 +28,14 @@ KE Studio: Korea Explained 채널의 기획→대본→디자인→마케팅→�
 - GitHub MCP: 라벨은 `list_pull_requests fields=[labels]`(빈 배열이면 키 자체가 빠짐) + `search_pull_requests label:approved`로 교차 확인.
 
 ## 대표 결정 대기
-1. PR #1·#2: 승인(approved) 또는 ①~⑧ 번호 반려 코멘트
+1. ~~PR #1·#2 승인~~ 완료. 이제 업로드를 막는 건 키와 Amazon 계정뿐
 2. 키 입력: TTS·이미지 공급자 + TTS_API_KEY·IMAGE_API_KEY, YOUTUBE_CLIENT_ID/SECRET/REFRESH_TOKEN. TTS가 ElevenLabs면 elevenlabs-tts 설치
 3. Amazon Associates 가입·트래킹 ID(가입 후 180일 내 3건 판매 조건 → 첫 업로드 직전 권장), 제휴 상품 확정(EP001 멀티팩·양은냄비, EP002 워크북·붓펜), 링크 허브
 4. EP002 썸네일 1안 "WHO WROTE THESE?" 유지 여부, F11 식민기 1문장 추가 여부
 5. (이월) 인스타 캐러셀 2주 테스트, risk #9 publisher 게이트 확장, 지정 폰트 setup.sh 추가, PLAN.md 비진정성 정책 날짜 정정, PLAN.md 결정 1~4, 보류 스킬 nano-banana·ScrapeCreators
 
 ## 다음 할 일 (Phase 5 — 승인·키 대기 처리 + EP003 기획)
-1. PR #1·#2 라벨·코멘트 확인 → 반려 항목만 재작업 → approved면 게이트(FIX 0·real 렌더) 점검.
+1. PR #1·#2는 approved. 새 코멘트만 확인 → 키 SET이면 바로 EP001·EP002 real 렌더 → legal FIX 5 재판정 → FIX 7(링크)까지 끝나면 publisher 비공개 업로드.
 2. 키 SET이면 EP001(승인 시 EP002도) producer real 렌더 → render-log → legal FIX 5 재판정 → 게이트 충족 시 publisher 비공개 업로드.
 3. EP003 기획: 구매 의도형(50:50 비율 유지). researcher가 last30days·niche-research로 소재 10개 → research.md → ep/EP003 분기.
 4. (여유 시) analyst 주간 리포트 템플릿을 reports/에 1회 돌려 보기(데이터 0이라 형식 확인만).
