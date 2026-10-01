@@ -1,0 +1,10 @@
+# EP002 publish.log — 업로드 기록 (업로드 0건)
+
+## Phase 4 (2026-10-01T09:04:32Z)
+2026-10-01T09:04:32Z | 검수 PR | 생성 | - | ep/EP002 → claude/admiring-clarke-beyyoi, 검수 시트 ①~⑧. approved 라벨 없음
+2026-10-01T09:04:32Z | GATE-1 approved 라벨 | 미충족 | - | PR 방금 생성, 라벨 0
+2026-10-01T09:04:32Z | GATE-2 risk.md FIX 0 | 미충족 | - | risk.md v1.1: BLOCK 0 / FIX 3(1b·5·7) / PASS 10
+2026-10-01T09:04:32Z | GATE-3 real 렌더 | 미충족 | - | 렌더 미실행(TTS_API_KEY·IMAGE_API_KEY UNSET). 목업 썸네일만 있음
+2026-10-01T09:04:32Z | YouTube / TikTok / Instagram | SKIPPED | - | 업로드 0건. publisher 미실행
+2026-10-01T09:04:32Z | ENV | - | - | TTS_API_KEY / IMAGE_API_KEY / YOUTUBE_CLIENT_ID / YOUTUBE_CLIENT_SECRET / YOUTUBE_REFRESH_TOKEN = UNSET (값 출력 없음)
+# 결론: 업로드 0건. 다음 조건: approved 라벨 + FIX 1b(KR 보류라 EN 비차단)·5·7 해소 + real 렌더 + legal 재점검
