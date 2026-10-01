@@ -1,15 +1,16 @@
 # EP001 리스크 점검: "Why Ramyeon Keeps Showing Up on Korean Screens"
 
+**v3 재점검 2026-10-01 (Phase 2 목업 렌더 후)**: FIX 5만 다시 판정했다(§7). 다른 행은 v2 판정을 그대로 둔다.
 **v2 재점검 2026-10-01** (v1 수정 요청 #1·#4·#5·#7 반영분을 실제 파일에서 확인했다. 커밋 b8f25ad·b42a64a·49349f5는 COO가 알려 준 해시이고, 내용은 파일에서 직접 대조했다)
 
-**BLOCK 0 / FIX 3 / PASS 7** (8개 항목 중 1번을 1a·1b·1c로 나눠 10행으로 셈. v1은 BLOCK 1 / FIX 5 / PASS 4)
-**판정: 대표가 승인해도 된다. 다만 업로드는 FIX 3건(쿠팡 문구 공식 대조, 최종 에셋과 라이선스 기록, 실제 제휴 링크와 계정)을 끝낸 뒤에만 한다.**
+**BLOCK 0 / FIX 3 / PASS 7** (v3. v2와 같다. 8개 항목 중 1번을 1a·1b·1c로 나눠 10행으로 셈. v1은 BLOCK 1 / FIX 5 / PASS 4)
+**판정(v3): 대표가 승인해도 된다. BLOCK 0 유지. 업로드는 FIX 3건(쿠팡 문구 공식 대조, 최종 에셋과 라이선스 기록, 실제 제휴 링크와 계정)을 끝내고, 목업이 아닌 real 모드 렌더를 legal-reviewer가 재점검한 뒤에만 한다.** (v2 판정 "대표가 승인해도 된다. 다만 업로드는 FIX 3건을 끝낸 뒤에만 한다"에 real 렌더 재점검 조건을 더했다)
 
 > **법률 자문이 아니라 사전 점검이다.** 최종 판단은 대표와 전문가가 한다.
 > 점검: legal-reviewer / 브랜치 ep/EP001 / 기준 문서: `.claude/agents/legal-reviewer.md` 1~8번, `docs/PLAN.md` "리스크", CLAUDE.md
 > 대상 파일: research.md, script.en.md, script.kr.md, design/(design-system.md, thumbnails.md, scene-prompts.md, thumb-1~3.png, thumbs-compare.png), marketing.md
 > 판정 기준: **BLOCK** = 콘텐츠 자체에 결함이 있어 대표가 승인하면 안 됨 / **FIX** = 승인은 가능하지만 업로드 전에 조치가 필요함(담당자와 시점 명시) / **PASS** = 문제 없음
-> 줄 번호는 v2 시점 파일 기준이다. EN = script.en.md, KR = script.kr.md, M = marketing.md
+> 줄 번호는 v2 시점 파일 기준이다. EN = script.en.md, KR = script.kr.md, M = marketing.md, RL = render-log.md(v3에서 추가)
 
 ## 1. 체크리스트
 
@@ -21,7 +22,7 @@
 | 2 | 협찬 여부와 유료 광고 표시 | PASS | 협찬 계약이나 무상 제공이 없다(M:29 "협찬 아님", M:129). 수익은 제휴 수수료뿐이고 농심·GS25·CU 언급은 사실 서술이다 | KR 업로드 때 유료 프로모션 체크를 권고한다. 이미 M:129 메모에 들어가 있다 |
 | 3 | 민감 주제 제외, 효능·건강 주장 없음 | PASS | 건강·금융·법률 주제가 아니다. 냄비 관련 문장은 "heats up fast"([F20], EN:136) 하나이고, 안전·건강 표현 금지가 EN:144에 적혀 있다. 수출 수치는 투자 조언이 아니다 | 참고: 인용 출처 S26에는 알루미늄 용출 보도도 들어 있다(research.md:88). 댓글에 답할 때도 건강 주장은 하지 않는다 |
 | 4 | 비진정성 3유형 해당 없음 | PASS | 서사가 고유하고, 사실과 해석을 구분해 썼다(EN:16). 제목 5안(M:26~30)과 썸네일 3안에 낚시가 없다. 민감 주제 AI 페르소나도 없다 | 참고: AI 이미지와 AI 음성으로 만든 영상이라 "image slideshow with minimal narrative"로 보이지 않게 모션과 편집을 유지한다(producer) |
-| 5 | 저작권: 이미지, 음악·보이스, 드라마 장면 | FIX | v1과 같다. 목업 3장에는 로고·실존 인물·스틸이 없다. 하지만 최종 AI 플레이트는 아직 만들지 않았다(thumbnails.md:4, scene-prompts.md:4). 생성 기록 표도 비어 있다(scene-prompts.md:210~212). TTS·음악 공급자와 라이선스도 정해지지 않았다(HANDOFF.md:33, ENV.md:16) | designer·producer: 생성할 때 모델·날짜·시드·라이선스를 기록하고, 렌더 로그에 TTS·음악 라이선스 출처를 남긴다 → legal-reviewer가 최종 이미지를 재점검한다 / 렌더 후 업로드 전 |
+| 5 | 저작권: 이미지, 음악·보이스, 드라마 장면 | FIX (v3 유지) | **v3:** 목업 렌더 소재 자체는 문제없다. 외부 이미지 0개, 무음, AI 미사용이고(RL:30, :36~40), 컨택트시트 17프레임에 실존 인물·로고·스틸·패키지·캐릭터가 없다. 대체 폰트 2종도 번인 텍스트의 상업 이용에 제약이 없다(§7). 그러나 업로드할 최종 에셋(AI 플레이트 16:9·9:16, TTS, 음악, 지정 폰트)이 아직 없고 기록도 비어 있어(RL:69~79) PASS로 올릴 수 없다. **v2:** v1과 같다. 목업 3장에는 로고·실존 인물·스틸이 없다. 하지만 최종 AI 플레이트는 아직 만들지 않았다(thumbnails.md:4, scene-prompts.md:4). 생성 기록 표도 비어 있다(scene-prompts.md:210~212). TTS·음악 공급자와 라이선스도 정해지지 않았다(HANDOFF.md:33, ENV.md:16) | designer·producer: 생성할 때 모델·날짜·시드·라이선스를 기록하고, 렌더 로그에 TTS·음악 라이선스 출처를 남긴다 → legal-reviewer가 최종 이미지를 재점검한다 / 렌더 후 업로드 전. **v3 추가:** producer는 지정 폰트의 버전·출처를 RL §4에 적고, AI 라벨 문구를 최종 에셋 구성과 맞춘다. 목업 렌더는 업로드하지 않는다(§6 #9) / real 렌더 후, 업로드 전 |
 | 6 | 사실 주장에 출처 있음 | PASS (해결됨) | 감사 39건 가운데 출처 없는 주장은 0건이다(§2). Sources 블록에 S22(M:104), S25(M:106), S1(M:107)이 추가됐다. 그래서 고정 댓글 "Every number ... has a source in the description"(M:150)도 이제 성립한다. 라면 라이브러리가 2026년에도 운영 중인지도 확인됐다(research.md:73~74, S42·S44는 원문을 직접 대조) | — |
 | 7 | 제휴 약관 (Amazon 오프라인 금지, 쿠팡 가격 표기 등) | FIX | v1과 같다. 오프라인 금지(M:122)와 가격 미표기(M:49, :123)는 Amazon Program Policies(2026-04-14)와 맞는다. 그러나 링크가 전부 자리표시자이고(M:7) 상품도 아직 가안이다(EN:13). 쿠팡 subId 형식과 채널 등록도 확인되지 않았다(M:119, :125) | 대표: 상품 지정, 계정 링크 생성, 쿠팡 활동 채널(YouTube·허브) 등록, Associates Central 사이트 등록 여부 확인 / marketer: 실제 링크로 교체하고 허브 맨 위에 고지(M:126) / 업로드 전 |
 | 8 | AI 생성물 공개 라벨 | PASS (해결됨) | 사실 검수를 단정하던 문장을 EN·KR 모두에서 뺐다(M:65, :85, 기록 :130). 공개 라벨은 설명란, S12 낭독·자막(EN:154, KR:147), 숏폼 마지막 1초와 캡션에 남아 있다. YouTube 합성 콘텐츠 토글은 비사실적 일러스트이고 실존 인물이 나오지 않아 필수는 아니다(§4, M:128 질문에 대한 답). 켜도 문제없다 | 체크리스트와 별개로, CLAUDE.md의 "인간 검수 기록" 규칙은 대표가 PR을 검수·승인할 때 남긴다. 기록이 남으면 M:130에 따라 그 문장을 다시 넣을 수 있다 |
@@ -138,12 +139,27 @@
 
 ## 6. 수정 요청
 
-| # | v1 판정 | 파일 | 무엇을 | 담당 직원 | v2 상태 |
+| # | v1 판정 | 파일 | 무엇을 | 담당 직원 | v2 상태 (v3 추가분은 → 뒤) |
 |---|---|---|---|---|---|
 | 1 | BLOCK (1c) | script.kr.md S02·S12, marketing.md §2.4 | 시작과 끝에 쿠팡 고지 낭독 + 자막 추가(S11 유지), KR 유료 프로모션 메모 | writer, marketer | **해결됨(커밋 b8f25ad·b42a64a)**: KR:33, :37, :145, :150, M:129에서 확인 |
-| 2 | FIX (1b) | M §2.2·§4 KR, KR S02·S11·S12 낭독·자막 | 파트너스 공식 안내 문구와 한 글자씩 대조한 뒤 그대로 반영 | 대표(대조) → marketer, writer | **미해결**: 쿠팡 링크를 만들 때, 업로드 전 |
-| 3 | FIX (5) | design/thumbnails.md, design/scene-prompts.md 생성 기록, 렌더 로그 | 최종 플레이트 생성(모델·날짜·시드·라이선스 기록), TTS·음악 상용 라이선스 출처 기록, 최종 이미지 재점검 | designer, producer → legal-reviewer | **미해결**: 렌더 후, 업로드 전 |
+| 2 | FIX (1b) | M §2.2·§4 KR, KR S02·S11·S12 낭독·자막 | 파트너스 공식 안내 문구와 한 글자씩 대조한 뒤 그대로 반영 | 대표(대조) → marketer, writer | **미해결**: 쿠팡 링크를 만들 때, 업로드 전 → v3 변화 없음(이번 렌더는 EN만) |
+| 3 | FIX (5) | design/thumbnails.md, design/scene-prompts.md 생성 기록, 렌더 로그 | 최종 플레이트 생성(모델·날짜·시드·라이선스 기록), TTS·음악 상용 라이선스 출처 기록, 최종 이미지 재점검 | designer, producer → legal-reviewer | **미해결**: 렌더 후, 업로드 전 → **v3 미해결 유지**: 목업 렌더 소재는 점검했고 문제없다(§7). 남은 순서: 최종 에셋 생성과 라이선스 기록 → real 렌더 → legal-reviewer 재점검 / 업로드 전 |
 | 4 | FIX (6) | M §2.3 Sources 블록 | S22, S25, S1 URL 추가 | marketer | **해결됨(커밋 b42a64a)**: M:104, :106, :107에서 확인 |
 | 5 | FIX (6) | research.md, EN·KR S08, M §5 컷 4 | 라면 라이브러리 2026년 운영 확인. 확인하지 못하면 문구 교체 | researcher → writer, marketer | **해결됨(커밋 49349f5)**: research.md:73~74(S42~S47). 대본은 바꾸지 않았는데 그 근거(EN:15, KR:16)가 타당하다고 본다. S42·S44는 원문을 대조했다 |
-| 6 | FIX (7) | M §2.1·§2.2·§4·§6.5 | 상품 지정, 실제 링크와 트래킹 ID·subId로 교체, 쿠팡 활동 채널 등록, Associates 사이트 등록 확인, 링크 허브를 만들고 맨 위에 고지 | 대표(계정·지정) → marketer | **미해결**: 업로드 전 |
+| 6 | FIX (7) | M §2.1·§2.2·§4·§6.5 | 상품 지정, 실제 링크와 트래킹 ID·subId로 교체, 쿠팡 활동 채널 등록, Associates 사이트 등록 확인, 링크 허브를 만들고 맨 위에 고지 | 대표(계정·지정) → marketer | **미해결**: 업로드 전 → v3 변화 없음(영상 안에는 링크 없이 고지 문구만 있다, RL:5) |
 | 7 | FIX (8) | M:65, :85 | 사람 사실 검수 문장 삭제(또는 PR에 검수 기록) | 대표 → marketer | **해결됨(커밋 b42a64a)**: 문장 삭제를 M:65, :85, :130에서 확인 |
+| 8 | v3 추적 (§5 권고 5) | long.srt·short-3.srt의 S06 자막, M:202·:254 | 그룹명 "Huntrix"를 공식 표기 "HUNTR/X"(Netflix Tudum)로 바꾸거나, 다른 표기를 쓸 근거를 대본 메모(EN:92)에 남긴다 | writer → marketer, producer | v3 신규: 최종 렌더 전. FIX로 세지 않는다(법적 리스크 낮음, §7) |
+| 9 | v3 추적 (5) | `.claude/agents/publisher.md` 업로드 직전 확인 | approved 라벨 확인에 더해 real 모드 렌더인지, "MOCKUP" 표기가 없는지, 오디오가 무음이 아닌지, risk.md FIX가 0인지 확인하는 항목을 넣을지 검토 | COO(대표 결정) | v3 신규: 첫 업로드 전 |
+
+## 7. v3 (Phase 2 렌더 후)
+
+대상: RL, render-preview/long-contact.png·shorts-contact.png(이미지 직접 확인), render-input/scenes.en.json·shorts.en.json. 목업 모드(키 UNSET, RL:8), EN만, 업로드 없음.
+- **FIX 5 → FIX 유지.** 목업 소재와 최종 에셋을 나눠 판단했다. (a) 목업 소재는 문제없다. Pillow 자체 생성 슬라이드에 외부 이미지 0개(RL:36), 오디오는 -91 dB 무음(RL:30), AI 미사용(RL:40)이다. (b) 최종 에셋은 아직 없다. AI 플레이트·TTS·음악이 없고 생성·라이선스 기록도 비어 있다(RL:76~79). BLOCK이 아닌 이유: 콘텐츠 결함이 아니고, YouTube 키가 UNSET이며 영상이 커밋되지 않아 지금은 목업이 올라갈 경로가 없다. 다만 목업은 "MOCKUP" 표기가 있는 무음 텍스트 슬라이드라 그대로 올리면 4번(비진정성: 텍스트 슬라이드, 서사 최소) 위험이 생긴다. 그래서 업로드 대상에서 뺀다(§6 #9).
+- **폰트: 번인 텍스트로 상업 이용 가능.** Liberation Sans 2.1.5는 SIL OFL 1.1이다(VM `/usr/share/doc/fonts-liberation/copyright`). OFL은 "does not apply to any document created using the Font Software"라고 하고, 금지는 폰트를 단독으로 파는 것뿐이다([OFL 원문](https://openfontlicense.org/open-font-license-official-text/)). WenQuanYi Zen Hei 0.9.45는 "GPL-2 with Font embedding exception and M+ FONTS License"다([Debian copyright](https://metadata.ftp-master.debian.org/changelogs/main/f/fonts-wqy-zenhei/stable_copyright), VM 파일과 같음). 예외 조항에 따라 이 폰트를 쓴 문서는 GPL 적용을 받지 않는다. M+ 라이선스는 "commercially and noncommercially" 사용을 허락한다. 영상에는 픽셀만 들어가고 폰트 파일은 배포하지 않는다(RL:41). 최종 지정 폰트 3종도 OFL이다(RL:41). 설치할 때 버전과 출처만 기록한다.
+- **컨택트시트(롱폼 12 + 숏폼 5 표본 프레임).** 텍스트·카드·막대만 있다. 브랜드·작품명(Netflix, GS25, CU, Korea Herald, Gamescom 등)은 일반 글꼴로 쓴 글자로만 나온다. 로고, 인물, 스틸, 패키지, 캐릭터는 없다. 그래서 M:65의 "No film or TV footage is used"는 목업에서는 성립한다(§2 끝 문단). 최종 렌더에서 다시 확인한다.
+- **S12 "AI-generated voice & images"(scenes.en.json:254).** 최종 에셋이 AI 음성과 AI 이미지라면 적정하다. 낭독(EN:154)과 설명란(M:65)과도 맞는다. 목업에는 AI 소재가 없어 사실과 다르지만, 업로드하지 않으므로 문제 삼지 않는다. 조건이 하나 있다. 문구를 최종 구성과 맞춘다(음악이 AI면 music을 더하고, 사람 목소리면 voice를 뺀다). 권고: 이 줄이 화면 세로 중앙 바로 아래에 있다(눈대중). 하단 절반은 최종 화면 요소 자리(scene-prompts.md:205)라 가려질 수 있으니 위로 올린다.
+- **숏폼 5 고지 바(shorts.en.json:129).** 바가 처음부터 끝까지 나오고, CTA 낭독(:163)과 캡션 첫머리(M:211~212)에도 고지가 있다. 공정위 "시작·끝·반복"과 FTC "영상 안 고지"를 충족하므로 적정하다. 남은 것은 두 가지다. "may" 문구(§5 권고 1), 그리고 바가 하단 480px 금지 구역(M:178) 경계 근처로 보인다는 점이다. producer가 최종 렌더에서 Shorts UI에 가리지 않는지 확인한다.
+- **숏폼 1(RL:61): 리스크 없음.** 상품·제휴 언급이 없는 클립이라 CTA를 화면 카드로만 보여 줘도 고지 의무가 생기지 않는다. AI 라벨(마지막 1초)도 그대로 있다. 편집 판단이므로 marketer가 최종 렌더 전에 확인한다.
+- **"Huntrix"(RL:63).** Netflix 공식 표기는 "HUNTR/X"다([Tudum](https://www.netflix.com/tudum/articles/kpop-demon-hunters-food-guide) 제목). 작품 속 그룹을 가리키는 이름이라 법적 리스크는 낮다. 다만 대본 메모(EN:92 "공식 표기 확인 후 사용")와 어긋나므로 §6 #8로 추적한다.
+- **새로 발견한 것: publisher 확인의 빈틈.** publisher.md:10~13은 approved 라벨, 설명란 첫 줄, AI 설정만 확인한다. v2·v3 판정은 "승인한 뒤에도 FIX를 해결하기 전에는 업로드하지 않는다"를 전제하는데, 이를 막는 장치가 없다(§6 #9).
+- **결론: BLOCK 0 유지. v3는 BLOCK 0 / FIX 3 / PASS 7이다.** 새 FIX는 없다.
