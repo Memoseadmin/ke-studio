@@ -23,15 +23,15 @@
 
 | # | 제목 | 글자 수 | 짝 썸네일 | 메모 |
 |---|---|---|---|---|
-| 1 | Korea Banned Its Own Alphabet: The 580-Year Fight for Hangul | 60 | _ | **기본안.** 대본 메타 제목 가안 그대로. "Banned"는 S06 사료 기록(약 5개월)이고 S13이 "Yes, for about five months"로 답하므로 낚시가 아님 |
-| 2 | Why a Korean King Banned Hangul in 1504 (for Five Months) | 57 | _ | S06 각도. 괄호가 기간을 미리 밝혀 과장 방지. 왕 이름은 제목에서 뺌(검색어 아님) |
-| 3 | 28 Letters to 24: How Hangul Survived 580 Years | 47 | _ | S04·S12 각도. 숫자 3개 모두 대본(28·24·580). 제휴 컷(숏폼 5)·캐러셀과 같은 축 |
-| 4 | Hangul Day Turns 100: Why the Date Is October 9 | 47 | _ | **2026년 업로드에만 유효**(S09·S11 "hundredth"). S10의 10/9 환산 이야기가 답. 11월로 넘어가도 유효하지만 2027년부터는 불가 |
-| 5 | Mocked, Banned, Renamed: The Long Road to Hangul Day | 52 | _ | S02 로드맵 문장("mocked by scholars, banned by a king, … renamed")을 그대로 세 단어로. 서사 전체를 요약 |
+| 1 | Korea Banned Its Own Alphabet: The 580-Year Fight for Hangul | 60 | 썸1 | **기본안.** 대본 메타 제목 가안 그대로. "Banned"는 S06 사료 기록(약 5개월)이고 S13이 "Yes, for about five months"로 답하므로 낚시가 아님 |
+| 2 | Why a Korean King Banned Hangul in 1504 (for Five Months) | 57 | 썸1 | S06 각도. 괄호가 기간을 미리 밝혀 과장 방지. 왕 이름은 제목에서 뺌(검색어 아님) |
+| 3 | 28 Letters to 24: How Hangul Survived 580 Years | 47 | 썸2 | S04·S12 각도. 숫자 3개 모두 대본(28·24·580). 제휴 컷(숏폼 5)·캐러셀과 같은 축 |
+| 4 | Hangul Day Turns 100: Why the Date Is October 9 | 47 | 썸3 | **2026년 업로드에만 유효**(S09·S11 "hundredth"). S10의 10/9 환산 이야기가 답. 11월로 넘어가도 유효하지만 2027년부터는 불가 |
+| 5 | Mocked, Banned, Renamed: The Long Road to Hangul Day | 52 | 썸1 | S02 로드맵 문장("mocked by scholars, banned by a king, … renamed")을 그대로 세 단어로. 서사 전체를 요약 |
 
 - 글자 수는 공백 포함, 수기 집계. 1안은 정확히 60자라 플랫폼 입력 시 잘림 여부만 확인.
 - "Secret", "Shocking", "You won't believe" 류 없음. 연산군 평가어(tyrant 등) 없음. 한일·한중 비교 없음.
-- 운영: YouTube Test & Compare를 쓸 수 있으면 제목 1 고정 + 썸네일 3개 비교(가능 여부 업로드 시 확인). 썸네일 번호는 designer 산출물(`design/`) 확정 후 COO가 채운다.
+- 운영: YouTube Test & Compare를 쓸 수 있으면 제목 1 고정 + 썸네일 3개 비교(가능 여부 업로드 시 확인). 썸네일 번호는 COO가 채웠다(2026-10-01): 썸1 벽 위의 세 장 / 썸2 사라진 네 글자 / 썸3 10월 9일.
 - KR판 제목(참고, 업로드 보류): 한글을 금지한 왕이 있었다: 훈민정음 반포 580년, 한글날 100년
 
 ## 2. 설명란
@@ -64,7 +64,7 @@ Chapters
 8:30 Try the twenty-four yourself (affiliate links)
 9:41 Wrap-up
 
-AI disclosure: The voice and images in this video were generated with AI. The script was written and fact-checked by a human editor. No film, drama, or museum footage is used; letters on screen are text overlays, not AI-generated images.
+AI disclosure: The voice and images in this video were generated with AI. No film, drama, or museum footage is used; letters on screen are text overlays, not AI-generated images.
 
 [2.3 Sources 블록을 여기에 붙임]
 ```
@@ -72,7 +72,7 @@ AI disclosure: The voice and images in this video were generated with AI. The sc
 - 첫 줄은 고정 고지 문구 그대로(CLAUDE.md). 상단 3줄 = 링크 3개(워크북·붓펜·허브), 모든 링크에 서브ID.
 - 요약 문단의 연도·숫자는 전부 대본(S03·S05·S06·S07·S08·S09·S10·S11·S13)에 있는 값. "only barbarians"는 S05 상소문 인용이므로 따옴표 유지.
 - 챕터 타임스탬프는 장면 헤더(S01~S13)의 시작 시각. TTS 실측 후 교체.
-- AI 고지 문장은 S13 마지막 줄과 같은 뜻("voice and images … AI; script … human editor"). "fact-checked by a human editor"는 대본 라벨에 있는 문장이므로 유지하되, PR에 대표 사실 검수 기록이 남아야 뒷받침된다(EP001은 이 문장을 뺐음, §8 메모).
+- AI 고지 문장은 S13 마지막 줄과 같은 뜻("voice and images … AI; script … human editor"). "fact-checked by a human editor"는 risk.md v1 FIX 8에 따라 삭제(2026-10-01, COO). 대표 검수 기록이 PR에 남으면 재삽입 검토하되, PR에 대표 사실 검수 기록이 남아야 뒷받침된다(EP001은 이 문장을 뺐음, §8 메모).
 - 가격 표기 없음(변동). Amazon 링크는 이메일·PDF·오프라인(인쇄물·QR 포함)에 쓰지 않는다. 설명란·고정 댓글·링크 허브(웹)만.
 - S11 "hosts / is holding"은 10/9 이후 업로드면 과거형으로 바뀐다(writer 담당). 설명란 요약은 행사 문장을 넣지 않아 영향 없음.
 
@@ -91,7 +91,7 @@ AI disclosure: The voice and images in this video were generated with AI. The sc
 챕터
 [KR 음성 실측 후 기입. EN 타임코드와 다름]
 
-AI 고지: 이 영상의 음성과 이미지는 AI로 생성했습니다. 대본은 사람이 쓰고 사실 관계를 확인했습니다.
+AI 고지: 이 영상의 음성과 이미지는 AI로 생성했습니다.
 
 [2.3 출처 블록을 여기에 붙임]
 ```

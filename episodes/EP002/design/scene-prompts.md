@@ -251,7 +251,7 @@ outlines, warm limited palette of night navy (#1B1F2A), chili red (#C8102E), pot
 1920x1080. No text, no letters, no logos, no real people or faces.
 ```
 Negative 추가: `play button, subscribe button, bell icon, YouTube UI, social media icons, QR code`
-텍스트 오버레이: `Links in the description` / `580 years · 100th Hangul Day` / 마지막 줄 `AI-generated voice & images · human-written, fact-checked script`(한 글자도 변경 금지).
+텍스트 오버레이: `Links in the description` / `580 years · 100th Hangul Day` / 마지막 줄 `AI-generated voice & images`(한 글자도 변경 금지).
 모션 메모: 상단 띠에 S02 타임라인 5점 회상(1446→2026, 각 0.3초) → 24자 자모가 화면 중앙으로 모여 `한글` 두 글자로 합쳐짐(모프, 2초) → 하단 절반은 YouTube 최종 화면 요소 자리로 비움. 댓글 질문 카드는 글자 쓰기 질문(구매 유도 아님).
 9:16 메모: 숏폼에서는 `한글` 합체 모션만 중앙 1:1에 쓰고 엔드카드 영역은 쓰지 않음. 숏폼 비후보.
 

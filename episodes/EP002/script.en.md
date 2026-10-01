@@ -12,7 +12,7 @@
 | 예상 길이 | 낭독문 **1,580단어**(COO `wc -w` 실측 2026-10-01, 수기 집계 1,590) ÷ 150wpm = **약 10.5분**. 헤더·[F] 태그·화면 메모·TTS 메모 제외. 추정치이며 `wc -w` 및 TTS 실측값으로 교체. 집계 방법: `##`·`- `로 시작하는 줄과 `---`, 메타 표를 제외한 본문에서 `\[F[0-9]+\]` 태그를 지운 뒤 `wc -w` |
 | 3줄 요약 | 1) 1504년 연산군은 자신을 비판한 한글 벽서 3장 때문에 한글 학습·교육·사용을 금지했다. 금지는 약 5개월 만에 풀렸지만, 1444년 최만리 상소("오랑캐만 제 글자를 가진다")에서 드러난 엘리트의 시선은 그 뒤 400년 넘게 이어졌다. 2) 한글은 '언문'으로 불리며 주로 여성·불교계에서 살아남다가 1894년 칙령으로 국문이 되고, 1912년경 '한글'이라는 이름을, 1926년 '가갸날'을 얻는다. 1940년 안동에서 발견된 해례본이 10월 9일이라는 날짜의 근거다. 3) 공휴일은 1949년 지정→1991년 제외→2013년 복귀. 2026년은 반포 580돌·한글날 100돌. 마무리는 "24자를 직접 써 보기": 한글 쓰기 워크북과 붓펜 세트(제휴, 고지 포함) |
 | 사용 제휴 상품 | **가안 — 대표 지정 필요.** A 한글 쓰기 워크북(획순·따라쓰기 포함, 일반명사) / B 붓펜(캘리그래피 펜) 세트(일반명사). 둘 다 S12에서만 언급, 서사 중간 언급 없음. 브랜드명 없음. 프로그램·수수료율은 marketer가 `marketing.md`에서 확정(Amazon Associates 가정 시 S12 두 번째 고지 문장 유지, 아니면 삭제). 서브ID 규칙 `ke-EP002-<상품>` |
-| 구두 고지 | S12 상품 언급 직전: "This video's description contains affiliate links. If you buy through them, this channel earns a commission at no extra cost to you." (commission 명시). AI 공개 라벨은 S13 마지막 줄: "The voice and images in this video were generated with AI; the script was written and fact-checked by a human editor." |
+| 구두 고지 | S12 상품 언급 직전: "This video's description contains affiliate links. If you buy through them, this channel earns a commission at no extra cost to you." (commission 명시). AI 공개 라벨은 S13 마지막 줄: "The voice and images in this video were generated with AI." |
 | 태그 규칙 | [F#] = research.md §3 팩트 시트 번호, 낭독하지 않음. "Here's my read / Here's the twist I like / I think"로 시작하는 문장은 해석이며 사실 주장이 아님 |
 | 단일 출처 처리 | F3(세종 서문): "attributed to Sejong" + "According to it". F7(언문·여성·불교계): "According to the historical accounts" + "mostly". F4(△ 화자 불일치): "the Haerye says / by the Haerye's own estimate"로 화자 특정 안 함. F9(△ 연도): "around 1912". F14(△ 연도 혼재): "1949 / 1991 / 2013" 시행연도 기준 |
 | 미사용 사실 | F11(1938~1942 식민기 탄압, 단일 출처·research가 "2차 출처 확보 후 사용"으로 지정 → 확보 전까지 제외. 확보되면 S09 끝에 1문장 추가 가능: "In 1942, members of the Korean Language Society were arrested; the alphabet's advocates paid for it personally." 사실 나열만, 평가 없음). F15(북한 1/15, 단일 출처 + 서사 기여 작음 → 제외). F6의 참수 조항(단일) 미사용. F5의 최만리 사망일(단일) 미사용. F8의 "11월 21일"(단일) → "November 1894"만. F10의 "1928년 개칭"(단일) → 연도 없이 "later renamed". F13의 환산 방식 세부(단일) 미사용. F17의 전시명 '가갸'(가제) 미사용 → "a special exhibition" |
@@ -93,7 +93,7 @@ The ban did not last. By December of the same year, the same king ordered the ca
 
 So what happened to the alphabet between 1504 and the modern era? Officially, not much. The court and the bureaucracy mostly went back to Chinese characters, and the alphabet picked up a nickname: eonmun, "vernacular writing," which, to my ear, ranked it below the real thing. [F7]
 
-But it did not disappear. According to the historical accounts, its early users were mostly the people the scholars' world had left out: women, and Buddhist communities. [F7] That's the pattern you'll see for the next few centuries: the alphabet survived not at the top of society, but underneath it. No one at court was promoting it. People simply used it, because it was easy. [F7]
+But it did not disappear. According to the historical accounts, its early users were mostly the people the scholars' world had left out: women, and Buddhist communities. [F7] That's the pattern you'll see for the next few centuries: the alphabet survived not at the top of society, but underneath it. It had no official backing. People simply used it, because it was easy. [F7]
 
 - 화면: 화면 상단은 한자가 빽빽한 공문서 일러스트(실제 문장 아님), 하단은 한글 편지와 불경 두루마리 일러스트. 두 층이 분리된 구도. 인물은 실루엣.
 - 텍스트: "언문 · eonmun · 'vernacular writing'" / "court: Chinese characters ↑ / everyday life: Hangul ↓".
@@ -139,7 +139,7 @@ It also gave Korea the date of its holiday. The postscript to the Haerye, writte
 
 And even then, the fight wasn't quite over. Hangul Day became a public holiday in 1949. [F14] In 1991, it was dropped from the list of public holidays. [F14] It took until 2013 for it to be restored as a day off. [F14] So the holiday that celebrates the alphabet has itself been created, cancelled, and brought back.
 
-Which brings us to this year. 2026 is the 580th anniversary of the promulgation of Hunminjeongeum, the 100th anniversary of Hangul Day, and also the 100th anniversary of Korean Braille, which was created in 1926. [F16] On October 9, Gwanghwamun Square in Seoul hosts a Hangul festival, and the National Hangeul Museum is holding a special exhibition for the occasion. [F17] And in Sejong City, there's a Hangul Run on the same day, with a 10.9-kilometre course: ten point nine, for the ninth of October. [F18]
+Which brings us to this year. 2026 is the 580th anniversary of the promulgation of Hunminjeongeum, the 100th anniversary of Hangul Day, and also the 100th anniversary of Korean Braille, which was created in 1926. [F16] On October 9, Gwanghwamun Square in Seoul hosted a Hangul festival, and the National Hangeul Museum is holding a special exhibition this autumn. [F17] And in Sejong City, there was a Hangul Run on the same day, with a 10.9-kilometre course: ten point nine, for the ninth of October. [F18]
 
 - 화면: 달력 아이콘에 "10/9"가 켜짐(1949) → 꺼짐(1991) → 다시 켜짐(2013). 이어 광화문광장 풍경 일러스트(세종대왕 동상은 저작권 확인 전 비포함 → 광장 바닥·현수막·군중 실루엣만), 러닝 코스 지도 모션 "10.9 km".
 - 텍스트: "public holiday 1949 → dropped 1991 → restored 2013" → "2026: 580th · 100th · 100th (Braille)" → "Oct 9 · Gwanghwamun Square" → "Hangeul Run · 10.9 km".
@@ -169,10 +169,10 @@ Links to the workbook and the brush pen set are in the description. Tell me in t
 
 If you want more stories about the history behind what you see in Korean films and shows, subscribe for the next one.
 
-The voice and images in this video were generated with AI; the script was written and fact-checked by a human editor.
+The voice and images in this video were generated with AI.
 
 - 화면: S02 타임라인 회상(1446 → 1504 → 1894 → 1926 → 2026) → 24자 자모가 "한글" 두 글자로 모이는 모션 → 엔드카드.
-- 텍스트: "Links in the description" / "580 years · 100th Hangul Day" / 마지막 줄 "AI-generated voice & images · human-written, fact-checked script".
+- 텍스트: "Links in the description" / "580 years · 100th Hangul Day" / 마지막 줄 "AI-generated voice & images".
 - 장면 메모: AI 공개 라벨 문장은 낭독과 자막 모두 그대로. 댓글 질문은 구매 유도 아님(글자 쓰기 질문).
 
 ---
