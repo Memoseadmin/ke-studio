@@ -13,6 +13,8 @@ Phase 5 성공 기준 (시작 전에 표로 다시 적고, 끝에 자가 검증�
 4. ep/EP003(작업 브랜치에서 분기)에 researcher가 research.md를 만들었다: 구매 의도형 소재 10개, 1위 선정, 핵심 사실 20개 교차 확인, 건강·금융·법률 0, 제외 소재와 이유.
 5. 세션 종료 절차(HANDOFF·NEXT_PROMPT 갱신, 전부 푸시, 새 세션 안내 블록)를 마쳤다.
 
+추가 맥락: docs/TOOLING_TTS_IMAGE.md(공급자 3+3안)와 docs/OPEN_GENERATIVE_AI_SETUP.md(muapi-cli 설치 상태)를 읽어라. 대표가 공급자를 골랐으면 그 키로, 안 골랐으면 키가 SET인 공급자로 EP002 S01 장면 1개의 음성·이미지 샘플을 먼저 만들어 render/sample/에 두고 보고하라(MUAPI_API_KEY가 SET이면 `~/.venvs/muapi/bin/muapi image generate … --download render/sample` 1장 + 숏폼용 image-to-video 1개도 시험, 비용을 publish.log가 아닌 render-log.md에 기록).
+
 첫 3개 작업
 1. `bash scripts/setup.sh` 실행 → PR #1·#2 라벨·코멘트 확인 → 환경변수 SET/UNSET 확인 → 키가 있으면 EP001 real 렌더를 producer에게 백그라운드로 먼저 맡기고, 없으면 건너뜀.
 2. 반려 코멘트가 있으면 해당 직원(writer/designer/marketer/legal-reviewer)에게 그 항목만 재작업 지시 → ep 브랜치 커밋·푸시 → PR 코멘트.

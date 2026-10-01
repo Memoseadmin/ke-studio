@@ -12,6 +12,12 @@ KE Studio: Korea Explained 채널의 기획→대본→디자인→마케팅→�
 - 대표 답변(Phase 4 채팅): **EN만 진행, KR판 보류**. 제휴 구조 설명함(Amazon Associates 가입은 대표 몫, 링크는 아직 자리표시자).
 - 영상 파일은 어디에도 없다. EP001 재렌더는 `episodes/EP001/render-input/*.json` + ffmpeg-assemble·shorts-cut.
 
+## Phase 4 후반 추가 작업 (대표 요청, 같은 세션)
+- 대표 답: EN만 진행·KR 보류. 제휴 구조 설명(Amazon Associates 가입은 대표 몫).
+- `docs/TOOLING_TTS_IMAGE.md`: TTS·이미지 공급자 3+3안(출처 61건). COO 추천 = ElevenLabs Creator + Gemini Nano Banana 2(≈48,000원/월) / 가성비 = Google Chirp3 + Recraft V4(≈8,000원/월). 비주얼 방향 "민화 플랫 × 한지 질감". **대표 선택 대기.**
+- `docs/OPEN_GENERATIVE_AI_SETUP.md`: 대표가 준 설치 템플릿을 클라우드 기준으로 수행. muapi-cli 0.2.7 설치(venv, setup.sh 반영), `muapi image models` 103개 출력 ✅. muapi에 TTS 없음. 계정·키 없어 생성 검증 ❌, 웹 앱 빌드는 분류기 차단. ENV.md에 `MUAPI_API_KEY` 후보 행.
+- `scripts/youtube_auth.py`: 대표 PC에서 1회 실행해 YOUTUBE_* 3개를 얻는 스크립트(미테스트, 실행은 대표 PC).
+
 ## 완료 (Phase 4, 성공 기준 5/5)
 1. ep/EP002 writer: script.en.md S01~S13, 낭독문 1,580단어(wc -w 실측), 사실 18건 전부 F번호 출처, 금지 수치 0, 제휴 2개 S12에만, 고지·AI 라벨 낭독 포함. script.kr.md 1:1.
 2. designer: 썸네일 3안 목업(WHO WROTE THESE? / 4 LETTERS VANISHED / WHY OCTOBER 9?) + scene-prompts S01~S13. marketer: 제목 5안, EN 설명란(첫 줄 고지), 태그 15, 숏폼 5개(42~55초), 캡션, 캐러셀 7장, 제휴 표(Amazon 4.5%/4.0%).
@@ -29,7 +35,7 @@ KE Studio: Korea Explained 채널의 기획→대본→디자인→마케팅→�
 
 ## 대표 결정 대기
 1. ~~PR #1·#2 승인~~ 완료. 이제 업로드를 막는 건 키와 Amazon 계정뿐
-2. 키 입력: TTS·이미지 공급자 + TTS_API_KEY·IMAGE_API_KEY, YOUTUBE_CLIENT_ID/SECRET/REFRESH_TOKEN. TTS가 ElevenLabs면 elevenlabs-tts 설치
+2. **공급자 선택**(TOOLING_TTS_IMAGE.md 1안 또는 가성비안) → 키 입력: TTS_API_KEY·IMAGE_API_KEY(+ 선택 MUAPI_API_KEY), YOUTUBE_* 3개(scripts/youtube_auth.py). ElevenLabs면 elevenlabs-tts 설치. muapi 계정은 대표가 사이트에서 가입(OTP 메일)
 3. Amazon Associates 가입·트래킹 ID(가입 후 180일 내 3건 판매 조건 → 첫 업로드 직전 권장), 제휴 상품 확정(EP001 멀티팩·양은냄비, EP002 워크북·붓펜), 링크 허브
 4. EP002 썸네일 1안 "WHO WROTE THESE?" 유지 여부, F11 식민기 1문장 추가 여부
 5. (이월) 인스타 캐러셀 2주 테스트, risk #9 publisher 게이트 확장, 지정 폰트 setup.sh 추가, PLAN.md 비진정성 정책 날짜 정정, PLAN.md 결정 1~4, 보류 스킬 nano-banana·ScrapeCreators
