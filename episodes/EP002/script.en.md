@@ -63,7 +63,7 @@ What matters for our story is that the alphabet was built to be learned quickly,
 
 - 화면: 검은 배경에 28자 자모가 격자로 등장(획 순서대로 그려지는 모션). 현행 24자 흰색, 폐지 4자 "ㆁ ㅿ ㆆ ㆍ" 회색으로 뒤늦게 켜졌다 흐려짐. 글자는 프로그램 텍스트 오버레이(AI 생성 이미지에 글자 넣지 않음).
 - 텍스트: "17 consonants + 11 vowels = 28" → "today: 24" → 회색 4자 옆 "no longer used".
-- 장면 메모: 자모 글꼴은 상용 라이선스 확인. 폐지 4자는 유니코드 ㆁ(U+318D) ㅿ(U+317F) ㆆ(U+318E) ㆍ(U+318D 아래아)로 표시 가능한 글꼴 필요. 이 장면이 숏폼 "사라진 네 글자" 컷의 원본.
+- 장면 메모: 자모 글꼴은 상용 라이선스 확인. 폐지 4자는 유니코드 ㆁ(U+3181) ㅿ(U+317F) ㆆ(U+3186) ㆍ(U+318D 아래아)로 표시 가능한 글꼴 필요. 이 장면이 숏폼 "사라진 네 글자" 컷의 원본.
 
 ## S05 — 1444: "Only barbarians have their own script" | 2:40–3:40 | 151 words
 
