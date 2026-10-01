@@ -11,12 +11,16 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 | legal | https://github.com/anthropics/knowledge-work-plugins (legal/) | da38ec1ee89d41e5380e652a97382695003396e7 | Apache-2.0 | 9 |
 | marketing-skills | https://github.com/coreyhaines31/marketingskills | 5b2c0007766c6a1cf1d53fd8fc73e979e0821022 | MIT | 50 |
 | social-media-skills | https://github.com/charlie947/social-media-skills | 8cefb5b6d03757885faa6918bd8bfaef202a83db | MIT | 17 |
+| design | https://github.com/anthropics/knowledge-work-plugins (design/) | da38ec1ee89d41e5380e652a97382695003396e7 | Apache-2.0 | 7 |
+| example-skills | https://github.com/anthropics/skills (skills/canvas-design, skills/theme-factory만) | 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4 | Apache-2.0 | 2 |
 
 ## 포함 스킬
 - **finance**: audit-support close-management financial-statements journal-entry journal-entry-prep reconciliation sox-testing variance-analysis 
 - **legal**: brief compliance-check legal-response legal-risk-assessment meeting-briefing review-contract signature-request triage-nda vendor-check 
 - **marketing-skills**: ab-testing ad-creative ads ai-seo analytics aso attribution churn-prevention co-marketing cold-email community-marketing competitor-profiling competitors content-strategy copy-editing copywriting cro customer-research directory-submissions emails events free-tools image influencer-marketing launch lead-magnets marketing-council marketing-ideas marketing-loops marketing-plan marketing-psychology offers onboarding paywalls popups pricing product-marketing programmatic-seo prospecting public-relations referrals revops sales-enablement schema seo-audit signup site-architecture sms social video 
 - **social-media-skills**: analytics-dashboard content-matrix gemini-carousel gemini-infographic graphic-designer hook-generator newsletter-voice niche-research pinned-comment post-formatter post-scorer post-writer profile-optimizer quote-post reels-scripting voice-builder youtube-thumbnail 
+- **design**: accessibility-review design-critique design-handoff design-system research-synthesis user-research ux-copy (폴더명 예: `design-design-system`)
+- **example-skills**: canvas-design theme-factory (anthropics/skills 마켓플레이스의 `example-skills` 플러그인 중 이 2개만)
 
 ## 직원별 지정 스킬 (.claude/agents/*.md의 skills:)
 | 직원 | 스킬 |
@@ -49,3 +53,22 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 - **legal**: 계약·규정 점검 도구. 리스크 담당이 협찬 계약서와 업로드 전 고지 문구·저작권을 점검할 때 쓴다.
 - **marketing-skills**: 카피·마케팅 도구 50종. 작가·마케터가 제목, 설명란, 대본 문장을 다듬을 때 쓴다.
 - **social-media-skills**: SNS 도구 17종. 마케터·리서처가 숏폼 훅, 캡션, 썸네일 아이디어, 주간 화제 수집에 쓴다.
+- **design**: 디자인 점검 도구 7종. 디자이너가 썸네일·화면 비평, 디자인 규칙 정리, 짧은 문구(UX 카피) 다듬기에 쓴다.
+- **example-skills**: canvas-design(글자 중심 썸네일·카드뉴스를 PNG/PDF로, 무료 글꼴 포함)과 theme-factory(색·글꼴 테마 10종).
+
+## Phase 1-0 추가 설치 (2026-10-01, 대표 OK: SKILL_CANDIDATES "OK 시 순서" 1번)
+- 접두어는 기존 규칙(플러그인 매니페스트의 plugin `name`, 예: marketingskills 저장소 → `marketing-skills`)을 따름. canvas-design·theme-factory는 anthropics/skills 마켓플레이스의 `example-skills` 플러그인 소속.
+- design: 팩 폴더에 LICENSE 없음. 저장소 루트 LICENSE(Apache-2.0)만 있어 기존 팩처럼 이 표에만 기록. `.mcp.json`·`CONNECTORS.md`·`README.md`는 복사하지 않음. canvas-design·theme-factory는 스킬 폴더 안 `LICENSE.txt`(Apache-2.0)와 글꼴 OFL 고지문까지 원본 그대로 포함.
+- 세 팩 모두 `commands/`·`agents/` 없음, 필요한 API 키 없음, 실행 스크립트 없음, setup.sh 변경 없음.
+
+| 설치 폴더 | 파일 수 | `diff -r` | 비밀 파일 | Skill 도구 호출 |
+|---|---|---|---|---|
+| design-{accessibility-review, design-critique, design-handoff, design-system, research-synthesis, user-research, ux-copy} | 7 × 1 | 차이 0 | 없음 | 새 세션에서 로드 예정(설치 담당 세션에 Skill 도구 없음) |
+| example-skills-canvas-design | 83 | 차이 0 | 없음 | 새 세션에서 로드 예정 |
+| example-skills-theme-factory | 13 | 차이 0 | 없음 | 새 세션에서 로드 예정 |
+
+### 보류 (복사하지 않음, 대표 판단 필요)
+| 후보 | 이유 | 선택지 |
+|---|---|---|
+| mvanhorn/last30days-skill @5103ba478b380552207a3754b74c7655d64208cd (MIT) | 스킬 폴더(135파일, 17MB)에 `assets/claude-code-rap.mp3`(데모용) 포함 → 저장소 `.gitignore`의 `*.mp3`에 걸려 커밋 시 빠짐 = 원본 그대로 원칙과 "오디오 커밋 금지"가 충돌 | ① 그 파일만 예외로 강제 커밋 ② mp3 제외를 예외로 기록하고 설치 ③ 설치 안 함. 설치 시 Python ≥3.12 필요, 키는 전부 선택(예: `SCRAPECREATORS_API_KEY`, `XAI_API_KEY`, `OPENAI_API_KEY`, `BRAVE_API_KEY`) |
+| glebis/claude-skills `elevenlabs-tts` @7524dff0c54bb85645b6bb2b0c6c148f4f7c3e29 (MIT) | 스킬 폴더에 `.env.example` 포함(비밀 파일 패턴 `.env*`, `.gitignore`의 `.env.*`에도 걸림, 내용은 열어 보지 않음). 폴더 구조도 `skills/*/`가 아니라 폴더 자체가 플러그인(`.claude-plugin/`, 자체 `.gitignore` 포함) | ① `.env.example` 제외를 예외로 기록하고 설치 ② 설치 안 함. 필요 키 `ELEVENLABS_API_KEY`, pip `elevenlabs==2.23.0`, `python-dotenv==1.0.0` |

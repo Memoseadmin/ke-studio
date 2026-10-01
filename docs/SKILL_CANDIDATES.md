@@ -9,12 +9,12 @@
 | FFmpeg 조립 | affaan-m/everything-claude-code `video-editing` @c70874f | MIT | ElevenLabs·fal(선택) | 컷 편집→Remotion→보이스까지 넓은 가이드. 우리 파이프라인엔 과함 | △ 참고만 |
 | FFmpeg 조립 | **직접 작성** `ffmpeg-assemble` | 자체 | 없음 | 장면 이미지+TTS+자막 → long.mp4. 필요한 것만 | ✅ |
 | 숏폼 자동 컷 | **직접 작성** `shorts-cut` | 자체 | 없음 | marketing.md 컷 플랜(S번호 구간) → 9:16 60초 5개. 쓸 만한 MIT 기성품 못 찾음 | ✅ |
-| 썸네일·이미지 | anthropics/skills `canvas-design` @8a1541c | Apache-2.0 | 없음 | 글자 중심 썸네일·카드뉴스를 PNG로. 키 불필요 | ✅ |
+| 썸네일·이미지 | anthropics/skills `canvas-design` @8a1541c | Apache-2.0 | 없음 | 글자 중심 썸네일·카드뉴스를 PNG로. 키 불필요 | ✅ 설치됨(2026-10-01) |
 | 썸네일·이미지 | glebis/claude-skills `nano-banana` @7524dff | MIT | `GEMINI_API_KEY` | 사진풍 이미지 생성. **원작자의 암호화된 `secrets.enc.yaml`이 들어 있어 그 파일은 복사 제외 필요**(원본 그대로 원칙과 충돌 → 대표 판단) | △ |
 | 썸네일·이미지 | kkoppenhaver/cc-nano-banana @3b13699 | MIT | Gemini CLI 확장 | Gemini CLI 설치 필요. 클라우드 세션엔 번거로움 | ❌ |
 | TTS | glebis/claude-skills `elevenlabs-tts` @7524dff | MIT | `ELEVENLABS_API_KEY` | 대본→음성 파일. 스크립트·requirements 포함 | ✅ (키 발급 후) |
-| 디자인 | anthropics/knowledge-work-plugins `design` 팩(7) @da38ec1 | Apache-2.0 | 없음 | design-system, design-critique, ux-copy | ✅ |
-| 디자인 | anthropics/skills `theme-factory` | Apache-2.0 | 없음 | 색·폰트 테마 프리셋 10종 | ✅ |
+| 디자인 | anthropics/knowledge-work-plugins `design` 팩(7) @da38ec1 | Apache-2.0 | 없음 | design-system, design-critique, ux-copy | ✅ 설치됨(2026-10-01) |
+| 디자인 | anthropics/skills `theme-factory` | Apache-2.0 | 없음 | 색·폰트 테마 프리셋 10종 | ✅ 설치됨(2026-10-01) |
 | 트렌드 | mvanhorn/last30days-skill @5103ba4 | MIT | Reddit·HN 무료, YouTube·X·TikTok 유료 키 | 지난 30일 여론 수집. 첫 실행 setup 마법사는 금지 → scripts/setup.sh로 대체 | ✅ |
 | 트렌드 | ScrapeCreators/social-media-research-skills(13) @64ba7b4 | MIT | `SCRAPECREATORS_API_KEY`(유료) | trend-discovery, outlier-post-finder, comment-mining | △ 키 발급 후 |
 | 트렌드 | terryds/google-trends-skill @e578606 | **없음** | 없음 | 복사 불가 | ❌ |
