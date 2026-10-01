@@ -1,0 +1,29 @@
+# 비밀키
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+client_secret*.json
+token*.json
+
+# 렌더·미디어 (커밋 금지)
+render/
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.avi
+*.mp3
+*.wav
+*.m4a
+*.aac
+*.flac
+*.ogg
+
+# 임시
+tmp/
+.cache/
+__pycache__/
+node_modules/
+.DS_Store
