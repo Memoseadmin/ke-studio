@@ -1,40 +1,42 @@
-# HANDOFF — 2026-10-01 (Phase 1-0 추가 스킬 설치 완료)
+# HANDOFF — 2026-10-01 (Phase 1 EP001 검수 PR 완료)
 
 ## 목표
 KE Studio: Korea Explained 채널의 기획→대본→디자인→마케팅→업로드를 에이전트로 자동화. 수익 = 제휴·협찬·커머스.
 첫 게이트: 링크 클릭률 1%, 첫 제휴 매출, 월 비용 20만원 이하(docs/PLAN.md).
 
 ## 현재 상태
-- 작업 브랜치 `claude/admiring-clarke-beyyoi` (기본 브랜치 `claude/keen-thompson-bnikrl`보다 2커밋 앞섬. 새 세션은 이 브랜치를 체크아웃해서 시작).
-- Phase 0 성공 기준 3/3 통과. Phase 1-0(추가 스킬 설치)은 대표 승인 범위 안에서 완료. 그중 1건은 보류.
-- 직원 9명: `.claude/agents/`. 스킬 94개: `.claude/skills/` (기존 84 + design 7 + canvas-design + theme-factory + last30days). 등록부 docs/SKILLS.md.
-- ffmpeg 6.1.1 있음. 이 VM의 Python은 3.11 → last30days를 쓰려면 새 세션에서 `bash scripts/setup.sh` 먼저 실행(3.12 설치).
-- 환경변수는 GITHUB_TOKEN만 SET. YouTube·TTS·이미지 키는 UNSET. last30days 키는 모두 선택(ENV.md).
+- 작업 브랜치 `claude/admiring-clarke-beyyoi`(새 세션은 이걸 체크아웃). 에피소드 브랜치 `ep/EP001`은 여기서 분기.
+- **EP001 검수 PR 열림: https://github.com/Memoseadmin/ke-studio/pull/1** (base = 작업 브랜치). 대표 `approved` 라벨/반려 코멘트 대기.
+- EP001 = "Why Ramyeon Keeps Showing Up on Korean Screens"(구매 의도형, 신라면 40주년 2026-10). risk.md v2: BLOCK 0 / FIX 3 / PASS 7.
+- 환경변수: GITHUB_TOKEN만 SET. YouTube·TTS·이미지 키 UNSET → 렌더·업로드 불가 상태.
+- setup.sh 실행 시 /usr/bin/python3.12 사용 가능(last30days는 `LAST30DAYS_PYTHON=/usr/bin/python3.12`).
 
-## 완료
-- Phase 0: CLAUDE.md, .gitignore, PLAN, ENV, setup.sh, 에이전트 9명, 스킬 팩 4개, EP000 더미 전 과정, SKILL_CANDIDATES.md.
-- Phase 1-0 (f8521cb, 1d59692): 대표 OK → skill-installer가 복사 설치. 5종 모두 고정 SHA 원본과 `diff -r` 차이 0.
-  - design 팩 7개(`design-*`), `example-skills-canvas-design`, `example-skills-theme-factory`: Apache-2.0. 세션 스킬 목록에 등록 확인.
-  - `last30days-last30days` @5103ba4: MIT. 135파일·17MB. 대표 결정으로 데모 mp3 1개 강제 커밋(SKILLS.md에 예외 기록). setup.sh 끝에 7줄 추가.
-  - elevenlabs-tts: 보류(TTS 공급자 결정 후). `.env.example` 포함 문제는 그때 다시 판단.
+## 완료 (Phase 1, 성공 기준 4/4)
+- last30days 엔진 6회 실행 → `episodes/EP001/trends-last30days.md`(19건, Reddit·YouTube 검색만 동작).
+- researcher: 소재 10개(구매 7/문화 3), 팩트 20개, 출처 S1~S47. 라면 라이브러리 2026 운영 확인.
+- writer: script.en.md(1,478단어 ≈ 9.9분)·script.kr.md(956어절 ≈ 9~10분 추정), S01~S12, 사실마다 [F#] 태그.
+- designer: design-system.md, 썸네일 3안(Pillow 목업 PNG + thumbs-compare.png), scene-prompts.md S01~S12, make_thumbs.py.
+- marketer: 제목 5안, 설명란(고지 첫 줄 EN/KR), 태그, 고정 댓글, 숏폼 5, 캡션·게시 시각(가설), 제휴 표, **인스타 캐러셀 1안(기본값)**.
+- legal-reviewer: v1 BLOCK 1(KR 쿠팡 고지가 S11에만) → writer가 S02·S12에 낭독+자막 추가, marketer가 Sources 3개·AI 문구 수정 → v2 BLOCK 0. 사실 39개: 출처 38 / 미검증 1 / 출처 없음 0.
 
 ## 실패한 시도와 이유
-- 스킬을 원래 이름으로 호출 → Unknown. 이 환경은 **폴더명(팩 접두어 포함)** 으로 등록. 예: `design-design-system`, `example-skills-canvas-design`.
-- 복사 직후 폴더명도 Unknown일 수 있음 → 세션 중 목록 갱신 후 등록됨(이번엔 바로 등록).
-- skill-installer 서브에이전트에는 Skill 도구가 없음 → 등록 확인은 메인 세션이 스킬 목록으로 한다.
-- 원본 그대로 원칙이 다른 규칙과 충돌: last30days mp3(오디오 금지), elevenlabs-tts `.env.example`(비밀 파일 패턴) → 둘 다 대표 판단으로 처리.
-- `gh pr list` GraphQL 403 → GitHub MCP 도구 사용.
-- 소셜 팩 post-writer·post-formatter는 LinkedIn 전용, hook-generator는 낚시형 → marketer.md에 우선순위 규칙.
-- 라이선스 없는 youtube-uploader, google-trends-skill은 복사 불가 → 직접 작성 예정.
+- researcher에는 Bash가 없어 last30days 실행 불가 → general-purpose 에이전트로 엔진 실행, 결과 파일을 researcher에 입력.
+- last30days: X·TikTok·IG는 키 필요로 스킵, YouTube 자막은 yt-dlp 봇 확인·429로 실패, Jobs 502. Reddit 본문 직접 열람도 차단.
+- partners.coupang.com 403 → 쿠팡 고지 공식 문구 미검증(KR판 6곳에 사용 중, 대표 대조 후 일괄 교체).
+- 이미지 생성 키 없음 → 썸네일은 레이아웃 목업(MOCKUP 표기). 지정 폰트(Anton·Black Han Sans·Pretendard, OFL) 미설치.
+- "Every K-Drama" 제목: 사례가 영화 2·애니 1이라 부정확 → "Korean Screens"로 변경(대표 확인 필요).
+- 서브에이전트 산출물은 미추적 상태로 남음 → stop hook 경고. 직원 작업마다 메인이 바로 커밋·푸시.
 
 ## 대표 결정 대기
-1. 인스타 캐러셀(하루 1개, 5~7장) 2주 테스트를 Phase 1에 먼저 넣을지 (기본값: marketing.md에 캐러셀 1안만 추가)
-2. PLAN.md "결정이 필요한 사항" 1~4
-3. 환경변수 입력: YOUTUBE_CLIENT_ID/SECRET/REFRESH_TOKEN(Phase 2 전), 이미지·TTS 공급자 선택 → TTS가 ElevenLabs면 elevenlabs-tts 설치
-4. 보류 스킬: nano-banana(시크릿 파일), ScrapeCreators(유료 키)
+1. PR #1: 승인(approved) 또는 ①~⑧ 번호로 반려 코멘트
+2. 제휴 상품 지정(가안 A 라면 멀티팩·B 양은냄비), "이달의 상품 목록" 작성, Amazon·쿠팡 계정/트래킹 ID, 링크 허브
+3. KR판 별도 업로드 vs EN 영상에 KR 설명 / 제목 "Korean Screens" 확인
+4. 환경변수: 이미지·TTS 공급자와 키, YOUTUBE_CLIENT_ID/SECRET/REFRESH_TOKEN → TTS가 ElevenLabs면 elevenlabs-tts 설치
+5. PLAN.md "비진정성 정책 2026-07-16 개정" 날짜가 YouTube 공식 페이지에서 미확인(최신 2025-07-15) → 문서 정정 여부
+6. design-system.md 공용 위치(docs/로 이동?) · 폰트 3종 setup.sh 추가 · Amazon 트래킹 ID 100개 상한 운용
+7. (이월) PLAN.md 결정 1~4, 보류 스킬 nano-banana·ScrapeCreators(이번에도 보류 유지)
 
-## 다음 할 일 (Phase 1 — EP001 반자동 검수 PR)
-1. `bash scripts/setup.sh` 실행 → researcher가 last30days·niche-research로 EP001 소재 10개 → 1개 선정(구매 의도형, 트렌드 근거·출처)
-2. writer → designer(canvas-design·theme-factory 사용 가능) → marketer → legal-reviewer 순으로 실행
-3. 브랜치 ep/EP001(이 브랜치에서 분기) 푸시, 검수 시트 ①~⑧ PR 생성
-4. 직접 작성 스킬(youtube-upload, ffmpeg-assemble, shorts-cut, kr-trend-radar)은 Phase 1~2에서 필요해질 때 작성
+## 다음 할 일 (Phase 2 — EP001 피드백 반영 → 렌더 → 승인 시 업로드)
+1. PR #1 상태 확인: 반려 코멘트 항목만 재작업 → legal 재점검 → 푸시. approved면 다음으로.
+2. producer: 키가 있으면 TTS·장면 이미지·롱폼·숏폼 5 렌더 + 라이선스·생성 기록(risk FIX 5). 없으면 목업 슬라이드+자막 프리뷰 렌더와 필요한 키 목록.
+3. publisher: approved 라벨이 있을 때만 YouTube 비공개 업로드(키 없으면 수동 업로드 패키지). 필요 시 직접 작성 스킬(ffmpeg-assemble·shorts-cut·youtube-upload).
