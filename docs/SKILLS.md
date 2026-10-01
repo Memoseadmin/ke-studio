@@ -31,3 +31,21 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 
 ## 연결 검증
 (아래 검증 결과 섹션 참조)
+
+### 결과 (2026-10-01, EP000)
+| 팩 | Skill 도구 호출 | 더미 산출물 |
+|---|---|---|
+| finance | `finance-variance-analysis` → "Launching skill" ✅ | episodes/EP000/finance-variance.md |
+| legal | `legal-review-contract` → "Launching skill" ✅ | episodes/EP000/legal-contract-review.md |
+| marketing-skills | `marketing-skills-copywriting` → "Launching skill" ✅ | episodes/EP000/titles.md |
+| social-media-skills | `social-media-skills-post-writer`, `-hook-generator`, `-post-formatter` → "Launching skill" ✅ | episodes/EP000/social-captions.md |
+
+- 원래 이름(`variance-analysis` 등)은 "Unknown skill". 복사 직후엔 폴더명도 Unknown이었고, 세션 스킬 목록이 갱신된 뒤 성공(새 세션에선 시작부터 로드됨).
+- `/help` 확인은 해당 없음: 네 팩 모두 commands/ 없음, `/help`는 클라우드 세션 미지원. 대신 Skill 도구 호출 기록으로 검증.
+- 84개 모두 SKILL.md·`name:` 보유, `name` 중복 없음, 실행 스크립트 없음(episodes/EP000/skills-check.md).
+
+## 한눈에 보기 (비개발자용)
+- **finance**: 숫자 분석 도구. 애널리스트가 매주·매월 "계획 대비 실제 매출이 왜 다른지"를 쪼개 볼 때 쓴다.
+- **legal**: 계약·규정 점검 도구. 리스크 담당이 협찬 계약서와 업로드 전 고지 문구·저작권을 점검할 때 쓴다.
+- **marketing-skills**: 카피·마케팅 도구 50종. 작가·마케터가 제목, 설명란, 대본 문장을 다듬을 때 쓴다.
+- **social-media-skills**: SNS 도구 17종. 마케터·리서처가 숏폼 훅, 캡션, 썸네일 아이디어, 주간 화제 수집에 쓴다.

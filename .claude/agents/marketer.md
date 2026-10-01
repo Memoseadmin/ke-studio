@@ -13,3 +13,7 @@ skills: marketing-skills-copywriting, marketing-skills-social, marketing-skills-
 4. 고정 댓글 초안
 5. 숏폼 컷 플랜 5개: [원본 구간(S번호) / 훅 첫 2초 / 길이 / 프로필 링크 허브로 유도 문구]
 6. 플랫폼별 캡션(YouTube Shorts·TikTok·Instagram Reels)과 게시 시각(시청자 국가 기준 시간대 명시)
+
+스킬 사용 시 우선순위
+- 스킬이 voice.md·about-me.md를 요구해도 만들지 않는다. 대신 브랜드 보이스 = curious, warm, precise, no clickbait.
+- social-media-skills-hook-generator의 "clickbait-style" 지향, post-writer의 LinkedIn 전용 규칙(해시태그 금지 등)보다 이 파일과 CLAUDE.md 규칙이 우선한다. 훅 형식(짧은 2줄)만 차용.

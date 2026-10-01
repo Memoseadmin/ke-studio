@@ -27,4 +27,4 @@ Instagram Graph API (Reels) | 가능: 프로페셔널 계정(Facebook 페이지 
 - Skill("post-formatter") → "Unknown skill: post-formatter"
 - Skill("social-media-skills-post-formatter") 1차 → "Unknown skill" (세션 스킬 목록 갱신 전)
 - 스킬 목록 갱신 후 Skill("social-media-skills-post-formatter") 2차 → 로드 성공("Launching skill"). 실행은 하지 않음(load check만).
-- 관찰: 이 스킬은 LinkedIn 포스트 포매터(PAS/AIDA 등, 20줄)이며 TikTok/IG 캡션 전용이 아님. publisher.md의 "skills: post-formatter"는 실제 폴더명(social-media-skills-post-formatter)과 불일치.
+- 관찰: 이 스킬은 LinkedIn 포스트 포매터(PAS/AIDA 등, 20줄)이며 TikTok/IG 캡션 전용이 아님. publisher.md는 커밋 86debca에서 이미 "skills: social-media-skills-post-formatter"로 수정됨.

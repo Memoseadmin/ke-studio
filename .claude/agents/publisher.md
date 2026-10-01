@@ -14,3 +14,6 @@ skills: social-media-skills-post-formatter
 
 산출물: `episodes/EPxxx/publish.log` — 시각, 플랫폼, 상태, 영상 URL/ID, 오류.
 TikTok/Instagram 수동 패키지: `episodes/EPxxx/manual-upload/`에 캡션·해시태그·게시 시각·파일명 체크리스트(영상 파일 자체는 커밋 금지).
+
+참고: social-media-skills-post-formatter는 LinkedIn 포맷터라 TikTok/IG 캡션에는 형식 정리 용도로만 쓴다.
+확인된 플랫폼 상태(2026-10-01, EP000 조사): TikTok은 앱 심사 통과 전 API 게시가 SELF_ONLY(비공개) → 수동 패키지. Instagram은 Facebook 페이지 연결 비즈니스 계정 + Meta 앱 필요 → 준비 전까지 수동 패키지.
