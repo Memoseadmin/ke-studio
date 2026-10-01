@@ -13,6 +13,7 @@
 | 사용 제휴 상품 | **가안 — 대표 지정 필요.** A 한국 인스턴트 라면 혼합 멀티팩(Amazon Associates, Grocery 1% [S39]) / B 노란 알루미늄 라면 냄비(양은냄비)(Amazon Associates, Kitchen 4.5% [S39]). C·D·E 미사용. 서브ID는 marketer 규칙 `ke-EP001-<상품>`. 수수료율은 2026-10-01 열람값, 추정치 |
 | 구두 고지 | S11 상품 언급 직전(commission)·직후(Amazon Associate 필수 문구 + commission). AI 고지는 S12 마지막 줄 |
 | 수정 기록 | 2026-10-01 risk.md 수정 요청 #5: S08에는 특정 지점이 지금 열려 있다고 단정하는 문장이 없어 낭독·텍스트를 바꾸지 않음(현재형은 체인 단위 "there's the Ramyeon Library" 1문장뿐이고 홍대 1호점은 Dec 2023 개점·As of 2024의 과거 서술). 체인 운영 여부는 research.md #19 운영 현황 [S43][S44][S45]. #1(1c)은 KR판 대상이라 EN은 바꾸지 않음. 낭독문 1,478단어·9.85분 그대로(1,200~1,700 범위 안) |
+| 수정 기록 | 2026-10-01 risk.md §6 #8(v3 추적): S06 낭독·자막의 그룹명 "Huntrix" → Netflix 공식 표기 "HUNTR/X"(Tudum 기준, legal 확인). TTS 발음 'Huntrix' 메모를 S06·scenes.en.json S06 note에 추가. 단어 수 변동 없음 |
 | 태그 규칙 | [F#] = research.md §3 팩트 시트 번호, 낭독하지 않음. "Here's my theory / To me / what I find interesting"로 시작하는 문장은 해석이며 사실 주장이 아님 |
 | 미사용 사실 | F8(대본 사용 금지 일화), F18(실제 출시 미검증이라 뺐음). 미검증 세부 주장(F6 출시 일자, F7 재회 드라마 방영 시기·플랫폼, F13 조회수·속편 연도, F14 "2013~2020 1위", F20 뚜껑 습관)도 쓰지 않음 |
 | EP000과 차별 | 매운맛·브랜드 비교·리콜 각도 없음. F2는 "beef soup에서 출발"까지만 쓰고 맵기 서술은 뺐음 |
@@ -80,7 +81,7 @@ And travel it did. On February 10 and 11, 2020, right after the Academy Awards, 
 
 ## S06 — Scene three: KPop Demon Hunters | 3:53–5:01 | 170 words
 
-Scene three is animated. KPop Demon Hunters is the most-watched film in Netflix history. [F13] Early in the film, the three members of Huntrix, Rumi, Mira and Zoey, eat cup ramyeon. [F11]
+Scene three is animated. KPop Demon Hunters is the most-watched film in Netflix history. [F13] Early in the film, the three members of HUNTR/X, Rumi, Mira and Zoey, eat cup ramyeon. [F11]
 
 Think about that for a second. It's a film with "demon hunters" right in the title, and it still makes time for instant noodles. It's the same shortcut as before: in a story that is anything but ordinary, a cup of ramyeon is a moment of ordinary life.
 
@@ -89,7 +90,7 @@ Again, the real world answered. Nongshim made a limited-edition cup ramyeon six-
 The effect showed up at the convenience store counter, too. As reported by the Korea Herald, in July and August 2025, amid the buzz around the film, payments by foreign customers at CU convenience stores rose 185 percent. [F12] By category, ramyeon was up 99 percent. Gimbap, the seaweed rice roll, was up 231 percent. [F12] So the noodles weren't the biggest winner, but they made the list.
 
 - 화면: 무지 컵라면 3개가 나란히 김을 내는 일러스트(캐릭터·Netflix/Sony IP 이미지 금지).
-- 텍스트: "1,000 sets · pre-order Aug 28, 2025", 막대 "CU foreign payments +185% / gimbap +231% / ramyeon +99% (Jul–Aug 2025, Korea Herald)". 그룹명 자막 표기는 공식 표기 확인 후 사용.
+- 텍스트: "1,000 sets · pre-order Aug 28, 2025", 막대 "CU foreign payments +185% / gimbap +231% / ramyeon +99% (Jul–Aug 2025, Korea Herald)". 그룹명은 Netflix 공식 표기 HUNTR/X(Tudum 기준, 2026-10-01 legal 확인) 사용. TTS 발음은 'Huntrix'.
 
 ## S07 — Off script: Han River ramyeon | 5:01–5:36 | 87 words
 
