@@ -32,6 +32,7 @@
 2. completed → 산출물 브랜치를 fetch해 결과 요약을 이 표에 적고 **archive_session**. failed → list_events로 원인 확인 후 재지시 또는 archive. idle(review_ready)인데 푸시가 없으면 send_message로 완료·푸시 지시.
 3. 표에서 archived 행은 "완료(아카이브)"로 남긴다(삭제하지 않음). 새 세션을 만들면 즉시 이 표에 추가한다.
 4. 대표가 직접 해야 하는 일(계정 가입·OAuth 동의·결제·토큰 발급)은 자동화하지 않는다. 그 전후 단계는 전부 자동화한다.
+5. **하위 세션 모델 규칙(대표 지시 2026-10-02)**: 기본값(상위 세션과 같은 모델)으로 띄우지 않는다. COO가 작업 성격으로 판단해 `model`을 명시한다 — 리서치·전략·판단이 필요한 작업 = `claude-opus-5-5`, 스크립트·정리·반복·형식 변환 = `claude-sonnet-5-5`. PROJECTS 표의 "모델" 열에 기록.
 
 ## 하위 세션 (COO가 만들고 결과를 회수)
 | 세션 | 모델 | 브랜치 | 산출물 | 상태 |
@@ -45,7 +46,7 @@
 - 리서치는 대표 지시로 별도 세션·Opus. 제작(writer/designer/marketer/legal)은 COO 세션의 서브에이전트.
 - ECC(Everything Claude Code): 클라우드 세션은 플러그인을 로드하지 않으므로(공식 문서) 복사 설치만 가능. **대표 결정(2026-10-02): 쓸만한 스킬만 도입, 별도 세션·브랜치(`ecc/install`)에서 실행 → 검수 PR → approved 후 작업 브랜치에 병합.** docs/ECC_REVIEW.md(검토 중) 기준으로 선별.
 
-| [B] Instagram API 읽기 전용 연결 테스트 + 게시 스크립트(dry-run) `session_0123PjHg4syrrzozsBss7aRr` | Fable | tooling/ig-publisher | cardnews/docs/IG_CONNECTION.md, scripts/ig_publish.py, scripts/ig_token_refresh.py | 2026-10-02 01:42 생성. 대표가 IG 프로페셔널 계정·페이지 연결·토큰 입력 완료 보고 → 이 세션은 변수 미인식(세션 시작 후 입력)이라 새 세션에서 검증 |
+| ~~`session_0123PjHg4syrrzozsBss7aRr`(Fable, 모델 규칙 위반으로 아카이브)~~ → [B] Instagram API 읽기 전용 연결 테스트 + 게시 스크립트(dry-run) `session_01A3aHmduYXmSGmBrsgyd3gd` | Sonnet 5.5 | tooling/ig-publisher | cardnews/docs/IG_CONNECTION.md, scripts/ig_publish.py, scripts/ig_token_refresh.py | 2026-10-02 01:42 생성. 대표가 IG 프로페셔널 계정·페이지 연결·토큰 입력 완료 보고 → 이 세션은 변수 미인식(세션 시작 후 입력)이라 새 세션에서 검증 |
 
 ## 공용 자원
 - 직원 9명 `.claude/agents/`, 스킬 96개, 디자인 시스템 `episodes/EP001/design/design-system.md`, 비주얼 방향 "민화 플랫 × 한지 질감"(docs/TOOLING_TTS_IMAGE.md §D).
