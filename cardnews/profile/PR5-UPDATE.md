@@ -16,5 +16,6 @@ DM
 - **v6 대기(대표 피드백 "서체·크롭 변경" 반영)**: 서체 3(Nanum Myeongjo XB / Song Myung / Black Han Sans) × 크롭 2(필통·화병 칸 / 병풍 전경), 낙관 없음·바탕 75%·110px 전부 ≥4.65:1 → `contact-profile-v6.png`, 추천 v6-bx.
 
 - **v7 대기(대표: v4~v6 전부 반려 → 틀 교체, 글자 0)**: a 책가도 화병 한 점(2011.37) / b 민화 수탉 머리(Met 19.103.2) / c 엇갈린 책장 칸 + 붉은 한 칸 기호 → `contact-profile-v7.png`·`AVATAR-v7-CONCEPT.md`, 추천 a.
+- **v8 대기(대표: v4 A 복귀·바탕 20%·낙관 0·붓글씨 제대로)**: 서체 3(Nanum Brush Script / East Sea Dokdo / Yeon Sung) × 먹 질감(번짐·갈필·농담) 강, 원화 바탕 20% → `contact-profile-v8.png`, 추천 v8-3 Yeon Sung.
 
 **④ 남은 대표 결정**: 링크 허브 URL (대표: 나중에)
