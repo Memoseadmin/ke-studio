@@ -1,0 +1,137 @@
+[
+ {
+  "key": "A",
+  "name": "책장 칸",
+  "title": "Books and Scholars' Accoutrements",
+  "title_ko": "책가도",
+  "institution": "클리블랜드미술관",
+  "accession": "2011.37",
+  "object_url": "https://clevelandart.org/art/2011.37",
+  "url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_print.jpg",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+  "crop": [
+   1372,
+   182,
+   2028,
+   838
+  ],
+  "detail": "10폭 중 5~6폭 위 2단: 쌓인 책과 문방 기물",
+  "src_sha256": "d108f0bcae36a5a573e7c4c03367124c22a91a24e6cce129af9b37989a294b8a",
+  "src_size": [
+   3400,
+   1915
+  ],
+  "crop_side_px": 656,
+  "upscale": 1.65,
+  "steps": [
+   "levels 35% (0.5~99.5 percentile)",
+   "saturation -20%",
+   "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+   "hanji multiply 15% (procedural seed 2026)",
+   "sepia warm R x1.035 G x1.005 B x0.94 (estimate)"
+  ],
+  "seal": {
+   "center": [
+    762,
+    762
+   ],
+   "side": 150,
+   "max_radius": 420,
+   "glyph": "책 (render_profile.glyph_chaek, 도형 조립, 글꼴 미사용)"
+  },
+  "content_changed": false,
+  "ai_generated": false
+ },
+ {
+  "key": "B",
+  "name": "필통과 두루마리",
+  "title": "Books and Scholarly Accoutrements",
+  "title_ko": "책가도",
+  "institution": "메트로폴리탄미술관",
+  "accession": "2024.89.6",
+  "object_url": "https://www.metmuseum.org/art/collection/search/853896",
+  "url": "https://images.metmuseum.org/CRDImages/as/original/DP-40204-001.jpg",
+  "license": "CC0",
+  "license_url": "https://www.metmuseum.org/policies/image-resources",
+  "credit_short": "메트로폴리탄미술관 〈책가도〉 CC0",
+  "crop": [
+   1676,
+   557,
+   2277,
+   1158
+  ],
+  "detail": "오른쪽 폭 맨 위: 필통에 꽂힌 붓·두루마리·부채, 옆의 책",
+  "src_sha256": "44b63f71aba65a9c23e3e7447ed089be824161468a5d2aa582b53665517ddab0",
+  "src_size": [
+   3002,
+   4000
+  ],
+  "crop_side_px": 601,
+  "upscale": 1.8,
+  "steps": [
+   "levels 35% (0.5~99.5 percentile)",
+   "saturation -20%",
+   "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+   "hanji multiply 15% (procedural seed 2026)",
+   "sepia warm R x1.035 G x1.005 B x0.94 (estimate)"
+  ],
+  "seal": {
+   "center": [
+    762,
+    762
+   ],
+   "side": 150,
+   "max_radius": 420,
+   "glyph": "책 (render_profile.glyph_chaek, 도형 조립, 글꼴 미사용)"
+  },
+  "content_changed": false,
+  "ai_generated": false
+ },
+ {
+  "key": "C",
+  "name": "모란과 나비",
+  "title": "Butterflies and Peonies",
+  "title_ko": "모란나비도",
+  "institution": "메트로폴리탄미술관",
+  "accession": "1977.448",
+  "object_url": "https://www.metmuseum.org/art/collection/search/45063",
+  "url": "https://images.metmuseum.org/CRDImages/as/original/LC-1977_448-005.jpg",
+  "license": "CC0",
+  "license_url": "https://www.metmuseum.org/policies/image-resources",
+  "credit_short": "메트로폴리탄미술관 〈모란나비도〉 CC0",
+  "crop": [
+   832,
+   1901,
+   1724,
+   2793
+  ],
+  "detail": "가운데 보랏빛 모란 한 송이와 그 위 검은 나비",
+  "src_sha256": "8bae40534c36f12a6f16e2d7b9a5265fe758f43641c1350b737b772216ce319a",
+  "src_size": [
+   1968,
+   4160
+  ],
+  "crop_side_px": 892,
+  "upscale": 1.21,
+  "steps": [
+   "levels 35% (0.5~99.5 percentile)",
+   "saturation -20%",
+   "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+   "hanji multiply 15% (procedural seed 2026)",
+   "sepia warm R x1.035 G x1.005 B x0.94 (estimate)"
+  ],
+  "seal": {
+   "center": [
+    318,
+    762
+   ],
+   "side": 150,
+   "max_radius": 421,
+   "glyph": "책 (render_profile.glyph_chaek, 도형 조립, 글꼴 미사용)"
+  },
+  "content_changed": false,
+  "ai_generated": false
+ }
+]
