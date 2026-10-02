@@ -1,7 +1,7 @@
 {
   "id": "C1-1b-06",
   "mode": "mockup",
-  "rendered_at": "2026-10-02T03:29:33Z",
+  "rendered_at": "2026-10-02T03:40:19Z",
   "renderer": "render_reels.py",
   "duration_sec": 21.5,
   "duration_sec_spec": 21.5,
@@ -146,12 +146,12 @@
     "fake_bold": "True"
   },
   "mp4": "render/reels/C1-1b-06.mp4",
-  "mp4_bytes": 5846388,
-  "mp4_sha256": "038495f09a3331ffd74950596a34f070f63f791df2ee569d94d050cd052e37c6",
+  "mp4_bytes": 5865358,
+  "mp4_sha256": "04c369e33582eae4c96320485255fcacca88c588e5e506f7974a3110c06297af",
   "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5",
   "reel_json_sha256": "60470258406d6c5c188a5f1424d5ee5cc2ae8a98a2e4fa37a52e690666300b9a",
   "cards_render_mode": "final",
   "warnings": [],
-  "elapsed_sec": 14.4,
-  "encode_sec": 12.8
+  "elapsed_sec": 14.9,
+  "encode_sec": 13.2
 }
