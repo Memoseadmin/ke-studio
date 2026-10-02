@@ -16,7 +16,7 @@ COO 규칙: 세션이 MCP가 필요하다고 판단하면 이 표에 행을 추�
 ## 2. 대표 추가 요청("AI 디자인·실사 사진·리서치용") — COO 추천
 | 분야 | 레지스트리 결과 | 추천 | 주의 |
 |---|---|---|---|
-| AI 이미지 생성 | 레지스트리에 fal·Replicate·Midjourney 류 **없음** | muapi-cli(설치 세션 진행 중, `MUAPI_API_KEY` 대표 발급) 유지. 또는 fal/Replicate가 MCP URL을 제공하면 "커스텀 커넥터"로 추가(대표 결정) | 공급자 결정(PROJECTS 결정 큐 2)과 묶음 |
+| AI 이미지 생성 | 레지스트리에 fal·Replicate·Midjourney 류 **없음** | muapi-cli(설치 세션 진행 중, `MUAPI_API_KEY` 대표 발급) 유지. 또는 fal/Replicate가 MCP URL을 제공하면 "커스텀 커넥터"로 추가(대표 결정) | 공급자 결정(PROJECTS 결정 큐 2)과 묶음. → docs/MCP_SERVERS.md |
 | 실사 사진 | **Unsplash** MCP 있음(검색·컬렉션·다운로드) | 연결 추천 | **Unsplash 라이선스 ≠ CC0**(2017-06 이후). 디자인 시스템 §9-2 "CC0·CC BY·공공누리1"에 Unsplash License를 추가할지 **legal 판정 후 대표 결정** |
 | 리서치 | **Parallel Search**(무료·인증 없음), Exa, Firecrawl(스크랩) | Parallel Search + Firecrawl 연결 추천 | 한국 소스는 여전히 WebSearch 보조 |
 
