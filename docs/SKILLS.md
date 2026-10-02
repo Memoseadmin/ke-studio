@@ -15,6 +15,10 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 | example-skills | https://github.com/anthropics/skills (skills/canvas-design, skills/theme-factory만) | 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4 | Apache-2.0 | 2 |
 | last30days | https://github.com/mvanhorn/last30days-skill (skills/last30days) | 5103ba478b380552207a3754b74c7655d64208cd | MIT | 1 |
 | ecc | https://github.com/affaan-m/ECC (skills/ 중 선별 10개) | c05b2d6614f62f6db0047669aa4eefb223d478f9 | MIT | 10 |
+| frontend-design | https://github.com/anthropics/skills (skills/frontend-design) | 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4 | Apache-2.0(폴더 LICENSE.txt) | 1 |
+| webapp-testing | https://github.com/anthropics/skills (skills/webapp-testing) | 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4 | Apache-2.0(폴더 LICENSE.txt) | 1 |
+| taste-skill | https://github.com/Leonxlnx/taste-skill (skills/taste-skill만) | ce26fc25c0e5e8cab638f883de62d9a86ee5e45b | MIT(저장소 루트 LICENSE → 폴더에 `LICENSE.upstream`으로 복사) | 1 |
+| ui-ux-pro-max | https://github.com/nextlevelbuilder/ui-ux-pro-max-skill (.claude/skills/ui-ux-pro-max만) | 09170eec67eefd46a7ae85de61b40c194020f997 | MIT(저장소 루트 LICENSE → 폴더에 `LICENSE.upstream`으로 복사) | 1 |
 
 ## 포함 스킬
 - **finance**: audit-support close-management financial-statements journal-entry journal-entry-prep reconciliation sox-testing variance-analysis 
@@ -25,6 +29,10 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 - **example-skills**: canvas-design theme-factory (anthropics/skills 마켓플레이스의 `example-skills` 플러그인 중 이 2개만)
 - **last30days**: last30days (폴더명 `last30days-last30days`)
 - **ecc**: content-engine article-writing agent-self-evaluation growth-log living-docs-governance council market-research strategic-compact context-budget safety-guard (폴더명 `ecc-content-engine` 등, 호출도 폴더명)
+- **frontend-design**: frontend-design (폴더명 `frontend-design`, 단일 스킬이라 팩 접두어 없음)
+- **webapp-testing**: webapp-testing (폴더명 `webapp-testing`)
+- **taste-skill**: taste-skill (폴더명 `taste-skill`; 원문 frontmatter `name: design-taste-frontend`와 다름, 호출은 폴더명)
+- **ui-ux-pro-max**: ui-ux-pro-max (폴더명 `ui-ux-pro-max`)
 
 ## 직원별 지정 스킬 (.claude/agents/*.md의 skills:)
 | 직원 | 스킬 |
@@ -120,3 +128,21 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 - 사용 직원: producer. `.claude/agents/producer.md`의 `skills:` 지정은 COO 결정(이번에는 수정하지 않음).
 - 검증: EP001 목업 렌더(롱폼 1 + 숏폼 5, 결과는 `episodes/EP001/render-log.md`). 실제 모드(플레이트+TTS+음악)는 임시 폴더의 합성 테스트 소재로만 확인했다.
 - 한눈에 보기: **ffmpeg-assemble**은 장면 목록을 롱폼 영상과 자막 파일로 묶는 도구, **shorts-cut**은 그 장면에서 문단·문장을 골라 60초 이하 세로 숏폼을 만드는 도구다.
+
+## 디자인 리서치 후보 4개 설치 (2026-10-02, 대표 기본값 승인; 근거 `cardnews/docs/DESIGN_SOURCES.md` §7, 브랜치 `claude/admiring-clarke-beyyoi`)
+- 방법: 스크래치에 `git clone --filter=blob:none` → `git checkout <SHA>` → 스킬 폴더만 `cp -r` → `diff -r` 차이 0 확인. 설치 스크립트(`skill.sh`, `cli/`, `scripts/` 루트)·setup 마법사 실행 없음. 스크래치는 작업 후 삭제.
+- 폴더 안에 LICENSE가 없는 taste-skill·ui-ux-pro-max는 저장소 루트 LICENSE(MIT)를 `LICENSE.upstream`으로 함께 복사(원문 그대로, `diff` 0). 이 파일 1개만 상류 폴더에 없던 추가물이고 그 외 파일은 모두 원본과 동일.
+- 복사하지 않은 것: taste-skill 저장소의 `imagegen-*`·`brandkit`·`stitch-skill` 등 다른 스킬(외부 API 전제 또는 미검토); ui-ux-pro-max 저장소의 `design-system`(기존 `design-design-system`과 이름 충돌)·`banner-design`·`brand`·`design`·`slides`·`ui-styling`·`.claude-plugin/`·`cli/`·`src/`.
+- 비밀 파일 없음(`.env*`·키 파일 0개). 이 저장소 `.gitignore`에 걸리는 파일 0개(`git status --ignored` 확인). API 키 불필요.
+- 외부 의존: webapp-testing은 Python `playwright` 패키지 + 브라우저(`playwright install chromium`) 필요 → `scripts/setup.sh`는 이번에 바꾸지 않음(COO 결정). ui-ux-pro-max `scripts/*.py`는 표준 라이브러리만 사용(네트워크 없음), `scripts/tests/`는 상류 테스트라 실행하지 않음. frontend-design·taste-skill은 지침 전용.
+
+| 설치 폴더 | 파일 수 | `diff -r` | 라이선스 파일 | frontmatter `name` | SKILL.md 글자 수 → 토큰 추정(÷4) | 한 줄 용도 |
+|---|---|---|---|---|---|---|
+| frontend-design | 2 | 차이 0 | LICENSE.txt(Apache-2.0, 폴더 내 원본) | `frontend-design` = 폴더명 | 9,390 → ≈2,350 | HTML/CSS 미적 방향·타이포·"템플릿 같은 기본값 회피" 지침. 카드뉴스 HTML 렌더러 직결 |
+| webapp-testing | 6 | 차이 0 | LICENSE.txt(Apache-2.0, 폴더 내 원본) | `webapp-testing` = 폴더명 | 3,913 → ≈980 | Playwright로 로컬 웹 페이지 스크린샷·검증(`scripts/with_server.py`, `examples/` 3개). carousel-qa 자동화 바탕 |
+| taste-skill | 2 | 차이 0 | LICENSE.upstream(MIT, 루트에서 복사) | **`design-taste-frontend` ≠ 폴더명** (원문 무수정, 보고만) | 87,253 → **≈21,800** | "AI 티 나는 결과물" 회피 미감 규칙(랜딩·포트폴리오·리디자인). SKILL.md가 매우 커서 호출 시 컨텍스트 비용 큼 |
+| ui-ux-pro-max | 74 | 차이 0 | LICENSE.upstream(MIT, 루트에서 복사) | `ui-ux-pro-max` = 폴더명 | 15,969 → ≈3,990 | 서체 조합·색 팔레트·UX 가이드 CSV + 로컬 검색 스크립트(`scripts/search.py`). 데이터 3.7MB(`google-fonts.csv` 0.7MB, `phosphor-icons-upstream.json` 0.8MB). 실존 브랜드 사례는 참고로만 |
+
+- 컨텍스트 비용(상시): description 4개 합 ≈ 1,050자 ≈ 260토큰/턴. 본문은 호출 시에만 로드.
+- 직원 `skills:` 지정은 이번에 바꾸지 않음(COO 결정). 후보 지정: designer → frontend-design·taste-skill·ui-ux-pro-max, producer/QA → webapp-testing.
+- 한눈에 보기: **frontend-design**과 **taste-skill**은 "예쁘고 AI 티 안 나게" 만드는 지침, **ui-ux-pro-max**는 서체·색을 고를 때 찾아보는 자료집, **webapp-testing**은 만든 HTML을 브라우저로 찍어 확인하는 도구다.
