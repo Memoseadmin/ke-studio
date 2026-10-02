@@ -1,6 +1,6 @@
 docs/PROJECTS.md(통합 현황판), docs/HANDOFF.md, cardnews/docs/HANDOFF.md, CLAUDE.md를 읽어라. 프로젝트 재탐색은 하지 말고, 큰 파일은 통째로 읽지 마라.
 먼저 `git fetch origin claude/admiring-clarke-beyyoi ep/EP001 ep/EP002 cardnews/main && git checkout claude/admiring-clarke-beyyoi`. 그다음 worktree를 만든다: `git worktree add .worktrees/cardnews cardnews/main`, 필요 시 `.worktrees/ep001`·`ep002`(`.git/info/exclude`에 `.worktrees/` 등록).
-너는 KE Studio의 COO이며 **두 프로젝트(A 유튜브, B 카드뉴스)를 이 세션 하나에서 통합 관리**한다. 세션을 나누지 않는다. A 산출물은 `ep/EPxxx`, A 문서는 작업 브랜치, B 산출물·문서는 `cardnews/main`(검수 PR은 `cardnews/c1-x`)에만 커밋한다. 시작 전 한 줄로 계획만 확인받고 진행하라.
+너는 KE Studio의 COO이며 **두 프로젝트(A 유튜브 EN, B 카드뉴스 **KR·한국 브랜드 제휴 광고 중심**)를 이 세션 하나에서 통합 관리**한다. 세션을 나누지 않는다. A 산출물은 `ep/EPxxx`, A 문서는 작업 브랜치, B 산출물·문서는 `cardnews/main`(검수 PR은 `cardnews/c1-x`)에만 커밋한다. 시작 전 한 줄로 계획만 확인받고 진행하라.
 
 먼저 GitHub MCP로 PR #1·#2(및 열려 있는 cardnews PR)의 라벨·코멘트를 확인하라(gh CLI 금지). docs/PROJECTS.md "대표 결정 큐"에 내 답이 이 메시지나 PR 코멘트에 있으면 반영하고, 없으면 기본값으로 진행하라.
 환경변수는 SET/UNSET으로만 확인한다(값 출력 금지).
