@@ -1,6 +1,6 @@
 # KE Studio 통합 현황판 (COO 세션이 매 세션 시작·종료 때 갱신)
 
-갱신: 2026-10-02 03:00 · 운영 원칙: **세션 1개(COO)가 모든 프로젝트를 관리**한다. 프로젝트마다 폴더·브랜치만 분리하고, 작업은 `.worktrees/<project>`(git worktree)로 병렬 진행한다. 대표는 PR 승인·반려와 결정 항목만 본다.
+갱신: 2026-10-02 · 운영 원칙(대표 지시 2026-10-02 개정): **이 세션(COO)은 대표의 명령·총괄 의사결정·기획만 다룬다. 모든 실작업은 난이도별로 자식 세션에 배분**(판단·리서치·제작 = Opus, 반복·스크립트·검증 = Sonnet)하고 COO가 결과를 회수해 대표에게 보고한다. **대표가 결정하지 않은 사항은 기본값으로 진행하지 않고 끝까지 대표에게 묻는다.** 프로젝트마다 폴더·브랜치만 분리하고, 작업은 `.worktrees/<project>`(git worktree)로 병렬 진행한다. 대표는 PR 승인·반려와 결정 항목만 본다.
 
 ## 프로젝트
 | 프로젝트 | 목적·수익 | 폴더 | 브랜치 | 문서 | 현재 Phase | 게이트 |
@@ -60,6 +60,7 @@
 | [B] R2 재확인 #3 `session_014VArU1639pxzGs4QGvyY94` | Sonnet 5.5 | 없음(읽기 전용) | list_events | **완료(아카이브)**. 계정 ID는 **정상값으로 복구됨**(이전 정상 계정과 일치). 키는 여전히 KEY_ID 64자/SECRET 32자(**서로 바뀜**) → put `InvalidArgument`. 하위 세션이 값을 바꿔 넣어 보는 시도는 권한 분류기에 차단(자격증명 탐색) → COO도 하지 않음, 대표가 두 칸을 맞바꿔야 함 |
 | [B] R2 재확인 #4(키 맞바꾼 후) `session_011HdKKY5mUKiwMzarqftQqF` | Sonnet 5.5 | 없음(읽기 전용) | list_events | **완료(아카이브)**. 더 나빠짐: `R2_ACCESS_KEY_ID` **UNSET**, `R2_SECRET_ACCESS_KEY` **63자**(1자 누락), `R2_ACCOUNT_ID` 32자이나 정상값과 **다시 불일치** → put SSLError(존재하지 않는 계정). FAL_KEY UNSET. 대표가 세 값을 처음부터 다시 입력해야 함 |
 | [B] R2 재확인 #5(새 토큰 입력 후) `session_01RQWUDFEuckBSLcuiLZBxvq` | Sonnet 5.5 | 없음(읽기 전용) | list_events | **완료(아카이브) — R2 통과**: 계정 ID 정상, 키 32/64, PNG put→head→공개 GET 200(image/png)→delete→404 전부 OK. FAL_KEY UNSET(대표 결정: AI 생성 0안 우선 검토 중이라 보류) |
+| [A] **유튜브 채널 런칭 실행 계획 리서치**(이름·실사+모션그래픽 제작·썸네일·마케팅·유튜브 설정 체크리스트·4주 캘린더·대표 결정 목록) `session_01Yau1J62KqGoxS5vZt9LHYo` | Opus 5.5 | research/youtube-launch | docs/YOUTUBE_LAUNCH_PLAN.md | 진행 중 |
 | [B] **세계 수준 카드뉴스 디자인 소싱 리서치**(벤치마크·렌더 파이프라인·OFL 한글 서체(옛한글)·CC0 질감·퍼블릭 도메인 민화·생성 모델 프롬프트·스킬 후보+자체 스킬 초안 3·v3 방향 3안) `session_01QRFKHY6jLwZbZvM1zjf2nX` | Opus 5.5 | research/cardnews-design → cardnews/main 머지 예정 | cardnews/docs/DESIGN_SOURCES.md | **완료(아카이브)** 25f4d10 → cardnews/main 머지. 진단: 중국어 대체 서체+가짜 볼드, 무관한 클립아트 반복, 빈 띠, 위계 없음, 옛한글 깨짐, 질감 소멸. **추천: 렌더러 HTML/CSS→Playwright Chromium(VM 실측 1.1초/장, 옛한글·세로쓰기 OK, Pillow 폐기)** · 서체 세트 B(함렛 Black/마루부리/Black Han Sans, 옛한글은 Noto Serif KR) · 퍼블릭 도메인 원화 31점(Met·Cleveland CC0, e뮤지엄 1유형) · **v3 1안 "원화 아카이브"(AI 0·유료 API 0·월 0원) 추천**, 2안 LoRA 플레이트, 3안 콜라주 · 스킬 후보 4+자체 초안 3(부록 A) · 대표 결정 7건(§8) |
 
 ## 공용 자원
