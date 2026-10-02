@@ -35,6 +35,7 @@ body { -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; 
 /* 그림 칸: 먹선 2px + 한지 매트 10px (장황처럼 액자에 앉힌 도판) */
 .plate { border: 2px solid var(--ink); padding: 10px; background: var(--paper); position: relative; overflow: hidden; }
 .plate img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.plate.collage { padding: 0; border: 2px solid var(--ink); } /* 콜라주: 원화 프레임이 매트 역할 */
 .credit-pill { position: absolute; right: 22px; bottom: 22px; font-family: var(--f-body); font-weight: 700; font-size: 22px;
   color: #fff; background: rgba(17, 17, 17, 0.82); padding: 6px 14px 7px; border-radius: 999px; letter-spacing: 0.02em; }
 
@@ -60,8 +61,8 @@ body { -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; 
 .last .src-h { font-family: var(--f-num); font-size: 30px; color: var(--red); letter-spacing: 0.04em; }
 .last .src { font-size: 30px; line-height: 1.55; margin-top: 12px; }
 .last .credit { font-size: 26px; line-height: 1.55; margin-top: 12px; color: var(--ink-2); }
-.last .ai { font-size: 26px; line-height: 1.5; margin-top: auto; text-align: center; color: var(--ink-2); }
-.last .foot { justify-content: center; margin-top: 14px; }
+.last .credit { color: var(--ink); }
+.last .foot { justify-content: center; margin-top: auto; }
 
 .foot { display: flex; justify-content: space-between; align-items: center; height: 44px; }
 .handle { font-size: 28px; letter-spacing: 0.02em; }

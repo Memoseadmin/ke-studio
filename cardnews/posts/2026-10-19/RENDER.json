@@ -1,8 +1,8 @@
 {
   "mode": "mockup",
-  "rendered_at": "2026-10-02T04:17:54.190039Z",
+  "rendered_at": "2026-10-02T04:30:06.486262Z",
   "renderer": "cardnews/design/v3/render_v3.py",
-  "renderer_version": "v3.0-proto1 (2026-10-02)",
+  "renderer_version": "v3.1-collage-proto1 (2026-10-02, 3안 하이브리드 콜라주)",
   "engine": "HTML/CSS + Playwright Chromium (node playwright 1.56.1, /opt/pw-browsers/chromium-1194)",
   "cards": 8,
   "fonts": [
@@ -53,16 +53,16 @@
     }
   ],
   "font_rule": "지정 4서체 외(시스템 폴백) 사용 시 실패",
-  "ai_notice": "초안은 AI 도움을 받았고, 사실 확인은 사람이 했습니다",
-  "ai_notice_status": "제안 문구, 대표 결정 대기(DESIGN_SOURCES §8 #7)",
-  "art_credit_line": "그림: 메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0 · 클리블랜드미술관 〈책가도〉 CC0",
+  "ai_label_on_card": false,
+  "ai_label_note": "AI 표시 라벨은 카드에 없음(대표 결정 2026-10-02). 캡션 담당",
+  "art_credit_line": "사진: 서예 병풍 · 클리블랜드미술관(1998.286.b) · CC0\n그림: 메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0 · 클리블랜드미술관 〈책가도〉 CC0",
   "images_used": [
     "card-01:artwork",
     "card-02:artwork",
     "card-03:artwork",
     "card-04:artwork",
     "card-05:artwork",
-    "card-06:artwork",
+    "card-06:photo",
     "card-07:artwork",
     "card-08:artwork"
   ],
@@ -72,7 +72,6 @@
     "card-03: 이미지 1.98배 확대(해상도 낮음)",
     "card-04: 이미지 1.82배 확대(해상도 낮음)",
     "card-05: 이미지 3.44배 확대(해상도 낮음)",
-    "card-06: 이미지 2.38배 확대(해상도 낮음)",
     "card-07: 이미지 1.87배 확대(해상도 낮음)"
   ],
   "per_card": {
@@ -435,51 +434,63 @@
         }
       ],
       "image": {
-        "kind": "artwork",
-        "file": "src/met-73134-DP163174.jpg",
-        "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
-        "title_ko": "책거리",
-        "institution": "The Metropolitan Museum of Art",
-        "object_url": "https://www.metmuseum.org/art/collection/search/73134",
-        "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163174.jpg",
-        "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
-        "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
-        "credit": "그림: 메트로폴리탄미술관 〈책가도〉 CC0",
-        "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
-        "accession": "2005.385",
+        "kind": "photo",
+        "file": "src/photo-06-calligraphy.jpg",
+        "title": "서예 10폭 병풍 뒷면(19세기 후반, 초서)",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "서예 병풍 · 클리블랜드미술관 · CC0",
+        "credit_short": "서예 병풍 · 클리블랜드미술관(1998.286.b) · CC0",
         "license_status": "ok",
         "edit": {
-          "preset": "archive",
+          "preset": "muted-warm",
           "steps": [
-            "levels 35% (0.5~99.5 percentile)",
-            "saturation -10%",
-            "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
-            "hanji multiply 8% (procedural seed 2026)"
+            "saturation -25%",
+            "contrast -4%",
+            "hanji tint 8%",
+            "grain multiply 6%"
           ],
           "crop_px": [
-            820,
-            960,
-            1300,
-            1235
+            612,
+            101,
+            1904,
+            1136
           ],
           "src_size": [
-            3001,
-            4000
+            3400,
+            1262
           ],
           "crop_size": [
-            480,
-            275
+            1292,
+            1035
           ],
           "out_size": [
-            480,
-            275
+            1292,
+            1035
           ],
           "focus": [
             0.5,
             0.5
           ],
-          "src_sha256": "79e516d118c57ea141a4f98a3f0301d0fb6cb116da9506b24b926a65341eb818",
-          "content_changed": false
+          "src_sha256": "e87c82fa75ce03c12aa3fa20bd1253b794d5f1689b863fc6b2941e36a167fc79",
+          "content_changed": false,
+          "collage": {
+            "frame_file": "src/met-73134-DP163174.jpg",
+            "frame_credit": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+            "frame_focus": [
+              0.5,
+              0.45
+            ],
+            "slot": [
+              904,
+              584
+            ],
+            "inset": 14,
+            "torn_edge": {
+              "seed": 66,
+              "depth": 18
+            }
+          }
         }
       }
     },
@@ -555,7 +566,7 @@
       "template": "last",
       "fonts_used": {
         "Black Han Sans": 2,
-        "MaruBuri": 158,
+        "MaruBuri": 165,
         "Hahmlet": 12
       },
       "checks": [
@@ -570,14 +581,9 @@
           "max": 3
         },
         {
-          "check": "그림 출처 줄",
-          "lines": 2,
-          "max": 2
-        },
-        {
-          "check": "AI 고지",
-          "lines": 1,
-          "max": 1
+          "check": "그림·사진 출처 줄",
+          "lines": 3,
+          "max": 4
         }
       ],
       "image": {

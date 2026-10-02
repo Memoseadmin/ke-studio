@@ -137,3 +137,74 @@ def process(src, out_path, edit=None, kind="artwork", max_side=2200):
     return {"preset": preset, "steps": steps, "crop_px": crop_px, "src_size": list(src_size), "crop_size": list(crop_size),
             "out_size": list(im.size), "focus": edit.get("focus", [0.5, 0.5]), "src_sha256": sha,
             "content_changed": False}
+
+
+# ---------- 3안 콜라주: 종이 찢김 테두리(코드 마스크) + 원화 프레임 ----------
+def torn_mask(size, seed=11, depth=18, edges=("top", "bottom", "left", "right")):
+    """찢은 종이 가장자리 알파 마스크(L). 가장자리마다 저주파 요동 + 고주파 거스러미. 결정적(seed)."""
+    w, h = size
+    rng = np.random.default_rng(seed)
+    yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
+
+    def profile(n, d):
+        t = np.linspace(0, 1, n, dtype=np.float32)
+        p = np.zeros(n, np.float32)
+        for k, amp in ((2, 1.0), (5, 0.6), (11, 0.35), (23, 0.2)):
+            p += amp * np.sin(2 * np.pi * (k * t + rng.random()))
+        p += rng.normal(0, 0.25, n).astype(np.float32)
+        p = (p - p.min()) / max(1e-6, p.max() - p.min())
+        return d * (0.35 + 0.65 * p)
+
+    m = np.ones((h, w), np.float32)
+    if "top" in edges:
+        m *= (yy >= profile(w, depth)[None, :])
+    if "bottom" in edges:
+        m *= (yy <= h - 1 - profile(w, depth)[None, :])
+    if "left" in edges:
+        m *= (xx >= profile(h, depth)[:, None])
+    if "right" in edges:
+        m *= (xx <= w - 1 - profile(h, depth)[:, None])
+    mask = Image.fromarray((m * 255).astype(np.uint8))
+    return mask.filter(ImageFilter.GaussianBlur(0.8))
+
+
+def torn_photo(im, seed=11, depth=18, edge_light=True):
+    """사진에 찢김 테두리 적용 -> RGBA. 찢긴 가장자리 안쪽에 종이 섬유 느낌의 밝은 띠(1~2px)."""
+    im = im.convert("RGB")
+    mask = torn_mask(im.size, seed, depth)
+    out = im.copy()
+    if edge_light:
+        inner = mask.filter(ImageFilter.MinFilter(5))
+        rim = Image.fromarray(np.clip(np.asarray(mask).astype(np.int16) - np.asarray(inner).astype(np.int16), 0, 255).astype(np.uint8))
+        paper = Image.new("RGB", im.size, PAPER)
+        out = Image.composite(paper, out, rim)
+    out.putalpha(mask)
+    return out
+
+
+def frame_collage(frame_src, photo_rgba, size, inset, seed=3, frame_edit=None):
+    """원화 디테일을 프레임(배경 띠)으로 깔고 그 위에 찢긴 사진을 얹는다. frame_src=원화 사본 경로, size=(w,h), inset=px."""
+    w, h = size
+    frame = ImageOps.exif_transpose(Image.open(frame_src)).convert("RGB")
+    fw, fh = frame.size
+    sc = max(w / fw, h / fh)
+    frame = frame.resize((math.ceil(fw * sc), math.ceil(fh * sc)), Image.LANCZOS)
+    fe = frame_edit or {}
+    fx, fy = fe.get("focus", [0.5, 0.5])
+    left = int(min(max(fx * frame.width - w / 2, 0), frame.width - w))
+    top = int(min(max(fy * frame.height - h / 2, 0), frame.height - h))
+    frame = frame.crop((left, top, left + w, top + h))
+    frame = ImageEnhance.Color(frame).enhance(0.8)
+    frame = Image.blend(frame, Image.new("RGB", frame.size, PAPER), 0.12)  # 프레임은 한 단계 물러선다
+    frame = multiply_texture(frame, 0.10)
+    canvas = frame.convert("RGBA")
+    pw, ph = w - 2 * inset, h - 2 * inset
+    ph_im = photo_rgba.resize((pw, ph), Image.LANCZOS) if photo_rgba.size != (pw, ph) else photo_rgba
+    # 그림자: 먹 18%, 6px 오프셋
+    shadow = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    sh_alpha = ph_im.getchannel("A").point(lambda a: int(a * 0.18))
+    shadow.paste(Image.new("RGBA", (pw, ph), (17, 17, 17, 255)), (inset + 6, inset + 8), sh_alpha)
+    shadow = shadow.filter(ImageFilter.GaussianBlur(4))
+    canvas = Image.alpha_composite(canvas, shadow)
+    canvas.alpha_composite(ph_im, (inset, inset))
+    return canvas.convert("RGB")

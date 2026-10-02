@@ -1,7 +1,13 @@
 {
   "set": "2026-10-19",
-  "schema": "v3 (render_v3.py): card, kind(artwork|photo), file(photos/ 기준), credit, credit_short, license, edit{preset, crop(px 또는 0~1), focus}, credit_on_image",
-  "note": "원본은 src/ 에 그대로 둔다. 편집 사본은 렌더 때 render/cardnews-v3/ 에만 생성(내용 변형 없음: 크롭·톤·질감만)",
+  "direction": "v3 3안 하이브리드 콜라주(대표 결정 2026-10-02)",
+  "schema": "card, kind(artwork|photo), file(photos/ 기준), credit, credit_short, license, edit{preset, crop, focus}, frame{file, credit_short, license, focus, slot, inset, seed, depth}(사진만), credit_on_image",
+  "note": "원본은 src/ 에 그대로. 편집 사본은 렌더 때 render/cardnews-v3/ 에만 생성(크롭·톤·질감·찢김 테두리·프레임 합성, 내용 변형 없음). 사진 크레딧은 마지막 장 출처 줄에 모은다(CC BY = 작가명+라이선스)",
+  "pending": [
+    "card 1: src/photo-01-pen.jpg 미수신(위키미디어 429) -> 원화 디테일로 대체",
+    "card 3: src/photo-03-inkstone.jpg 미수신(위키미디어 429) -> 원화 디테일로 대체",
+    "card 4: src/photo-02-openbook.jpg 미수신(위키미디어 429) -> 원화 디테일로 대체"
+  ],
   "photos": [
     {
       "kind": "artwork",
@@ -18,7 +24,7 @@
       "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
       "date": "2026-10-19",
       "card": 1,
-      "crop_note": "오른쪽 폭 윗부분: 두루마리·붓·부채(필사 도구)",
+      "crop_note": "대체: 오른쪽 폭 윗부분 두루마리·붓·부채",
       "edit": {
         "preset": "archive",
         "crop": [
@@ -49,7 +55,7 @@
       "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
       "date": "2026-10-19",
       "card": 2,
-      "crop_note": "둘째 폭: 책 더미·두루마리 꽂이·청화 항아리(문장을 모으는 정물)",
+      "crop_note": "둘째 폭: 책 더미·두루마리 꽂이·청화 항아리",
       "edit": {
         "preset": "archive",
         "crop": [
@@ -80,7 +86,7 @@
       "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
       "date": "2026-10-19",
       "card": 3,
-      "crop_note": "둘째 폭 아래: 소반 위 벼루함(준비물)",
+      "crop_note": "대체: 소반 위 벼루함",
       "edit": {
         "preset": "archive",
         "crop": [
@@ -111,7 +117,7 @@
       "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
       "date": "2026-10-19",
       "card": 4,
-      "crop_note": "왼쪽 폭 가운데: 쌓인 책갑(첫 문장을 고를 책)",
+      "crop_note": "대체: 쌓인 책갑",
       "edit": {
         "preset": "archive",
         "crop": [
@@ -142,7 +148,7 @@
       "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
       "date": "2026-10-19",
       "card": 5,
-      "crop_note": "셋째 폭: 자명종 문자판(10분 루틴). 그릇의 한자·시계 상표 글자는 크롭 밖",
+      "crop_note": "자명종 문자판(10분 루틴)",
       "edit": {
         "preset": "archive",
         "crop": [
@@ -159,34 +165,47 @@
       "credit_on_image": false
     },
     {
-      "kind": "artwork",
-      "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
-      "title_ko": "책거리",
-      "institution": "The Metropolitan Museum of Art",
-      "accession": "2005.385",
-      "object_url": "https://www.metmuseum.org/art/collection/search/73134",
-      "file": "src/met-73134-DP163174.jpg",
-      "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163174.jpg",
-      "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
-      "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
-      "credit": "그림: 메트로폴리탄미술관 〈책가도〉 CC0",
-      "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
-      "date": "2026-10-19",
-      "card": 6,
-      "crop_note": "둘째 폭 위: 붓대·술 장식·매화 가지(획과 서체)",
+      "kind": "photo",
+      "file": "src/photo-06-calligraphy.jpg",
+      "title": "서예 10폭 병풍 뒷면(19세기 후반, 초서)",
+      "page_url": "https://clevelandart.org/art/1998.286.b",
+      "author": "작자 미상 / 클리블랜드미술관(1998.286.b)",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "서예 병풍 · 클리블랜드미술관 · CC0",
+      "credit_short": "서예 병풍 · 클리블랜드미술관(1998.286.b) · CC0",
       "edit": {
-        "preset": "archive",
-        "crop": [
-          820,
-          960,
-          1300,
-          1235
-        ],
+        "preset": "muted-warm",
         "focus": [
           0.5,
           0.5
+        ],
+        "crop": [
+          0.18,
+          0.08,
+          0.56,
+          0.9
         ]
       },
+      "frame": {
+        "file": "src/met-73134-DP163174.jpg",
+        "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+        "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+        "focus": [
+          0.5,
+          0.45
+        ],
+        "slot": [
+          904,
+          584
+        ],
+        "inset": 14,
+        "depth": 18,
+        "seed": 66
+      },
+      "risk_note": "정자·흘림 대비용(researcher). 사람·로고 없음",
+      "date": "2026-10-19",
+      "card": 6,
       "credit_on_image": false
     },
     {
@@ -204,7 +223,7 @@
       "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
       "date": "2026-10-19",
       "card": 7,
-      "crop_note": "셋째 폭 아래: 문갑과 책(기록 남기기)",
+      "crop_note": "문갑과 책(기록 남기기)",
       "edit": {
         "preset": "archive",
         "crop": [
