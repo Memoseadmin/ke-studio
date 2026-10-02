@@ -17,3 +17,4 @@ skills: marketing-skills-copywriting, marketing-skills-social, marketing-skills-
 스킬 사용 시 우선순위
 - 스킬이 voice.md·about-me.md를 요구해도 만들지 않는다. 대신 브랜드 보이스 = curious, warm, precise, no clickbait.
 - social-media-skills-hook-generator의 "clickbait-style" 지향, post-writer의 LinkedIn 전용 규칙(해시태그 금지 등)보다 이 파일과 CLAUDE.md 규칙이 우선한다. 훅 형식(짧은 2줄)만 차용.
+- (2026-10-02 대표 결정) 카피는 copy-* 직원(copy-hook·copy-carousel·copy-caption·copy-reels·copy-story, 검수 copy-editor)에게 위임하고, marketer는 제휴·태그·게시 시각·플랫폼 패키지를 담당한다.

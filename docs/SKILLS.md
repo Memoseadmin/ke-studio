@@ -45,6 +45,12 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 | publisher | social-media-skills-post-formatter |
 | legal-reviewer | legal-review-contract, legal-legal-risk-assessment, legal-compliance-check |
 | analyst | finance-variance-analysis |
+| copy-hook | cardnews-copy, social-media-skills-hook-generator, -post-scorer, marketing-skills-copywriting |
+| copy-carousel | cardnews-copy, marketing-skills-copywriting, social-media-skills-gemini-carousel |
+| copy-caption | cardnews-copy, social-media-skills-post-formatter, marketing-skills-copy-editing |
+| copy-reels | cardnews-copy, social-media-skills-reels-scripting, marketing-skills-video |
+| copy-story | cardnews-copy, marketing-skills-social, social-media-skills-profile-optimizer |
+| copy-editor | cardnews-copy, marketing-skills-copy-editing, social-media-skills-post-scorer |
 
 ## 연결 검증
 (아래 검증 결과 섹션 참조)
@@ -123,6 +129,7 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 |---|---|---|---|---|
 | 사내 · ffmpeg-assemble | 자체 작성 `.claude/skills/ffmpeg-assemble/` (SKILL.md, scripts/assemble.py·kemedia.py·script_to_scenes.py, examples/) | 외부 원본 없음(이 저장소 커밋 이력이 기준) | 사내 전용(KE Studio) | 1 |
 | 사내 · shorts-cut | 자체 작성 `.claude/skills/shorts-cut/` (SKILL.md, scripts/shorts_cut.py, examples/) | 외부 원본 없음(이 저장소 커밋 이력이 기준) | 사내 전용(KE Studio) | 1 |
+| 사내 · cardnews-copy **v1.1** | 자체 작성 `.claude/skills/cardnews-copy/SKILL.md`(v1은 `cardnews/c1-1-design`에서 그대로 가져옴, 2026-10-02 v1.1: §8 영양소 기준·§9 매체별 에이전트 분담표·C 틀 글자 수) | 외부 원본 없음(이 저장소 커밋 이력이 기준) | 사내 전용(KE Studio) | 1 |
 
 - 의존: Python 3.9+, Pillow, ffmpeg/ffprobe(`scripts/setup.sh` 기존 항목, setup.sh 변경 없음). API 키·네트워크 불필요. shorts-cut은 `ffmpeg-assemble/scripts/kemedia.py`(공용 모듈)를 불러 쓴다.
 - 폰트: 지정 폰트(Anton·Pretendard·Black Han Sans)를 `fc-list`로 찾고 없으면 설치된 대체 폰트(Liberation Sans, OFL 1.1 / WenQuanYi Zen Hei, GPL-2 + 폰트 임베딩 예외)를 쓴다. 쓴 폰트와 라이선스는 매니페스트에 기록된다.

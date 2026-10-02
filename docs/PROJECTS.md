@@ -101,5 +101,6 @@
 | [B] **세계 수준 카드뉴스 디자인 소싱 리서치**(벤치마크·렌더 파이프라인·OFL 한글 서체(옛한글)·CC0 질감·퍼블릭 도메인 민화·생성 모델 프롬프트·스킬 후보+자체 스킬 초안 3·v3 방향 3안) `session_01QRFKHY6jLwZbZvM1zjf2nX` | Opus 5.5 | research/cardnews-design → cardnews/main 머지 예정 | cardnews/docs/DESIGN_SOURCES.md | **완료(아카이브)** 25f4d10 → cardnews/main 머지. 진단: 중국어 대체 서체+가짜 볼드, 무관한 클립아트 반복, 빈 띠, 위계 없음, 옛한글 깨짐, 질감 소멸. **추천: 렌더러 HTML/CSS→Playwright Chromium(VM 실측 1.1초/장, 옛한글·세로쓰기 OK, Pillow 폐기)** · 서체 세트 B(함렛 Black/마루부리/Black Han Sans, 옛한글은 Noto Serif KR) · 퍼블릭 도메인 원화 31점(Met·Cleveland CC0, e뮤지엄 1유형) · **v3 1안 "원화 아카이브"(AI 0·유료 API 0·월 0원) 추천**, 2안 LoRA 플레이트, 3안 콜라주 · 스킬 후보 4+자체 초안 3(부록 A) · 대표 결정 7건(§8) |
 
 ## 공용 자원
-- 직원 9명 `.claude/agents/`, 스킬 96개, 디자인 시스템 `episodes/EP001/design/design-system.md`, 비주얼 방향 "민화 플랫 × 한지 질감"(docs/TOOLING_TTS_IMAGE.md §D).
+- 직원 15명 `.claude/agents/`, 스킬 96개, 디자인 시스템 `episodes/EP001/design/design-system.md`, 비주얼 방향 "민화 플랫 × 한지 질감"(docs/TOOLING_TTS_IMAGE.md §D).
+- 카피 직원 6명(2026-10-02 추가): copy-hook(표지 훅·제목 10안) · copy-carousel(캐러셀 8장) · copy-caption(캡션) · copy-reels(릴스) · copy-story(스토리·하이라이트) · copy-editor(편집장 검수). 하우스 스킬 cardnews-copy v1.1.
 - 비용 상한 월 20만원(전 프로젝트 합). analyst가 월간 리포트에서 프로젝트별로 나눠 보고.
