@@ -50,6 +50,8 @@
 
 | [B] 환경변수 검증 — R2 왕복 테스트 + IG 읽기 전용 `session_01JSpa9BYvBC9XNTLrdgMyCy` | Sonnet 5.5 | tooling/ig-publisher(**미푸시**: 그 세션의 git push가 권한 분류기에 막힘, 커밋 f2330b5 로컬만) | 보고는 list_events로 회수 | **완료(아카이브)**. 변수 8개 전부 SET. **R2 실패**: `R2_ACCESS_KEY_ID`가 20자(32자여야 함 → 잘못된 값 붙여넣음). **IG 실패**: `IG_USER_ID`=1336287509569193은 페이스북 페이지 ID(IG 계정 ID 아님), `/me/accounts` 빈 목록(토큰에 페이지 미연결, 계정 제한 추정). 토큰 자체는 유효·권한 5개 granted. 경로 B(graph.instagram.com)는 페이스북 토큰이라 불가 |
 
+| [B] 환경변수 **재검증** — R2 왕복 + IG 경로 A/B `session_01THknjq4c1h44pboBGRvAWV` | Sonnet 5.5 | 없음(읽기 전용, 파일 변경 0) | 보고는 list_events로 회수 | **완료(아카이브)** 2026-10-02. **대표 수정 전 상태 그대로**: R2 키 ID 20자(32 필요)·시크릿 32자(64 필요) → put `InvalidArgument`(업로드 0). IG 토큰 `EAA`(페이스북 로그인) 유효, 권한 5개 granted, `/me/accounts` 페이지 0개, `IG_USER_ID`=페이지 ID(username 없음). 경로 B `graph.instagram.com/me` 400 code 190(EAA 토큰이라 당연) → **IGAA 토큰 새로 발급 필요**. COO가 `ig_publish.py`에 `IG_API_BASE` 분기·`--check` 추가(9e34674) |
+
 ## 공용 자원
 - 직원 9명 `.claude/agents/`, 스킬 96개, 디자인 시스템 `episodes/EP001/design/design-system.md`, 비주얼 방향 "민화 플랫 × 한지 질감"(docs/TOOLING_TTS_IMAGE.md §D).
 - 비용 상한 월 20만원(전 프로젝트 합). analyst가 월간 리포트에서 프로젝트별로 나눠 보고.
