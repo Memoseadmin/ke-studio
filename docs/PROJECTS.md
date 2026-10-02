@@ -48,6 +48,8 @@
 
 | ~~`session_0123PjHg4syrrzozsBss7aRr`(Fable, 모델 규칙 위반으로 아카이브)~~ → [B] Instagram API 읽기 전용 연결 테스트 + 게시 스크립트(dry-run) `session_01A3aHmduYXmSGmBrsgyd3gd` | Sonnet 5.5 | tooling/ig-publisher → 작업 브랜치 머지 | scripts/ig_publish.py·r2_upload.py·ig_token_refresh.py·README-ig.md, cardnews/docs/IG_CONNECTION.md | **완료(아카이브)**. 연결 테스트는 `IG_ACCESS_TOKEN`·`IG_USER_ID` **UNSET이라 건너뜀**(대표가 환경 설정에 저장했는지 확인 필요). dry-run 정상(게이트: approved 라벨·목업 차단 동작). 업로드·게시 0건 |
 
+| [B] 환경변수 검증 — R2 왕복 테스트 + IG 읽기 전용(경로 A/B 판정) `session_01JSpa9BYvBC9XNTLrdgMyCy` | Sonnet 5.5 | tooling/ig-publisher | cardnews/docs/IG_CONNECTION.md 갱신, IG_API_BASE 지원 | 2026-10-02 02:43 생성(대표 "환경변수 다 넣었어") |
+
 ## 공용 자원
 - 직원 9명 `.claude/agents/`, 스킬 96개, 디자인 시스템 `episodes/EP001/design/design-system.md`, 비주얼 방향 "민화 플랫 × 한지 질감"(docs/TOOLING_TTS_IMAGE.md §D).
 - 비용 상한 월 20만원(전 프로젝트 합). analyst가 월간 리포트에서 프로젝트별로 나눠 보고.
