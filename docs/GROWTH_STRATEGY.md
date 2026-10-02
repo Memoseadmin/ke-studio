@@ -247,78 +247,41 @@
 ---
 
 ## 출처 (확인 날짜 전부 2026-10-02)
-- G1 https://gist.ly/youtube-summarizer/insider-secrets-of-growing-a-youtube-channel-from-0-to-100k-subscribers-in-365-days
-- G2 https://kapwing.com/resources/we-grew-a-faceless-youtube-channel-to-1000-subscribers
-- G3 https://www.goodreads.com/author_blog_posts/26015656-75k-from-this-faceless-channel-launched-in-january
-- G4 https://socialcounts.org/youtube-live-subscriber-count/UCyWu1tIrHSMmserB-U5NV_g
-- G5 https://flippa.com/12813083-faceless-documentary-youtube-channel-with-11m-views-235k-revenue-98-profit-margin-and-20-rpm-in-a-premium-history-niche
-- G6 https://socialblade.com/youtube/handle/sleepytimehistorianyt (스니펫)
-- G7 https://rise-up-today.beehiiv.com/p/how-a-faceless-ai-history-channel-earns-1-000-month
-- G8 https://www.pluggedin.com/youtube-reviews/fern/
-- G9 https://outlierkit.com/channel/fern-tv
-- G10 https://blog.youtube/news-and-events/youtube-partner-program-updates-2027-new-opportunities-earn/ (2026-08-10 게시, 직접 확인)
-- G11 https://support.google.com/youtube/answer/72851?hl=en · https://support.google.com/youtube/answer/12504220?hl=en
-- G12 https://ppc.land/subscribers-skip-90-of-uploads-in-their-feed-youtube-director-says/
-- G13 https://support.google.com/youtube/answer/141805?hl=en
-- G14 https://support.google.com/youtube/answer/1311392?hl=en
-- G15 https://www.searchenginejournal.com/youtube-shorts-algorithm/543939/ (스니펫)
-- G16 https://blog.youtube/creator-and-artist-stories/debunking-common-myths-about-youtube-shorts/
-- G17 https://ppc.land/youtube-changes-how-shorts-views-are-counted-from-march-31/ (스니펫)
-- G18 https://searchengineland.com/youtube-enables-linking-shorts-long-form-videos-430655 (스니펫)
-- G19 https://vidiq.com/research/youtube-upload-frequency-study/ (스니펫)
-- G20 https://support.google.com/youtube/answer/7628154?hl=en
-- G21 https://en.wikipedia.org/wiki/Korean_Englishman
-- G22 https://en.wikipedia.org/wiki/Abroad_in_Japan
-- G23 https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=7kh4HvCems4&format=json
-- G24 https://socialblade.com/youtube/handle/hoog-youtube/achievements (스니펫)
-- G25 https://en.wikipedia.org/wiki/Geography_Now
-- G26 https://en.everybodywiki.com/Kings_and_Generals (스니펫)
-- G27 https://www.koreaherald.com/article/10405024
-- G28 https://support.google.com/youtube/answer/13195878 (스니펫) · https://support.google.com/youtube/answer/7636690?hl=en
-- G29 https://support.google.com/youtube/answer/9314415?hl=en
-- G30 https://support.google.com/youtube/answer/16554898
-- G31 https://www.searchenginejournal.com/youtube-title-a-b-testing-rolls-out-globally-to-creators/562571/
-- G32 https://vidiq.com/blog/post/youtube-cta/ (스니펫)
-- G33 https://gyre.pro/blog/how-to-create-high-converting-youtube-end-screens-tips-and-examples (스니펫)
-- G34 https://vidiq.com/blog/post/how-to-use-the-youtube-collaborations-feature/ (스니펫)
-- G35 https://redlib.groet-infra.nl/wiki/selfpromotion (Reddit 미러)
-- G36 https://redlib.groet-infra.nl/r/videos · /r/history · /r/kdrama/wiki/rules · /r/korea · /r/Korean · /r/NewTubers/wiki/rules (미러, 규칙 원문은 Reddit에서 재확인 필요)
-- G37 https://www.socialmediatoday.com/news/instagram-clarifies-that-including-your-own-logo-on-a-reel-is-ok/730852/ · https://mediapost.com/publications/article/414773/instagram-algorithm-update-discourages-reposted-co.html
-- G38 https://www.tiktok.com/safety/en/policies-and-engagement/fyf-standards (스니펫)
-- G39 https://www.mediaite.com/media/news/elon-musk-admits-x-is-throttling-links-effectively-limiting-people-from-reading-news/
-- G40 https://publicholidays.co.kr/hangeul-day/ · https://lingopie.com/blog/hangeul-day/
-- G41 https://www.koreatimes.co.kr/southkorea/society/20241107/how-pepero-day-got-started-in-korea
-- G42 https://www.heraldk.com/article/2026062919000082154 · https://www.etoday.co.kr/news/view/2390974
-- G43 https://publicholidays.co.kr/chuseok/
-- G44 https://publicholidays.co.kr/seollal/
-- G45 https://help.quora.com/hc/en-us/articles/115004211543 · https://help.quora.com/hc/en-us/articles/360055133711
-- G46 https://www.simplepinmedia.com/promote-youtube-on-pinterest/
-- G47 https://costbench.com/software/email-marketing/beehiiv/free-plan
-- G48 https://www.soompi.com/article/1745204wpp/important-updates-regarding-soompi
-- G49 https://www.mcst.go.kr/english/policy/pressView.jsp?pSeq=631 · https://www.mcst.go.kr/english/policy/pressView.jsp?pSeq=634
-- G50 https://www.koreatimes.co.kr/amp/lifestyle/people-events/20250429/korea-appoints-2800-global-content-creators-to-promote-culture-tourism
-- G51 https://english.gg.go.kr/blog/daily-news/gyeonggi-launches-2026-oh-my-gyeonggi-supporters-program-to-promote-international-tourism/
-- G52 https://www.socialmediatoday.com/news/youtube-adds-more-tiktok-like-options-to-shorts-including-collabs-and-q/689648/
-- G53 https://buffer.com/resources/instagram-collab-post/
-- G54 https://kowork.kr/en/post/3892
-- G55 https://news.thepublishpress.com/p/are-shorts-worth-it
-- G56 https://air.io/en/youtube-hacks/how-often-should-you-post-shorts-to-grow-faster
-- G57 https://tubefilter.com/2026/01/29/youtube-ai-slop-channel-crackdown-bans/ (스니펫)
-- G58 https://decrypt.co/355373/youtube-plans-ai-expansion-2026-promising-crackdown-ai-slop (스니펫)
-- G59 https://support.google.com/youtube/answer/14328491
-- G60 https://www.washington.edu/news/2024/05/09/wikipedia-citations-youtube-misinformation-viblio (스니펫)
-- G61 https://www.lindseygamble.com/blog/youtube-expands-access-to-community-posts-adds-new-features (스니펫)
-- G62 https://support.google.com/youtube/answer/15509925
-- G63 https://air.io/en/youtube-glossary/what-are-youtube-channel-memberships (스니펫)
-- G64 https://www.whats-on-netflix.com/news/k-dramas/netflix-october-2026-k-drama-release-dates/
-- G65 https://newsroom.cj.net/2026-mama-awards-to-take-place-in-japan-from-november-20-21/
-- G66 https://ich.unesco.org/en/RL/00881 · https://www.koreajoongangdaily.com/lifestyle/autumn-heralds-kimjang-season/10393592
-- G67 https://www.koreajoongangdaily.com/kjd-special/why-valentines-day-with-santa-how-christmas-became-a-couples-holiday-in-korea/11949384
-- G68 https://www.fox5ny.com/news/korean-age-scrapped-south-koreans-became-younger-international-age-system
-- G69 https://en.wikipedia.org/wiki/Black_Day_(South_Korea)
-- G70 https://seoulstart.com/festivals/jinhae-cherry-blossom-festival (여행사 추정)
-- G71 https://www.jambase.com/article/bts-tour-dates-arirang-world-tour-asia-australia (Weverse 재확인 필요)
-- G72 https://www.koreatimes.co.kr/amp/lifestyle/travel-food/20251223/visitors-to-korea-to-hit-record-187-million-this-year-outpacing-pre-pandemic-high · https://www.seoulz.com/korea-inbound-tourism-2026/amp/
-- G73 https://www.koreatimes.co.kr/lifestyle/travel-food/20260728/korea-surpasses-10-mil-tourists-in-1st-half-of-2026
-- G74 https://suggestqueries.google.com/complete/search?client=firefox&q=why+do+koreans (YT는 &ds=yt 추가)
+- G1 https://gist.ly/youtube-summarizer/insider-secrets-of-growing-a-youtube-channel-from-0-to-100k-subscribers-in-365-days ／ G2 https://kapwing.com/resources/we-grew-a-faceless-youtube-channel-to-1000-subscribers
+- G3 https://www.goodreads.com/author_blog_posts/26015656-75k-from-this-faceless-channel-launched-in-january ／ G4 https://socialcounts.org/youtube-live-subscriber-count/UCyWu1tIrHSMmserB-U5NV_g
+- G5 https://flippa.com/12813083-faceless-documentary-youtube-channel-with-11m-views-235k-revenue-98-profit-margin-and-20-rpm-in-a-premium-history-niche ／ G6 https://socialblade.com/youtube/handle/sleepytimehistorianyt (스니펫)
+- G7 https://rise-up-today.beehiiv.com/p/how-a-faceless-ai-history-channel-earns-1-000-month ／ G8 https://www.pluggedin.com/youtube-reviews/fern/
+- G9 https://outlierkit.com/channel/fern-tv ／ G10 https://blog.youtube/news-and-events/youtube-partner-program-updates-2027-new-opportunities-earn/ (2026-08-10 게시, 직접 확인)
+- G11 https://support.google.com/youtube/answer/72851?hl=en · https://support.google.com/youtube/answer/12504220?hl=en ／ G12 https://ppc.land/subscribers-skip-90-of-uploads-in-their-feed-youtube-director-says/
+- G13 https://support.google.com/youtube/answer/141805?hl=en ／ G14 https://support.google.com/youtube/answer/1311392?hl=en
+- G15 https://www.searchenginejournal.com/youtube-shorts-algorithm/543939/ (스니펫) ／ G16 https://blog.youtube/creator-and-artist-stories/debunking-common-myths-about-youtube-shorts/
+- G17 https://ppc.land/youtube-changes-how-shorts-views-are-counted-from-march-31/ (스니펫) ／ G18 https://searchengineland.com/youtube-enables-linking-shorts-long-form-videos-430655 (스니펫)
+- G19 https://vidiq.com/research/youtube-upload-frequency-study/ (스니펫) ／ G20 https://support.google.com/youtube/answer/7628154?hl=en
+- G21 https://en.wikipedia.org/wiki/Korean_Englishman ／ G22 https://en.wikipedia.org/wiki/Abroad_in_Japan
+- G23 https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=7kh4HvCems4&format=json ／ G24 https://socialblade.com/youtube/handle/hoog-youtube/achievements (스니펫)
+- G25 https://en.wikipedia.org/wiki/Geography_Now ／ G26 https://en.everybodywiki.com/Kings_and_Generals (스니펫)
+- G27 https://www.koreaherald.com/article/10405024 ／ G28 https://support.google.com/youtube/answer/13195878 (스니펫) · https://support.google.com/youtube/answer/7636690?hl=en
+- G29 https://support.google.com/youtube/answer/9314415?hl=en ／ G30 https://support.google.com/youtube/answer/16554898
+- G31 https://www.searchenginejournal.com/youtube-title-a-b-testing-rolls-out-globally-to-creators/562571/ ／ G32 https://vidiq.com/blog/post/youtube-cta/ (스니펫)
+- G33 https://gyre.pro/blog/how-to-create-high-converting-youtube-end-screens-tips-and-examples (스니펫) ／ G34 https://vidiq.com/blog/post/how-to-use-the-youtube-collaborations-feature/ (스니펫)
+- G35 https://redlib.groet-infra.nl/wiki/selfpromotion (Reddit 미러) ／ G36 https://redlib.groet-infra.nl/r/videos · /r/history · /r/kdrama/wiki/rules · /r/korea · /r/Korean · /r/NewTubers/wiki/rules (미러, 규칙 원문은 Reddit에서 재확인 필요)
+- G37 https://www.socialmediatoday.com/news/instagram-clarifies-that-including-your-own-logo-on-a-reel-is-ok/730852/ · https://mediapost.com/publications/article/414773/instagram-algorithm-update-discourages-reposted-co.html ／ G38 https://www.tiktok.com/safety/en/policies-and-engagement/fyf-standards (스니펫)
+- G39 https://www.mediaite.com/media/news/elon-musk-admits-x-is-throttling-links-effectively-limiting-people-from-reading-news/ ／ G40 https://publicholidays.co.kr/hangeul-day/ · https://lingopie.com/blog/hangeul-day/
+- G41 https://www.koreatimes.co.kr/southkorea/society/20241107/how-pepero-day-got-started-in-korea ／ G42 https://www.heraldk.com/article/2026062919000082154 · https://www.etoday.co.kr/news/view/2390974
+- G43 https://publicholidays.co.kr/chuseok/ ／ G44 https://publicholidays.co.kr/seollal/
+- G45 https://help.quora.com/hc/en-us/articles/115004211543 · https://help.quora.com/hc/en-us/articles/360055133711 ／ G46 https://www.simplepinmedia.com/promote-youtube-on-pinterest/
+- G47 https://costbench.com/software/email-marketing/beehiiv/free-plan ／ G48 https://www.soompi.com/article/1745204wpp/important-updates-regarding-soompi
+- G49 https://www.mcst.go.kr/english/policy/pressView.jsp?pSeq=631 · https://www.mcst.go.kr/english/policy/pressView.jsp?pSeq=634 ／ G50 https://www.koreatimes.co.kr/amp/lifestyle/people-events/20250429/korea-appoints-2800-global-content-creators-to-promote-culture-tourism
+- G51 https://english.gg.go.kr/blog/daily-news/gyeonggi-launches-2026-oh-my-gyeonggi-supporters-program-to-promote-international-tourism/ ／ G52 https://www.socialmediatoday.com/news/youtube-adds-more-tiktok-like-options-to-shorts-including-collabs-and-q/689648/
+- G53 https://buffer.com/resources/instagram-collab-post/ ／ G54 https://kowork.kr/en/post/3892
+- G55 https://news.thepublishpress.com/p/are-shorts-worth-it ／ G56 https://air.io/en/youtube-hacks/how-often-should-you-post-shorts-to-grow-faster
+- G57 https://tubefilter.com/2026/01/29/youtube-ai-slop-channel-crackdown-bans/ (스니펫) ／ G58 https://decrypt.co/355373/youtube-plans-ai-expansion-2026-promising-crackdown-ai-slop (스니펫)
+- G59 https://support.google.com/youtube/answer/14328491 ／ G60 https://www.washington.edu/news/2024/05/09/wikipedia-citations-youtube-misinformation-viblio (스니펫)
+- G61 https://www.lindseygamble.com/blog/youtube-expands-access-to-community-posts-adds-new-features (스니펫) ／ G62 https://support.google.com/youtube/answer/15509925
+- G63 https://air.io/en/youtube-glossary/what-are-youtube-channel-memberships (스니펫) ／ G64 https://www.whats-on-netflix.com/news/k-dramas/netflix-october-2026-k-drama-release-dates/
+- G65 https://newsroom.cj.net/2026-mama-awards-to-take-place-in-japan-from-november-20-21/ ／ G66 https://ich.unesco.org/en/RL/00881 · https://www.koreajoongangdaily.com/lifestyle/autumn-heralds-kimjang-season/10393592
+- G67 https://www.koreajoongangdaily.com/kjd-special/why-valentines-day-with-santa-how-christmas-became-a-couples-holiday-in-korea/11949384 ／ G68 https://www.fox5ny.com/news/korean-age-scrapped-south-koreans-became-younger-international-age-system
+- G69 https://en.wikipedia.org/wiki/Black_Day_(South_Korea) ／ G70 https://seoulstart.com/festivals/jinhae-cherry-blossom-festival (여행사 추정)
+- G71 https://www.jambase.com/article/bts-tour-dates-arirang-world-tour-asia-australia (Weverse 재확인 필요) ／ G72 https://www.koreatimes.co.kr/amp/lifestyle/travel-food/20251223/visitors-to-korea-to-hit-record-187-million-this-year-outpacing-pre-pandemic-high · https://www.seoulz.com/korea-inbound-tourism-2026/amp/
+- G73 https://www.koreatimes.co.kr/lifestyle/travel-food/20260728/korea-surpasses-10-mil-tourists-in-1st-half-of-2026 ／ G74 https://suggestqueries.google.com/complete/search?client=firefox&q=why+do+koreans (YT는 &ds=yt 추가)
 - G75 https://meetglimpse.com/trend/korean-skincare/
