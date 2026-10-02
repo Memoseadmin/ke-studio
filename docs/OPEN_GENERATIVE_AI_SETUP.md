@@ -55,3 +55,31 @@
 - setup.sh에 muapi-cli venv 설치 블록 추가, ENV.md에 `MUAPI_API_KEY` 행(후보) 추가.
 - 검증 상태: 자동화 조건 "`muapi image models`가 모델 목록 출력" ✅ / 이미지 1장·영상 1개 생성 ❌(키 없음) / 앱이 경고 없이 열림 ❌(GUI 없는 환경, 해당 없음).
 - 다음: 대표가 muapi.ai 가입 → API Keys 발급 → 환경 설정에 `MUAPI_API_KEY` 입력 → 새 세션에서 `muapi image generate "<장면 프롬프트>" --model flux-2-pro --download render/test`로 1장 생성 → 비용·품질 확인 → `docs/TOOLING_TTS_IMAGE.md` 비교표와 함께 공급자 확정.
+
+## 6. 3차 시도 (2026-10-02)
+대표 지시: "Open-Generative-AI 영상 만드는 앱, 설치해서 이용해." 대표 결정: 키는 나중에 발급 → 지금은 CLI 설치만.
+
+| # | 명령 | 결과 |
+|---|---|---|
+| 16 | `python3.12 -m venv ~/.venvs/muapi && ~/.venvs/muapi/bin/pip install -q muapi-cli` (setup.sh muapi 블록만) | **성공**. 새 VM이라 venv가 없어 재설치함 |
+| 17 | `~/.venvs/muapi/bin/muapi --version` | `muapi CLI 0.2.7` |
+| 18 | `muapi image models` / `muapi video models` | **성공(키 없이 동작)**: 이미지 text-to-image·image-to-image, 영상 text-to-video·image-to-video 목록 출력. 단가 열 없음 |
+| 19 | `git clone --depth 1 --recurse-submodules …/Open-Generative-AI` → 스크래치패드 | 성공(서브모듈 3개 체크아웃 확인) |
+| 20 | `npm run setup` (1회) | **차단**: 권한 분류기 "Code from External". 재시도 안 함 → 서버 기동(curl 200) 확인도 미실행 |
+| 21 | `MUAPI_API_KEY` | **UNSET** (생성 미실행) |
+
+### 모델 추천 (CLI 목록 기준 후보. 단가·최대 길이는 공식 문서·CLI 목록에 없어 "미확인")
+| 용도 | 모델(CLI 이름) | 선정 이유 | 단가 |
+|---|---|---|---|
+| 이미지→영상(짧은 모션) | `kling-v2.5-std` | 이미지→영상 표준급, 5·10초 지원 여부는 생성 시 확인 필요 | 미확인 |
+| 이미지→영상(짧은 모션) | `seedance-pro-fast` | fast 계열, 저비용·빠른 샘플 후보 | 미확인 |
+| 이미지→영상(짧은 모션) | `wan2.6` | Wan 계열 최신 i2v, 비교용 | 미확인 |
+| 이미지(플레이트) | `flux-2-pro` | 범용 품질, 장면 플레이트 | 미확인 |
+| 이미지(플레이트) | `imagen4` | 사실적 풍경·배경, 로고·인물 회피 프롬프트에 유리 | 미확인 |
+| 이미지(플레이트) | `nano-banana-pro` | 텍스트 렌더·편집(-edit) 연계 | 미확인 |
+- 위 선택은 모델 이름·유형 목록에서 고른 **추정**이며 품질·길이·단가는 실제 생성 전 검증 안 됨. 최종 선택은 샘플 비교 후 대표 결정.
+
+### 다음 단계
+1. 대표: muapi.ai 가입 → API Keys 발급 → 환경 설정에 `MUAPI_API_KEY` 입력(채팅에 붙여넣지 않음).
+2. 새 세션에서 (생성은 대표 승인 후): [A] EP002 S01 플레이트 1장 + 5초 영상 1개, [B] 세트 02 AI 배경 1장 샘플. 비용·품질 기록.
+3. 웹 앱 빌드는 이 환경에서 분류기 차단 → 필요하면 대표 PC에서 호스팅 웹 버전 사용. 파이프라인은 CLI만 쓴다.
