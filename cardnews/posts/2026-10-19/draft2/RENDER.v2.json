@@ -1,0 +1,1035 @@
+{
+  "mode": "mockup",
+  "rendered_at": "2026-10-02T05:24:22.022132Z",
+  "renderer": "cardnews/design/v3/render_v3.py",
+  "renderer_version": "v3.2-collage-2 (2026-10-02, 3안 하이브리드 콜라주 2판: LAYOUT.v3·흐림·잉크 테두리·코드 오버레이·rev 레이아웃·슬롯 실측)",
+  "engine": "HTML/CSS + Playwright Chromium (node playwright 1.56.1, /opt/pw-browsers/chromium-1194)",
+  "cards": 8,
+  "fonts": [
+    {
+      "family": "Hahmlet",
+      "file": "Hahmlet[wght].ttf",
+      "weight": "100 900",
+      "version": "Version 1.002",
+      "license": "OFL-1.1 (OFL-Hahmlet.txt)",
+      "source": "https://github.com/google/fonts/tree/main/ofl/hahmlet",
+      "sha256": "892bffe530255770a7435226154a02f519055ff6bedf64254f37f21d15a59279"
+    },
+    {
+      "family": "MaruBuri",
+      "file": "MaruBuri-Regular.ttf",
+      "weight": "400",
+      "version": "Version 1.000;hotconv 1.0.118;makeotfexe 2.5.65603",
+      "license": "네이버 글꼴 오픈 라이선스(상업적 사용 허용, OFL 기반)",
+      "source": "https://hangeul.naver.com/fonts/search?f=maru",
+      "sha256": "803429881927c79dbb49497274244e72b672c56e0503f28262503f77524cba7a"
+    },
+    {
+      "family": "MaruBuri",
+      "file": "MaruBuri-Bold.ttf",
+      "weight": "700",
+      "version": "Version 1.000;hotconv 1.0.118;makeotfexe 2.5.65603",
+      "license": "네이버 글꼴 오픈 라이선스(상업적 사용 허용, OFL 기반)",
+      "source": "https://hangeul.naver.com/fonts/search?f=maru",
+      "sha256": "13aa1058c135e8f0b2c41de4e5e7866b18f970a15db2b1a290227e52dc02aba8"
+    },
+    {
+      "family": "Black Han Sans",
+      "file": "BlackHanSans-Regular.ttf",
+      "weight": "400",
+      "version": "Version 1.001",
+      "license": "OFL-1.1 (OFL-BlackHanSans.txt)",
+      "source": "https://github.com/google/fonts/tree/main/ofl/blackhansans",
+      "sha256": "31960809284026681774a8e52dc19ebcad26cf69b0ad9d560f288296fbb52739"
+    },
+    {
+      "family": "Noto Serif KR",
+      "file": "NotoSerifKR[wght].ttf",
+      "weight": "200 900",
+      "version": "Version 2.003-H1;hotconv 1.1.1;makeotfexe 2.6.0",
+      "license": "OFL-1.1 (OFL-NotoSerifKR.txt)",
+      "source": "https://github.com/google/fonts/tree/main/ofl/notoserifkr",
+      "sha256": "11f8d5de6f1b79195efba3828aaa2ec95c1178f5ae976fb23c8d53250a9938f3"
+    }
+  ],
+  "font_rule": "지정 4서체 외(시스템 폴백) 사용 시 실패",
+  "ai_label_on_card": false,
+  "content_changed": false,
+  "content_rule": "사진·원화는 크롭·톤·그레인·흐림(로고·각인·문자판)·테두리만. 합성·사물 추가·생성형 채우기 없음. 4·6·7장 그래픽은 사진 위 별도 코드 층(오버레이)",
+  "layout_sequence": [
+    "cover",
+    "body",
+    "body-rev",
+    "body",
+    "body-rev",
+    "body",
+    "body-rev",
+    "last"
+  ],
+  "notes": {
+    "card6_choice": "코드 그래픽 글줄 2종(정자·흘림)을 1 alt 사진(노트에 쓰는 손) 위 쪽지로 올림. 서예 병풍 1998.286.b는 택하지 않음: ① 본문 '같은 문장을 정자로, 다음엔 흘려'의 핵심은 '같은 글줄 두 가지 획'인데 병풍은 한 서체(행초서) 한문 시구라 대비가 없다 ② 병풍은 원화 스캔이라 '원화는 프레임·낙관·띠·모서리만' 규칙과 충돌(사진 주인공 원칙) ③ '손이 글자 모양을 기억' 문장은 쓰는 손 사진이 직접 보여 준다",
+    "card7_choice": "코드 그래픽(날짜 칸·책 제목 칸·체크박스 5개)을 3 alt 사진(독서 기록 노트) 오른쪽 빈 면 위 쪽지로 올림. 지시안(1 alt 또는 3 main)보다 3 alt가 더 일치: 왼쪽 면에 실제로 date·title·author 인쇄 칸이 있는 독서 기록장이라 '날짜와 책 제목을 함께 적으면 문장집'을 사진 자체가 보여 준다. 3 main은 3장에서 이미 써서 반복 금지, 1 alt는 6장(쓰는 손)에 더 맞음",
+    "card4": "실사 밑줄 없음 -> 주황 밑줄 2줄('두세 줄')을 코드 그래픽으로 덧그림(사진 픽셀 불변)",
+    "downloads": "Wikimedia upload 서버 429(요청 제한)로 같은 원본(해상도·촬영 동일)을 Unsplash CDN(images.unsplash.com, Commons {{Unsplash}} 원본 링크)·Pexels CDN에서 받음. 라이선스 근거는 PHOTOS.v3.json(Commons 원문 확인) 그대로",
+    "readable_text": "7장 사진의 인쇄 칸 이름(이탈리아어·영어 'data·date, titolo·title' 등)과 2장 노트 손글씨 일부는 확대 시 판독 가능. 상표·저작물 아님(일반 양식). 2장 책 표지 제목·저자명은 흐림"
+  },
+  "ai_label_note": "AI 표시 라벨은 카드에 없음(대표 결정 2026-10-02). 캡션 담당",
+  "art_credit_line": "그림: 메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0 · 클리블랜드미술관 〈책가도〉 CC0\n사진: Aaron Burden · Thought Catalog · Sanah Suvarna · Tookapic · Hope House Press · CC0",
+  "images_used": [
+    "card-01:photo",
+    "card-02:photo",
+    "card-03:photo",
+    "card-04:photo",
+    "card-05:photo",
+    "card-06:photo",
+    "card-07:photo",
+    "card-08:artwork"
+  ],
+  "checks_failed": [],
+  "warnings": [],
+  "per_card": {
+    "card-01": {
+      "template": "cover",
+      "layout": "cover",
+      "fonts_used": {
+        "MaruBuri": 62,
+        "Hahmlet": 10
+      },
+      "checks": [
+        {
+          "check": "표지 헤드라인",
+          "lines": 2,
+          "max": 2
+        },
+        {
+          "check": "표지 부제",
+          "lines": 2,
+          "max": 2
+        }
+      ],
+      "image": {
+        "kind": "photo",
+        "ref": {
+          "card": 1,
+          "role": "main"
+        },
+        "file": "src/1-main.jpg",
+        "title": "만년필로 노트에 손글씨를 쓰는 장면(클로즈업)",
+        "author": "Aaron Burden",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AWriting_with_a_fountain_pen_%28Unsplash%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Writing_with_a_fountain_pen_%28Unsplash%29.jpg",
+        "downloaded_from": "https://images.unsplash.com/photo-1455390582262-044cdead277a",
+        "license": "CC0 1.0 (Commons {{Unsplash}}: 2017-06 이전 Unsplash CC0)",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "사진: Aaron Burden (Unsplash) · CC0 · 크롭·보정",
+        "credit_short": "Aaron Burden",
+        "why": "표지 '필사책 +692.8%' = 펜으로 글을 베껴 쓰는 순간. 펜촉이 글줄에 닿은 한 컷",
+        "license_status": "ok",
+        "edit": {
+          "preset": "muted-warm",
+          "steps": [
+            "focus crop [276, 138, 4316, 2620]",
+            "blur [1515, 345, 2296, 1793] r14 (펜촉 각인 문자(제조사 표기))",
+            "saturation -25%",
+            "contrast -4%",
+            "hanji tint 8%",
+            "grain multiply 6%"
+          ],
+          "crop_px": [
+            276,
+            138,
+            4316,
+            2620
+          ],
+          "src_size": [
+            4592,
+            3448
+          ],
+          "crop_size": [
+            4040,
+            2482
+          ],
+          "out_size": [
+            2200,
+            1352
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "src_sha256": "b5ae21e54b4c42140fdcaf5b7575dbf5817a523b79655b2875b1f2318cdcd791",
+          "content_changed": false,
+          "collage": {
+            "frame_file": "src/met-853896.jpg",
+            "frame_credit": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+            "frame_crop_px": [
+              1700,
+              560,
+              2290,
+              920
+            ],
+            "frame_steps": [
+              "focus crop [1700, 560, 2290, 920]",
+              "levels 35% (0.5~99.5 percentile)",
+              "saturation -10%",
+              "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+              "hanji multiply 8% (procedural seed 2026)",
+              "frame: saturation -20%, hanji 12%, grain 10% (한 단계 물러섬)"
+            ],
+            "slot": [
+              900,
+              556
+            ],
+            "inset": 20,
+            "photo_scale": 0.391,
+            "torn_edge": {
+              "seed": 10,
+              "depth": 18
+            },
+            "ink_border": true
+          }
+        },
+        "frame": {
+          "file": "src/met-853896.jpg",
+          "title": "Books and Scholarly Accoutrements (two-panel folding screen, 19th century)",
+          "institution": "The Metropolitan Museum of Art",
+          "accession": "2024.89.6",
+          "object_url": "https://www.metmuseum.org/art/collection/search/853896",
+          "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+          "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+          "crop": [
+            1700,
+            560,
+            2290,
+            920
+          ],
+          "detail": "붓·두루마리(옛 필기구)"
+        }
+      }
+    },
+    "card-02": {
+      "template": "body",
+      "layout": "body",
+      "fonts_used": {
+        "Black Han Sans": 2,
+        "MaruBuri": 73,
+        "Hahmlet": 6
+      },
+      "checks": [
+        {
+          "check": "본문 헤드라인",
+          "lines": 1,
+          "max": 2
+        },
+        {
+          "check": "본문",
+          "lines": 2,
+          "max": 3
+        }
+      ],
+      "image": {
+        "kind": "photo",
+        "ref": {
+          "card": 2,
+          "role": "main"
+        },
+        "file": "src/2-main.jpg",
+        "title": "책 더미·노트·커피가 놓인 책상에서 노트를 쓰는 손(탑뷰)",
+        "author": "Thought Catalog",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AJournaling_over_coffee_%28Unsplash%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Journaling_over_coffee_%28Unsplash%29.jpg",
+        "downloaded_from": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e",
+        "license": "CC0 1.0 (Commons {{Unsplash}}: 2017-06 이전 Unsplash CC0)",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "사진: Thought Catalog (Unsplash) · CC0 · 크롭·보정",
+        "credit_short": "Thought Catalog",
+        "why": "'책 읽고 문장을 모으는' 장면: 책 더미 옆에서 노트에 문장을 옮겨 적는 손",
+        "license_status": "ok",
+        "edit": {
+          "preset": "muted-warm",
+          "steps": [
+            "focus crop [0, 1160, 3510, 3960]",
+            "blur [0, 1160, 1260, 3520] r70 (책 표지·책등 제목 글자(SOUL·저자명))",
+            "saturation -25%",
+            "contrast -4%",
+            "hanji tint 8%",
+            "grain multiply 6%"
+          ],
+          "crop_px": [
+            0,
+            1160,
+            3510,
+            3960
+          ],
+          "src_size": [
+            6000,
+            4000
+          ],
+          "crop_size": [
+            3510,
+            2800
+          ],
+          "out_size": [
+            2200,
+            1755
+          ],
+          "focus": [
+            0.55,
+            0.5
+          ],
+          "src_sha256": "aac4250c09a07e7c141bd05f5fd72d53d59a84c5756b3d6e5884b8d7c1aaa54e",
+          "content_changed": false,
+          "collage": {
+            "frame_file": "src/met-73134-DP163173.jpg",
+            "frame_credit": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+            "frame_crop_px": [
+              790,
+              1500,
+              1400,
+              1850
+            ],
+            "frame_steps": [
+              "focus crop [790, 1500, 1400, 1850]",
+              "levels 35% (0.5~99.5 percentile)",
+              "saturation -10%",
+              "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+              "hanji multiply 8% (procedural seed 2026)",
+              "frame: saturation -20%, hanji 12%, grain 10% (한 단계 물러섬)"
+            ],
+            "slot": [
+              900,
+              674
+            ],
+            "inset": 22,
+            "photo_scale": 0.389,
+            "torn_edge": {
+              "seed": 17,
+              "depth": 18
+            },
+            "ink_border": true
+          }
+        },
+        "frame": {
+          "file": "src/met-73134-DP163173.jpg",
+          "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+          "institution": "The Metropolitan Museum of Art",
+          "accession": "2005.385",
+          "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+          "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+          "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+          "crop": [
+            790,
+            1500,
+            1400,
+            1850
+          ],
+          "detail": "책 더미·두루마리 꽂이"
+        }
+      }
+    },
+    "card-03": {
+      "template": "body",
+      "layout": "body-rev",
+      "fonts_used": {
+        "Black Han Sans": 2,
+        "MaruBuri": 76,
+        "Hahmlet": 9
+      },
+      "checks": [
+        {
+          "check": "본문 헤드라인",
+          "lines": 1,
+          "max": 2
+        },
+        {
+          "check": "본문",
+          "lines": 2,
+          "max": 3
+        }
+      ],
+      "image": {
+        "kind": "photo",
+        "ref": {
+          "card": 3,
+          "role": "main"
+        },
+        "file": "src/3-main.jpg",
+        "title": "펼친 책+필기 노트+연필 정물(야외 테이블)",
+        "author": "Aaron Burden",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AAaron_Burden_2015-09-24_%28Unsplash%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Aaron_Burden_2015-09-24_%28Unsplash%29.jpg",
+        "downloaded_from": "https://images.unsplash.com/photo-1443140570159-279cf334cf24",
+        "license": "CC0 1.0 (Commons {{Unsplash}}: 2017-06 이전 Unsplash CC0)",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "사진: Aaron Burden (Unsplash) · CC0 · 크롭·보정",
+        "credit_short": "Aaron Burden",
+        "why": "본문이 '노트 한 권, 펜 하나, 베낄 책 한 권'을 세므로 사진도 책·연필·노트 세 가지만",
+        "license_status": "ok",
+        "edit": {
+          "preset": "muted-warm",
+          "steps": [
+            "focus crop [88, 994, 4325, 3215]",
+            "saturation -25%",
+            "contrast -4%",
+            "hanji tint 8%",
+            "grain multiply 6%"
+          ],
+          "crop_px": [
+            88,
+            994,
+            4325,
+            3215
+          ],
+          "src_size": [
+            4413,
+            3314
+          ],
+          "crop_size": [
+            4237,
+            2221
+          ],
+          "out_size": [
+            2200,
+            1153
+          ],
+          "focus": [
+            0.5,
+            0.62
+          ],
+          "src_sha256": "e914e2fd61fab794c4eaa023bf0b14a5a0c067fff62e2630f4933dfdb87f215e",
+          "content_changed": false,
+          "collage": {
+            "frame_file": "src/met-73134-DP163173.jpg",
+            "frame_credit": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+            "frame_crop_px": [
+              780,
+              2230,
+              1240,
+              2560
+            ],
+            "frame_steps": [
+              "focus crop [780, 2230, 1240, 2560]",
+              "levels 35% (0.5~99.5 percentile)",
+              "saturation -10%",
+              "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+              "hanji multiply 8% (procedural seed 2026)",
+              "frame: saturation -20%, hanji 12%, grain 10% (한 단계 물러섬)"
+            ],
+            "slot": [
+              900,
+              690
+            ],
+            "inset": 22,
+            "photo_scale": 0.56,
+            "torn_edge": {
+              "seed": 24,
+              "depth": 18
+            },
+            "ink_border": true
+          }
+        },
+        "frame": {
+          "file": "src/met-73134-DP163173.jpg",
+          "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+          "institution": "The Metropolitan Museum of Art",
+          "accession": "2005.385",
+          "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+          "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+          "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+          "crop": [
+            780,
+            2230,
+            1240,
+            2560
+          ],
+          "detail": "소반 위 벼루함(옛 준비물)"
+        }
+      }
+    },
+    "card-04": {
+      "template": "body",
+      "layout": "body",
+      "fonts_used": {
+        "Black Han Sans": 2,
+        "MaruBuri": 67,
+        "Hahmlet": 10
+      },
+      "checks": [
+        {
+          "check": "본문 헤드라인",
+          "lines": 1,
+          "max": 2
+        },
+        {
+          "check": "본문",
+          "lines": 2,
+          "max": 3
+        }
+      ],
+      "image": {
+        "kind": "photo",
+        "ref": {
+          "card": 4,
+          "role": "alt"
+        },
+        "file": "src/4-alt.jpg",
+        "title": "햇빛 속 펼친 책",
+        "author": "Aaron Burden",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3AOpen_book_in_sun_%28Unsplash%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Open_book_in_sun_%28Unsplash%29.jpg",
+        "downloaded_from": "https://images.unsplash.com/photo-1476490445914-cc8ed84a4277",
+        "license": "CC0 1.0 (Commons {{Unsplash}}: 2017-06 이전 Unsplash CC0)",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "사진: Aaron Burden (Unsplash) · CC0 · 크롭·보정",
+        "credit_short": "Aaron Burden",
+        "why": "'좋아하는 책의 첫 문장·밑줄 친 문장' = 펼친 책 + 첫 줄 아래 주황 밑줄(코드 그래픽)",
+        "overlay": {
+          "type": "underline",
+          "lines": [
+            [
+              0.15,
+              0.42,
+              0.505,
+              0.012
+            ],
+            [
+              0.15,
+              0.36,
+              0.548,
+              0.01
+            ]
+          ],
+          "width": 8,
+          "seed": 4
+        },
+        "license_status": "ok",
+        "edit": {
+          "preset": "hanji-duotone",
+          "steps": [
+            "focus crop [138, 1241, 4454, 3310]",
+            "tritone night/kraft/paper",
+            "grain multiply 6%"
+          ],
+          "crop_px": [
+            138,
+            1241,
+            4454,
+            3310
+          ],
+          "src_size": [
+            4592,
+            3448
+          ],
+          "crop_size": [
+            4316,
+            2069
+          ],
+          "out_size": [
+            2200,
+            1055
+          ],
+          "focus": [
+            0.42,
+            0.5
+          ],
+          "src_sha256": "b506cf03c4591452a51773458a83d6f1095c1b2fbdff1676ae81c1ae2b9cdfe5",
+          "content_changed": false,
+          "collage": {
+            "frame_file": "src/met-853896.jpg",
+            "frame_credit": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+            "frame_crop_px": [
+              690,
+              930,
+              1280,
+              1290
+            ],
+            "frame_steps": [
+              "focus crop [690, 930, 1280, 1290]",
+              "levels 35% (0.5~99.5 percentile)",
+              "saturation -10%",
+              "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+              "hanji multiply 8% (procedural seed 2026)",
+              "frame: saturation -20%, hanji 12%, grain 10% (한 단계 물러섬)"
+            ],
+            "slot": [
+              900,
+              674
+            ],
+            "inset": 22,
+            "photo_scale": 0.597,
+            "torn_edge": {
+              "seed": 31,
+              "depth": 18
+            },
+            "ink_border": true
+          }
+        },
+        "frame": {
+          "file": "src/met-853896.jpg",
+          "title": "Books and Scholarly Accoutrements (two-panel folding screen, 19th century)",
+          "institution": "The Metropolitan Museum of Art",
+          "accession": "2024.89.6",
+          "object_url": "https://www.metmuseum.org/art/collection/search/853896",
+          "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+          "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+          "crop": [
+            690,
+            930,
+            1280,
+            1290
+          ],
+          "detail": "쌓인 책갑"
+        }
+      }
+    },
+    "card-05": {
+      "template": "body",
+      "layout": "body-rev",
+      "fonts_used": {
+        "Black Han Sans": 2,
+        "MaruBuri": 61,
+        "Hahmlet": 12
+      },
+      "checks": [
+        {
+          "check": "본문 헤드라인",
+          "lines": 1,
+          "max": 2
+        },
+        {
+          "check": "본문",
+          "lines": 2,
+          "max": 3
+        }
+      ],
+      "image": {
+        "kind": "photo",
+        "ref": {
+          "card": 5,
+          "role": "alt"
+        },
+        "file": "src/5-alt.jpg",
+        "title": "자명종 시계+커피 잔+책(아침 분위기)",
+        "author": "Sanah Suvarna",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3ABook%2C_coffee_and_clock_Mumbai_%28Unsplash%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Book%2C_coffee_and_clock_Mumbai_%28Unsplash%29.jpg",
+        "downloaded_from": "https://images.unsplash.com/photo-1478980236323-01c287f81aed",
+        "license": "CC0 1.0 (Commons {{Unsplash}}: 2017-06 이전 Unsplash CC0)",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "사진: Sanah Suvarna (Unsplash) · CC0 · 크롭·보정",
+        "credit_short": "Sanah Suvarna",
+        "why": "'하루 10분, 같은 시간에' = 아침 자명종(10시 무렵) 옆 책과 찻잔. 시간을 정해 두는 루틴",
+        "license_status": "ok",
+        "edit": {
+          "preset": "muted-warm",
+          "steps": [
+            "focus crop [129, 228, 3859, 2820]",
+            "blur [1008, 1595, 1372, 1766] r12 (시계 문자판 상표)",
+            "blur [1072, 1994, 1372, 2122] r10 (문자판 'QUARTZ' 글자)",
+            "saturation -25%",
+            "contrast -4%",
+            "hanji tint 8%",
+            "grain multiply 6%"
+          ],
+          "crop_px": [
+            129,
+            228,
+            3859,
+            2820
+          ],
+          "src_size": [
+            4288,
+            2848
+          ],
+          "crop_size": [
+            3730,
+            2592
+          ],
+          "out_size": [
+            2200,
+            1529
+          ],
+          "focus": [
+            0.4,
+            0.55
+          ],
+          "src_sha256": "6c5b8aae2f1effcdef93881087fa2a95eeb037137eca866292eb11ff32ed981b",
+          "content_changed": false,
+          "collage": {
+            "frame_file": "src/met-73134-DP163174.jpg",
+            "frame_credit": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+            "frame_crop_px": [
+              1660,
+              1770,
+              2020,
+              1960
+            ],
+            "frame_steps": [
+              "focus crop [1660, 1770, 2020, 1960]",
+              "levels 35% (0.5~99.5 percentile)",
+              "saturation -10%",
+              "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+              "hanji multiply 8% (procedural seed 2026)",
+              "frame: saturation -20%, hanji 12%, grain 10% (한 단계 물러섬)"
+            ],
+            "slot": [
+              900,
+              690
+            ],
+            "inset": 22,
+            "photo_scale": 0.422,
+            "torn_edge": {
+              "seed": 38,
+              "depth": 18
+            },
+            "ink_border": true
+          }
+        },
+        "frame": {
+          "file": "src/met-73134-DP163174.jpg",
+          "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+          "institution": "The Metropolitan Museum of Art",
+          "accession": "2005.385",
+          "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+          "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+          "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+          "crop": [
+            1660,
+            1770,
+            2020,
+            1960
+          ],
+          "detail": "자명종(옛 시계)"
+        }
+      }
+    },
+    "card-06": {
+      "template": "body",
+      "layout": "body",
+      "fonts_used": {
+        "Black Han Sans": 2,
+        "MaruBuri": 77,
+        "Hahmlet": 12
+      },
+      "checks": [
+        {
+          "check": "본문 헤드라인",
+          "lines": 1,
+          "max": 2
+        },
+        {
+          "check": "본문",
+          "lines": 2,
+          "max": 3
+        }
+      ],
+      "image": {
+        "kind": "photo",
+        "ref": {
+          "card": 1,
+          "role": "alt"
+        },
+        "file": "src/1-alt.jpg",
+        "title": "스프링 노트에 펜으로 쓰는 손",
+        "author": "Tookapic",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3APen-writing-notes-studying.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Pen-writing-notes-studying.jpg",
+        "downloaded_from": "https://images.pexels.com/photos/8769/pen-writing-notes-studying.jpg",
+        "license": "CC0 1.0 (Commons {{cc-zero}}, 리뷰 완료)",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "사진: Tookapic (Pexels) · CC0 · 크롭·보정",
+        "credit_short": "Tookapic",
+        "why": "'같은 문장을 정자로, 다음엔 흘려 써 보기. 손이 글자 모양을 기억' = 노트에 직접 쓰는 손 + 같은 글줄을 정자·흘림 두 줄로 그린 쪽지(코드 그래픽)",
+        "overlay": {
+          "type": "script-pair",
+          "x": 0.585,
+          "y": 0.07,
+          "w": 0.375,
+          "h": 0.5,
+          "glyphs": 5,
+          "seed": 6,
+          "labels": [
+            "정자",
+            "흘림"
+          ]
+        },
+        "license_status": "ok",
+        "edit": {
+          "preset": "muted-warm",
+          "steps": [
+            "focus crop [475, 0, 4752, 2851]",
+            "saturation -25%",
+            "contrast -4%",
+            "hanji tint 8%",
+            "grain multiply 6%"
+          ],
+          "crop_px": [
+            475,
+            0,
+            4752,
+            2851
+          ],
+          "src_size": [
+            4752,
+            3168
+          ],
+          "crop_size": [
+            4277,
+            2851
+          ],
+          "out_size": [
+            2200,
+            1466
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "src_sha256": "751c4f4e0ddd59131b0a68d745426743e29a3319884b48735641d14c96ee348f",
+          "content_changed": false,
+          "collage": {
+            "frame_file": "src/met-73134-DP163174.jpg",
+            "frame_credit": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+            "frame_crop_px": null,
+            "frame_steps": [
+              "levels 35% (0.5~99.5 percentile)",
+              "saturation -10%",
+              "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+              "hanji multiply 8% (procedural seed 2026)",
+              "frame: saturation -20%, hanji 12%, grain 10% (한 단계 물러섬)"
+            ],
+            "slot": [
+              900,
+              674
+            ],
+            "inset": 22,
+            "photo_scale": 0.43,
+            "torn_edge": {
+              "seed": 45,
+              "depth": 18
+            },
+            "ink_border": true
+          }
+        },
+        "frame": {
+          "file": "src/met-73134-DP163174.jpg",
+          "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+          "institution": "The Metropolitan Museum of Art",
+          "accession": "2005.385",
+          "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+          "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+          "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+          "detail": "붓대·술 장식·매화 가지"
+        }
+      }
+    },
+    "card-07": {
+      "template": "body",
+      "layout": "body-rev",
+      "fonts_used": {
+        "Black Han Sans": 2,
+        "MaruBuri": 83,
+        "Hahmlet": 12
+      },
+      "checks": [
+        {
+          "check": "본문 헤드라인",
+          "lines": 1,
+          "max": 2
+        },
+        {
+          "check": "본문",
+          "lines": 2,
+          "max": 3
+        }
+      ],
+      "image": {
+        "kind": "photo",
+        "ref": {
+          "card": 3,
+          "role": "alt"
+        },
+        "file": "src/3-alt.jpg",
+        "title": "펼친 노트+연필+커피(탑뷰)",
+        "author": "Hope House Press",
+        "page_url": "https://commons.wikimedia.org/wiki/File%3APlanning_over_coffee_%28Unsplash%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Planning_over_coffee_%28Unsplash%29.jpg",
+        "downloaded_from": "https://images.unsplash.com/photo-1471970394675-613138e45da3",
+        "license": "CC0 1.0 (Commons {{Unsplash}}: 2017-06 이전 Unsplash CC0)",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "사진: Hope House Press (Unsplash) · CC0 · 크롭·보정",
+        "credit_short": "Hope House Press",
+        "why": "'날짜와 책 제목을 함께 적으면 나만의 문장집' = 실제 독서 기록 노트(왼쪽 면에 date·title·author 인쇄 칸) + 오른쪽 빈 면에 날짜·책 제목 칸과 체크박스 5개 쪽지(코드 그래픽)",
+        "overlay": {
+          "type": "record",
+          "x": 0.52,
+          "y": 0.3,
+          "w": 0.44,
+          "h": 0.44,
+          "boxes": 5,
+          "checked": 5,
+          "labels": [
+            "날짜",
+            "책 제목"
+          ]
+        },
+        "license_status": "ok",
+        "edit": {
+          "preset": "muted-warm",
+          "steps": [
+            "focus crop [0, 492, 4096, 3277]",
+            "saturation -25%",
+            "contrast -4%",
+            "hanji tint 8%",
+            "grain multiply 6%"
+          ],
+          "crop_px": [
+            0,
+            492,
+            4096,
+            3277
+          ],
+          "src_size": [
+            4096,
+            4096
+          ],
+          "crop_size": [
+            4096,
+            2785
+          ],
+          "out_size": [
+            2200,
+            1496
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "src_sha256": "328121b1e30f848a79ae1ca2e4e97bc1aaf3f238bec963dcc86b39cc64a0477a",
+          "content_changed": false,
+          "collage": {
+            "frame_file": "src/met-73134-DP163173.jpg",
+            "frame_credit": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+            "frame_crop_px": [
+              1690,
+              2080,
+              2300,
+              2430
+            ],
+            "frame_steps": [
+              "focus crop [1690, 2080, 2300, 2430]",
+              "levels 35% (0.5~99.5 percentile)",
+              "saturation -10%",
+              "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+              "hanji multiply 8% (procedural seed 2026)",
+              "frame: saturation -20%, hanji 12%, grain 10% (한 단계 물러섬)"
+            ],
+            "slot": [
+              900,
+              690
+            ],
+            "inset": 22,
+            "photo_scale": 0.432,
+            "torn_edge": {
+              "seed": 52,
+              "depth": 18
+            },
+            "ink_border": true
+          }
+        },
+        "frame": {
+          "file": "src/met-73134-DP163173.jpg",
+          "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+          "institution": "The Metropolitan Museum of Art",
+          "accession": "2005.385",
+          "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+          "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+          "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+          "crop": [
+            1690,
+            2080,
+            2300,
+            2430
+          ],
+          "detail": "문갑과 책"
+        }
+      }
+    },
+    "card-08": {
+      "template": "last",
+      "layout": "last",
+      "fonts_used": {
+        "Black Han Sans": 2,
+        "MaruBuri": 212,
+        "Hahmlet": 12
+      },
+      "checks": [
+        {
+          "check": "CTA",
+          "lines": 1,
+          "max": 2
+        },
+        {
+          "check": "출처 줄",
+          "lines": 2,
+          "max": 3
+        },
+        {
+          "check": "그림·사진 출처 줄",
+          "lines": 4,
+          "max": 4
+        }
+      ],
+      "image": {
+        "kind": "artwork",
+        "file": "src/cma-2011.37-print.jpg",
+        "title": "Books and Scholars' Accoutrements (ten-panel folding screen, late 1800s)",
+        "title_ko": "책가도",
+        "institution": "Cleveland Museum of Art",
+        "object_url": "https://clevelandart.org/art/2011.37",
+        "image_url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_print.jpg",
+        "license": "CC0 1.0 (Cleveland Open Access, API share_license_status=CC0, 2026-10-02 확인)",
+        "license_url": "https://www.clevelandart.org/open-access",
+        "credit": "그림: 클리블랜드미술관 〈책가도〉 CC0",
+        "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+        "accession": "2011.37",
+        "why": "시리즈 공통 끝맺음: 책가도 10폭 전경 띠",
+        "license_status": "ok",
+        "edit": {
+          "preset": "archive",
+          "steps": [
+            "focus crop [126, 143, 3282, 1463]",
+            "levels 35% (0.5~99.5 percentile)",
+            "saturation -10%",
+            "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+            "hanji multiply 8% (procedural seed 2026)"
+          ],
+          "crop_px": [
+            126,
+            143,
+            3282,
+            1463
+          ],
+          "src_size": [
+            3400,
+            1915
+          ],
+          "crop_size": [
+            3156,
+            1320
+          ],
+          "out_size": [
+            2200,
+            920
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "src_sha256": "d108f0bcae36a5a573e7c4c03367124c22a91a24e6cce129af9b37989a294b8a",
+          "content_changed": false
+        }
+      }
+    }
+  }
+}

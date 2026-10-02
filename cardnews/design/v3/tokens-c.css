@@ -1,0 +1,107 @@
+/* 책가도 노트 3판 C안 = @cultureart4u 틀 (대표 결정 2026-10-02), 3:4 1080x1440.
+   위 62% 원화(ⓑ) 또는 원화 + 코드 그래픽(ⓒ) / 아래 먹갈색 띠(첫 줄 굵게 + 본문 3줄 + "이미지 제공 ・ 기관").
+   표지 = 풀블리드 원화 + 하단 그라데이션 + 펀치줄만 청자. 마지막 = 위 55% 전경 + 한지 카드(질문 1줄 · 청자 가는 줄 · 출처).
+   안전 영역 x 88~992, y 98~1342 (render_v3.safe_area: 4:5의 여백 비율 8.1% / 6.8% 유지). 서체 = 세트 B. tokens.css(4:5)는 그대로 둔다. */
+:root {
+  --paper: #F7F3EA; --ink: #111111; --red: #C8102E; --band: #2A211B; --shade: 26, 20, 16;
+  --celadon: #8CC2B3; --celadon-deep: #3F8676; --marker: #E2701F;
+  --ink-2: rgba(17, 17, 17, 0.70); --paper-2: rgba(247, 243, 234, 0.90); --paper-3: rgba(247, 243, 234, 0.72);
+  --m: 88px; --top: 98px; --bottom: 98px;
+  --f-title: "Hahmlet", "Noto Serif KR", serif;
+  --f-body: "MaruBuri", "Noto Serif KR", serif;
+  --f-num: "Black Han Sans", "Noto Serif KR", sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1440px; overflow: hidden; background: var(--band); }
+body { -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
+.card { position: relative; width: 1080px; height: 1440px; overflow: hidden; color: var(--paper);
+  word-break: keep-all; overflow-wrap: break-word; line-break: strict; background: var(--band); }
+.seal-mark { width: 18px; height: 18px; background: var(--red); display: inline-block; }
+.brand, .handle, .imgcredit, .slash, .text, .sub, .src, .credit { font-family: var(--f-body); }
+
+/* 원화 칸 */
+.hero { position: absolute; left: 0; top: 0; width: 1080px; height: 893px; overflow: hidden; background: var(--paper) var(--grain); }
+.hero img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.c-cover .hero { height: 1440px; }
+.c-last .hero { height: 792px; }
+
+/* 표지 */
+.c-cover .shade { position: absolute; left: 0; right: 0; bottom: 0; height: 760px;
+  background: linear-gradient(to bottom, rgba(var(--shade), 0) 0%, rgba(var(--shade), 0.55) 34%, rgba(var(--shade), 0.90) 66%, rgba(var(--shade), 0.94) 100%); }
+.c-cover .top { position: absolute; left: var(--m); top: var(--top); }
+.brand { display: flex; align-items: center; gap: 10px; font-size: 24px; font-weight: 700; letter-spacing: 0.06em; }
+.c-cover .brand { color: var(--paper); text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55); }
+.cover-text { position: absolute; left: var(--m); right: var(--m); bottom: 190px; } /* 1:1 미리보기(y 180~1260) 안에 끝남 */
+.kicker { font-family: var(--f-title); font-weight: 800; font-size: 68px; line-height: 1.18; letter-spacing: -0.03em; color: var(--paper); }
+.punch { font-family: var(--f-title); font-weight: 900; font-size: 96px; line-height: 1.16; letter-spacing: -0.035em; color: var(--celadon); margin-top: 4px; }
+.c-cover .sub { font-size: 32px; line-height: 1.55; letter-spacing: -0.01em; color: var(--paper-2); margin-top: 26px; max-width: 860px; text-wrap: balance; }
+.c-cover .foot { position: absolute; left: var(--m); right: var(--m); bottom: var(--bottom); }
+
+.foot { display: flex; justify-content: space-between; align-items: center; height: 34px; }
+.handle { font-size: 22px; letter-spacing: 0.02em; color: var(--paper-3); }
+.imgcredit { font-size: 21px; letter-spacing: 0.01em; color: var(--paper-3); }
+
+/* 본문 */
+.brand-pill { position: absolute; left: var(--m); top: var(--top); display: flex; align-items: center; gap: 9px; font-family: var(--f-body);
+  font-size: 21px; font-weight: 700; letter-spacing: 0.06em; color: var(--paper); background: rgba(var(--shade), 0.66); padding: 8px 14px 9px 12px; }
+.band { position: absolute; left: 0; top: 893px; width: 1080px; height: 547px; background: var(--band);
+  padding: 44px var(--m) var(--bottom); display: flex; flex-direction: column; }
+.meta { display: flex; align-items: baseline; gap: 10px; }
+.meta b { font-family: var(--f-num); font-weight: 400; font-size: 28px; color: var(--celadon); letter-spacing: 0.02em; }
+.slash { font-size: 20px; color: var(--paper-3); letter-spacing: 0.08em; }
+.lead { font-family: var(--f-title); font-weight: 800; font-size: 60px; line-height: 1.24; letter-spacing: -0.025em; color: var(--paper); margin-top: 14px; }
+.c-body .text { font-size: 42px; line-height: 1.6; letter-spacing: -0.012em; color: var(--paper-2); margin-top: 14px; text-wrap: balance; }
+.c-body .foot { margin-top: auto; }
+
+/* 마지막 장 */
+.sheet { position: absolute; left: 0; top: 792px; width: 1080px; height: 648px; background: var(--paper) var(--grain);
+  color: var(--ink); padding: 84px var(--m) var(--bottom); display: flex; flex-direction: column; align-items: center; text-align: center; }
+.cta { font-family: var(--f-title); font-weight: 900; font-size: 66px; line-height: 1.2; letter-spacing: -0.03em; }
+.cline { width: 120px; height: 3px; background: var(--celadon-deep); margin-top: 30px; }
+.src { font-size: 30px; line-height: 1.55; margin-top: 40px; text-wrap: balance; }
+.c-last .credit { font-size: 25px; line-height: 1.55; margin-top: 14px; color: var(--ink-2); text-wrap: balance; }
+.c-last .foot { margin-top: auto; width: 100%; }
+.c-last .handle { color: var(--ink-2); }
+.c-last .brand { color: var(--ink); }
+
+.mockup { position: absolute; right: var(--m); top: var(--top); font: 700 20px/1 "MaruBuri", serif; color: var(--paper);
+  background: var(--red); padding: 6px 10px; letter-spacing: 0.1em; }
+
+/* ---- 코드 그래픽 쪽지(ⓒ): 원화 위·옆 한지 쪽지. 글자는 HTML 텍스트(세트 B) ---- */
+.hero .ov { position: absolute; pointer-events: none; }
+.cg { background: var(--paper) var(--grain); color: var(--ink); border: 2px solid var(--ink);
+  box-shadow: 9px 11px 0 rgba(17, 17, 17, 0.30); padding: 26px 30px 24px; }
+.cg-t { font-family: var(--f-body); font-weight: 700; font-size: 27px; letter-spacing: -0.01em; }
+.cg-note { font-family: var(--f-body); font-size: 20px; color: var(--ink-2); margin-top: 14px; }
+/* 숫자 막대 */
+.cg-plot { display: flex; gap: 46px; height: 372px; padding: 78px 26px 0; margin-bottom: 46px; border-bottom: 2px solid var(--ink); }
+.cg-col { position: relative; flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; }
+.cg-bar { display: block; width: 100%; background: #8A8178; }
+.cg-bar.hi { background: var(--celadon-deep); }
+.cg-hl { position: absolute; top: -70px; font-family: var(--f-num); font-size: 54px; line-height: 1; color: var(--red); white-space: nowrap; }
+.cg-x { position: absolute; bottom: -40px; font-family: var(--f-num); font-size: 26px; line-height: 1; }
+/* 원고지 */
+.cg-ms { padding: 24px 24px 20px; }
+.cg-mrow { position: relative; display: grid; border: 1.5px solid rgba(200, 16, 46, 0.55); margin-top: 14px; }
+.cg-mrow:first-child { margin-top: 0; }
+.cg-mrow b { aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; font-family: var(--f-body); font-weight: 400;
+  font-size: 27px; line-height: 1; border-left: 1.5px solid rgba(200, 16, 46, 0.40); }
+.cg-mrow b:first-child { border-left: 0; }
+.cg-mrow.ul::after { content: ""; position: absolute; left: 1%; width: var(--ulw, 90%); bottom: -9px; height: 6px; background: var(--marker);
+  border-radius: 3px; transform: rotate(-0.5deg); opacity: 0.95; }
+/* 달력 */
+.cg-cal .cg-t { font-family: var(--f-num); font-weight: 400; font-size: 40px; letter-spacing: 0.02em; }
+.cg-wk, .cg-days { display: grid; grid-template-columns: repeat(7, 1fr); text-align: center; }
+.cg-wk { margin-top: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--ink); }
+.cg-wk span { font-family: var(--f-body); font-weight: 700; font-size: 20px; color: var(--ink-2); }
+.cg-days { margin-top: 6px; row-gap: 2px; }
+.cg-days span { position: relative; height: 54px; display: flex; align-items: center; justify-content: center; }
+.cg-days em { font-family: var(--f-num); font-style: normal; font-size: 24px; line-height: 1; }
+.cg-days .ck em { color: rgba(17, 17, 17, 0.38); }
+.cg-days svg { position: absolute; left: 50%; top: 50%; width: 40px; height: 40px; transform: translate(-50%, -50%); }
+.cg-days .today::before { content: ""; position: absolute; width: 44px; height: 44px; border: 3px solid var(--red); border-radius: 50%; }
+/* 기록 칸 */
+.cg-rec { padding: 18px 32px 26px; }
+.cg-rrow { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 22px 0 14px; border-bottom: 2px solid var(--ink); }
+.cg-lab { font-family: var(--f-body); font-weight: 700; font-size: 24px; color: var(--red); min-width: 92px; letter-spacing: 0.02em; }
+.cg-val { font-family: var(--f-body); font-size: 32px; letter-spacing: -0.01em; }

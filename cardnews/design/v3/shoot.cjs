@@ -1,4 +1,4 @@
-// v3 촬영기: HTML 카드 -> 1080x1350 PNG + 검수 측정(줄 수·넘침·안전 영역·실제 사용 서체).
+// v3 촬영기: HTML 카드 -> 1080x1350(기본) 또는 job.viewport(C안 3:4 = 1080x1440) PNG + 검수 측정(줄 수·넘침·안전 영역·실제 사용 서체).
 // 사용: NODE_PATH=$(npm root -g) node shoot.cjs job.json   (render_v3.py 가 호출)
 // 실제 사용 서체는 CDP CSS.getPlatformFontsForNode 로 받는다(폴백 서체가 끼면 render_v3.py 가 실패 처리).
 const { chromium } = require('playwright');
@@ -7,7 +7,7 @@ const fs = require('fs');
 (async () => {
   const job = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
   const browser = await chromium.launch();
-  const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
+  const page = await browser.newPage({ viewport: job.viewport || { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
   const cdp = await page.context().newCDPSession(page);
   const results = [];
   for (const c of job.cards) {
@@ -36,7 +36,10 @@ const fs = require('fs');
       const imgs = [...document.images].map(i => { const b = i.getBoundingClientRect();
         return { src: i.getAttribute('src'), ok: i.complete && i.naturalWidth > 0, natural: [i.naturalWidth, i.naturalHeight], box: [b.left, b.top, b.right, b.bottom] }; });
       const card = document.querySelector('.card').getBoundingClientRect();
-      const bottoms = [...document.querySelectorAll('.card > *:not(.mockup)')].map(e => e.getBoundingClientRect().bottom);
+      // 풀블리드 배경(C안 .hero/.shade/.band/.sheet)은 가장자리까지 닿는 게 의도 -> 그 안의 내용물로 세로 넘침을 잰다
+      const BLEED = '.hero, .shade, .band, .sheet';
+      const els = [...document.querySelectorAll('.card > *:not(.mockup)')].flatMap(e => e.matches(BLEED) ? (e.matches('.hero, .shade') ? [] : [...e.children]) : [e]);
+      const bottoms = els.map(e => e.getBoundingClientRect().bottom);
       return { checks, imgs, contentBottom: Math.max(...bottoms), cardBottom: card.bottom };
     });
     await cdp.send('DOM.enable');

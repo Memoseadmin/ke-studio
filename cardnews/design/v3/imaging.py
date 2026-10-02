@@ -6,6 +6,8 @@
 - muted-warm    사진용. 채도 -25%, 대비 -4%, 한지 톤 틴트 8% -> 그레인 multiply 6%
 - hanji-duotone 사진용. 흑백 -> 먹(#1B1F2A)·크라프트(#C9A877)·한지(#F7F3EA) 3색 매핑 -> 그레인 multiply 8%
 - ink-cut       사진용. 흑백 -> 3단 포스터(먹·크라프트·한지), 판화 느낌 -> 그레인 multiply 8%
+- archive-v12   원화용(디자인 시스템 v1.2 §8-3, 2026-10-02). 레벨 35% -> 채도 -20% -> 공통 LUT v1 -> 세피아 약하게(색온도 약 +6%: R x1.035, B x0.94, 추정치)
+                -> 한지 multiply 15%. 균열·얼룩·노화 흔적 보존(노이즈 제거·리터치 없음)
 선택: vignette 0~0.35 (가장자리 먹 multiply)
 """
 import hashlib
@@ -19,7 +21,8 @@ INK = (17, 17, 17)
 NIGHT = (27, 31, 42)
 KRAFT = (201, 168, 119)
 LUT_VERSION = "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)"
-PRESETS = ("archive", "muted-warm", "hanji-duotone", "ink-cut")
+PRESETS = ("archive", "archive-v12", "muted-warm", "hanji-duotone", "ink-cut")
+SEPIA_GAIN = (1.035, 1.0, 0.94)  # v1.2 §8-3 "세피아 기미 약하게(색온도 +5~8%)" 추정치. 실측 후 교체
 
 
 def hanji_texture(size, seed=2026):
@@ -113,6 +116,7 @@ def process(src, out_path, edit=None, kind="artwork", max_side=2200):
     """원본 -> 렌더용 사본(JPEG). 편집 기록(dict) 반환."""
     edit = dict(edit or {})
     preset = edit.get("preset") or ("archive" if kind == "artwork" else "muted-warm")
+    Image.MAX_IMAGE_PIXELS = None  # 클리블랜드 TIFF 원본(11838x6670) 허용
     if preset not in PRESETS:
         raise ValueError(f"알 수 없는 편집 프리셋 '{preset}' (가능: {', '.join(PRESETS)})")
     im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
@@ -133,6 +137,14 @@ def process(src, out_path, edit=None, kind="artwork", max_side=2200):
         im = ImageEnhance.Color(im).enhance(0.90); steps.append("saturation -10%")
         im = common_lut(im); steps.append(LUT_VERSION)
         im = multiply_texture(im, 0.08); steps.append("hanji multiply 8% (procedural seed 2026)")
+    elif preset == "archive-v12":
+        im = gentle_levels(im, 0.35); steps.append("levels 35% (0.5~99.5 percentile)")
+        im = ImageEnhance.Color(im).enhance(0.80); steps.append("saturation -20%")
+        im = common_lut(im); steps.append(LUT_VERSION)
+        arr = np.asarray(im).astype(np.float32) * np.array(SEPIA_GAIN, np.float32)[None, None, :]
+        im = Image.fromarray(np.clip(arr, 0, 255).astype(np.uint8)); steps.append(f"sepia light (gain R{SEPIA_GAIN[0]} G{SEPIA_GAIN[1]} B{SEPIA_GAIN[2]}, 색온도 약 +6% 추정)")
+        im = multiply_texture(im, 0.15); steps.append("hanji multiply 15% (procedural seed 2026)")
+        steps.append("aging marks kept (no denoise/retouch)")
     elif preset == "muted-warm":
         im = ImageEnhance.Color(im).enhance(0.75); steps.append("saturation -25%")
         im = ImageEnhance.Contrast(im).enhance(0.96); steps.append("contrast -4%")

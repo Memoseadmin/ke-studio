@@ -182,3 +182,10 @@ python3 cardnews/design/v3/render_v3.py cardnews/posts/2026-10-19 --final   # ap
 - `layout: "rev"`: 그림 위·글 아래. 같은 레이아웃 3연속은 자동 실패.
 - 콜라주 슬롯은 그림 칸 실측 크기로 다시 만든다(2패스, 프레임 테두리 잘림 없음).
 - 출처 줄 형식: `그림: 기관 〈작품명〉 라이선스` + `사진: 작가 · … · CC0`(라이선스별로 묶음). contact.png는 원본 1/2 축소 8장 + 360px 피드 8장.
+
+## 9. 3판 C안 (2026-10-02, 대표 결정: @cultureart4u 틀, 3:4)
+- cards.json에 `layout_family: "c"`, `canvas: [1080, 1440]`, `layout_file`을 넣으면 `templates/c-{cover,body,last}.html` + `tokens-c.css`로 렌더한다. 키가 없으면 기존 4:5 v3 동작 그대로다.
+- 안전 영역은 `safe_area()`로 계산한다(4:5 여백 비율 8.1%/6.8% 유지). 3:4는 x 88~992, y 98~1342다. 크롭 미리보기는 3:4 그리드 잘림 0, 1:1은 y 180~1260, 4:5는 y 45~1395. 표지 글자는 y 1250 안에서 끝난다.
+- 넘김 리듬: C안은 틀이 고정이라, 같은 레이아웃 3연속 대신 구성(ⓐ/ⓑ/ⓒ, LAYOUT `compose`) 3연속을 실패로 잡는다. 구성 기록이 없거나, 한국 맥락 확인이 없는 실사를 쓰면 실패다.
+- 원화 톤은 `archive-v12` 프리셋(v1.2 §8-3)이다. 코드 그래픽은 `bars`·`manuscript`·`calendar`·`record-ko` 쪽지로 만든다(HTML 텍스트, 서체 점검 대상).
+- 세트 11 3판 기록: `posts/2026-10-19/VISUAL-BRIEF.md`, `MATCH-v3.md`, `RENDER.json`.

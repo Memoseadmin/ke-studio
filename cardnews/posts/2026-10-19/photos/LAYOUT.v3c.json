@@ -1,0 +1,362 @@
+{
+ "set": "C1-1-11 (2026-10-19) 필사 입문",
+ "version": "3판 C안 @cultureart4u 틀, 3:4 (2026-10-02 designer)",
+ "schema": "cards[] = render_v3.py 입력(cards.json layout_file). kind=artwork, edit.preset=archive-v12(design-system v1.2 §8-3), compose = ⓐ사진/ⓑ원화/ⓒ함께(§9-1), card_credit = 장별 '이미지 제공 ・ 기관', overlay = 코드 그래픽 쪽지(원화 픽셀 불변), split = 원화를 왼쪽 비율만 쓰고 오른쪽은 한지+쪽지",
+ "notes": {
+  "photos": "2판 서양 스톡 사진 7장 전부 폐기(대표 결정). 한국 맥락 CC0·공공누리1 실사는 확보하지 못해 ⓐ 0장",
+  "nmk": "국립중앙박물관 e뮤지엄 책가도(공공누리1)는 다운로드가 JS 팝업이라 이번에도 자동으로 받지 못함. 받으면 같은 형식으로 추가",
+  "ⓒ_definition": "§9-1 ⓒ '사진+원화 함께'를 이번 세트는 '원화 + 코드 그래픽 함께'로 적용(대표 지시: 원화 디테일 + 코드 그래픽 조합)",
+  "text_in_art": "그림 속 글자(5장 시계 상표·'福')는 크롭 밖으로 뺌. 지우기·흐림 없음",
+  "originals": "photos/src/ (커밋 제외). 받기: python3 photos/fetch_art_v3c.py"
+ },
+ "cards": [
+  {
+   "file": "src/cma-2011.37-full.tif",
+   "kind": "artwork",
+   "title": "Books and Scholars' Accoutrements (10-panel folding screen, 19th century)",
+   "title_ko": "책가도",
+   "institution": "The Cleveland Museum of Art",
+   "accession": "2011.37",
+   "object_url": "https://www.clevelandart.org/art/2011.37",
+   "image_url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_full.tif",
+   "license": "CC0 1.0 (Cleveland Open Access, API share_license_status=CC0, 2026-10-02 확인)",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "credit": "The Cleveland Museum of Art, 2011.37, CC0",
+   "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+   "card_credit": "클리블랜드미술관",
+   "card": 1,
+   "compose": "b",
+   "edit": {
+    "preset": "archive-v12",
+    "crop": [
+     3650,
+     500,
+     5950,
+     3567
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   },
+   "detail": "두 폭 위 칸: 책갑 더미(위)와 향로·필통·청자 병(아래)",
+   "why": "표지 '요즘 필사 붐의 원조 / 윤동주도 베껴 썼다' = 옛 서가의 책. 베껴 쓰던 시대의 책장이 원조라는 말을 그림 한 장으로",
+   "compose_why": "ⓑ 원화 주인공: 표지는 풀블리드 원화 + 하단 그라데이션(C안). 그래픽을 얹지 않아 글 두 줄이 먼저 읽힘"
+  },
+  {
+   "file": "src/cma-2011.37-full.tif",
+   "kind": "artwork",
+   "title": "Books and Scholars' Accoutrements (10-panel folding screen, 19th century)",
+   "title_ko": "책가도",
+   "institution": "The Cleveland Museum of Art",
+   "accession": "2011.37",
+   "object_url": "https://www.clevelandart.org/art/2011.37",
+   "image_url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_full.tif",
+   "license": "CC0 1.0 (Cleveland Open Access, API share_license_status=CC0, 2026-10-02 확인)",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "credit": "The Cleveland Museum of Art, 2011.37, CC0",
+   "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+   "card_credit": "클리블랜드미술관",
+   "card": 2,
+   "compose": "c",
+   "edit": {
+    "preset": "archive-v12",
+    "crop": [
+     1300,
+     760,
+     2630,
+     1860
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   },
+   "detail": "둘째 폭 맨 위 칸: 아홉 칸 책갑 + 붉은 접시",
+   "why": "판매량 = 쌓인 책. 가지런히 쌓인 책갑 옆에 막대 두 개로 +692.8%를 그대로 보여 준다",
+   "compose_why": "ⓒ 원화 + 숫자 인포그래픽: 수치는 그림만으로 전할 수 없어 막대(값 비율 1 : 7.928 그대로)를 쪽지로 얹음",
+   "overlay": {
+    "type": "bars",
+    "x": 0.53,
+    "y": 0.125,
+    "w": 0.385,
+    "title": "교보문고 필사책 판매",
+    "items": [
+     [
+      "2023",
+      1.0
+     ],
+     [
+      "2024",
+      7.928
+     ]
+    ],
+    "highlight": "+692.8%",
+    "note": "전년 대비 · 서울신문 2025.2.14"
+   }
+  },
+  {
+   "file": "src/cma-2011.37-full.tif",
+   "kind": "artwork",
+   "title": "Books and Scholars' Accoutrements (10-panel folding screen, 19th century)",
+   "title_ko": "책가도",
+   "institution": "The Cleveland Museum of Art",
+   "accession": "2011.37",
+   "object_url": "https://www.clevelandart.org/art/2011.37",
+   "image_url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_full.tif",
+   "license": "CC0 1.0 (Cleveland Open Access, API share_license_status=CC0, 2026-10-02 확인)",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "credit": "The Cleveland Museum of Art, 2011.37, CC0",
+   "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+   "card_credit": "클리블랜드미술관",
+   "card": 3,
+   "compose": "b",
+   "edit": {
+    "preset": "archive-v12",
+    "crop": [
+     9330,
+     2915,
+     10410,
+     3808
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   },
+   "detail": "여덟째 폭 셋째 칸: 대나무 필통의 붓, 책갑, 연적",
+   "why": "'노트 한 권, 펜 하나, 베낄 책 한 권' = 옛 서가의 붓·책·연적. 준비물이 셋으로 끝난다는 말을 그림 속 사물 셋이 보여 준다",
+   "compose_why": "ⓑ 원화 주인공: 사물이 이미 셋이라 덧그림이 필요 없음"
+  },
+  {
+   "file": "src/cma-2011.37-full.tif",
+   "kind": "artwork",
+   "title": "Books and Scholars' Accoutrements (10-panel folding screen, 19th century)",
+   "title_ko": "책가도",
+   "institution": "The Cleveland Museum of Art",
+   "accession": "2011.37",
+   "object_url": "https://www.clevelandart.org/art/2011.37",
+   "image_url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_full.tif",
+   "license": "CC0 1.0 (Cleveland Open Access, API share_license_status=CC0, 2026-10-02 확인)",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "credit": "The Cleveland Museum of Art, 2011.37, CC0",
+   "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+   "card_credit": "클리블랜드미술관",
+   "card": 4,
+   "compose": "c",
+   "edit": {
+    "preset": "archive-v12",
+    "crop": [
+     1300,
+     3500,
+     2630,
+     4600
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   },
+   "detail": "둘째 폭 맨 아래 칸: 높이 쌓인 책",
+   "why": "'밑줄 그어 둔 문장 두세 줄' = 원고지에 옮긴 두 줄 + 주황 밑줄. 문장은 윤동주 「서시」(퍼블릭 도메인)로 1장과 이어짐",
+   "compose_why": "ⓒ 원화 + 한글 원고지·밑줄: 쌓인 책(오른쪽)에서 두 줄을 골라 옮긴 장면",
+   "overlay": {
+    "type": "manuscript",
+    "x": 0.085,
+    "y": 0.2,
+    "w": 0.52,
+    "cols": 14,
+    "rows": [
+     "죽는 날까지 하늘을 우러러",
+     "한 점 부끄럼이 없기를,",
+     "잎새에 이는 바람에도",
+     "나는 괴로워했다."
+    ],
+    "underline": [
+     0,
+     1
+    ],
+    "cite": "윤동주 「서시」(1941) 중에서"
+   }
+  },
+  {
+   "kind": "artwork",
+   "title": "Books and Scholars' Possessions (10-panel folding screen, late 19th–early 20th century)",
+   "title_ko": "책거리",
+   "institution": "The Metropolitan Museum of Art",
+   "accession": "2005.385",
+   "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+   "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "credit": "The Metropolitan Museum of Art, 2005.385, CC0",
+   "credit_short": "메트로폴리탄미술관 〈책거리〉 CC0",
+   "card_credit": "메트로폴리탄미술관",
+   "card": 5,
+   "compose": "c",
+   "file": "src/met-73134-DP163174.jpg",
+   "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163174.jpg",
+   "edit": {
+    "preset": "archive-v12",
+    "crop": [
+     1680,
+     1360,
+     2030,
+     1940
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   },
+   "split": 0.5,
+   "detail": "책거리 폭의 자명종(문자판). 시계 아래 상표 글자와 그릇의 '福' 자는 크롭 밖",
+   "why": "'10분, 같은 시각' = 옛 그림 속 자명종, '달력엔 체크 하나씩' = 날짜마다 체크한 달력",
+   "compose_why": "ⓒ 원화 + 달력 나란히: 시각(시계)과 날짜(달력)를 한 장에. 시계 원화가 작아(폭 350px) 왼쪽 반 칸에만 둬 확대를 1.5배로 묶음",
+   "overlay": {
+    "type": "calendar",
+    "x": 0.555,
+    "y": 0.135,
+    "w": 0.36,
+    "title": "2026. 10",
+    "first_weekday": 4,
+    "days": 31,
+    "checked": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ],
+    "today": 19
+   }
+  },
+  {
+   "file": "src/cma-2011.37-full.tif",
+   "kind": "artwork",
+   "title": "Books and Scholars' Accoutrements (10-panel folding screen, 19th century)",
+   "title_ko": "책가도",
+   "institution": "The Cleveland Museum of Art",
+   "accession": "2011.37",
+   "object_url": "https://www.clevelandart.org/art/2011.37",
+   "image_url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_full.tif",
+   "license": "CC0 1.0 (Cleveland Open Access, API share_license_status=CC0, 2026-10-02 확인)",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "credit": "The Cleveland Museum of Art, 2011.37, CC0",
+   "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+   "card_credit": "클리블랜드미술관",
+   "card": 6,
+   "compose": "b",
+   "edit": {
+    "preset": "archive-v12",
+    "crop": [
+     8240,
+     2440,
+     9300,
+     3316
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   },
+   "detail": "일곱째 폭 둘째 칸: 벼루, 도장, 책갑",
+   "why": "'같은 문장을 두 서체로' = 먹을 갈아 쓰는 벼루와 도장. 글씨를 쓰는 자리 그 자체",
+   "compose_why": "ⓑ 원화 주인공: 흘림 손글씨를 세트 B 서체로 흉내 내면 가짜가 되므로 덧그림 없이 원화만(5·7장 ⓒ 사이 리듬도 맞춤)"
+  },
+  {
+   "kind": "artwork",
+   "title": "Books and Scholars' Possessions (10-panel folding screen, late 19th–early 20th century)",
+   "title_ko": "책거리",
+   "institution": "The Metropolitan Museum of Art",
+   "accession": "2005.385",
+   "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+   "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "credit": "The Metropolitan Museum of Art, 2005.385, CC0",
+   "credit_short": "메트로폴리탄미술관 〈책거리〉 CC0",
+   "card_credit": "메트로폴리탄미술관",
+   "card": 7,
+   "compose": "c",
+   "file": "src/met-73134-DP163173.jpg",
+   "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163173.jpg",
+   "edit": {
+    "preset": "archive-v12",
+    "crop": [
+     1690,
+     1700,
+     2310,
+     2213
+    ],
+    "focus": [
+     0.3,
+     0.5
+    ]
+   },
+   "detail": "책거리 폭: 문갑·책·백자 병",
+   "why": "'날짜와 책 제목, 이 두 줄' = 기록 쪽지 두 칸(날짜·책 제목). 책 제목은 1장 윤동주의 시집으로 이어짐",
+   "compose_why": "ⓒ 원화 + 기록 칸: 문장집이 되는 두 줄을 실제 칸으로 보여 줌",
+   "overlay": {
+    "type": "record-ko",
+    "x": 0.47,
+    "y": 0.27,
+    "w": 0.445,
+    "rows": [
+     [
+      "날짜",
+      "2026. 10. 19."
+     ],
+     [
+      "책 제목",
+      "『하늘과 바람과 별과 시』"
+     ]
+    ]
+   }
+  },
+  {
+   "file": "src/cma-2011.37-full.tif",
+   "kind": "artwork",
+   "title": "Books and Scholars' Accoutrements (10-panel folding screen, 19th century)",
+   "title_ko": "책가도",
+   "institution": "The Cleveland Museum of Art",
+   "accession": "2011.37",
+   "object_url": "https://www.clevelandart.org/art/2011.37",
+   "image_url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_full.tif",
+   "license": "CC0 1.0 (Cleveland Open Access, API share_license_status=CC0, 2026-10-02 확인)",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "credit": "The Cleveland Museum of Art, 2011.37, CC0",
+   "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+   "card_credit": "클리블랜드미술관",
+   "card": 8,
+   "compose": "b",
+   "edit": {
+    "preset": "archive-v12",
+    "crop": [
+     2565,
+     380,
+     9274,
+     5300
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   },
+   "detail": "10폭 전경(가운데 7폭)",
+   "why": "마지막 장 = 책가도 전경 + 질문 1줄 + 출처(§8-4). 시리즈 끝맺음",
+   "compose_why": "ⓑ 원화 주인공: 전경 띠"
+  }
+ ]
+}

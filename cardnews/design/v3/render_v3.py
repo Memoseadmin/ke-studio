@@ -49,7 +49,28 @@ STACKS = {"title": ["Hahmlet[wght].ttf", "NotoSerifKR[wght].ttf"], "body": ["Mar
 BRAND, HANDLE = "책가도 노트", "@chaekgado.note"
 # AI 표시 라벨은 카드에 넣지 않는다(대표 결정 2026-10-02). AI 고지는 캡션(marketer)이 담당. 마지막 장 = 출처 줄만.
 SAFE = (88, 92, 1080 - 88, 1350 - 92)
-RENDERER_VERSION = "v3.2-collage-2 (2026-10-02, 3안 하이브리드 콜라주 2판: LAYOUT.v3·흐림·잉크 테두리·코드 오버레이·rev 레이아웃·슬롯 실측)"
+RENDERER_VERSION = "v3.3-c (2026-10-02, C안 @cultureart4u 틀 3:4 추가. 기본(4:5·v3 템플릿) 동작은 v3.2-collage-2 그대로)"
+CELADON = "#3F8676"  # C안 인포그래픽 막대(청자 짙게). 펀치줄 청자는 tokens-c.css --celadon
+
+
+def safe_area(w, h):
+    """바깥 여백 비율 고정(design-system §7: 좌우 88/1080 = 8.1%, 위아래 92/1350 = 6.8% ≈ 7%) -> 캔버스별 안전 영역."""
+    mx = round(w * 88 / 1080)
+    my = round(h * 92 / 1350)
+    return (mx, my, w - mx, h - my)
+
+
+def crop_zones(w, h):
+    """미리보기 크롭에서 보이는 영역(가운데 크롭 가정, 계산값). 3:4 그리드는 3:4 원본이면 잘림 0."""
+    z = {}
+    for name, (rw, rh) in {"grid_3x4": (3, 4), "square_1x1": (1, 1), "feed_4x5": (4, 5)}.items():
+        if w / h > rw / rh:  # 원본이 더 넓음 -> 좌우가 잘림
+            vw = h * rw / rh
+            z[name] = {"x": [round((w - vw) / 2, 1), round((w + vw) / 2, 1)], "y": [0, h]}
+        else:
+            vh = w * rh / rw
+            z[name] = {"x": [0, w], "y": [round((h - vh) / 2, 1), round((h + vh) / 2, 1)]}
+    return z
 OVERLAY_ORANGE = "#E2701F"  # 4장 밑줄(cards.json visual "주황"). 코드 그래픽, 사진 픽셀은 바꾸지 않음
 
 
@@ -100,11 +121,11 @@ def font_log():
     return out
 
 
-def grain_tile(work):
-    p = os.path.join(work, "grain.png")
+def grain_tile(work, size=(1080, 1350)):
+    p = os.path.join(work, "grain.png" if tuple(size) == (1080, 1350) else f"grain-{size[0]}x{size[1]}.png")
     if not os.path.exists(p):
         import numpy as np
-        tex = imaging.hanji_texture((1080, 1350), seed=7)
+        tex = imaging.hanji_texture(tuple(size), seed=7)
         s = 0.07  # 바탕 한지 결 7%(글자 위에는 올리지 않음: 배경 레이어)
         arr = np.array(imaging.PAPER, np.float32)[None, None, :] * (1 - s + s * tex[..., None])
         Image.fromarray(arr.clip(0, 255).astype("uint8")).save(p)
@@ -120,13 +141,15 @@ def load_images(post_dir, post, total, work):
         jpath = os.path.join(pdir, "PHOTOS.v3.json")  # COO 별도 세션이 넣는 사진 목록이 우선
     if os.path.isfile(os.path.join(pdir, "LAYOUT.v3.json")):
         jpath = os.path.join(pdir, "LAYOUT.v3.json")  # 2판: 장별 배치(사진 선택·편집·프레임·오버레이). 사진 메타는 PHOTOS.v3.json에서 ref로 병합
+    if post.get("layout_file"):
+        jpath = os.path.join(post_dir, post["layout_file"])  # 3판(C안): cards.json이 지정한 배치 파일이 최우선(2판 LAYOUT.v3.json은 보관)
     if os.path.isfile(jpath):
         with open(jpath, encoding="utf-8") as fp:
             data = json.load(fp)
         entries = (data.get("cards") or data.get("photos", [])) if isinstance(data, dict) else data
         if isinstance(data, dict) and data.get("notes"):
             out["_notes"] = data["notes"]
-        if jpath.endswith("LAYOUT.v3.json"):
+        if os.path.basename(jpath).startswith("LAYOUT"):
             entries = [resolve_ref(e, pdir) for e in entries]
         elif entries and "file" not in entries[0]:
             raise SystemExit(f"{jpath}: researcher 후보 목록 형식(file 없음) -> photos/LAYOUT.v3.json 으로 장별 배치를 지정")
@@ -246,12 +269,14 @@ def plate_html(img, cls="plate"):
         cls += " collage"
         fx, fy = 0.5, 0.5
         path = img["collage_path"]
+    split = f"width:{float(e['split']) * 100:.1f}%;" if e.get("split") else ""  # C안 ⓒ 나란히: 원화는 왼쪽 split 비율만, 오른쪽은 한지 + 코드 그래픽
     return (f'<figure class="{cls}"><img src="{file_url(path)}" alt="" '
-            f'style="object-position:{fx * 100:.1f}% {fy * 100:.1f}%">{pill}{overlay_html(e.get("overlay"))}</figure>')
+            f'style="{split}object-position:{fx * 100:.1f}% {fy * 100:.1f}%">{pill}{overlay_html(e.get("overlay"))}</figure>')
 
 
 def _box_style(o):
-    return f'left:{o["x"] * 100:.1f}%;top:{o["y"] * 100:.1f}%;width:{o["w"] * 100:.1f}%;height:{o["h"] * 100:.1f}%'
+    h = f'height:{o["h"] * 100:.1f}%' if o.get("h") else "height:auto"
+    return f'left:{o["x"] * 100:.1f}%;top:{o["y"] * 100:.1f}%;width:{o["w"] * 100:.1f}%;{h}'
 
 
 def overlay_html(o):
@@ -307,12 +332,79 @@ def overlay_html(o):
                 f'<div class="ov-row"><span class="ov-lab" data-font>{html.escape(labels[0])}</span>{date}</div>'
                 f'<div class="ov-row"><span class="ov-lab" data-font>{html.escape(labels[1])}</span><span class="ov-line"></span></div>'
                 f'<div class="ov-row ov-checks">{boxes}</div></div>')
+    if t in C_OVERLAYS:
+        return C_OVERLAYS[t](o)
     raise SystemExit(f"알 수 없는 overlay type {t}")
 
 
 def overlay_text(o):
+    if (o or {}).get("type") in C_OVERLAYS:
+        return c_overlay_text(o)
     return "".join((o or {}).get("labels", ["정자", "흘림"] if (o or {}).get("type") == "script-pair" else
                                   ["날짜", "책 제목"] if (o or {}).get("type") == "record" else []))
+
+
+# ---- C안(3판) 코드 그래픽: 원화 위·옆에 얹는 한지 쪽지. 원화 픽셀은 그대로, 글자는 세트 B 서체(HTML 텍스트, 서체·두부 점검 대상) ----
+def _cg_bars(o):
+    """숫자 인포그래픽: 막대 높이 = 값 비율 그대로(왜곡 없음). items = [[라벨, 값], ...]."""
+    items = o["items"]
+    vmax = max(v for _, v in items)
+    bars = []
+    for i, (lab, v) in enumerate(items):
+        hi = i == len(items) - 1
+        top = f'<span class="cg-hl" data-font>{html.escape(o["highlight"])}</span>' if hi and o.get("highlight") else ""
+        bars.append(f'<div class="cg-col">{top}<i class="cg-bar{" hi" if hi else ""}" style="height:{v / vmax * 100:.2f}%"></i>'
+                    f'<span class="cg-x" data-font>{html.escape(lab)}</span></div>')
+    return (f'<div class="ov cg cg-bars" style="{_box_style(o)}"><p class="cg-t" data-font>{html.escape(o["title"])}</p>'
+            f'<div class="cg-plot">{"".join(bars)}</div><p class="cg-note" data-font>{html.escape(o.get("note", ""))}</p></div>')
+
+
+def _cg_manuscript(o):
+    """원고지: 한 칸에 한 글자, 띄어쓰기는 빈 칸. underline = 밑줄 칠 줄 번호(0부터)."""
+    cols = int(o.get("cols", 14))
+    rows = []
+    for i, line in enumerate(o["rows"]):
+        cells = "".join(f'<b data-font>{html.escape(ch) if ch != " " else ""}</b>' for ch in line.ljust(cols)[:cols])
+        ul = ' ul' if i in o.get("underline", []) else ''
+        rows.append(f'<div class="cg-mrow{ul}" style="grid-template-columns:repeat({cols},1fr);--ulw:{len(line.rstrip()) / cols * 98:.1f}%">{cells}</div>')
+    cite = f'<p class="cg-note" data-font>{html.escape(o["cite"])}</p>' if o.get("cite") else ""
+    return f'<div class="ov cg cg-ms" style="{_box_style(o)}">{"".join(rows)}{cite}</div>'
+
+
+def _cg_calendar(o):
+    """달력: first_weekday(0=일) 기준 칸 배치, checked = 체크한 날짜, today = 테두리만."""
+    wk = "".join(f'<span data-font>{d}</span>' for d in "일월화수목금토")
+    cells = ['<span></span>'] * int(o["first_weekday"])
+    chk = set(o.get("checked", []))
+    for d in range(1, int(o["days"]) + 1):
+        cls = "ck" if d in chk else "today" if d == o.get("today") else ""
+        mark = ('<svg viewBox="0 0 40 40"><path d="M8,21 L17,30 L33,10" fill="none" stroke="#C8102E" stroke-width="5" '
+                'stroke-linecap="round" stroke-linejoin="round"/></svg>') if d in chk else ""
+        cells.append(f'<span class="{cls}"><em data-font>{d}</em>{mark}</span>')
+    return (f'<div class="ov cg cg-cal" style="{_box_style(o)}"><p class="cg-t" data-font>{html.escape(o["title"])}</p>'
+            f'<div class="cg-wk">{wk}</div><div class="cg-days">{"".join(cells)}</div></div>')
+
+
+def _cg_record(o):
+    rows = "".join(f'<div class="cg-rrow"><span class="cg-lab" data-font>{html.escape(a)}</span><span class="cg-val" data-font>{html.escape(b)}</span></div>'
+                   for a, b in o["rows"])
+    return f'<div class="ov cg cg-rec" style="{_box_style(o)}">{rows}</div>'
+
+
+C_OVERLAYS = {"bars": _cg_bars, "manuscript": _cg_manuscript, "calendar": _cg_calendar, "record-ko": _cg_record}
+
+
+def c_overlay_text(o):
+    t = o["type"]
+    if t == "bars":
+        return o["title"] + o.get("highlight", "") + o.get("note", "") + "".join(a for a, _ in o["items"])
+    if t == "manuscript":
+        return "".join(o["rows"]) + o.get("cite", "")
+    if t == "calendar":
+        return o["title"] + "일월화수목금토" + "".join(str(d) for d in range(1, int(o["days"]) + 1))
+    if t == "record-ko":
+        return "".join(a + b for a, b in o["rows"])
+    return ""
 
 
 def _lic_short(lic):
@@ -323,7 +415,7 @@ def _lic_short(lic):
     return m.group(0).upper() if m else str(lic)
 
 
-def art_credit_line(images):
+def art_credit_line(images, sep=" · "):
     """마지막 장 고정 출처 줄(§8-4). '그림: 기관 〈작품명〉 라이선스'(원화 + 프레임 원화) + '사진: 작가 · 라이선스'(쓰인 실사 전부).
     LAYOUT.v3.json/PHOTOS.v3.json에서 자동 생성(수기 누락 방지). 사진은 라이선스별로 작가를 묶는다."""
     arts, by_lic = [], {}
@@ -348,7 +440,7 @@ def art_credit_line(images):
     nb = lambda x: x.replace(" ", "\u00a0")  # 이름·작품 단위로만 줄바꿈(작가명·'〈책가도〉 CC0'이 갈라지지 않게)
     parts = []
     if arts:
-        parts.append("그림: " + " · ".join(nb(a) for a in arts))
+        parts.append("그림: " + sep.join(nb(a) for a in arts))
     if by_lic:
         parts.append("사진: " + " / ".join(" · ".join(nb(w) for w in v) + " · " + k for k, v in by_lic.items()))
     return "\n".join(parts)
@@ -356,6 +448,8 @@ def art_credit_line(images):
 
 def build_html(post, card, idx, total, images, css, mockup):
     tpl_name = "cover" if idx == 0 else "last" if idx == total - 1 else "body"
+    if post.get("layout_family") == "c":
+        return build_html_c(post, card, idx, total, images, css, mockup, tpl_name)
     with open(os.path.join(HERE, "templates", f"{tpl_name}.html"), encoding="utf-8") as fp:
         tpl = string.Template(fp.read())
     n = card.get("n", idx + 1)
@@ -378,6 +472,32 @@ def build_html(post, card, idx, total, images, css, mockup):
     return tpl.substitute(vals), texts, tpl_name
 
 
+def build_html_c(post, card, idx, total, images, css, mockup, tpl_name):
+    """C안(@cultureart4u 틀, 3:4): 표지 = 풀블리드 원화 + 하단 그라데이션 + 설정줄/펀치줄(청자) + 부제.
+    본문 = 위 62% 원화(ⓑ) 또는 원화+코드 그래픽(ⓒ) / 아래 먹갈색 띠: 장 번호 · 첫 줄 굵게(headline) · 본문 · '이미지 제공 ・ 기관'.
+    마지막 = 위 55% 원화 전경 / 아래 한지 카드: 질문 1줄 · 청자 가는 줄 · 출처 줄(body) · 그림 출처 줄(자동, §8-4 형식)."""
+    with open(os.path.join(HERE, "templates", f"c-{tpl_name}.html"), encoding="utf-8") as fp:
+        tpl = string.Template(fp.read())
+    n = card.get("n", idx + 1)
+    img = images.get(n)
+    esc = lambda s: re.sub(r"(^|\s)([□☑→·(『「①②③④⑤]) ", lambda m: m.group(1) + m.group(2) + "\u00a0", html.escape(s or ""))
+    credit = art_credit_line(images, sep=" / ")
+    inst = (img or {}).get("entry", {}).get("card_credit") or ""
+    vals = {
+        "css": css, "brand": BRAND, "handle": HANDLE, "num": f"{n:02d}", "total": f"{total:02d}",
+        "kicker": esc(card.get("kicker")), "headline": esc(card.get("headline")), "body": esc(card.get("body")).replace("\n", "<br>"),
+        "plate": plate_html(img, "hero"), "compose": (img or {}).get("entry", {}).get("compose", ""),
+        "imgcredit": f'<span class="imgcredit" data-font>이미지 제공 ・ {html.escape(inst)}</span>' if inst else "",
+        "credit": f'<p class="credit" data-check="그림 출처 줄" data-maxlines="3" data-font>{esc(credit).replace(chr(10), "<br>")}</p>' if credit else "",
+        "mockup": "" if not mockup else '<div class="mockup">MOCKUP</div>',
+    }
+    texts = {"title": card.get("headline", "") + card.get("kicker", ""),
+             "body": card.get("body", "") + BRAND + HANDLE + credit + "이미지 제공 ・ " + inst
+             + (overlay_text(img["entry"].get("overlay")) if img else ""),
+             "num": f"{n:02d}{total:02d}"}
+    return tpl.substitute(vals), texts, tpl_name
+
+
 def contact_sheet(paths, title, out, tile=(360, 450), per_row=4, big=(540, 675)):
     """검수용 한 장: 위 = 8장 원본(1/2 축소, 540x675) 4x2, 아래 = 피드 폭 360x450 8장 한 줄(실제 피드 크기)."""
     pad, head, lab = 24, 70, 34
@@ -393,7 +513,7 @@ def contact_sheet(paths, title, out, tile=(360, 450), per_row=4, big=(540, 675))
         f2 = ImageFont.truetype(os.path.join(FONT_DIR, "MaruBuri-Regular.ttf"), 20)
     except Exception:
         f1 = f2 = ImageFont.load_default()
-    d.text((pad, 22), title + "   |   위: 원본 1/2 (540x675)   아래: 피드 폭 360x450", font=f1, fill="#FFD23F")
+    d.text((pad, 22), title + f"   |   위: 원본 1/2 ({big[0]}x{big[1]})   아래: 피드 폭 {tile[0]}x{tile[1]}", font=f1, fill="#FFD23F")
     for i, p in enumerate(paths):
         im = Image.open(p).convert("RGB")
         x = pad + (i % per_row) * (big[0] + pad)
@@ -419,9 +539,13 @@ def render_post(post_dir, out_dir, final, keep_html):
     os.makedirs(out_dir, exist_ok=True)
     images = load_images(post_dir, post, total, work)
     notes = images.pop("_notes", None)
-    css = font_faces() + "\n" + open(os.path.join(HERE, "tokens.css"), encoding="utf-8").read().replace(
-        "var(--grain)", f'url("{file_url(grain_tile(work))}")')
-    job, texts_by_n, tpl_by_n = {"cards": []}, {}, {}
+    family = post.get("layout_family", "v3")
+    canvas_w, canvas_h = post.get("canvas", [1080, 1350])
+    safe = safe_area(canvas_w, canvas_h)
+    css_file = "tokens-c.css" if family == "c" else "tokens.css"
+    css = font_faces() + "\n" + open(os.path.join(HERE, css_file), encoding="utf-8").read().replace(
+        "var(--grain)", f'url("{file_url(grain_tile(work, (canvas_w, canvas_h)))}")')
+    job, texts_by_n, tpl_by_n = {"cards": [], "viewport": {"width": canvas_w, "height": canvas_h}}, {}, {}
     for i, c in enumerate(cards):
         n = c.get("n", i + 1)
         doc, texts, tpl = build_html(post, c, i, total, images, css, mockup=not final)
@@ -461,9 +585,19 @@ def render_post(post_dir, out_dir, final, keep_html):
         img = images.get(c["n"])
         layouts[c["n"]] = tpl_by_n[c["n"]] + (("-" + img["entry"]["layout"]) if img and img["entry"].get("layout") else "")
     seq = [layouts[c["n"]] for c in job["cards"]]
-    for i in range(len(seq) - 2):
-        if seq[i] == seq[i + 1] == seq[i + 2]:
-            fails.append(f"card-{job['cards'][i]['n']:02d}~{job['cards'][i + 2]['n']:02d}: 같은 레이아웃 3연속({seq[i]})")
+    compose = [((images.get(c["n"]) or {}).get("entry") or {}).get("compose", "-") for c in job["cards"]]
+    # 넘김 리듬: v3 = 같은 레이아웃 3연속 금지(§7). C안 = 틀 자체가 고정(대표 결정)이라 구성 ⓐ/ⓑ/ⓒ 3연속 금지(§9-1)로 판정
+    rhythm = compose if family == "c" else seq
+    for i in range(len(rhythm) - 2):
+        if rhythm[i] == rhythm[i + 1] == rhythm[i + 2] and rhythm[i] != "-":
+            fails.append(f"card-{job['cards'][i]['n']:02d}~{job['cards'][i + 2]['n']:02d}: 같은 {'구성' if family == 'c' else '레이아웃'} 3연속({rhythm[i]})")
+    if family == "c":
+        for c in job["cards"]:
+            e = (images.get(c["n"]) or {}).get("entry") or {}
+            if e.get("compose") not in ("a", "b", "c"):
+                fails.append(f"card-{c['n']:02d}: 구성(ⓐ/ⓑ/ⓒ) 기록 없음")
+            if e.get("kind") == "photo" and family == "c" and not e.get("korean_context"):
+                fails.append(f"card-{c['n']:02d}: 한국 맥락 확인 없는 실사(3판 금지)")
     for n, img in images.items():
         sc = (img["edit"] or {}).get("collage", {}).get("photo_scale", 0)
         if sc > 1.6:
@@ -480,10 +614,10 @@ def render_post(post_dir, out_dir, final, keep_html):
             if ch["overflow"]:
                 fails.append(f"card-{n:02d}: 넘침 {ch['check']}")
             x0, y0, x1, y1 = ch["box"]
-            if x0 < SAFE[0] - 1 or y0 < SAFE[1] - 1 or x1 > SAFE[2] + 1 or y1 > SAFE[3] + 1:
+            if x0 < safe[0] - 1 or y0 < safe[1] - 1 or x1 > safe[2] + 1 or y1 > safe[3] + 1:
                 fails.append(f"card-{n:02d}: 안전 영역 밖 {ch['check']} {[round(v) for v in ch['box']]}")
             rec["checks"].append(item)
-        if m["contentBottom"] > 1350 - SAFE[1] + 1:
+        if m["contentBottom"] > canvas_h - safe[1] + 1:
             fails.append(f"card-{n:02d}: 세로 넘침(내용 끝 y {round(m['contentBottom'])})")
         for im in m["imgs"]:
             if not im["ok"]:
@@ -491,7 +625,7 @@ def render_post(post_dir, out_dir, final, keep_html):
             else:
                 w = im["box"][2] - im["box"][0]
                 h = im["box"][3] - im["box"][1]
-                if h < 300 and tpl_by_n[n] == "body":
+                if h < 300 and tpl_by_n[n] == "body" and family != "c":
                     warns.append(f"card-{n:02d}: 그림 칸 높이 {round(h)}px(<300)")
                 scale = max(w / max(1, im["natural"][0]), h / max(1, im["natural"][1]))
                 if scale > 1.6:
@@ -507,7 +641,7 @@ def render_post(post_dir, out_dir, final, keep_html):
             rec["image"] = {"kind": img["kind"], **{k: img["entry"].get(k) for k in (
                 "ref", "file", "title", "title_ko", "author", "institution", "page_url", "object_url", "image_url", "file_url", "downloaded_from",
                 "license", "license_url", "credit", "credit_short", "accession", "model", "endpoint", "model_license", "terms_url", "seed",
-                "generated_at", "why", "overlay") if img["entry"].get(k)},
+                "generated_at", "why", "overlay", "compose", "compose_why", "detail", "card_credit") if img["entry"].get(k)},
                 "license_status": img.get("license_status"), "edit": img["edit"]}
             if img["entry"].get("frame"):
                 fr = img["entry"]["frame"]
@@ -515,15 +649,22 @@ def render_post(post_dir, out_dir, final, keep_html):
         per_card[f"card-{n:02d}"] = rec
     paths = [c["png"] for c in job["cards"]]
     cpath = os.path.join(out_dir, "contact.png")
-    contact_sheet(paths, f"{post.get('post_id', date)}  v3 contact (360x450 = feed width)  {'final' if final else 'MOCKUP'}", cpath)
+    tile = (360, round(360 * canvas_h / canvas_w))
+    contact_sheet(paths, f"{post.get('post_id', date)}  v3 contact ({tile[0]}x{tile[1]} = feed width)  {'final' if final else 'MOCKUP'}", cpath,
+                  tile=tile, big=(540, round(540 * canvas_h / canvas_w)))
     log = {"mode": "final" if final else "mockup", "rendered_at": _dt.datetime.utcnow().isoformat() + "Z",
            "renderer": "cardnews/design/v3/render_v3.py", "renderer_version": RENDERER_VERSION,
            "engine": "HTML/CSS + Playwright Chromium (node playwright 1.56.1, /opt/pw-browsers/chromium-1194)",
            "cards": total, "fonts": font_log(), "font_rule": "지정 4서체 외(시스템 폴백) 사용 시 실패",
-           "ai_label_on_card": False, "content_changed": False,
+           "ai_label_on_card": False, "ai_label_in_caption": False if family == "c" else None, "content_changed": False,
            "content_rule": "사진·원화는 크롭·톤·그레인·흐림(로고·각인·문자판)·테두리만. 합성·사물 추가·생성형 채우기 없음. 4·6·7장 그래픽은 사진 위 별도 코드 층(오버레이)",
            "layout_sequence": seq, "notes": notes, "ai_label_note": "AI 표시 라벨은 카드에 없음(대표 결정 2026-10-02). 캡션 담당",
-           "art_credit_line": art_credit_line(images), "images_used": sorted(f"card-{k:02d}:{v['kind']}" for k, v in images.items()),
+           "layout_family": family, "canvas": [canvas_w, canvas_h], "compose_sequence": compose,
+           "safe_area": {"box_x0_y0_x1_y1": list(safe), "rule": "바깥 여백 비율 유지: 좌우 88/1080 = 8.1%, 위아래 92/1350 = 6.8%(≈7%) -> 캔버스 높이에 비례",
+                         "crop_zones_visible": crop_zones(canvas_w, canvas_h),
+                         "cover_title_zone": "1:1 미리보기 대비 표지 핵심 글자는 square_1x1.y 안"},
+           "fact_checks": post.get("fact_checks"),
+           "art_credit_line": art_credit_line(images, sep=" / " if family == "c" else " · "), "images_used": sorted(f"card-{k:02d}:{v['kind']}" for k, v in images.items()),
            "checks_failed": fails, "warnings": warns, "per_card": per_card}
     with open(os.path.join(out_dir, "RENDER.json"), "w", encoding="utf-8") as fp:
         json.dump(log, fp, ensure_ascii=False, indent=2)
