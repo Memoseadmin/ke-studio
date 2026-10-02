@@ -1,5 +1,5 @@
 # STATUS
-갱신: 2026-10-02 06:35Z (COO 세션 e90e44c+)
+갱신: 2026-10-02 08:41Z (COO 세션 claude/admiring-clarke-beyyoi, 대표 퇴근 → 집에서 새 세션)
 
 ## 현재 상태
 - 운영: COO 세션 `claude/admiring-clarke-beyyoi`(7e4a4e9). CLAUDE.md에 토큰 절약·세션 관리 규범 추가(10/2). 자식 세션 분배·회수·아카이브 표 = docs/PROJECTS.md "하위 세션". 대표 결정 큐 = PROJECTS.md 1~17.
@@ -15,11 +15,12 @@
 - A 유튜브: 보류(대표 10/2 "카드뉴스 집중"). 채널명 1·2차 후보 docs/CHANNEL_NAME.md, EP001·002 approved·업로드 0.
 
 ## 다음 할 일
-1. 대표 결정 회수: 프로필 v5 택1 → PR #5 본문 갱신 / 기획안 T-D1~6(검토 PR 개설 여부) / 창의 에이전트 A1~A10 → 승인되면 설치 세션(Opus) + 파일럿. 승인된 세트만 AGENDA "기획", C1-1 14건 "제작"으로 정정.: get_session → fetch c1-1-design → PROJECTS 표 갱신 → archive. **실작업은 반드시 자식 세션(Opus/Sonnet 명시), COO 세션 서브에이전트 금지(대표 지적 10/2).**
-2. 대표가 집 PC에서 AI 플레이트 생성·푸시(`plates/v4/*.png`, README-homepc.md v4.1) → 4판 렌더 **Opus 자식 세션**(cards.v5.json + caption.v5 + V1 35:15:25:25 + V3 소자 + P5 Nanum Brush + Y1 사진 추정 사용) → contact.png SendUserFile → 대표 확인.
-3. 윤동주 사진 PD 판정(PHOTOS-yun.md) + §9-2 v1.4(스톡 L1 ⓑ·L2) legal 세션 → 디자인 시스템 반영.
-4. legal(세트 11) → 검수 PR(cardnews/c1-1-design → cardnews/main) → approved → 새 Sonnet 세션 `r2_upload.py --execute` → `ig_publish.py --pr N --execute`(PR #5 승인 뒤).
-5. 리서치 5건 결과를 cardnews/main에 머지, 세트 01~14 병렬 5세션(cardnews/v3-sets-A~E)은 4판 승인 후.
+1. **대표 집 PC**: ComfyUI 플레이트 40장(`cardnews/posts/2026-10-19/plates/README-homepc.md` v4.1 한지 콜라주, pull 먼저) → `plates/v4/P{장}{a|b}-s{시드}.png` → cardnews/c1-1-design 푸시. 이게 4판 게이트.
+2. 자식 세션 2개 회수(이전 COO 세션이 체크인으로 회수 중일 수 있음 → PROJECTS 표 상태 먼저 확인): 프로필 v6 `session_01VH5TAzPwPmZJr7r6US9bTm`(c1-1b, contact-profile-v6.png → SendUserFile → 대표 택1 → PR #5 본문 ③ 갱신) / 창의 직원 설치 `session_01SLPH6FP54k7ndaNL1LiCDL`(agents/creative-v1 → 검수 PR → approved → 작업 브랜치 머지).
+3. 대표 라벨 대기: PR #5(프로필·릴스, v6 확정 뒤) · PR #7(T1~T10 기획안, approved = T-D1~5 추천안 수용 → cardnews/main 머지 → AGENDA "기획", C1-1 14건 "제작"으로 정정).
+4. 플레이트 푸시되면 **4판 렌더 Opus 세션**(cards.v5.json + caption.v5.txt + V1 35:15:25:25 + V3 소자 + P5 Nanum Brush + Y1 사진 추정 사용 + v4.1 플레이트) → contact.png → 대표. 창의 직원 승인됐으면 A9 파일럿 공정(AD 브리프 → 3안 → CD 비평 → 1회 수정)으로.
+5. legal(세트 11: 윤동주 L1~L6·§9-5 AI 라벨 D6 반영·§9-2 v1.4) → 검수 PR(c1-1-design → cardnews/main) → approved → Sonnet 세션 `r2_upload.py --execute` → `ig_publish.py --pr N --execute`(PNG→JPEG 변환 필요, DISTRIBUTION_2026 발견 1).
+6. 트렌드 리서치는 루틴 아님 — 대표에게 물은 뒤 단발(Opus). 세트 01~14 병렬 세션은 4판 승인 후.
 
 ## 검증 방법
 - 세션 표: `grep -c "진행 중 |" docs/PROJECTS.md` → 0이면 전부 회수.
