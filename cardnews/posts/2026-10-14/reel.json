@@ -1,0 +1,24 @@
+{
+  "id": "C1-1b-06",
+  "date": "2026-10-14",
+  "carousel_time_kst": "12:00",
+  "reel_time_kst": "18:00",
+  "duration_sec": 21.5,
+  "audio": "none",
+  "size": [1080, 1920],
+  "hook": "남은 주말, 세 번",
+  "segments": [
+    {"card": "card-01.png", "dur": 4.0, "subtitle": "10월 셋째 주말부터\n11월 첫 주말까지", "motion": "zoom_in"},
+    {"card": "card-02.png", "dur": 3.5, "subtitle": "10/17~18 서울\n'일구이륙 무한이륙' 전시", "motion": "static"},
+    {"card": "card-03.png", "dur": 3.0, "subtitle": "오대산 절정 예보\n10월 16일~25일", "motion": "zoom_in"},
+    {"card": "card-04.png", "dur": 3.0, "subtitle": "설악산 절정 예보\n10월 25일 무렵", "motion": "static"},
+    {"card": "card-05.png", "dur": 3.0, "subtitle": "내장산 절정 예보\n11월 1일 무렵", "motion": "zoom_in"},
+    {"card": "card-06.png", "dur": 3.0, "subtitle": "비가 오면 실내로,\n박물관 특별전", "motion": "pan_up"}
+  ],
+  "end_card": {"dur": 2.0, "text": "전체 8장은 프로필 캐러셀에서", "sub": "저장해 두고 꺼내 보세요"},
+  "cover": "card-01.png",
+  "caption": "10월 남은 주말 3번, 날짜별 정리\n\n10/17~18 대한민국역사박물관 한글날 특별전 '일구이륙 무한이륙'과 하늘공원 억새, 10/17~25 오대산 단풍, 10/24~25 설악산, 10/31~11/1 내장산.\n단풍 날짜는 민간 기상업체 웨더아이 예보라 바뀔 수 있습니다. 축제 일정과 요금은 각 누리집에서 확인하세요.\n비가 오면 박물관 특별전으로 바꾸는 선택지도 넣었습니다.\n함께 갈 사람에게 바로 보내 두면 주말 계획이 빨라집니다.\n전체 8장은 프로필의 캐러셀 게시물에 있습니다. 저장해 두고 꺼내 보세요.\n\n출처: 천지일보 2026-10-02(대한민국역사박물관 특별전), 웨더아이 2026-09-04\n#가을나들이 #주말여행 #단풍여행 #서울나들이 #책가도노트\n이미지·초안은 AI로 생성, 사실 확인은 사람이 했습니다",
+  "hashtags": ["#가을나들이", "#주말여행", "#단풍여행", "#서울나들이", "#책가도노트"],
+  "sponsor": null,
+  "source_check": "hook ← card-01 headline(legal v3) 「남은 주말,\\n세 번」의 줄바꿈만 뺀 1줄 / seg1 ← card-01 body 「10월 셋째 주말부터 11월 첫 주말까지」 / seg2 ← card-02 headline 「10/17~18 서울」 + body 「'일구이륙 무한이륙' 전시」(억새는 일정 미확인이라 뺌) / seg3 ← card-03 body 「오대산 단풍 절정 10월 16일~25일(웨더아이 예보)」 / seg4 ← card-04 body 「설악산 절정 10월 25일 무렵(예보)」 / seg5 ← card-05 body 「내장산 절정 11월 1일 무렵(예보)」 / seg6 ← card-06 body 「비가 오면 실내로」 + caption.txt 5행 「박물관 특별전」 / end_card ← 계정 행동 유도(사실 주장 없음) / caption ← caption.txt 1·3·4·5·6·8·9행 그대로 + CTA 1줄 / hashtags ← caption.txt 그대로 / 정정: 04 세트 단풍 날짜가 바뀌면 이 릴스에도 정정 댓글"
+}

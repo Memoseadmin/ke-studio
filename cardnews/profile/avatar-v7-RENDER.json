@@ -1,0 +1,153 @@
+{
+ "feedback": "2026-10-02 대표: v4·v5·v6 전부 반려, '처음으로 돌아가서 전혀 다른 방향 3안을 새로'",
+ "dropped_frame": "붓글씨 글자 + 원화 바탕 (v4~v6)",
+ "legibility_def": "110px 축소본에서 기준 형태 vs 바깥 고리 ① WCAG 대비비(render_avatar_v5.legibility_110), 비글자 그래픽 문턱 3:1(WCAG 1.4.11 차용, 추정) ② CIE76 ΔE, 문턱 20(추정). 둘 중 하나 이상 통과 + 육안",
+ "recommended": "a",
+ "variants": [
+  {
+   "key": "a",
+   "kind": "단일 모티프",
+   "concept": "책가도 한 칸에서 화병 한 점만 꺼내 왔다",
+   "method": "code_render",
+   "ai_generated": false,
+   "text_glyphs": 0,
+   "colors": {
+    "ground": "#F7F3EA",
+    "ring": "#1B1F2A"
+   },
+   "art": {
+    "file": "cleveland-2011.37-full.tif",
+    "url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_full.tif",
+    "title": "Books and Scholars' Accoutrements",
+    "title_ko": "책가도",
+    "institution": "클리블랜드미술관",
+    "accession": "2011.37",
+    "object_url": "https://clevelandart.org/art/2011.37",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+    "image_size": [
+     11838,
+     6670
+    ],
+    "crop": [
+     10400,
+     2250,
+     11250,
+     3450
+    ],
+    "part": "10폭 중 10폭 가운데 단 오른쪽 칸: 청화 화병(구름무늬 원문)에 꽂힌 분홍 꽃가지 한 점. 옆 붉은 잔·칸 벽은 지움"
+   },
+   "source_crop_box": [
+    10400,
+    2250,
+    11250,
+    3450
+   ],
+   "object_bbox_in_crop": [
+    207,
+    79,
+    739,
+    1143
+   ],
+   "scale": 0.789,
+   "paste_xy": [
+    348,
+    120
+   ],
+   "upsample": "없음(원본 해상도 ≥ 출력)",
+   "mask": "화병 = 손으로 딴 대칭 윤곽(VASE_R) / 꽃 = lum>74 & R-B>28 (y<690) / 줄기 = 가이드선 9px 안 올리브색(G-B>8, G≥R-6) → closing 5 → 연결 덩어리만 → 구멍 메움",
+   "source_sha256": "6d35666f9791c61812f8ad7821e6965675f19a0a30ba75b94c71df3dcef2230d",
+   "legibility_110": {
+    "contrast": 5.28,
+    "threshold": 3.0,
+    "delta_e": 54.8,
+    "delta_e_threshold": 20
+   },
+   "tone": "채도 -20% + lut-v1(render_avatar_v3.common_lut), 형태·색 변형 없음"
+  },
+  {
+   "key": "b",
+   "kind": "민화 동물",
+   "concept": "민화 수탉이 눈을 맞춘다",
+   "method": "code_render",
+   "ai_generated": false,
+   "text_glyphs": 0,
+   "colors": {
+    "ring": "#1B1F2A"
+   },
+   "art": {
+    "file": "met-40073.jpg",
+    "url": "https://images.metmuseum.org/CRDImages/as/original/DP289323.jpg",
+    "title": "Golden Rooster and Hen",
+    "title_ko": "금계도(수탉과 암탉)",
+    "institution": "메트로폴리탄미술관",
+    "accession": "19.103.2",
+    "object_url": "https://www.metmuseum.org/art/collection/search/40073",
+    "license": "CC0",
+    "license_url": "https://www.metmuseum.org/policies/image-resources",
+    "credit_short": "메트로폴리탄미술관 〈금계도〉 CC0",
+    "image_size": [
+     861,
+     2000
+    ],
+    "crop": [
+     396,
+     790,
+     656,
+     1050
+    ],
+    "part": "가운데 수탉의 머리: 붉은 볏·눈·부리·턱볏, 목 깃털 일부. 오른쪽 위 소나무 잎 끝이 모서리에 걸림(원형 크롭에서 대부분 잘림)"
+   },
+   "source_crop_box": [
+    396,
+    790,
+    656,
+    1050
+   ],
+   "upsample": "×4.15 (LANCZOS + unsharp r2/60%, 원본 머리 폭 약 110px)",
+   "source_sha256": "68628863a9d666dc38d1e36a7ae5fce8c426a54b9690ce0cc20854c9cd2448c3",
+   "legibility_110": {
+    "contrast": 1.36,
+    "threshold": 3.0,
+    "delta_e": 18.6,
+    "delta_e_threshold": 20
+   },
+   "tone": "채도 -20% + lut-v1, unsharp r2/60%"
+  },
+  {
+   "key": "c",
+   "kind": "추상 기하",
+   "concept": "엇갈린 책장 칸 중 오늘 펼친 '한 칸'",
+   "method": "code_render",
+   "ai_generated": false,
+   "text_glyphs": 0,
+   "colors": {
+    "ground": "#F7F3EA",
+    "ink": "#111111",
+    "accent": "#C8102E"
+   },
+   "art": null,
+   "box_px": 560,
+   "stroke_px": 40,
+   "left_dividers": [
+    0.4,
+    0.74
+   ],
+   "right_dividers": [
+    0.22,
+    0.58
+   ],
+   "red_cell": "오른쪽 단 가운데 칸",
+   "half_diagonal_px": 424,
+   "fits_safe_r": true,
+   "art_pixels": 0,
+   "legibility_110": {
+    "contrast": 10.62,
+    "threshold": 3.0,
+    "delta_e": 85.6,
+    "delta_e_threshold": 20
+   }
+  }
+ ]
+}

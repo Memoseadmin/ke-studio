@@ -1,0 +1,24 @@
+{
+  "id": "C1-1b-02",
+  "date": "2026-10-10",
+  "carousel_time_kst": "10:00",
+  "reel_time_kst": "16:00",
+  "duration_sec": 22.0,
+  "audio": "none",
+  "size": [1080, 1920],
+  "hook": "궁궐 5곳, 이번 주말",
+  "segments": [
+    {"card": "card-01.png", "dur": 4.0, "subtitle": "10월 11일까지,\n이틀 남았습니다", "motion": "zoom_in"},
+    {"card": "card-02.png", "dur": 3.5, "subtitle": "경복궁·창덕궁·덕수궁\n창경궁·종묘, 다섯 곳", "motion": "pan_down"},
+    {"card": "card-03.png", "dur": 3.0, "subtitle": "밤에는 경복궁\n'한복 연향'", "motion": "static"},
+    {"card": "card-06.png", "dur": 3.0, "subtitle": "창경궁 '물빛연화',\n야간 미디어아트", "motion": "zoom_in"},
+    {"card": "card-07.png", "dur": 3.0, "subtitle": "남은 회차는\n공식 누리집에서 확인", "motion": "static"},
+    {"card": "card-08.png", "dur": 3.5, "subtitle": "가기 전 체크 5\n사전 예매·야간 입장", "motion": "pan_up"}
+  ],
+  "end_card": {"dur": 2.0, "text": "전체 9장은 프로필 캐러셀에서", "sub": "저장해 두고 꺼내 보세요"},
+  "cover": "card-01.png",
+  "caption": "궁궐 5곳 축제, 이틀 남았습니다\n\n가을 궁중문화축전이 10월 11일까지 열립니다. 경복궁·창덕궁·덕수궁·창경궁·종묘, 다섯 곳입니다.\n낮에는 전시·투어·체험, 밤에는 경복궁 '한복 연향'과 창경궁 '물빛연화' 같은 공연·미디어아트가 있습니다.\n남은 회차는 공식 누리집에서 확인하세요.\n가기 전 체크 5가 담긴 전체 9장은 프로필의 캐러셀 게시물에 있습니다. 저장해 두고 꺼내 보세요.\n\n출처: 인사이트 2026-09-07, 뉴시스 2026-04-10\n#궁중문화축전 #경복궁 #창경궁 #가을나들이 #책가도노트\n이미지·초안은 AI로 생성, 사실 확인은 사람이 했습니다",
+  "hashtags": ["#궁중문화축전", "#경복궁", "#창경궁", "#가을나들이", "#책가도노트"],
+  "sponsor": null,
+  "source_check": "hook ← card-01 headline 「궁궐 5곳, 이번 주말」 / seg1 ← card-01 body 「10월 7일부터 11일까지. 오늘과 내일, 이틀 남았습니다」 + caption.txt 3행 「10월 11일까지 열립니다」 / seg2 ← caption.txt 3행 「경복궁·창덕궁·덕수궁·창경궁·종묘, 다섯 곳입니다」 / seg3 ← caption.txt 4행 「밤에는 경복궁 '한복 연향'」 / seg4 ← card-06 headline 「창경궁 물빛연화」 + body 「야간 미디어아트」 / seg5 ← caption.txt 5행 「남은 회차는 공식 누리집에서 확인하세요」 / seg6 ← card-08 headline 「가기 전 체크 5」 + body 「사전 예매 여부」「야간 입장 시간」 / end_card ← 계정 행동 유도(사실 주장 없음) / caption ← caption.txt 1·3·4행 + 5행 둘째 문장 + 8·9행 그대로 + CTA 1줄 / hashtags ← caption.txt 그대로"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "C1-1b-05",
+  "date": "2026-10-13",
+  "carousel_time_kst": "19:00",
+  "reel_time_kst": "21:00",
+  "duration_sec": 20.0,
+  "audio": "none",
+  "size": [1080, 1920],
+  "hook": "빵보다 책갈피",
+  "segments": [
+    {"card": "card-01.png", "dur": 4.0, "subtitle": "출시 일주일에\n20만 개 팔렸습니다", "motion": "zoom_in"},
+    {"card": "card-02.png", "dur": 3.5, "subtitle": "세계문학 제목이\n그대로 빵 이름", "motion": "static"},
+    {"card": "card-03.png", "dur": 3.5, "subtitle": "포장 안에 책갈피 한 장,\n20종 중 하나", "motion": "pan_down"},
+    {"card": "card-04.png", "dur": 3.5, "subtitle": "'랜덤깡'\n열어 보는 재미", "motion": "static"},
+    {"card": "card-05.png", "dur": 3.5, "subtitle": "책 읽는 걸 멋으로 보는\n'텍스트힙'", "motion": "zoom_in"}
+  ],
+  "end_card": {"dur": 2.0, "text": "전체 7장은 프로필 캐러셀에서", "sub": "저장해 두고 천천히 보세요"},
+  "cover": "card-01.png",
+  "caption": "빵을 샀는데 주인공은 책갈피\n\n편의점 협업빵이 출시 일주일에 20만 개 팔렸습니다. 세계문학 제목을 붙인 빵 4종, 안에는 랜덤 책갈피 20종 중 한 장.\n무엇이 들었는지 열어 봐야 아는 '랜덤깡' 재미와, 책 읽는 걸 멋으로 보는 '텍스트힙' 흐름이 만났습니다.\n상품 사진 대신 민화풍 그림으로 그렸습니다.\n여러분이 뽑은 책갈피 문장은 무엇이었나요? 댓글로 알려 주세요.\n전체 7장은 프로필의 캐러셀 게시물에 있습니다.\n\n출처: MTN 2026-08-28, supple.kr(2026), 매일신문 2026-09-05\n#편의점신상 #텍스트힙 #랜덤깡 #책가도노트\n이미지·초안은 AI로 생성, 사실 확인은 사람이 했습니다",
+  "hashtags": ["#편의점신상", "#텍스트힙", "#랜덤깡", "#책가도노트"],
+  "sponsor": null,
+  "source_check": "hook ← card-01 headline 「빵보다 책갈피」 / seg1 ← card-01 body(legal v3) 「편의점 협업빵이 출시 일주일에 20만 개 팔렸습니다」 / seg2 ← card-02 body 「세계문학 제목이 그대로 빵 이름이 됐습니다」 / seg3 ← card-03 body 「포장 안에 책갈피 한 장」 + caption.txt 3행 「랜덤 책갈피 20종 중 한 장」 / seg4 ← card-04 headline 「'랜덤깡'이란」 + body 「열어 보는 재미」 / seg5 ← caption.txt 4행 「책 읽는 걸 멋으로 보는 '텍스트힙'」 / end_card ← 계정 행동 유도(사실 주장 없음) / caption ← caption.txt 1행 + card-01 body 첫 문장(3행의 상호명 대신) + 3행 둘째 문장 + 4·5·6·8·9행 그대로 + CTA 1줄. 상호명은 협찬 오인을 피하려고 캡션·자막에서 뺌(카드 이미지에는 그대로) / hashtags ← caption.txt 5개 중 4개(#민음사빵 제외: 상호 태그)"
+}

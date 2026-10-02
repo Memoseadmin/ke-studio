@@ -1,0 +1,24 @@
+{
+  "id": "C1-1b-13",
+  "date": "2026-10-21",
+  "carousel_time_kst": "12:00",
+  "reel_time_kst": "18:00",
+  "duration_sec": 23.0,
+  "audio": "none",
+  "size": [1080, 1920],
+  "hook": "10/25부터 차례로 마감",
+  "segments": [
+    {"card": "card-01.png", "dur": 4.0, "subtitle": "국립 박물관·미술관\n가을 전시가 닫힙니다", "motion": "zoom_in"},
+    {"card": "card-02.png", "dur": 3.5, "subtitle": "~10/25 '우리들의 밥상'\n국립중앙박물관", "motion": "pan_down"},
+    {"card": "card-03.png", "dur": 3.5, "subtitle": "~11/1 '빛의 상상들'\n국립현대미술관 과천", "motion": "static"},
+    {"card": "card-04.png", "dur": 3.5, "subtitle": "~11/29 OLED 시리즈\n국립현대미술관 서울", "motion": "pan_up"},
+    {"card": "card-05.png", "dur": 3.5, "subtitle": "한글날 100돌 특별전\n~내년 2/9", "motion": "zoom_in"},
+    {"card": "card-06.png", "dur": 3.0, "subtitle": "'전쟁, 예술 그리고 삶'\n11월 개막 예정", "motion": "static"}
+  ],
+  "end_card": {"dur": 2.0, "text": "전체 8장은 프로필 캐러셀에서", "sub": "저장해 두고 꺼내 보세요"},
+  "cover": "card-01.png",
+  "caption": "닫는 전시 3, 앞으로 볼 전시 2\n\n국립중앙박물관 '우리들의 밥상'은 10월 25일, 국립현대미술관 과천 '빛의 상상들'은 11월 1일, 서울관 'MMCA×LG OLED 시리즈 2026'은 11월 29일에 닫습니다.\n한글날 100돌 특별전 '일구이륙 무한이륙'은 광화문 대한민국역사박물관에서 내년 2월 9일까지 이어지고, 국립중앙박물관의 스위스 취리히미술관 협력전 '전쟁, 예술 그리고 삶'은 11월 개막 예정입니다.\n날짜는 기관 발표와 보도를 교차 확인했고, 관람료·휴관일·개막일은 각 누리집에서 확인해 주세요.\n이번 주말에는 어디로 가시나요?\n마감 날짜 표가 담긴 전체 8장은 프로필의 캐러셀 게시물에 있습니다. 저장해 두고 꺼내 보세요.\n\n출처: 문화체육관광부 문화포털, 세계일보 2026-06-30, 뉴시스 2026-07-09, 데일리안, 천지일보 2026-10-02, 서울신문 2026-02-04\n#전시일정 #10월전시 #국립중앙박물관 #국립현대미술관 #책가도노트\n이미지·초안은 AI로 생성, 사실 확인은 사람이 했습니다",
+  "hashtags": ["#전시일정", "#10월전시", "#국립중앙박물관", "#국립현대미술관", "#책가도노트"],
+  "sponsor": null,
+  "source_check": "hook ← card-01 headline 「10/25부터 차례로 마감」 / seg1 ← card-01 body(legal v3) 「국립 박물관·미술관 가을 전시가 닫힙니다」 / seg2 ← card-02 headline 「~10/25 우리들의 밥상」 + body 「국립중앙박물관」 / seg3 ← card-03 headline 「~11/1 빛의 상상들」 + body 「국립현대미술관 과천」(개막일 없음, risk §5 #14) / seg4 ← card-04 headline 「~11/29 OLED시리즈」를 card-07 body 표기 「OLED 시리즈」로 + card-04 body 「국립현대미술관 서울」(LG 상호는 자막에서 뺌) / seg5 ← card-05 body 「한글날 100돌 특별전 … 10/2~내년 2/9」 / seg6 ← card-06 headline 「전쟁, 예술 그리고 삶」 + body 「11월 개막 예정」 / end_card ← 계정 행동 유도(사실 주장 없음) / caption ← caption.txt 1·3·4행 + 5행 둘째 문장 + 6·8·9행 그대로 + CTA 1줄 / hashtags ← caption.txt 그대로"
+}

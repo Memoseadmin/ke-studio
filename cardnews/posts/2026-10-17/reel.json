@@ -1,0 +1,23 @@
+{
+  "id": "C1-1b-09",
+  "date": "2026-10-17",
+  "carousel_time_kst": "10:00",
+  "reel_time_kst": "16:00",
+  "duration_sec": 20.5,
+  "audio": "none",
+  "size": [1080, 1920],
+  "hook": "편의점 협업, 요즘 흐름",
+  "segments": [
+    {"card": "card-01.png", "dur": 4.0, "subtitle": "출판사 책갈피부터\n스포츠 카드까지", "motion": "zoom_in"},
+    {"card": "card-02.png", "dur": 3.5, "subtitle": "흐름 1 · 읽는 굿즈\n문장이 포장과 책갈피로", "motion": "static"},
+    {"card": "card-03.png", "dur": 3.5, "subtitle": "흐름 2 · 모으는 굿즈\n무엇이 들었는지 모르는 구성", "motion": "zoom_in"},
+    {"card": "card-04.png", "dur": 3.5, "subtitle": "흐름 3 · 완판과 재입고\n출시 요일을 먼저 확인", "motion": "static"},
+    {"card": "card-05.png", "dur": 4.0, "subtitle": "사기 전 체크 5\n판매 편의점·출시일·앱 가격", "motion": "pan_up"}
+  ],
+  "end_card": {"dur": 2.0, "text": "전체 7장은 프로필 캐러셀에서", "sub": "저장해 두고 꺼내 보세요"},
+  "cover": "card-01.png",
+  "caption": "편의점 협업 상품, 사기 전 체크 5\n\n출판사 책갈피부터 스포츠 카드까지, 편의점 협업 상품의 흐름을 세 가지로 정리했습니다. 읽는 굿즈, 모으는 굿즈, 완판과 재입고.\n사기 전에는 판매 편의점과 출시일, 앱 가격, 랜덤 구성 안내문, 한정 수량 공지를 확인하세요.\n신상 가격과 출시일은 자주 바뀌어 카드에 적지 않았습니다.\n이번 주 산 편의점 신상이 있다면 댓글로 알려 주세요.\n전체 7장은 프로필의 캐러셀 게시물에 있습니다. 저장해 두고 꺼내 보세요.\n\n출처: MTN 2026-08-28, supple.kr(2026)\n#편의점신상 #편의점협업 #편의점꿀팁 #랜덤깡 #책가도노트\n이미지·초안은 AI로 생성, 사실 확인은 사람이 했습니다",
+  "hashtags": ["#편의점신상", "#편의점협업", "#편의점꿀팁", "#랜덤깡", "#책가도노트"],
+  "sponsor": null,
+  "source_check": "hook ← card-01 headline 「편의점 협업, 요즘 흐름」 / seg1 ← card-01 body(legal v3) 「출판사 책갈피부터 스포츠 카드까지」 / seg2 ← card-02 headline 「흐름 1 · 읽는 굿즈」 + body 「문장이 포장과 책갈피로」 / seg3 ← card-03 headline 「흐름 2 · 모으는 굿즈」 + body 「무엇이 들었는지 모르는 구성」 / seg4 ← card-04 headline 「흐름 3 · 완판과 재입고」 + body 「출시 요일을 먼저 확인하세요」 / seg5 ← card-05 headline 「사기 전 체크 5」 + body 「판매 편의점·출시일」「앱 가격·행사」 / card-06(협찬 비교표 자리 시연)은 협찬 암시를 피하려고 쓰지 않음 / end_card ← 계정 행동 유도(사실 주장 없음) / caption ← caption.txt 1·3·4행 + 5행 첫 문장 + 6·8·9행 그대로 + CTA 1줄(5행 둘째 문장 '비교표는 스토리로'는 협찬 비교표 자리와 연결돼 뺌) / hashtags ← caption.txt 그대로"
+}

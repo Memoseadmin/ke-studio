@@ -1,0 +1,314 @@
+{
+ "version": "v8",
+ "composition": "v4 A (세로 3자 '책가도', 한지색 원 + 원화 바탕)",
+ "seal": null,
+ "text": "책가도",
+ "ink_color": "#161413",
+ "fake_bold": false,
+ "ai_generated": false,
+ "background_art": {
+  "title": "Books and Scholars' Accoutrements",
+  "title_ko": "책가도",
+  "institution": "클리블랜드미술관",
+  "accession": "2011.37",
+  "object_url": "https://clevelandart.org/art/2011.37",
+  "url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_print.jpg",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+  "crop": [
+   1372,
+   182,
+   2028,
+   838
+  ],
+  "src_sha256": "d108f0bcae36a5a573e7c4c03367124c22a91a24e6cce129af9b37989a294b8a",
+  "opacity": 0.2,
+  "saturation": -0.2,
+  "hanji_cover_around_text": false
+ },
+ "paper": "#F7F3EA x hanji 15% x sepia (v4와 동일)",
+ "adopted_strength": "강",
+ "recommended_font": "3",
+ "strengths": {
+  "약": {
+   "blur": 1.2,
+   "soft": 0.1,
+   "fib": 0.1,
+   "halo": 0.1,
+   "dry": 0.18,
+   "shade": 0.1,
+   "mottle": 0.04
+  },
+  "중": {
+   "blur": 1.8,
+   "soft": 0.14,
+   "fib": 0.18,
+   "halo": 0.14,
+   "dry": 0.32,
+   "shade": 0.16,
+   "mottle": 0.06
+  },
+  "강": {
+   "blur": 2.6,
+   "soft": 0.18,
+   "fib": 0.28,
+   "halo": 0.18,
+   "dry": 0.5,
+   "shade": 0.24,
+   "mottle": 0.09
+  }
+ },
+ "fonts": [
+  {
+   "key": "1",
+   "family": "Nanum Brush Script",
+   "license": "SIL OFL 1.1",
+   "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanumbrushscript/NanumBrushScript-Regular.ttf",
+   "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanumbrushscript/OFL.txt",
+   "sha256": "27ceaf578c96f594cdf07fe0181b251790acbb746a164e45c1f6473f89911a31",
+   "layout_ink_h_dx_rot": [
+    [
+     270,
+     -6,
+     -1.5
+    ],
+    [
+     250,
+     10,
+     1.0
+    ],
+    [
+     238,
+     -2,
+     -0.5
+    ]
+   ],
+   "gap": 34,
+   "glyph_ink_heights_px": [
+    276,
+    256,
+    240
+   ],
+   "column_height_px": 830,
+   "strength": "강",
+   "ink_params": {
+    "blur": 2.6,
+    "soft": 0.18,
+    "fib": 0.28,
+    "halo": 0.18,
+    "dry": 0.5,
+    "shade": 0.24,
+    "mottle": 0.09
+   },
+   "bg_pct": 20,
+   "max_radius": {
+    "ink": 420,
+    "limit": 430
+   },
+   "legibility_110": {
+    "ink_L": 55.7,
+    "bg_L": 208.3,
+    "delta_L": 152.6,
+    "shape_corr": 0.982
+   }
+  },
+  {
+   "key": "2",
+   "family": "East Sea Dokdo",
+   "license": "SIL OFL 1.1",
+   "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/eastseadokdo/EastSeaDokdo-Regular.ttf",
+   "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/eastseadokdo/OFL.txt",
+   "sha256": "8cebb39d375134fdbcedef9bf4ec4f6c3f02c39ed0aacd6e83f7a0f435e593b2",
+   "layout_ink_h_dx_rot": [
+    [
+     268,
+     -4,
+     -1.0
+    ],
+    [
+     250,
+     8,
+     1.5
+    ],
+    [
+     236,
+     -6,
+     0.0
+    ]
+   ],
+   "gap": 34,
+   "glyph_ink_heights_px": [
+    272,
+    258,
+    236
+   ],
+   "column_height_px": 824,
+   "strength": "강",
+   "ink_params": {
+    "blur": 2.6,
+    "soft": 0.18,
+    "fib": 0.28,
+    "halo": 0.18,
+    "dry": 0.5,
+    "shade": 0.24,
+    "mottle": 0.09
+   },
+   "bg_pct": 20,
+   "max_radius": {
+    "ink": 421,
+    "limit": 430
+   },
+   "legibility_110": {
+    "ink_L": 52.5,
+    "bg_L": 208.2,
+    "delta_L": 155.8,
+    "shape_corr": 0.988
+   }
+  },
+  {
+   "key": "3",
+   "family": "Yeon Sung (BM YEONSUNG)",
+   "license": "SIL OFL 1.1",
+   "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/yeonsung/YeonSung-Regular.ttf",
+   "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/yeonsung/OFL.txt",
+   "sha256": "49ac2a11009f5f58307d377911eb45d210cf4c1d379d9eca38fb4cdad5491ef6",
+   "layout_ink_h_dx_rot": [
+    [
+     266,
+     -8,
+     -1.0
+    ],
+    [
+     250,
+     10,
+     0.8
+    ],
+    [
+     236,
+     -4,
+     -0.6
+    ]
+   ],
+   "gap": 34,
+   "glyph_ink_heights_px": [
+    270,
+    254,
+    238
+   ],
+   "column_height_px": 823,
+   "strength": "강",
+   "ink_params": {
+    "blur": 2.6,
+    "soft": 0.18,
+    "fib": 0.28,
+    "halo": 0.18,
+    "dry": 0.5,
+    "shade": 0.24,
+    "mottle": 0.09
+   },
+   "bg_pct": 20,
+   "max_radius": {
+    "ink": 416,
+    "limit": 430
+   },
+   "legibility_110": {
+    "ink_L": 59.4,
+    "bg_L": 208.2,
+    "delta_L": 148.8,
+    "shape_corr": 0.982
+   }
+  }
+ ],
+ "strength_compare": [
+  {
+   "font": "3",
+   "strength": "약",
+   "params": {
+    "blur": 1.2,
+    "soft": 0.1,
+    "fib": 0.1,
+    "halo": 0.1,
+    "dry": 0.18,
+    "shade": 0.1,
+    "mottle": 0.04
+   },
+   "legibility_110": {
+    "ink_L": 43.9,
+    "bg_L": 208.5,
+    "delta_L": 164.6,
+    "shape_corr": 0.987
+   }
+  },
+  {
+   "font": "3",
+   "strength": "중",
+   "params": {
+    "blur": 1.8,
+    "soft": 0.14,
+    "fib": 0.18,
+    "halo": 0.14,
+    "dry": 0.32,
+    "shade": 0.16,
+    "mottle": 0.06
+   },
+   "legibility_110": {
+    "ink_L": 50.4,
+    "bg_L": 208.4,
+    "delta_L": 158.0,
+    "shape_corr": 0.985
+   }
+  },
+  {
+   "font": "3",
+   "strength": "강",
+   "params": {
+    "blur": 2.6,
+    "soft": 0.18,
+    "fib": 0.28,
+    "halo": 0.18,
+    "dry": 0.5,
+    "shade": 0.24,
+    "mottle": 0.09
+   },
+   "legibility_110": {
+    "ink_L": 59.4,
+    "bg_L": 208.2,
+    "delta_L": 148.8,
+    "shape_corr": 0.982
+   }
+  }
+ ],
+ "bg_compare": [
+  {
+   "font": "3",
+   "bg_pct": 18,
+   "legibility_110": {
+    "ink_L": 60.0,
+    "bg_L": 211.4,
+    "delta_L": 151.3,
+    "shape_corr": 0.985
+   }
+  },
+  {
+   "font": "3",
+   "bg_pct": 20,
+   "legibility_110": {
+    "ink_L": 59.4,
+    "bg_L": 208.2,
+    "delta_L": 148.8,
+    "shape_corr": 0.982
+   }
+  },
+  {
+   "font": "3",
+   "bg_pct": 22,
+   "legibility_110": {
+    "ink_L": 58.7,
+    "bg_L": 204.9,
+    "delta_L": 146.2,
+    "shape_corr": 0.979
+   }
+  }
+ ]
+}
