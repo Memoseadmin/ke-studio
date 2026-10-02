@@ -89,6 +89,7 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 |---|---|---|---|---|
 | 사내 · ffmpeg-assemble | 자체 작성 `.claude/skills/ffmpeg-assemble/` (SKILL.md, scripts/assemble.py·kemedia.py·script_to_scenes.py, examples/) | 외부 원본 없음(이 저장소 커밋 이력이 기준) | 사내 전용(KE Studio) | 1 |
 | 사내 · shorts-cut | 자체 작성 `.claude/skills/shorts-cut/` (SKILL.md, scripts/shorts_cut.py, examples/) | 외부 원본 없음(이 저장소 커밋 이력이 기준) | 사내 전용(KE Studio) | 1 |
+| 사내 · cardnews-copy | 자체 작성 `.claude/skills/cardnews-copy/` (SKILL.md, 2026-10-02 리서처, 근거 cardnews/docs/BENCHMARK.md) | 외부 원본 없음(이 저장소 커밋 이력이 기준) | 사내 전용(KE Studio) | 1 |
 
 - 의존: Python 3.9+, Pillow, ffmpeg/ffprobe(`scripts/setup.sh` 기존 항목, setup.sh 변경 없음). API 키·네트워크 불필요. shorts-cut은 `ffmpeg-assemble/scripts/kemedia.py`(공용 모듈)를 불러 쓴다.
 - 폰트: 지정 폰트(Anton·Pretendard·Black Han Sans)를 `fc-list`로 찾고 없으면 설치된 대체 폰트(Liberation Sans, OFL 1.1 / WenQuanYi Zen Hei, GPL-2 + 폰트 임베딩 예외)를 쓴다. 쓴 폰트와 라이선스는 매니페스트에 기록된다.
