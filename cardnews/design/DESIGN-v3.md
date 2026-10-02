@@ -174,3 +174,11 @@ python3 cardnews/design/v3/render_v3.py cardnews/posts/2026-10-19 --final   # ap
   - 승인 게이트는 대표 PR로 대체
 - **marketing-skills-image**: 프롬프트 공식(Subject·Setting·Style·Lighting·Composition), 40~80단어, 글자는 이미지에 넣지 않고 오버레이, 시험 생성 후 템플릿 고정 → v2 `gen_plates.py` / `plate_style.json`
 - **design-critique**: 첫인상·위계·일관성·접근성·잘한 점·우선순위 구조 → v2 §4, v3 §7
+
+## 8. 2판 변경 (2026-10-02, 세트 11 콜라주 2판)
+- 입력 우선순위: `photos/LAYOUT.v3.json`(장별 배치, `ref`로 PHOTOS.v3.json 메타 병합) > PHOTOS.v3.json(렌더 형식일 때만) > PHOTOS.json.
+- `edit.blur`: 로고·각인·문자판 글자만 흐림(크롭 단계). `edit.grain`: 그레인 비율(이 세트 6%). `frame.rim: "ink"`: 찢김 가장자리에 먹선(잉크 테두리). `frame.crop`: 프레임 원화도 archive 프리셋으로 크롭.
+- `overlay`: 사진 위 코드 그래픽 층(underline / script-pair / record). 사진 픽셀은 바꾸지 않는다.
+- `layout: "rev"`: 그림 위·글 아래. 같은 레이아웃 3연속은 자동 실패.
+- 콜라주 슬롯은 그림 칸 실측 크기로 다시 만든다(2패스, 프레임 테두리 잘림 없음).
+- 출처 줄 형식: `그림: 기관 〈작품명〉 라이선스` + `사진: 작가 · … · CC0`(라이선스별로 묶음). contact.png는 원본 1/2 축소 8장 + 360px 피드 8장.

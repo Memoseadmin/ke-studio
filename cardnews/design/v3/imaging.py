@@ -83,6 +83,20 @@ def tritone(gray, dark, mid, light):
     return Image.fromarray(np.clip(out, 0, 255).astype(np.uint8))
 
 
+def blur_region(im, box, radius=24, feather=None):
+    """box(0~1 또는 px) 영역만 가우시안 흐림(가장자리 부드럽게). 로고·각인·문자판 글자를 읽히지 않게 할 때만 쓴다."""
+    w, h = im.size
+    x0, y0, x1, y1 = box
+    if max(box) <= 1.0:
+        x0, x1, y0, y1 = x0 * w, x1 * w, y0 * h, y1 * h
+    px = [int(round(v)) for v in (max(0, x0), max(0, y0), min(w, x1), min(h, y1))]
+    f = feather if feather is not None else max(4, radius)
+    mask = Image.new("L", im.size, 0)
+    mask.paste(255, (px[0] + f // 2, px[1] + f // 2, max(px[0] + f // 2 + 1, px[2] - f // 2), max(px[1] + f // 2 + 1, px[3] - f // 2)))
+    mask = mask.filter(ImageFilter.GaussianBlur(f / 2))
+    return Image.composite(im.filter(ImageFilter.GaussianBlur(radius)), im, mask), px
+
+
 def crop_norm(im, box):
     """box = [x0, y0, x1, y1] 0~1(원본 기준) 또는 픽셀(>1)."""
     if not box:
@@ -103,11 +117,17 @@ def process(src, out_path, edit=None, kind="artwork", max_side=2200):
         raise ValueError(f"알 수 없는 편집 프리셋 '{preset}' (가능: {', '.join(PRESETS)})")
     im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
     src_size = im.size
+    steps = []
+    for b in edit.get("blur") or []:  # 로고·각인·문자판 글자 흐림(원본 좌표, 크롭 전). 내용 추가·삭제 아님
+        im, px = blur_region(im, b["box"], int(b.get("radius", 24)))
+        steps.append(f"blur {px} r{int(b.get('radius', 24))} ({b.get('why', 'text/logo')})")
     im, crop_px = crop_norm(im, edit.get("crop"))
     crop_size = im.size
     if max(im.size) > max_side:
         im.thumbnail((max_side, max_side), Image.LANCZOS)
-    steps = []
+    if crop_px:
+        steps.insert(0, f"focus crop {crop_px}")
+    grain = float(edit.get("grain", 0.06 if preset == "muted-warm" else 0.08))
     if preset == "archive":
         im = gentle_levels(im, 0.35); steps.append("levels 35% (0.5~99.5 percentile)")
         im = ImageEnhance.Color(im).enhance(0.90); steps.append("saturation -10%")
@@ -117,11 +137,11 @@ def process(src, out_path, edit=None, kind="artwork", max_side=2200):
         im = ImageEnhance.Color(im).enhance(0.75); steps.append("saturation -25%")
         im = ImageEnhance.Contrast(im).enhance(0.96); steps.append("contrast -4%")
         im = Image.blend(im, Image.new("RGB", im.size, PAPER), 0.08); steps.append("hanji tint 8%")
-        im = multiply_texture(im, 0.06); steps.append("grain multiply 6%")
+        im = multiply_texture(im, grain); steps.append(f"grain multiply {grain:.0%}")
     elif preset == "hanji-duotone":
         g = ImageOps.autocontrast(ImageOps.grayscale(im), cutoff=1)
         im = tritone(g, NIGHT, KRAFT, PAPER); steps.append("tritone night/kraft/paper")
-        im = multiply_texture(im, 0.08); steps.append("grain multiply 8%")
+        im = multiply_texture(im, grain); steps.append(f"grain multiply {grain:.0%}")
     elif preset == "ink-cut":
         g = ImageOps.autocontrast(ImageOps.grayscale(im), cutoff=2).filter(ImageFilter.MedianFilter(3))
         arr = np.asarray(g)
@@ -168,12 +188,17 @@ def torn_mask(size, seed=11, depth=18, edges=("top", "bottom", "left", "right"))
     return mask.filter(ImageFilter.GaussianBlur(0.8))
 
 
-def torn_photo(im, seed=11, depth=18, edge_light=True):
-    """사진에 찢김 테두리 적용 -> RGBA. 찢긴 가장자리 안쪽에 종이 섬유 느낌의 밝은 띠(1~2px)."""
+def torn_photo(im, seed=11, depth=18, edge_light=True, rim="paper"):
+    """사진에 찢김 테두리 적용 -> RGBA. rim="paper": 찢긴 가장자리 안쪽에 종이 섬유 느낌의 밝은 띠(1~2px).
+    rim="ink": 찢긴 가장자리를 따라 먹선(약 3px, 먹 85%) = 프리셋 4단계 '잉크 테두리'."""
     im = im.convert("RGB")
     mask = torn_mask(im.size, seed, depth)
     out = im.copy()
-    if edge_light:
+    if rim == "ink":
+        inner = mask.filter(ImageFilter.MinFilter(7))
+        band = np.clip(np.asarray(mask).astype(np.int16) - np.asarray(inner).astype(np.int16), 0, 255) * 0.85
+        out = Image.composite(Image.new("RGB", im.size, INK), out, Image.fromarray(band.astype(np.uint8)))
+    elif edge_light:
         inner = mask.filter(ImageFilter.MinFilter(5))
         rim = Image.fromarray(np.clip(np.asarray(mask).astype(np.int16) - np.asarray(inner).astype(np.int16), 0, 255).astype(np.uint8))
         paper = Image.new("RGB", im.size, PAPER)

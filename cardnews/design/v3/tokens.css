@@ -72,3 +72,31 @@ body { -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; 
 
 .mockup { position: absolute; right: var(--m); bottom: 30px; font: 700 22px/1 "MaruBuri", serif; color: var(--red);
   border: 2px solid var(--red); padding: 5px 10px; letter-spacing: 0.1em; }
+
+/* ---- 2판(2026-10-02): rev 레이아웃 = 그림 위, 글 아래 (같은 레이아웃 3연속 금지 대응) ---- */
+.body.rev .plate { order: 1; margin-top: 28px; }
+.body.rev .title { order: 2; margin-top: 40px; }
+.body.rev .rule { order: 3; }
+.body.rev .text { order: 4; }
+.body.rev .foot { order: 5; margin-top: 20px; }
+
+/* ---- 코드 그래픽 오버레이(사진 위 별도 층, 사진 픽셀은 그대로) ---- */
+.plate .ov { position: absolute; pointer-events: none; }
+.plate .ov-underline { left: 0; top: 0; width: 100%; height: 100%; mix-blend-mode: multiply; }
+.plate .ov-slip { background: var(--paper) var(--grain); border: 2px solid var(--ink); box-shadow: 6px 8px 0 rgba(17, 17, 17, 0.18);
+  padding: 18px 22px; display: flex; flex-direction: column; justify-content: space-between; }
+.plate .ov-slip svg { width: 100%; height: 100%; display: block; }
+.plate .ov-lab { font-family: var(--f-body); font-weight: 700; font-size: 24px; color: var(--red); letter-spacing: 0.04em; }
+.plate .ov-pair .ov-row { display: flex; align-items: center; gap: 14px; flex: 1 1 0; min-height: 0; }
+.plate .ov-pair .ov-row svg { flex: 1 1 auto; height: 100%; width: auto; min-width: 0; }
+.plate .ov-pair .ov-lab { writing-mode: horizontal-tb; min-width: 56px; }
+.plate .ov-sep { border-top: 2px dashed rgba(17, 17, 17, 0.25); margin: 6px 0; }
+.plate .ov-record .ov-row { display: flex; align-items: center; gap: 16px; }
+.plate .ov-record .ov-lab { color: var(--ink); min-width: 80px; white-space: nowrap; }
+.plate .ov-cells { display: flex; align-items: flex-end; gap: 3px; }
+.plate .ov-cells b { width: 20px; height: 28px; border: 2px solid var(--ink); display: block; background: rgba(255,255,255,.35); }
+.plate .ov-cells em { font: 700 22px/1 var(--f-body); font-style: normal; }
+.plate .ov-line { flex: 1; height: 2px; background: var(--ink); align-self: flex-end; margin-bottom: 6px; }
+.plate .ov-checks { gap: 14px; }
+.plate .ov-box { width: 36px; height: 36px; border: 3px solid var(--ink); display: block; background: rgba(255,255,255,.35); }
+.plate .ov-box svg { width: 100%; height: 100%; display: block; }

@@ -1,0 +1,461 @@
+{
+ "set": "C1-1-11 (2026-10-19) 필사 입문",
+ "version": "v3 3안 하이브리드 콜라주 2판 (2026-10-02 designer)",
+ "schema": "cards[] = render_v3.py 입력. ref = PHOTOS.v3.json(researcher)의 {card, role} -> 작가·라이선스·출처 병합(출처 줄 자동 생성). file = photos/src/(커밋 제외, fetch_photos.py). edit = 초점 크롭(+흐림) -> 프리셋 -> 그레인 6%, frame = 원화 디테일(archive), rim=ink = 잉크 테두리, overlay = 코드 그래픽 층, layout=rev = 그림 위·글 아래",
+ "notes": {
+  "card6_choice": "코드 그래픽 글줄 2종(정자·흘림)을 1 alt 사진(노트에 쓰는 손) 위 쪽지로 올림. 서예 병풍 1998.286.b는 택하지 않음: ① 본문 '같은 문장을 정자로, 다음엔 흘려'의 핵심은 '같은 글줄 두 가지 획'인데 병풍은 한 서체(행초서) 한문 시구라 대비가 없다 ② 병풍은 원화 스캔이라 '원화는 프레임·낙관·띠·모서리만' 규칙과 충돌(사진 주인공 원칙) ③ '손이 글자 모양을 기억' 문장은 쓰는 손 사진이 직접 보여 준다",
+  "card7_choice": "코드 그래픽(날짜 칸·책 제목 칸·체크박스 5개)을 3 alt 사진(독서 기록 노트) 오른쪽 빈 면 위 쪽지로 올림. 지시안(1 alt 또는 3 main)보다 3 alt가 더 일치: 왼쪽 면에 실제로 date·title·author 인쇄 칸이 있는 독서 기록장이라 '날짜와 책 제목을 함께 적으면 문장집'을 사진 자체가 보여 준다. 3 main은 3장에서 이미 써서 반복 금지, 1 alt는 6장(쓰는 손)에 더 맞음",
+  "card4": "실사 밑줄 없음 -> 주황 밑줄 2줄('두세 줄')을 코드 그래픽으로 덧그림(사진 픽셀 불변)",
+  "downloads": "Wikimedia upload 서버 429(요청 제한)로 같은 원본(해상도·촬영 동일)을 Unsplash CDN(images.unsplash.com, Commons {{Unsplash}} 원본 링크)·Pexels CDN에서 받음. 라이선스 근거는 PHOTOS.v3.json(Commons 원문 확인) 그대로",
+  "readable_text": "7장 사진의 인쇄 칸 이름(이탈리아어·영어 'data·date, titolo·title' 등)과 2장 노트 손글씨 일부는 확대 시 판독 가능. 상표·저작물 아님(일반 양식). 2장 책 표지 제목·저자명은 흐림"
+ },
+ "cards": [
+  {
+   "card": 1,
+   "kind": "photo",
+   "ref": {
+    "card": 1,
+    "role": "main"
+   },
+   "downloaded_from": "https://images.unsplash.com/photo-1455390582262-044cdead277a",
+   "why": "표지 '필사책 +692.8%' = 펜으로 글을 베껴 쓰는 순간. 펜촉이 글줄에 닿은 한 컷",
+   "edit": {
+    "preset": "muted-warm",
+    "crop": [
+     0.06,
+     0.04,
+     0.94,
+     0.76
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "grain": 0.06,
+    "blur": [
+     {
+      "box": [
+       0.33,
+       0.1,
+       0.5,
+       0.52
+      ],
+      "radius": 14,
+      "why": "펜촉 각인 문자(제조사 표기)"
+     }
+    ]
+   },
+   "frame": {
+    "file": "src/met-853896.jpg",
+    "title": "Books and Scholarly Accoutrements (two-panel folding screen, 19th century)",
+    "title_ko": "책가도",
+    "institution": "The Metropolitan Museum of Art",
+    "accession": "2024.89.6",
+    "object_url": "https://www.metmuseum.org/art/collection/search/853896",
+    "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP-40204-001.jpg",
+    "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+    "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+    "crop": [
+     1700,
+     560,
+     2290,
+     920
+    ],
+    "detail": "붓·두루마리(옛 필기구)",
+    "inset": 20,
+    "depth": 18,
+    "seed": 10,
+    "rim": "ink"
+   },
+   "credit_on_image": false
+  },
+  {
+   "card": 2,
+   "kind": "photo",
+   "ref": {
+    "card": 2,
+    "role": "main"
+   },
+   "downloaded_from": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e",
+   "why": "'책 읽고 문장을 모으는' 장면: 책 더미 옆에서 노트에 문장을 옮겨 적는 손",
+   "edit": {
+    "preset": "muted-warm",
+    "crop": [
+     0.0,
+     0.29,
+     0.585,
+     0.99
+    ],
+    "focus": [
+     0.55,
+     0.5
+    ],
+    "grain": 0.06,
+    "blur": [
+     {
+      "box": [
+       0.0,
+       0.29,
+       0.21,
+       0.88
+      ],
+      "radius": 70,
+      "why": "책 표지·책등 제목 글자(SOUL·저자명)"
+     }
+    ]
+   },
+   "frame": {
+    "file": "src/met-73134-DP163173.jpg",
+    "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+    "title_ko": "책거리",
+    "institution": "The Metropolitan Museum of Art",
+    "accession": "2005.385",
+    "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+    "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163173.jpg",
+    "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+    "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+    "crop": [
+     790,
+     1500,
+     1400,
+     1850
+    ],
+    "detail": "책 더미·두루마리 꽂이",
+    "inset": 22,
+    "depth": 18,
+    "seed": 17,
+    "rim": "ink"
+   },
+   "credit_on_image": false
+  },
+  {
+   "card": 3,
+   "kind": "photo",
+   "ref": {
+    "card": 3,
+    "role": "main"
+   },
+   "downloaded_from": "https://images.unsplash.com/photo-1443140570159-279cf334cf24",
+   "layout": "rev",
+   "why": "본문이 '노트 한 권, 펜 하나, 베낄 책 한 권'을 세므로 사진도 책·연필·노트 세 가지만",
+   "edit": {
+    "preset": "muted-warm",
+    "crop": [
+     0.02,
+     0.3,
+     0.98,
+     0.97
+    ],
+    "focus": [
+     0.5,
+     0.62
+    ],
+    "grain": 0.06
+   },
+   "frame": {
+    "file": "src/met-73134-DP163173.jpg",
+    "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+    "title_ko": "책거리",
+    "institution": "The Metropolitan Museum of Art",
+    "accession": "2005.385",
+    "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+    "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163173.jpg",
+    "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+    "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+    "crop": [
+     780,
+     2230,
+     1240,
+     2560
+    ],
+    "detail": "소반 위 벼루함(옛 준비물)",
+    "inset": 22,
+    "depth": 18,
+    "seed": 24,
+    "rim": "ink"
+   },
+   "credit_on_image": false
+  },
+  {
+   "card": 4,
+   "kind": "photo",
+   "ref": {
+    "card": 4,
+    "role": "alt"
+   },
+   "downloaded_from": "https://images.unsplash.com/photo-1476490445914-cc8ed84a4277",
+   "why": "'좋아하는 책의 첫 문장·밑줄 친 문장' = 펼친 책 + 첫 줄 아래 주황 밑줄(코드 그래픽)",
+   "edit": {
+    "preset": "hanji-duotone",
+    "crop": [
+     0.03,
+     0.36,
+     0.97,
+     0.96
+    ],
+    "focus": [
+     0.42,
+     0.5
+    ],
+    "grain": 0.06
+   },
+   "overlay": {
+    "type": "underline",
+    "lines": [
+     [
+      0.15,
+      0.42,
+      0.505,
+      0.012
+     ],
+     [
+      0.15,
+      0.36,
+      0.548,
+      0.01
+     ]
+    ],
+    "width": 8,
+    "seed": 4
+   },
+   "frame": {
+    "file": "src/met-853896.jpg",
+    "title": "Books and Scholarly Accoutrements (two-panel folding screen, 19th century)",
+    "title_ko": "책가도",
+    "institution": "The Metropolitan Museum of Art",
+    "accession": "2024.89.6",
+    "object_url": "https://www.metmuseum.org/art/collection/search/853896",
+    "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP-40204-001.jpg",
+    "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+    "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+    "crop": [
+     690,
+     930,
+     1280,
+     1290
+    ],
+    "detail": "쌓인 책갑",
+    "inset": 22,
+    "depth": 18,
+    "seed": 31,
+    "rim": "ink"
+   },
+   "credit_on_image": false
+  },
+  {
+   "card": 5,
+   "kind": "photo",
+   "ref": {
+    "card": 5,
+    "role": "alt"
+   },
+   "downloaded_from": "https://images.unsplash.com/photo-1478980236323-01c287f81aed",
+   "why": "'하루 10분, 같은 시간에' = 아침 자명종(10시 무렵) 옆 책과 찻잔. 시간을 정해 두는 루틴",
+   "edit": {
+    "preset": "muted-warm",
+    "crop": [
+     0.03,
+     0.08,
+     0.9,
+     0.99
+    ],
+    "focus": [
+     0.4,
+     0.55
+    ],
+    "grain": 0.06,
+    "blur": [
+     {
+      "box": [
+       0.235,
+       0.56,
+       0.32,
+       0.62
+      ],
+      "radius": 12,
+      "why": "시계 문자판 상표"
+     },
+     {
+      "box": [
+       0.25,
+       0.7,
+       0.32,
+       0.745
+      ],
+      "radius": 10,
+      "why": "문자판 'QUARTZ' 글자"
+     }
+    ]
+   },
+   "frame": {
+    "file": "src/met-73134-DP163174.jpg",
+    "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+    "title_ko": "책거리",
+    "institution": "The Metropolitan Museum of Art",
+    "accession": "2005.385",
+    "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+    "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163174.jpg",
+    "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+    "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+    "crop": [
+     1660,
+     1770,
+     2020,
+     1960
+    ],
+    "detail": "자명종(옛 시계)",
+    "inset": 22,
+    "depth": 18,
+    "seed": 38,
+    "rim": "ink"
+   },
+   "credit_on_image": false,
+   "layout": "rev"
+  },
+  {
+   "card": 6,
+   "kind": "photo",
+   "ref": {
+    "card": 1,
+    "role": "alt"
+   },
+   "downloaded_from": "https://images.pexels.com/photos/8769/pen-writing-notes-studying.jpg",
+   "why": "'같은 문장을 정자로, 다음엔 흘려 써 보기. 손이 글자 모양을 기억' = 노트에 직접 쓰는 손 + 같은 글줄을 정자·흘림 두 줄로 그린 쪽지(코드 그래픽)",
+   "edit": {
+    "preset": "muted-warm",
+    "crop": [
+     0.1,
+     0.0,
+     1.0,
+     0.9
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "grain": 0.06
+   },
+   "overlay": {
+    "type": "script-pair",
+    "x": 0.585,
+    "y": 0.07,
+    "w": 0.375,
+    "h": 0.5,
+    "glyphs": 5,
+    "seed": 6,
+    "labels": [
+     "정자",
+     "흘림"
+    ]
+   },
+   "frame": {
+    "file": "src/met-73134-DP163174.jpg",
+    "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+    "title_ko": "책거리",
+    "institution": "The Metropolitan Museum of Art",
+    "accession": "2005.385",
+    "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+    "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163174.jpg",
+    "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+    "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+    "detail": "붓대·술 장식·매화 가지",
+    "inset": 22,
+    "depth": 18,
+    "seed": 45,
+    "rim": "ink"
+   },
+   "credit_on_image": false
+  },
+  {
+   "card": 7,
+   "kind": "photo",
+   "ref": {
+    "card": 3,
+    "role": "alt"
+   },
+   "downloaded_from": "https://images.unsplash.com/photo-1471970394675-613138e45da3",
+   "why": "'날짜와 책 제목을 함께 적으면 나만의 문장집' = 실제 독서 기록 노트(왼쪽 면에 date·title·author 인쇄 칸) + 오른쪽 빈 면에 날짜·책 제목 칸과 체크박스 5개 쪽지(코드 그래픽)",
+   "edit": {
+    "preset": "muted-warm",
+    "crop": [
+     0.0,
+     0.12,
+     1.0,
+     0.8
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "grain": 0.06
+   },
+   "overlay": {
+    "type": "record",
+    "x": 0.52,
+    "y": 0.3,
+    "w": 0.44,
+    "h": 0.44,
+    "boxes": 5,
+    "checked": 5,
+    "labels": [
+     "날짜",
+     "책 제목"
+    ]
+   },
+   "frame": {
+    "file": "src/met-73134-DP163173.jpg",
+    "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+    "title_ko": "책거리",
+    "institution": "The Metropolitan Museum of Art",
+    "accession": "2005.385",
+    "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+    "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163173.jpg",
+    "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+    "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+    "crop": [
+     1690,
+     2080,
+     2300,
+     2430
+    ],
+    "detail": "문갑과 책",
+    "inset": 22,
+    "depth": 18,
+    "seed": 52,
+    "rim": "ink"
+   },
+   "credit_on_image": false,
+   "layout": "rev"
+  },
+  {
+   "card": 8,
+   "kind": "artwork",
+   "file": "src/cma-2011.37-print.jpg",
+   "title": "Books and Scholars' Accoutrements (ten-panel folding screen, late 1800s)",
+   "title_ko": "책가도",
+   "institution": "Cleveland Museum of Art",
+   "accession": "2011.37",
+   "object_url": "https://clevelandart.org/art/2011.37",
+   "image_url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_print.jpg",
+   "license": "CC0 1.0 (Cleveland Open Access, API share_license_status=CC0, 2026-10-02 확인)",
+   "license_url": "https://www.clevelandart.org/open-access",
+   "credit": "그림: 클리블랜드미술관 〈책가도〉 CC0",
+   "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+   "why": "시리즈 공통 끝맺음: 책가도 10폭 전경 띠",
+   "edit": {
+    "preset": "archive",
+    "crop": [
+     126,
+     143,
+     3282,
+     1463
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   },
+   "credit_on_image": false
+  }
+ ]
+}
