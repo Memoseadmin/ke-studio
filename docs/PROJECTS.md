@@ -11,7 +11,7 @@
 ## 상태 한눈에
 | 항목 | A 유튜브 | B 카드뉴스 |
 |---|---|---|
-| 승인된 PR | #1 EP001, #2 EP002 (approved) · #3 ECC 설치 approved → **작업 브랜치에 머지(9c97b71)** | **#4 C1-1 14일 세트 approved**(대표 채팅 승인 → COO 라벨, 2026-10-02) https://github.com/Memoseadmin/ke-studio/pull/4 · 대표 결정: 하루 캐러셀 1 + 릴스 1(C1-1b 별도 PR) |
+| 승인된 PR | #1 EP001, #2 EP002 (approved) · #3 ECC 설치 approved → **작업 브랜치에 머지(9c97b71)** | **#4 C1-1 14일 세트 approved → cardnews/main 머지(98d2a96, final 렌더·legal v3 BLOCK 0)** · **#5 C1-1b 릴스 14개+프로필 패키지 검수 중** https://github.com/Memoseadmin/ke-studio/pull/5 · **디자인 v2(AI 민화 배경+실사 사진) 작업 중, 브랜치 cardnews/c1-1-design** |
 | 업로드/게시 | 0건 (키 UNSET, FIX 3) | 0건 (계정 미개설) |
 | 막힌 것 | TTS·이미지·YouTube 키, Amazon 트래킹 ID, 공급자 선택 | **R2_ACCESS_KEY_ID 재입력(32자)** · **IG_USER_ID 교체(IG 계정 ID) + 페이지↔IG 연결 또는 Instagram 직접 로그인 경로(B)로 전환** · 링크 허브 URL |
 | 이번 세션 할 일 | 키 들어오면 샘플 생성→렌더→업로드 게이트, EP003 대본 | C1-2: PR #4 승인 → final 렌더 → R2·IG 검증 → 예약 게시 큐 |
@@ -55,6 +55,7 @@
 | [B] R2 계정 ID 일치 확인 `session_01AL8dBNE2STSUkrwrwxLoLL` | Sonnet 5.5 | 없음(읽기 전용) | list_events | **완료(아카이브)**. 새 `R2_ACCOUNT_ID`(32자 hex)가 이전 정상값과 **다름**, 키 두 값과도 다름 → 존재하지 않는 계정이라 SSL 핸드셰이크 거부(COO 세션의 이전 값은 R2가 400 응답 = 정상 주소). 네트워크 차단 아님 |
 | [B] IG 경로 B 토큰 확인 + R2 재확인 `session_01PgobjmxjLQgda47utgKtdH` | Sonnet 5.5 | 없음(읽기 전용) | list_events | **완료(아카이브)**. **IG 통과**: 토큰 IGAA, `ig_publish.py --check` 경로 B·username=chaekgado.note·IG_USER_ID 일치, BUSINESS, content_publishing_limit 0/100(24h). 쓰기 API 미호출. R2는 대표 재입력 전 값이라 미통과(32/64/32, 계정 불일치) |
 | [B] R2 재확인 #3 `session_014VArU1639pxzGs4QGvyY94` | Sonnet 5.5 | 없음(읽기 전용) | list_events | **완료(아카이브)**. 계정 ID는 **정상값으로 복구됨**(이전 정상 계정과 일치). 키는 여전히 KEY_ID 64자/SECRET 32자(**서로 바뀜**) → put `InvalidArgument`. 하위 세션이 값을 바꿔 넣어 보는 시도는 권한 분류기에 차단(자격증명 탐색) → COO도 하지 않음, 대표가 두 칸을 맞바꿔야 함 |
+| [B] R2 재확인 #4(키 맞바꾼 후) `session_011HdKKY5mUKiwMzarqftQqF` | Sonnet 5.5 | 없음(읽기 전용) | list_events | 진행 중 |
 
 ## 공용 자원
 - 직원 9명 `.claude/agents/`, 스킬 96개, 디자인 시스템 `episodes/EP001/design/design-system.md`, 비주얼 방향 "민화 플랫 × 한지 질감"(docs/TOOLING_TTS_IMAGE.md §D).
