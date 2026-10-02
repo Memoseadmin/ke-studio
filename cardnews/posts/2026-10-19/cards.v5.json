@@ -1,0 +1,72 @@
+{
+  "post_id": "C1-1-11",
+  "date": "2026-10-19",
+  "title": "필사 입문 — 큐레이터 메모형",
+  "type": "체크리스트",
+  "copy_version": "v5",
+  "copy_note": "copy-v5.md (2026-10-02). 대표 결정 P2(영양소를 띠 본문에)·P3(통째로 제거)·E1 ⑤(8장 질문)·V3(출처 소자+8장 묶음) 반영. 훅은 1안. 줄바꿈은 렌더러가 띠 폭에 맞춰 처리. source(21px 소자)·source_lines(30px 묶음) 키는 v5에서 추가. REVIEW-v5(copy-editor 2026-10-02): source_lines는 기사 출처 2줄만 — 그림·사진 줄은 render_v3 §8-4 자동 생성(art_credit_line)이라 수기 중복 제거. 사진 고정 문구 '1941년 윤동주 졸업 사진(촬영자 미상) · 퍼블릭 도메인 · Wikimedia Commons'는 사진 목록(credit·license)에 넣는다.",
+  "layout_family": "c",
+  "canvas": [1080, 1440],
+  "layout_file": "photos/LAYOUT.v3c.json",
+  "cards": [
+    {"n": 1, "kicker": "요즘 필사 붐의 원조", "headline": "윤동주도 베껴 썼다", "body": "1936년 100부만 찍은 백석 시집 『사슴』 한 권을, 이듬해 도서관에서 옮겨 적었다.", "source": "출처 ・ 서울경제 2020 · 서울신문 2014"},
+    {"n": 2, "headline": "판매 +692.8%", "body": "교보문고 2024년 집계예요. 필사책 판매는 전년 대비 이만큼, 출간 종수는 57권에서 81권.", "source": "출처 ・ 서울신문 2025 · 디지털데일리 2025"},
+    {"n": 3, "headline": "준비물은 셋", "body": "노트 한 권, 펜 하나, 베낄 책 한 권. 요즘 필사책은 시·소설에서 철학·경제경영까지 넓어졌다고 해요.", "source": "출처 ・ 서울신문 2025"},
+    {"n": 4, "headline": "첫 줄은 밑줄에서", "body": "밑줄 친 두세 줄이면 돼요. 정약용은 핵심 대목만 베껴 읽는 초서(抄書)를 아들에게 권했다고 전하죠.", "source": "출처 ・ 한국교육신문 2019 · 코리아타임뉴스 2025"},
+    {"n": 5, "headline": "10분, 같은 시각", "body": "분량보다 날짜. 2025 독서실태에서 20대만 독서율이 75.3%로 올랐는데, 배경에 필사가 꼽혔거든요.", "source": "출처 ・ 문체부 2025 국민 독서실태 · 뉴시스 2026"},
+    {"n": 6, "headline": "정자로, 흘림으로", "body": "예쁜 글씨가 아니어도 괜찮아요. 궁체에도 정자와 흘림이 있고, 윤동주는 한 글자씩 또박또박 옮겼다고 하고요.", "source": "출처 ・ 동양예술 26호 2014 · 서울경제 2020"},
+    {"n": 7, "headline": "날짜와 책 제목", "body": "1941년 윤동주가 손으로 써 묶은 시 19편, 3부. 후배 정병욱이 받은 1부는 항아리 속에서 살아남았다.", "source": "출처 ・ 한국민족문화대백과사전 · 더팩트 2022"},
+    {"n": 8, "headline": "윤동주처럼 통째로 옮길 시집은?", "body": "항아리 속 원고는 1948년 1월 30일 정음사 초판 31편이 됐다.", "source_lines": [
+      "출처 ・ 서울신문 2025·서울경제 2020",
+      "민족문화대백과·더팩트 2022·뉴시스 2026"
+    ]}
+  ],
+  "hook_alternatives": [
+    {"id": "2안", "kicker": "숙제인 줄 알았는데", "headline": "윤동주도 베껴 썼다"},
+    {"id": "3안", "kicker": "100부뿐인 시집을", "headline": "윤동주는 베꼈다"}
+  ],
+  "sources": [
+    "https://m.seoul.co.kr/news/2025/02/14/20250214022001",
+    "https://www.sedaily.com/article/12920831",
+    "http://www.joongangenews.com/news/articleView.html?idxno=316372",
+    "https://www.ddaily.co.kr/page/view/2025032516241839723",
+    "https://www.seoul.co.kr/news/2014/12/01/20141201031001",
+    "https://encykorea.aks.ac.kr/Article/E0060561",
+    "https://news.tf.co.kr/read/ogmeta/1926351.htm",
+    "https://v.daum.net/v/20250723185057580?f=p",
+    "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=22278",
+    "https://v.daum.net/v/qhgwXcWIZu?f=p",
+    "https://hangyo.com/mobile/article.html?no=88969",
+    "https://koreatimenews.com/news/article.html?no=863569",
+    "https://www.earticle.net/Article/A238530",
+    "https://scholar.kyobobook.co.kr/article/detail/4010024635986",
+    "https://encykorea.aks.ac.kr/Article/E0006812"
+  ],
+  "fact_checks": [
+    {
+      "card": 1,
+      "claim": "윤동주가 1937년 8월 백석 시집 『사슴』(1936년 1월, 100부 한정) 한 권을 도서관에서 필사",
+      "status": "확인 O (언론 3곳 + 서울신문 2014 칼럼, 기관 출처 없음). v5에서 '통째로·전체·33편' 미사용",
+      "checked_at": "2026-10-02",
+      "sources": [
+        {"url": "https://www.sedaily.com/article/12920831", "outlet": "서울경제 2020-12-10 (김응교 『서른세 번의 만남, 백석과 동주』 서평)", "quote": "1937년 8월 33편을 한 글자 한 글자 또박또박 정성껏 원고지에 필사했다(요지)"},
+        {"url": "http://www.joongangenews.com/news/articleView.html?idxno=316372", "outlet": "중앙이코노미뉴스 2020-11-20", "quote": "그 자리에서 시집 한 권을 필사해 품 안에 넣고 다닐 만큼 아꼈다."},
+        {"url": "https://www.seoul.co.kr/news/2014/12/01/20141201031001", "outlet": "서울신문 2014-12-01 최동호 칼럼", "quote": "『사슴』 1936년 1월 100부 한정(요지)"}
+      ],
+      "caveats": "필사본 소장처·원고지 규격·학교급은 카드에 쓰지 않음. 6장 '또박또박'은 서울경제 단일 출처라 전언 어미."
+    },
+    {
+      "card": 7,
+      "claim": "1941년 시 19편 손제본 3부, 정병욱 몫 1부가 광양 집 마루 밑 항아리에서 보존, 1948-01-30 정음사 초판 31편",
+      "status": "확인 O (한국민족문화대백과사전 + 더팩트 2022 + 경인일보 2025 교차)",
+      "checked_at": "2026-10-02",
+      "sources": [
+        {"url": "https://encykorea.aks.ac.kr/Article/E0060561", "outlet": "한국민족문화대백과사전 「하늘과 바람과 별과 시」"},
+        {"url": "https://news.tf.co.kr/read/ogmeta/1926351.htm", "outlet": "더팩트 2022-03-23"}
+      ],
+      "caveats": "'원래 77부 한정 계획'(F09)은 단일 출처라 카드에 쓰지 않음."
+    }
+  ],
+  "sponsor_slot": "문구·필기구, 출판, 교양 앱",
+  "hashtags": ["#필사", "#텍스트힙", "#필사노트", "#독서기록", "#책가도노트"]
+}

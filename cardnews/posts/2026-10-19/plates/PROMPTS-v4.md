@@ -1,5 +1,9 @@
 # 세트 11 "필사 입문" 4판 — AI 플레이트 프롬프트 팩 (집 PC ComfyUI용)
 
+> **v4.1 변경 이력(2026-10-02, 대표 결정 V1·V2 반영)**: V2 AI 플레이트 스타일 = ⓒ 한지 콜라주(찢은 한지 결·겹침·먹 번짐·낮은 채도) — §0 스타일 꼬리 문자열만 교체, 프롬프트 ID·시드·저장 경로·절차는 그대로.
+> V1 면적 비율 원화:AI:사진:코드 = 35:15:25:25 — 플레이트는 "바탕"만. 꼬리에 `background plate only, subject small or absent, wide empty negative space, empty lower third` 추가, 네거티브에 BENCHMARK-visual §4-3 SDXL 항목 추가.
+> v4 원 스타일 문자열(기록용, 사용 안 함): `flat editorial illustration in Korean minhwa folk-painting manner, bold clean ink outlines, warm limited palette of ink brown (#3B2F2A), celadon green (#7FA99B), muted vermilion (#B5523B) and hanji cream paper (#F3ECDD), visible hanji mulberry paper fibres, subtle paper grain, calm soft daylight, generous empty space, quiet still-life mood`
+
 > 2026-10-02 designer. 대표 결정: 집 PC(ComfyUI)에서 AI 플레이트를 먼저 만든 뒤 4판 렌더. 작업 순서는 `plates/README-homepc.md`.
 > **플레이트 = 배경만.** 사물(책·붓·시계)은 CC0 원화 크롭, 글자·숫자·원고지·달력·막대는 코드 그래픽이 맡는다. 플레이트에는 글자·인물·로고가 0이어야 한다.
 > **1장(윤동주)은 AI로 인물을 그리지 않는다**(디자인 시스템 §6-1 실존 인물 금지). 1장 플레이트는 사진·원화를 얹을 **빈 배경**만 만든다.
@@ -14,16 +18,16 @@
 | 표지 1장 풀블리드 | 1080x1440 | **1152x1536** (3:4) | 1080x1440으로 축소 |
 | 마지막 8장 그림 영역(위 55%) | 1080x792 | **1536x1128** (≈1.36:1) | 1080x793 축소 → 792 크롭 |
 
-**스타일 꼬리 문자열** (§5 공통 문자열의 구조를 따르되 팔레트만 §9-6 책가도 톤으로 바꿈, "soft white steam"은 라면 에피소드 전용이라 뺌 — ⚠ 추정 적용, 대표 확인 대상):
+**스타일 꼬리 문자열** (v4.1 · 대표 결정 V2 ⓒ 한지 콜라주. §5 공통 문자열 구조를 따르되 hex 코드는 모델이 해석 못 해 색 이름만 씀(BENCHMARK-visual §4-2). 실존 작가 이름은 넣지 않는다):
 ```
-flat editorial illustration in Korean minhwa folk-painting manner, bold clean ink outlines, warm limited palette of ink brown (#3B2F2A), celadon green (#7FA99B), muted vermilion (#B5523B) and hanji cream paper (#F3ECDD), visible hanji mulberry paper fibres, subtle paper grain, calm soft daylight, generous empty space, quiet still-life mood
+torn layered hanji collage, overlapping mulberry paper pieces with deckled edges and visible fibres, faint paper-relief shadows, soft ink bleed, low-saturation palette of cream, warm ink brown, celadon and faded persimmon dyed paper, matte, background plate only, subject small or absent, wide empty negative space, empty lower third
 ```
 
-**네거티브** (§5 "항상 포함" 원문 그대로 + §6·§10 추가분):
+**네거티브** (§5 "항상 포함" 원문 그대로 + §6·§10 추가분 + v4.1 BENCHMARK-visual §4-3 SDXL 추가분):
 ```
-text, letters, numbers, captions, logos, brand names, trademarks, product packaging graphics, printed labels, readable signage, real people, faces, celebrity likeness, copyrighted characters, mascots, film or TV stills, posters, watermarks, UI elements, human figures, hands, silhouettes of people, calligraphy, hanja characters, seal stamps, signatures, tigers, magpies, red cross on white, flags, photorealistic, 3d render, glossy, copy of an existing painting
+text, letters, numbers, captions, logos, brand names, trademarks, product packaging graphics, printed labels, readable signage, real people, faces, celebrity likeness, copyrighted characters, mascots, film or TV stills, posters, watermarks, UI elements, human figures, hands, silhouettes of people, calligraphy, hanja characters, seal stamps, signatures, tigers, magpies, red cross on white, flags, photorealistic, 3d render, glossy, copy of an existing painting, plastic, neon, oversaturated, vector clip art, thick cartoon outlines, anime, pseudo-hanja, gold sparkle, HDR, harsh shadows, cluttered lower area, picture frame
 ```
-- 네거티브 칸이 약한 모델(Z-Image-Turbo는 CFG 1이라 네거티브 효과가 거의 없음 — 추정)은 프롬프트 끝에 §5 문장을 그대로 붙인다: `No text, no logos, no brand packaging, no real people or faces.`
+- 네거티브 칸이 약한 모델(Z-Image-Turbo는 CFG 1이라 네거티브 효과가 거의 없음 — 추정)은 프롬프트 끝에 §5 문장을 그대로 붙인다: `No text, no logos, no brand packaging, no real people or faces.` 그 뒤에 v4.1 바탕 지시 `Empty lower third, subject small or absent.`를 한 줄 더 붙인다.
 
 **모델·설정 권장** (`docs/LOCAL_GPU_PROMPT.md`: 상업 사용 허용 체크포인트만, 모델명은 GEN.json 필수)
 
@@ -35,7 +39,7 @@ text, letters, numbers, captions, logos, brand names, trademarks, product packag
 - **시드**: 3판 규칙 그대로 `seed = MMDD*1000 + card*10 + variant` (세트 날짜 10/19). 프롬프트마다 기본 시드 + 3개(+1·+2·+3) = **4장 생성 → 사람이 1장 고름**. 고른 시드를 GEN.json `picked`에 기록.
 - 파일명: `plates/v4/P{장 2자리}{변형 a|b}-s{시드}.png` (예 `plates/v4/P02a-s1019020.png`). 원본 PNG는 그대로 커밋(영상·오디오가 아니므로 허용). 편집·크롭은 클라우드 세션이 한다.
 
-**생성 후 사람 검수 체크(1장이라도 걸리면 다른 시드)**: 글자·숫자처럼 보이는 획 0 / 사람·손·얼굴 0 / 로고·상표 0 / 호랑이·까치 0 / 특정 원화를 그대로 베낀 구도 아님 / 아래쪽 30%가 비어 있어 원화·코드 그래픽을 얹을 자리 있음.
+**생성 후 사람 검수 체크(1장이라도 걸리면 다른 시드)**: 글자·숫자처럼 보이는 획 0 / 사람·손·얼굴 0 / 로고·상표 0 / 호랑이·까치 0 / 특정 원화를 그대로 베낀 구도 아님 / 아래쪽 30%가 비어 있어 원화·코드 그래픽을 얹을 자리 있음 / (v4.1) 벡터 클립아트·플랫 일러스트처럼 보이지 않고 종이 결이 보임 / 주제 사물이 화면의 1/4을 넘지 않음.
 
 ---
 

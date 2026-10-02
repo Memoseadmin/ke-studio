@@ -1,5 +1,5 @@
 {
-  "style_version": "v2-provisional-2026-10-02",
+  "style_version": "v4.1-hanji-collage-2026-10-02",
   "model": "Tongyi-MAI/Z-Image-Turbo (6B)",
   "model_card": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
   "model_license": "Apache-2.0",
@@ -29,7 +29,6 @@
     "text",
     "letters",
     "numbers",
-    "calligraphy",
     "captions",
     "logos",
     "brand names",
@@ -39,19 +38,40 @@
     "readable signage",
     "real people",
     "faces",
-    "human figures",
     "celebrity likeness",
     "copyrighted characters",
     "mascots",
     "film or TV stills",
     "posters",
     "watermarks",
+    "UI elements",
+    "human figures",
+    "hands",
+    "silhouettes of people",
+    "calligraphy",
+    "hanja characters",
+    "seal stamps",
     "signatures",
-    "artist seal stamps",
     "tigers",
     "magpies",
+    "red cross on white",
     "flags",
-    "copy of an existing painting"
+    "photorealistic",
+    "3d render",
+    "glossy",
+    "copy of an existing painting",
+    "plastic",
+    "neon",
+    "oversaturated",
+    "vector clip art",
+    "thick cartoon outlines",
+    "anime",
+    "pseudo-hanja",
+    "gold sparkle",
+    "HDR",
+    "harsh shadows",
+    "cluttered lower area",
+    "picture frame"
   ],
   "created_at": "2026-10-02T03:58:03.378035Z",
   "mode": "dry-run",
@@ -69,9 +89,9 @@
         "notebook",
         "pen"
       ],
-      "prompt": "펼친 노트와 펜 하나를 책가도 소반 위에, 노트 (chaekgado scholar's bookshelf screen, small wooden tray table, notebook, pen). Theme: hand-copying favourite books as a quiet hobby. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one focal motif right of center, calm empty paper on the left. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
-      "prompt_words": 99,
-      "prompt_sha256": "91573d16b11ae51cc0953cf00e61608206b071bdffaa1a378f837da4dc7c0cae",
+      "prompt": "펼친 노트와 펜 하나를 책가도 소반 위에, 노트 (chaekgado scholar's bookshelf screen, small wooden tray table, notebook, pen). Theme: hand-copying favourite books as a quiet hobby. torn layered hanji collage, overlapping mulberry paper pieces with deckled edges and visible fibres, faint paper-relief shadows, soft ink bleed, low-saturation palette of cream, warm ink brown, celadon and faded persimmon dyed paper, matte, background plate only, subject small or absent, wide empty negative space, empty lower third. wide panoramic banner, one focal motif right of center, calm empty paper on the left. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 115,
+      "prompt_sha256": "74a853fa45f527b2dba14da910108ce64c591d58b580818c745ecee94c1a6c72",
       "seeds": [
         1019010
       ],
@@ -92,9 +112,9 @@
         "paper notes",
         "books"
       ],
-      "prompt": "책 세 권 위에 쪽지(문장 메모) 여러 장이 꽂힌 정물, 청자색 포인트 (celadon accents, paper notes, books). Theme: hand-copying favourite books as a quiet hobby. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
-      "prompt_words": 93,
-      "prompt_sha256": "2cb0b1c138021c9c2473310aeec4f291b3b6865fad4691666caa144b5861c8d7",
+      "prompt": "책 세 권 위에 쪽지(문장 메모) 여러 장이 꽂힌 정물, 청자색 포인트 (celadon accents, paper notes, books). Theme: hand-copying favourite books as a quiet hobby. torn layered hanji collage, overlapping mulberry paper pieces with deckled edges and visible fibres, faint paper-relief shadows, soft ink bleed, low-saturation palette of cream, warm ink brown, celadon and faded persimmon dyed paper, matte, background plate only, subject small or absent, wide empty negative space, empty lower third. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 109,
+      "prompt_sha256": "ed095e8d5288235e6f09df7c5a83140ff0e61bc784b99298e081a17714988f02",
       "seeds": [
         1019020
       ],
@@ -116,9 +136,9 @@
         "books",
         "pen"
       ],
-      "prompt": "노트· 펜· 책 세 가지만 나란히, 책가도 한 칸 구도 (chaekgado scholar's bookshelf screen, notebook, books, pen). Theme: hand-copying favourite books as a quiet hobby. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
-      "prompt_words": 93,
-      "prompt_sha256": "5a1643c1e92d3bb7988061bda5da034f710e71b50de8ee5b58d059708612a5b6",
+      "prompt": "노트· 펜· 책 세 가지만 나란히, 책가도 한 칸 구도 (chaekgado scholar's bookshelf screen, notebook, books, pen). Theme: hand-copying favourite books as a quiet hobby. torn layered hanji collage, overlapping mulberry paper pieces with deckled edges and visible fibres, faint paper-relief shadows, soft ink bleed, low-saturation palette of cream, warm ink brown, celadon and faded persimmon dyed paper, matte, background plate only, subject small or absent, wide empty negative space, empty lower third. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 109,
+      "prompt_sha256": "621e85098be1a6c76dacb3875dd9bf0b99085448b63a4cebaf3b42ee59999832",
       "seeds": [
         1019030
       ],
@@ -137,9 +157,9 @@
       "english_hints": [
         "books"
       ],
-      "prompt": "책 한 쪽에 밑줄 한 줄이 주황으로, 읽히지 않는 획 (books). Theme: hand-copying favourite books as a quiet hobby. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
-      "prompt_words": 87,
-      "prompt_sha256": "e32561d6e3fa13d8d1d352ea92c195c0a5d7912986e300745d9e6e8fac42740b",
+      "prompt": "책 한 쪽에 밑줄 한 줄이 주황으로, 읽히지 않는 획 (books). Theme: hand-copying favourite books as a quiet hobby. torn layered hanji collage, overlapping mulberry paper pieces with deckled edges and visible fibres, faint paper-relief shadows, soft ink bleed, low-saturation palette of cream, warm ink brown, celadon and faded persimmon dyed paper, matte, background plate only, subject small or absent, wide empty negative space, empty lower third. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 103,
+      "prompt_sha256": "e212ccfd1f0804f9b54b204c67196274de12656a55589e7fded70b754b92078a",
       "seeds": [
         1019040
       ],
@@ -160,9 +180,9 @@
         "sundial",
         "paper calendar grid"
       ],
-      "prompt": "민화풍 해시계 또는 모래시계 하나와 달력 (hourglass, sundial, paper calendar grid). Theme: hand-copying favourite books as a quiet hobby. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
-      "prompt_words": 87,
-      "prompt_sha256": "32c84272b112bdf3a5f3283d2910a3ae869d2eca95bcfb940a0c52252ab14258",
+      "prompt": "민화풍 해시계 또는 모래시계 하나와 달력 (hourglass, sundial, paper calendar grid). Theme: hand-copying favourite books as a quiet hobby. torn layered hanji collage, overlapping mulberry paper pieces with deckled edges and visible fibres, faint paper-relief shadows, soft ink bleed, low-saturation palette of cream, warm ink brown, celadon and faded persimmon dyed paper, matte, background plate only, subject small or absent, wide empty negative space, empty lower third. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 103,
+      "prompt_sha256": "ce12441fa4a94d31cae29f1b8e2bcf7dc439fe8948ac246cd247e0aff4d9b789",
       "seeds": [
         1019050
       ],
@@ -179,9 +199,9 @@
       "subject_source": "override(plate_subjects.json)",
       "subject_quality": "ok",
       "english_hints": [],
-      "prompt": "two bands of abstract brush strokes, one upright and one flowing, stacked on hanji. Theme: hand-copying favourite books as a quiet hobby. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
-      "prompt_words": 90,
-      "prompt_sha256": "8be8bff7dc6151647ef7cef8efd5db5886c0f5f689dae80d8e899c32750a8fdc",
+      "prompt": "two bands of abstract brush strokes, one upright and one flowing, stacked on hanji. Theme: hand-copying favourite books as a quiet hobby. torn layered hanji collage, overlapping mulberry paper pieces with deckled edges and visible fibres, faint paper-relief shadows, soft ink bleed, low-saturation palette of cream, warm ink brown, celadon and faded persimmon dyed paper, matte, background plate only, subject small or absent, wide empty negative space, empty lower third. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 106,
+      "prompt_sha256": "9ba90613f34c3299adba11b0bd760bbc042f0add69995761283a033ebe9ac170",
       "seeds": [
         1019060
       ],
@@ -200,9 +220,9 @@
       "english_hints": [
         "notebook"
       ],
-      "prompt": "노트 표지에 날짜 칸, 아래 다섯 개 한 줄 (notebook). Theme: hand-copying favourite books as a quiet hobby. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
-      "prompt_words": 86,
-      "prompt_sha256": "a0574f73e6922186c6929771fd16d076178e6c132915694c8a1265487a4621a5",
+      "prompt": "노트 표지에 날짜 칸, 아래 다섯 개 한 줄 (notebook). Theme: hand-copying favourite books as a quiet hobby. torn layered hanji collage, overlapping mulberry paper pieces with deckled edges and visible fibres, faint paper-relief shadows, soft ink bleed, low-saturation palette of cream, warm ink brown, celadon and faded persimmon dyed paper, matte, background plate only, subject small or absent, wide empty negative space, empty lower third. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 102,
+      "prompt_sha256": "3b1832b4b5ad81916364d0b7f4a664ed8b125d0b77885a33ef56265dc7a05a75",
       "seeds": [
         1019070
       ],
@@ -217,5 +237,6 @@
       "visual": "1장 노트·펜 정물을 축소, 노란 시그니처 바, 핸들 오버레이",
       "skip": "마지막 장: 렌더러 코드 단청 띠 유지(생성 안 함)"
     }
-  ]
+  ],
+  "style_note": "v4.1(2026-10-02) 대표 결정 V2 ⓒ 한지 콜라주·V1 바탕 역할: 스타일 문자열·negative만 교체(prompt_words·sha256 재계산). v4 원 문자열은 PROMPTS-v4.md 변경 이력에 보존"
 }
