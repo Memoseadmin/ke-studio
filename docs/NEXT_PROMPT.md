@@ -16,6 +16,6 @@ docs/PROJECTS.md(통합 현황판), docs/HANDOFF.md, cardnews/docs/HANDOFF.md, C
 [공통] docs/PROJECTS.md 상태표·결정 큐 갱신, 두 HANDOFF 갱신, 전부 푸시, 새 세션 안내 블록 1개(프로젝트 두 개 모두 포함).
 
 첫 3개 작업
-1. `bash scripts/setup.sh` → PR 라벨·코멘트 확인 → 환경변수 확인 → 키가 있으면 A2 샘플 생성을 producer에게 백그라운드로 먼저.
-2. B1을 worktree `.worktrees/cardnews`에서 시작: marketer 14일 플랜 → 커밋·푸시 → designer 템플릿+14세트 목업 → 커밋·푸시 (A3 researcher와 병렬).
-3. legal-reviewer(B1 risk) → cardnews 검수 PR 생성 → A3 커밋·푸시 → 세션 종료 절차(PROJECTS.md 포함).
+1. 세션 위생(하위 세션 표 전부 확인·아카이브, 미푸시 커밋은 보고만) → `bash scripts/setup.sh` → PR #1~#4 라벨·코멘트 확인 → 환경변수 SET/UNSET → Sonnet 세션으로 R2 왕복·IG 검증(경로 B 전환 포함). [A3]는 이미 완료(ep/EP003 research.md, 1위 김장) → EP003 writer 착수 여부만 판단.
+2. [B1] `.worktrees/cardnews`에서 cardnews/c1-1 체크아웃 → 릴스 플랜·reel.json 존재 확인(없으면 marketer 재실행) → `render_cards.py --all cardnews/posts --final` → legal risk v3 → cardnews/main 머지 → 키 검증 통과 시 R2 업로드·게시 큐·루틴, 실패 시 수동 패키지.
+3. [B2] producer가 릴스 14개 목업 렌더 + designer·marketer 프로필 패키지 → C1-1b 검수 PR → 세션 종료 절차(PROJECTS.md 포함).
