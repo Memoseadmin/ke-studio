@@ -1,0 +1,4 @@
+# v3 서체 파일은 커밋하지 않는다(fetch_fonts.sh로 받음). 라이선스 텍스트만 남긴다.
+*
+!.gitignore
+!OFL-*.txt

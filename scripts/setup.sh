@@ -18,3 +18,5 @@ if command -v python3.12 >/dev/null 2>&1; then
   [ -x "$HOME/.venvs/muapi/bin/muapi" ] || { python3.12 -m venv "$HOME/.venvs/muapi" && "$HOME/.venvs/muapi/bin/pip" install -q muapi-cli; } || echo "WARN: muapi-cli 설치 실패"
   "$HOME/.venvs/muapi/bin/muapi" --version 2>/dev/null || true
 fi
+# --- 카드뉴스 v3 서체(세트 B: 함렛·마루부리·Black Han Sans·Noto Serif KR). 저장소에 커밋하지 않고 받아 온다 (cardnews/docs/DESIGN_SOURCES.md §4) ---
+bash "$(cd "$(dirname "$0")/.." && pwd)/cardnews/design/v3/fetch_fonts.sh" >/dev/null || echo "WARN: v3 서체 다운로드 실패"
