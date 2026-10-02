@@ -1,0 +1,12 @@
+{
+  "mode": "final",
+  "rendered_at": "2026-10-02T03:13:31.902419Z",
+  "fonts": {
+    "head": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+    "body": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+    "latin": "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+    "fake_bold": "True"
+  },
+  "cards": 7,
+  "renderer": "render_cards.py"
+}

@@ -1,0 +1,23 @@
+{
+  "post_id": "C1-1-12",
+  "date": "2026-10-20",
+  "title": "라면이 영화 소품이 된 이유 (EP001 재구성)",
+  "type": "비하인드",
+  "cards": [
+    {"n": 1, "headline": "영화 2편, 라면 하나", "body": "2001년과 2019년, 한국 영화 두 편이 라면 한 그릇으로 오래 남는 장면을 만들었습니다.", "visual": "필름 프레임 두 칸과 그 사이 면 한 가닥, 민화 평면. 배우·포스터·스틸 모사 금지. 한지 바탕, 빨강 포인트"},
+    {"n": 2, "headline": "2001 · 라면 먹을래요", "body": "영화 '봄날은 간다'의 이 한마디는 밥 한 끼 제안을 넘어, 조금 더 머물자는 뜻으로 굳었습니다.", "visual": "밤 부엌: 냄비 하나, 그릇 두 개, 살짝 열린 문. 인물·실루엣 없음. 밤색 배경"},
+    {"n": 3, "headline": "2019 · 짜파구리", "body": "영화 '기생충'의 짜파구리는 라면 두 종을 섞은 음식. 영어 자막에서는 'ram-don'이 됐습니다.", "visual": "무지 봉지 두 개(크라프트·오프화이트) + 더하기 기호 → 그릇 하나. 빨강+검정 등 브랜드 연상 배색 금지"},
+    {"n": 4, "headline": "번역가가 만든 말", "body": "ram-don은 라면(ramyeon)과 우동(udon)을 합쳐 자막 번역가가 새로 만든 단어입니다.", "visual": "자막 자리처럼 화면 아래 'ram-don' 글자만, 위는 빈 밤 풍경. 사람 없음"},
+    {"n": 5, "headline": "1인당 연 79.2개", "body": "2024년 한국 1인당 라면 소비 79.2개, 베트남(81개) 다음 세계 2위(세계라면협회).", "visual": "그릇 아이콘 두 줄로 81 대 79.2 비율, 청자색. 국기 금지"},
+    {"n": 6, "headline": "말없이 말하는 음식", "body": "누구나 끓일 줄 알고 누구나 먹어 본 음식이라, 장면에 놓이면 설명 없이 뜻이 전해집니다.", "visual": "김이 오르는 냄비 하나를 화면 중앙에 크게, 주변은 비움"},
+    {"n": 7, "headline": "저장해 두고 다시 보기", "body": "출처: Wikipedia, KOCIS 2019-09, 코리아타임스 · @chaekgado.note", "visual": "냄비 실루엣을 작게, 노란 시그니처 바, 핸들 오버레이. 본편 링크는 캡션에서 안내"}
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/One_Fine_Spring_Day",
+    "https://en.wikipedia.org/wiki/Jjapaguri",
+    "https://www.korean-culture.org/eng/webzine/201909/sub06.html",
+    "https://www.koreatimes.co.kr/amp/southkorea/society/20251009/koreans-per-capita-ramyeon-consumption-ranks-2nd-after-vietnam"
+  ],
+  "sponsor_slot": "편의점·식품, 주방 생활용품",
+  "hashtags": ["#라면", "#봄날은간다", "#기생충", "#한국영화", "#책가도노트"]
+}
