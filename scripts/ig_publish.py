@@ -70,14 +70,23 @@ def gate_tags(cap):
     return n <= 5, f"hashtags={n}"
 
 
+def image_urls(d, cards):
+    """urls.json(r2_upload.py 산출)이 있으면 그 URL, 없으면 IMAGE_HOST_BASE_URL + 파일명."""
+    f = d / "urls.json"
+    if f.exists():
+        return json.loads(f.read_text(encoding="utf-8"))
+    base = os.environ.get("IMAGE_HOST_BASE_URL", "<IMAGE_HOST_BASE_URL>").rstrip("/")
+    return [f"{base}/{os.path.basename(c)}" for c in cards]
+
+
 def build_plan(d, cap):
     cards = sorted(glob.glob(str(d / "card-[0-9][0-9].png")))
-    base = os.environ.get("IMAGE_HOST_BASE_URL", "<IMAGE_HOST_BASE_URL>").rstrip("/")
     uid = "{IG_USER_ID}"
+    urls = image_urls(d, cards)
     reqs = []
-    for i, c in enumerate(cards, 1):
+    for i, u in enumerate(urls, 1):
         reqs.append({"step": f"child {i}", "method": "POST", "url": f"{GRAPH}/{uid}/media",
-                     "fields": {"image_url": f"{base}/{os.path.basename(c)}", "is_carousel_item": "true"}})
+                     "fields": {"image_url": u, "is_carousel_item": "true"}})
     reqs.append({"step": "carousel", "method": "POST", "url": f"{GRAPH}/{uid}/media",
                  "fields": {"media_type": "CAROUSEL", "children": "<child ids>", "caption": cap}})
     reqs.append({"step": "publish", "method": "POST", "url": f"{GRAPH}/{uid}/media_publish",
@@ -95,10 +104,9 @@ def post(path, data):
     return j["id"]
 
 
-def execute(cards, cap):
+def execute(d, cards, cap):
     import requests
-    base = os.environ["IMAGE_HOST_BASE_URL"].rstrip("/")
-    kids = [post("media", {"image_url": f"{base}/{os.path.basename(c)}", "is_carousel_item": "true"}) for c in cards]
+    kids = [post("media", {"image_url": u, "is_carousel_item": "true"}) for u in image_urls(d, cards)]
     cid = post("media", {"media_type": "CAROUSEL", "children": ",".join(kids), "caption": cap})
     for _ in range(10):  # 컨테이너 처리 대기
         s = requests.get(f"{GRAPH}/{cid}", params={"fields": "status_code",
@@ -137,7 +145,7 @@ def main():
         return
     if not allok:
         sys.exit("게이트 실패 — 중단")
-    for v in ("IG_ACCESS_TOKEN", "IG_USER_ID", "IMAGE_HOST_BASE_URL"):
+    for v in ("IG_ACCESS_TOKEN", "IG_USER_ID"):
         if not os.environ.get(v):
             sys.exit(f"{v} UNSET — 중단")
     if a.schedule:
@@ -146,7 +154,7 @@ def main():
         QUEUE.write_text(json.dumps(q, ensure_ascii=False, indent=2) + "\n")
         print(f"queued: {a.schedule} (루틴이 시각에 --execute 실행)")
         return
-    print("published media id:", execute(cards, cap))
+    print("published media id:", execute(d, cards, cap))
 
 
 if __name__ == "__main__":

@@ -18,7 +18,11 @@ bash scripts/setup.sh
 | `MUAPI_API_KEY` | 후보 · muapi.ai(이미지·영상 500+ 모델 중계, TTS 없음). CLI `~/.venvs/muapi/bin/muapi`가 읽음. muapi.ai → API Keys에서 발급 | designer, producer | 공급자 확정 시 |
 | `IG_ACCESS_TOKEN` | 카드뉴스 프로젝트 · Meta Graph API 예약 게시(인스타 비즈니스 계정) | cardnews publisher | 카드뉴스 C1 승인 후 |
 | `IG_USER_ID` | 카드뉴스 프로젝트 · 인스타그램 비즈니스 계정 ID(비밀 아님) | cardnews publisher | 동일 |
-| `IMAGE_HOST_BASE_URL` | 카드뉴스 이미지 공개 호스팅 주소(비밀 아님). 인스타가 `<주소>/card-01.png`를 직접 읽을 수 있어야 함 | cardnews publisher | 카드뉴스 C1 승인 후 |
+| `IMAGE_HOST_BASE_URL` | 카드뉴스 이미지 공개 호스팅 주소 = R2 버킷 공개 URL(r2.dev 또는 커스텀 도메인, 비밀 아님). 인스타가 `<주소>/card-01.png`를 직접 읽을 수 있어야 함 | cardnews publisher | 카드뉴스 C1 승인 후 |
+| `R2_ACCOUNT_ID` | 카드뉴스 · Cloudflare 계정 ID(R2 엔드포인트용, 비밀 아님) | cardnews publisher | 카드뉴스 C1 승인 후 |
+| `R2_ACCESS_KEY_ID` | 카드뉴스 · R2 API 토큰 액세스 키 ID(**비밀**) | cardnews publisher | 동일 |
+| `R2_SECRET_ACCESS_KEY` | 카드뉴스 · R2 API 토큰 시크릿(**비밀**) | cardnews publisher | 동일 |
+| `R2_BUCKET` | 카드뉴스 · R2 버킷 이름(비밀 아님) | cardnews publisher | 동일 |
 | `GITHUB_TOKEN` | 루틴에서 approved 라벨 확인·PR 생성(세션 기본 GitHub 연동으로 충분하면 불필요) | publisher | Phase 2~3 |
 | `SCRAPECREATORS_API_KEY` | (보류) TikTok·Instagram·YouTube 트렌드 수집 스킬 | researcher | 대표 OK 후 |
 | `OPENAI_API_KEY` | 선택 · last30days (보조 검색·요약) | researcher | 필요 시 |
