@@ -1,0 +1,157 @@
+{
+  "id": "C1-1b-02",
+  "mode": "mockup",
+  "rendered_at": "2026-10-02T03:28:36Z",
+  "renderer": "render_reels.py",
+  "duration_sec": 22.0,
+  "duration_sec_spec": 22.0,
+  "frames": 660,
+  "fps": 30,
+  "size": [
+    1080,
+    1920
+  ],
+  "video": {
+    "codec": "h264",
+    "profile": "High",
+    "pix_fmt": "yuv420p",
+    "color": "bt709 tv",
+    "crf": 18,
+    "preset": "medium",
+    "maxrate": "12M",
+    "faststart": true
+  },
+  "audio": {
+    "content": "none",
+    "track": "aac-lc 48kHz stereo silent (anullsrc)",
+    "reason": "소리 내용은 없음(audio=none). 무음 AAC-LC 48kHz 스테레오 트랙 1개를 넣는다: Instagram 콘텐츠 게시 API 영상 규격이 오디오를 AAC 48kHz 이하·1~2채널로 정의하고, 오디오 스트림이 없는 파일을 가정하지 않는 업로더·편집기·플레이어가 있어 호환성을 위해 포함. 용량 증가는 수 KB 수준. --no-audio-track으로 끌 수 있음."
+  },
+  "transition": {
+    "type": "card-layer crossfade, subtitle cut, end-card full crossfade",
+    "sec": 0.25
+  },
+  "scenes": [
+    {
+      "card": "card-01.png",
+      "dur": 4.0,
+      "motion": "zoom_in",
+      "subtitle_lines": [
+        "10월 11일까지,",
+        "이틀 남았습니다"
+      ]
+    },
+    {
+      "card": "card-02.png",
+      "dur": 3.5,
+      "motion": "pan_down",
+      "subtitle_lines": [
+        "경복궁·창덕궁·덕수궁",
+        "창경궁·종묘, 다섯 곳"
+      ]
+    },
+    {
+      "card": "card-03.png",
+      "dur": 3.0,
+      "motion": "static",
+      "subtitle_lines": [
+        "밤에는 경복궁",
+        "'한복 연향'"
+      ]
+    },
+    {
+      "card": "card-06.png",
+      "dur": 3.0,
+      "motion": "zoom_in",
+      "subtitle_lines": [
+        "창경궁 '물빛연화',",
+        "야간 미디어아트"
+      ]
+    },
+    {
+      "card": "card-07.png",
+      "dur": 3.0,
+      "motion": "static",
+      "subtitle_lines": [
+        "남은 회차는",
+        "공식 누리집에서 확인"
+      ]
+    },
+    {
+      "card": "card-08.png",
+      "dur": 3.5,
+      "motion": "pan_up",
+      "subtitle_lines": [
+        "가기 전 체크 5",
+        "사전 예매·야간 입장"
+      ]
+    }
+  ],
+  "end_card_dur": 2.0,
+  "cover": "card-01.png",
+  "hook_px": 92,
+  "layout": {
+    "card_box_xywh": [
+      196,
+      486,
+      688,
+      860
+    ],
+    "hook_zone_y": [
+      274,
+      446
+    ],
+    "subtitle_bottom_y": 1528,
+    "safe_area": {
+      "top": 220,
+      "bottom": 380,
+      "right": 120
+    },
+    "text_bbox": {
+      "hook": [
+        133,
+        319,
+        946,
+        407
+      ],
+      "mockup": [
+        812,
+        232,
+        952,
+        270
+      ],
+      "subtitle": [
+        310,
+        1396,
+        771,
+        1503
+      ],
+      "subtitle_bar": [
+        278,
+        1368,
+        803,
+        1528
+      ],
+      "end": [
+        192,
+        730,
+        888,
+        1286
+      ]
+    }
+  },
+  "fonts": {
+    "head": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+    "body": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+    "latin": "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+    "fake_bold": "True"
+  },
+  "mp4": "render/reels/C1-1b-02.mp4",
+  "mp4_bytes": 6069432,
+  "mp4_sha256": "d15cdc3b8a6928d07bfef2be86c315ad6ef2745a9952b0975e0577bfd40743d9",
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5",
+  "reel_json_sha256": "128d3c9cf72255e177b8a4ae7fc3a33053f94962110c579907ad673ceea57d69",
+  "cards_render_mode": "final",
+  "warnings": [],
+  "elapsed_sec": 15.5,
+  "encode_sec": 13.9
+}

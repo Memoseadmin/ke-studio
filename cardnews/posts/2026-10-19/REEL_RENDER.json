@@ -1,0 +1,157 @@
+{
+  "id": "C1-1b-11",
+  "mode": "mockup",
+  "rendered_at": "2026-10-02T03:30:43Z",
+  "renderer": "render_reels.py",
+  "duration_sec": 21.0,
+  "duration_sec_spec": 21.0,
+  "frames": 630,
+  "fps": 30,
+  "size": [
+    1080,
+    1920
+  ],
+  "video": {
+    "codec": "h264",
+    "profile": "High",
+    "pix_fmt": "yuv420p",
+    "color": "bt709 tv",
+    "crf": 18,
+    "preset": "medium",
+    "maxrate": "12M",
+    "faststart": true
+  },
+  "audio": {
+    "content": "none",
+    "track": "aac-lc 48kHz stereo silent (anullsrc)",
+    "reason": "소리 내용은 없음(audio=none). 무음 AAC-LC 48kHz 스테레오 트랙 1개를 넣는다: Instagram 콘텐츠 게시 API 영상 규격이 오디오를 AAC 48kHz 이하·1~2채널로 정의하고, 오디오 스트림이 없는 파일을 가정하지 않는 업로더·편집기·플레이어가 있어 호환성을 위해 포함. 용량 증가는 수 KB 수준. --no-audio-track으로 끌 수 있음."
+  },
+  "transition": {
+    "type": "card-layer crossfade, subtitle cut, end-card full crossfade",
+    "sec": 0.25
+  },
+  "scenes": [
+    {
+      "card": "card-01.png",
+      "dur": 3.5,
+      "motion": "zoom_in",
+      "subtitle_lines": [
+        "2024년 교보문고",
+        "필사책 판매"
+      ]
+    },
+    {
+      "card": "card-01.png",
+      "dur": 3.0,
+      "motion": "zoom_out",
+      "subtitle_lines": [
+        "전년보다 692.8%",
+        "늘었습니다"
+      ]
+    },
+    {
+      "card": "card-02.png",
+      "dur": 3.0,
+      "motion": "static",
+      "subtitle_lines": [
+        "읽는 걸 멋으로 보는",
+        "'텍스트힙'"
+      ]
+    },
+    {
+      "card": "card-03.png",
+      "dur": 3.0,
+      "motion": "static",
+      "subtitle_lines": [
+        "1단계 · 준비물",
+        "노트·펜·베낄 책 한 권"
+      ]
+    },
+    {
+      "card": "card-04.png",
+      "dur": 3.0,
+      "motion": "pan_down",
+      "subtitle_lines": [
+        "2단계 · 첫 문장",
+        "두세 줄이면 충분"
+      ]
+    },
+    {
+      "card": "card-05.png",
+      "dur": 3.5,
+      "motion": "static",
+      "subtitle_lines": [
+        "3단계 · 10분 루틴",
+        "하루 10분, 같은 시간에"
+      ]
+    }
+  ],
+  "end_card_dur": 2.0,
+  "cover": "card-01.png",
+  "hook_px": 92,
+  "layout": {
+    "card_box_xywh": [
+      196,
+      486,
+      688,
+      860
+    ],
+    "hook_zone_y": [
+      274,
+      446
+    ],
+    "subtitle_bottom_y": 1528,
+    "safe_area": {
+      "top": 220,
+      "bottom": 380,
+      "right": 120
+    },
+    "text_bbox": {
+      "hook": [
+        202,
+        320,
+        877,
+        407
+      ],
+      "mockup": [
+        812,
+        232,
+        952,
+        270
+      ],
+      "subtitle": [
+        290,
+        1396,
+        789,
+        1503
+      ],
+      "subtitle_bar": [
+        259,
+        1368,
+        822,
+        1528
+      ],
+      "end": [
+        192,
+        730,
+        888,
+        1286
+      ]
+    }
+  },
+  "fonts": {
+    "head": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+    "body": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+    "latin": "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+    "fake_bold": "True"
+  },
+  "mp4": "render/reels/C1-1b-11.mp4",
+  "mp4_bytes": 5612054,
+  "mp4_sha256": "b7c7ccef8bd9cc1c47da89e05317c9e7c420c8a7755bef72eeff8e42977fb885",
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5",
+  "reel_json_sha256": "befd445bea336621a07988935bfef5d2d4d8fd7a481e2a3c7f294d9642c7402c",
+  "cards_render_mode": "final",
+  "warnings": [],
+  "elapsed_sec": 12.9,
+  "encode_sec": 11.4
+}

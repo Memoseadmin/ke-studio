@@ -1,0 +1,157 @@
+{
+  "id": "C1-1b-06",
+  "mode": "mockup",
+  "rendered_at": "2026-10-02T03:29:33Z",
+  "renderer": "render_reels.py",
+  "duration_sec": 21.5,
+  "duration_sec_spec": 21.5,
+  "frames": 645,
+  "fps": 30,
+  "size": [
+    1080,
+    1920
+  ],
+  "video": {
+    "codec": "h264",
+    "profile": "High",
+    "pix_fmt": "yuv420p",
+    "color": "bt709 tv",
+    "crf": 18,
+    "preset": "medium",
+    "maxrate": "12M",
+    "faststart": true
+  },
+  "audio": {
+    "content": "none",
+    "track": "aac-lc 48kHz stereo silent (anullsrc)",
+    "reason": "소리 내용은 없음(audio=none). 무음 AAC-LC 48kHz 스테레오 트랙 1개를 넣는다: Instagram 콘텐츠 게시 API 영상 규격이 오디오를 AAC 48kHz 이하·1~2채널로 정의하고, 오디오 스트림이 없는 파일을 가정하지 않는 업로더·편집기·플레이어가 있어 호환성을 위해 포함. 용량 증가는 수 KB 수준. --no-audio-track으로 끌 수 있음."
+  },
+  "transition": {
+    "type": "card-layer crossfade, subtitle cut, end-card full crossfade",
+    "sec": 0.25
+  },
+  "scenes": [
+    {
+      "card": "card-01.png",
+      "dur": 4.0,
+      "motion": "zoom_in",
+      "subtitle_lines": [
+        "10월 셋째 주말부터",
+        "11월 첫 주말까지"
+      ]
+    },
+    {
+      "card": "card-02.png",
+      "dur": 3.5,
+      "motion": "static",
+      "subtitle_lines": [
+        "10/17~18 서울",
+        "'일구이륙 무한이륙' 전시"
+      ]
+    },
+    {
+      "card": "card-03.png",
+      "dur": 3.0,
+      "motion": "zoom_in",
+      "subtitle_lines": [
+        "오대산 절정 예보",
+        "10월 16일~25일"
+      ]
+    },
+    {
+      "card": "card-04.png",
+      "dur": 3.0,
+      "motion": "static",
+      "subtitle_lines": [
+        "설악산 절정 예보",
+        "10월 25일 무렵"
+      ]
+    },
+    {
+      "card": "card-05.png",
+      "dur": 3.0,
+      "motion": "zoom_in",
+      "subtitle_lines": [
+        "내장산 절정 예보",
+        "11월 1일 무렵"
+      ]
+    },
+    {
+      "card": "card-06.png",
+      "dur": 3.0,
+      "motion": "pan_up",
+      "subtitle_lines": [
+        "비가 오면 실내로,",
+        "박물관 특별전"
+      ]
+    }
+  ],
+  "end_card_dur": 2.0,
+  "cover": "card-01.png",
+  "hook_px": 92,
+  "layout": {
+    "card_box_xywh": [
+      196,
+      486,
+      688,
+      860
+    ],
+    "hook_zone_y": [
+      274,
+      446
+    ],
+    "subtitle_bottom_y": 1528,
+    "safe_area": {
+      "top": 220,
+      "bottom": 380,
+      "right": 120
+    },
+    "text_bbox": {
+      "hook": [
+        207,
+        319,
+        873,
+        407
+      ],
+      "mockup": [
+        812,
+        232,
+        952,
+        270
+      ],
+      "subtitle": [
+        271,
+        1396,
+        809,
+        1503
+      ],
+      "subtitle_bar": [
+        239,
+        1368,
+        841,
+        1528
+      ],
+      "end": [
+        192,
+        730,
+        888,
+        1286
+      ]
+    }
+  },
+  "fonts": {
+    "head": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+    "body": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+    "latin": "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+    "fake_bold": "True"
+  },
+  "mp4": "render/reels/C1-1b-06.mp4",
+  "mp4_bytes": 5846388,
+  "mp4_sha256": "038495f09a3331ffd74950596a34f070f63f791df2ee569d94d050cd052e37c6",
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5",
+  "reel_json_sha256": "60470258406d6c5c188a5f1424d5ee5cc2ae8a98a2e4fa37a52e690666300b9a",
+  "cards_render_mode": "final",
+  "warnings": [],
+  "elapsed_sec": 14.4,
+  "encode_sec": 12.8
+}

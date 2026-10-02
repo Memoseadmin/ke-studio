@@ -1,0 +1,148 @@
+{
+  "id": "C1-1b-10",
+  "mode": "mockup",
+  "rendered_at": "2026-10-02T03:30:30Z",
+  "renderer": "render_reels.py",
+  "duration_sec": 20.0,
+  "duration_sec_spec": 20.0,
+  "frames": 600,
+  "fps": 30,
+  "size": [
+    1080,
+    1920
+  ],
+  "video": {
+    "codec": "h264",
+    "profile": "High",
+    "pix_fmt": "yuv420p",
+    "color": "bt709 tv",
+    "crf": 18,
+    "preset": "medium",
+    "maxrate": "12M",
+    "faststart": true
+  },
+  "audio": {
+    "content": "none",
+    "track": "aac-lc 48kHz stereo silent (anullsrc)",
+    "reason": "소리 내용은 없음(audio=none). 무음 AAC-LC 48kHz 스테레오 트랙 1개를 넣는다: Instagram 콘텐츠 게시 API 영상 규격이 오디오를 AAC 48kHz 이하·1~2채널로 정의하고, 오디오 스트림이 없는 파일을 가정하지 않는 업로더·편집기·플레이어가 있어 호환성을 위해 포함. 용량 증가는 수 KB 수준. --no-audio-track으로 끌 수 있음."
+  },
+  "transition": {
+    "type": "card-layer crossfade, subtitle cut, end-card full crossfade",
+    "sec": 0.25
+  },
+  "scenes": [
+    {
+      "card": "card-01.png",
+      "dur": 4.5,
+      "motion": "zoom_in",
+      "subtitle_lines": [
+        "출시 직후 품절된 키링,",
+        "원형은 나라의 도장"
+      ]
+    },
+    {
+      "card": "card-02.png",
+      "dur": 3.5,
+      "motion": "static",
+      "subtitle_lines": [
+        "국새 손잡이 장식을",
+        "키보드 키캡 모양으로"
+      ]
+    },
+    {
+      "card": "card-04.png",
+      "dur": 3.5,
+      "motion": "pan_down",
+      "subtitle_lines": [
+        "뮤지엄과 굿즈를 합친 말,",
+        "'뮷즈'"
+      ]
+    },
+    {
+      "card": "card-05.png",
+      "dur": 3.5,
+      "motion": "zoom_in",
+      "subtitle_lines": [
+        "2025년 연매출 413억 원",
+        "역대 최대"
+      ]
+    },
+    {
+      "card": "card-06.png",
+      "dur": 3.0,
+      "motion": "static",
+      "subtitle_lines": [
+        "다음에 박물관 가면",
+        "원형 유물을 찾아보세요"
+      ]
+    }
+  ],
+  "end_card_dur": 2.0,
+  "cover": "card-01.png",
+  "hook_px": 92,
+  "layout": {
+    "card_box_xywh": [
+      196,
+      486,
+      688,
+      860
+    ],
+    "hook_zone_y": [
+      274,
+      446
+    ],
+    "subtitle_bottom_y": 1528,
+    "safe_area": {
+      "top": 220,
+      "bottom": 380,
+      "right": 120
+    },
+    "text_bbox": {
+      "hook": [
+        234,
+        320,
+        845,
+        407
+      ],
+      "mockup": [
+        812,
+        232,
+        952,
+        270
+      ],
+      "subtitle": [
+        271,
+        1395,
+        809,
+        1503
+      ],
+      "subtitle_bar": [
+        239,
+        1368,
+        841,
+        1528
+      ],
+      "end": [
+        192,
+        730,
+        888,
+        1286
+      ]
+    }
+  },
+  "fonts": {
+    "head": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+    "body": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+    "latin": "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+    "fake_bold": "True"
+  },
+  "mp4": "render/reels/C1-1b-10.mp4",
+  "mp4_bytes": 5093660,
+  "mp4_sha256": "77d1a6652aca983da9971942fcbc6e5a6c5609a4f7d007c1084f7c9038e177e9",
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5",
+  "reel_json_sha256": "e7bcd597a2934a62a5aee4aa1a4f029dc913c35b6a7f60d5275ad359fb299a65",
+  "cards_render_mode": "final",
+  "warnings": [],
+  "elapsed_sec": 13.4,
+  "encode_sec": 11.9
+}

@@ -1,0 +1,148 @@
+{
+  "id": "C1-1b-07",
+  "mode": "mockup",
+  "rendered_at": "2026-10-02T03:29:46Z",
+  "renderer": "render_reels.py",
+  "duration_sec": 20.5,
+  "duration_sec_spec": 20.5,
+  "frames": 615,
+  "fps": 30,
+  "size": [
+    1080,
+    1920
+  ],
+  "video": {
+    "codec": "h264",
+    "profile": "High",
+    "pix_fmt": "yuv420p",
+    "color": "bt709 tv",
+    "crf": 18,
+    "preset": "medium",
+    "maxrate": "12M",
+    "faststart": true
+  },
+  "audio": {
+    "content": "none",
+    "track": "aac-lc 48kHz stereo silent (anullsrc)",
+    "reason": "소리 내용은 없음(audio=none). 무음 AAC-LC 48kHz 스테레오 트랙 1개를 넣는다: Instagram 콘텐츠 게시 API 영상 규격이 오디오를 AAC 48kHz 이하·1~2채널로 정의하고, 오디오 스트림이 없는 파일을 가정하지 않는 업로더·편집기·플레이어가 있어 호환성을 위해 포함. 용량 증가는 수 KB 수준. --no-audio-track으로 끌 수 있음."
+  },
+  "transition": {
+    "type": "card-layer crossfade, subtitle cut, end-card full crossfade",
+    "sec": 0.25
+  },
+  "scenes": [
+    {
+      "card": "card-01.png",
+      "dur": 4.5,
+      "motion": "zoom_in",
+      "subtitle_lines": [
+        "2026년 상반기 라면 수출",
+        "반기 기준 사상 최대"
+      ]
+    },
+    {
+      "card": "card-02.png",
+      "dur": 3.5,
+      "motion": "static",
+      "subtitle_lines": [
+        "1년 전보다 27.9%↑",
+        "연간 20억 달러 전망"
+      ]
+    },
+    {
+      "card": "card-03.png",
+      "dur": 3.5,
+      "motion": "static",
+      "subtitle_lines": [
+        "K-푸드+ 상반기 수출",
+        "70억 달러 넘겨 역대 최대"
+      ]
+    },
+    {
+      "card": "card-04.png",
+      "dur": 3.0,
+      "motion": "pan_up",
+      "subtitle_lines": [
+        "유럽·중동·중남미로",
+        "시장이 넓어지고 있습니다"
+      ]
+    },
+    {
+      "card": "card-05.png",
+      "dur": 4.0,
+      "motion": "zoom_in",
+      "subtitle_lines": [
+        "2024년 1인당 79.2개",
+        "세계 2위(세계라면협회)"
+      ]
+    }
+  ],
+  "end_card_dur": 2.0,
+  "cover": "card-01.png",
+  "hook_px": 80,
+  "layout": {
+    "card_box_xywh": [
+      196,
+      486,
+      688,
+      860
+    ],
+    "hook_zone_y": [
+      274,
+      446
+    ],
+    "subtitle_bottom_y": 1528,
+    "safe_area": {
+      "top": 220,
+      "bottom": 380,
+      "right": 120
+    },
+    "text_bbox": {
+      "hook": [
+        134,
+        324,
+        946,
+        402
+      ],
+      "mockup": [
+        812,
+        232,
+        952,
+        270
+      ],
+      "subtitle": [
+        262,
+        1395,
+        819,
+        1503
+      ],
+      "subtitle_bar": [
+        230,
+        1368,
+        851,
+        1528
+      ],
+      "end": [
+        192,
+        730,
+        888,
+        1286
+      ]
+    }
+  },
+  "fonts": {
+    "head": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+    "body": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+    "latin": "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+    "fake_bold": "True"
+  },
+  "mp4": "render/reels/C1-1b-07.mp4",
+  "mp4_bytes": 5492761,
+  "mp4_sha256": "efa7e24cf7fb2ed71a690113cca2e72d9e64266f745ea3b8e6f2bbe474a7736a",
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5",
+  "reel_json_sha256": "8263305efde8b10a090c6bb420b8215315a7ec65c2a2238e8d0f250d4ec3ac42",
+  "cards_render_mode": "final",
+  "warnings": [],
+  "elapsed_sec": 13.4,
+  "encode_sec": 11.9
+}
