@@ -463,16 +463,15 @@ def render_last(post, card, fonts, post_dir, total):
     ys = y0 + bh + 90
     d.text((MARGIN, ys), "출처", font=font(fonts["head"], 48), fill=TOKENS["ink"], stroke_width=head_stroke(fonts, 48), stroke_fill=TOKENS["ink"])
     ys += 70
-    sources = post.get("sources", [])[:2]
-    if card.get("body"):
-        sources = [card["body"]] + sources
+    # 공개 카드에는 원본 URL을 찍지 않는다(캡션·sources.txt가 담당). 마지막 장 body = 출처 이름 줄 (COO 2026-10-02)
+    sources = [card["body"]] if card.get("body") else [s for s in post.get("sources", [])[:2] if not str(s).startswith("http")]
     for src in sources[:2]:
         for ln in wrap(d, str(src), f_s, W - 2 * MARGIN)[:2]:
             d.text((MARGIN, ys), ln, font=f_s, fill=TOKENS["ink"])
             ys += int(SIZE["last_src"] * 1.35)
         ys += 10
     # 협찬 슬롯(있을 때만, 상단 광고 표기는 캡션 첫 줄이 담당)
-    sponsor = post.get("sponsor_slot")
+    sponsor = post.get("sponsor_slot") if post.get("render_sponsor_slot") else None  # 내부 기획 정보, 기본 비표시 (COO 2026-10-02)
     if sponsor and sponsor not in ("", "none", "없음"):
         d.rectangle([MARGIN, ys + 20, W - MARGIN, ys + 110], fill=TOKENS["wheat"], outline=TOKENS["ink"], width=4)
         d.text((MARGIN + 24, ys + 44), wrap(d, f"협찬 슬롯: {sponsor}", f_s, W - 2 * MARGIN - 48)[0], font=f_s, fill=TOKENS["ink"])
