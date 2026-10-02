@@ -1,0 +1,24 @@
+{
+  "id": "C1-1b-04",
+  "date": "2026-10-12",
+  "carousel_time_kst": "12:00",
+  "reel_time_kst": "18:00",
+  "duration_sec": 21.5,
+  "audio": "none",
+  "size": [1080, 1920],
+  "hook": "단풍, 언제 가야 절정?",
+  "segments": [
+    {"card": "card-01.png", "dur": 4.0, "subtitle": "민간 기상업체 웨더아이\n2026년 예보", "motion": "zoom_in"},
+    {"card": "card-02.png", "dur": 3.0, "subtitle": "설악산\n절정 10월 25일 무렵", "motion": "zoom_in"},
+    {"card": "card-03.png", "dur": 3.0, "subtitle": "오대산\n절정 10월 16일~25일", "motion": "static"},
+    {"card": "card-04.png", "dur": 3.0, "subtitle": "내장산\n절정 11월 1일 무렵", "motion": "zoom_in"},
+    {"card": "card-05.png", "dur": 3.0, "subtitle": "지리산과 남부\n절정 11월 5일~13일", "motion": "static"},
+    {"card": "card-07.png", "dur": 3.5, "subtitle": "예보는 바뀜,\n출발 전 재확인", "motion": "pan_up"}
+  ],
+  "end_card": {"dur": 2.0, "text": "전체 8장은 프로필 캐러셀에서", "sub": "저장해 두고 꺼내 보세요"},
+  "cover": "card-01.png",
+  "caption": "산별 단풍 절정, 날짜만 모았습니다\n\n설악산은 10월 25일 무렵, 오대산 10월 16~25일, 내장산 11월 1일, 지리산과 남부는 11월 5~13일.\n민간 기상업체 웨더아이의 2026년 예보입니다. 예보는 날씨에 따라 바뀌니 출발 전 다시 확인하세요.\n산림청 공식 예측이 확인되면 이 게시물 댓글에 정정 내용을 올립니다.\n한 줄 비교표가 담긴 전체 8장은 프로필의 캐러셀 게시물에 있습니다. 저장해 두고 꺼내 보세요.\n\n출처: 웨더아이 단풍 예보 2026-09-04(민간 예보)\n#단풍 #단풍시기 #설악산 #내장산 #가을여행\n이미지·초안은 AI로 생성, 사실 확인은 사람이 했습니다",
+  "hashtags": ["#단풍", "#단풍시기", "#설악산", "#내장산", "#가을여행"],
+  "sponsor": null,
+  "source_check": "hook ← card-01 headline 「단풍, 언제 가야 절정?」 / seg1 ← card-01 body(legal v3) 「민간 기상업체 웨더아이 2026년 예보를 모았습니다」 / seg2 ← card-02 headline 「설악산」 + body 「절정 10월 25일 무렵」 / seg3 ← card-03 headline 「오대산」 + body 「절정 10월 16일~25일」 / seg4 ← card-04 headline 「내장산」 + body 「절정 11월 1일 무렵」 / seg5 ← card-05 headline 「지리산과 남부」 + body 「절정 11월 5일~13일」 / seg6 ← card-07 body 「예보는 바뀜, 출발 전 재확인」 / end_card ← 계정 행동 유도(사실 주장 없음) / caption ← caption.txt 1·3·4·5·8·9행 그대로 + CTA 1줄(6행 '한 줄 비교표'를 줄임) / hashtags ← caption.txt 그대로 / 정정: 산림청 예측으로 바뀌면 이 릴스에도 정정 댓글(번인 자막은 수정 불가)"
+}

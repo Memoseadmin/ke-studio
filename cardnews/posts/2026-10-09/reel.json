@@ -1,0 +1,24 @@
+{
+  "id": "C1-1b-01",
+  "date": "2026-10-09",
+  "carousel_time_kst": "11:00",
+  "reel_time_kst": "17:00",
+  "duration_sec": 22.5,
+  "audio": "none",
+  "size": [1080, 1920],
+  "hook": "580돌인데 100돌?",
+  "segments": [
+    {"card": "card-01.png", "dur": 4.0, "subtitle": "오늘 한글날,\n숫자가 두 개", "motion": "zoom_in"},
+    {"card": "card-02.png", "dur": 3.5, "subtitle": "훈민정음 반포는 1446년,\n올해로 580돌", "motion": "pan_down"},
+    {"card": "card-03.png", "dur": 3.5, "subtitle": "1926년 '가갸날',\n한글날의 시작", "motion": "static"},
+    {"card": "card-04.png", "dur": 3.0, "subtitle": "뒤에 '한글날'로 이름이\n바뀌었습니다", "motion": "static"},
+    {"card": "card-05.png", "dur": 3.5, "subtitle": "한글 점자 '훈맹정음'도\n올해 100돌", "motion": "zoom_in"},
+    {"card": "card-06.png", "dur": 3.0, "subtitle": "특별전 '일구이륙 무한이륙'\n~내년 2/9", "motion": "pan_up"}
+  ],
+  "end_card": {"dur": 2.0, "text": "전체 7장은 프로필 캐러셀에서", "sub": "저장해 두고 천천히 보세요"},
+  "cover": "card-01.png",
+  "caption": "오늘 한글날, 왜 100돌일까요\n\n훈민정음 반포는 1446년, 올해로 580돌입니다.\n그런데 한글날 자체는 1926년 '가갸날'에서 시작해 올해 100돌을 맞습니다.\n같은 해 반포된 한글 점자 '훈맹정음'도 100돌이라, 2026년은 숫자가 겹치는 해입니다.\n전체 7장은 프로필의 캐러셀 게시물에 있습니다. 저장해 두고 천천히 보세요.\n\n출처: 뉴시스 2026-01-29, 천지일보 2026-10-02(특별전), Wikipedia 'Hangul Day'\n#한글날 #한글날100주년 #훈민정음 #책가도노트\n이미지·초안은 AI로 생성, 사실 확인은 사람이 했습니다",
+  "hashtags": ["#한글날", "#한글날100주년", "#훈민정음", "#책가도노트"],
+  "sponsor": null,
+  "source_check": "hook ← card-01 headline 「580돌인데 100돌?」 / seg1 ← card-01 body 「오늘 한글날에는 숫자가 두 개 붙습니다」 / seg2 ← caption.txt 3행 「훈민정음 반포는 1446년, 올해로 580돌입니다」 / seg3 ← card-03 body 「1926년, 조선어연구회가 '가갸날'을 정했습니다. 이게 한글날의 시작입니다」 / seg4 ← card-04 body 「'가갸날'은 뒤에 '한글날'로 이름이 바뀌었고」 / seg5 ← card-05 body 「한글 점자 '훈맹정음'도 반포됐습니다. 올해는 점자도 100돌입니다」 / seg6 ← card-06 body 「대한민국역사박물관 특별전 '일구이륙 무한이륙'(~내년 2/9)」(한글 한마당은 일정 미확인이라 뺌) / end_card ← 계정 행동 유도(사실 주장 없음) / caption ← caption.txt 1·3·4·5·8·9행 그대로 + CTA 1줄(사실 주장 없음) / hashtags ← caption.txt 5개 중 4개(#한글박물관 제외: 특별전 장소는 대한민국역사박물관)"
+}
