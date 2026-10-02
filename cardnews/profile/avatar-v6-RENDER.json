@@ -1,0 +1,589 @@
+{
+ "feedback": "2026-10-02 대표(v5 컨택트시트 본 뒤): ① 붓글씨 서체 변경(Nanum Brush 말고) ② 바탕 책가도 크롭 부위 변경",
+ "kept": "낙관 없음(v5-A), 바탕 가시성 75%, 세로 '책가도'",
+ "visibility_def": "원화 크롭 블렌드 불투명도",
+ "visibility": 0.75,
+ "legibility_def": "110px 축소본 획 vs 획 바깥 고리 WCAG 대비비(render_avatar_v5.legibility_110), 문턱 4.5(추정)",
+ "no_synthetic_bold": "마스크 팽창 없음(weight 1). 크기만 조정",
+ "crops": {
+  "x": {
+   "box": [
+    2677,
+    595,
+    3272,
+    1190
+   ],
+   "name": "필통·화병 칸",
+   "note": "10폭 중 9~10폭 가운데 단: 왼쪽 아래 붓 꽂힌 필통·붉은 합·보자기 함, 오른쪽 청화 화병(분홍 꽃)·붉은 잔, 위 책갑 일부"
+  },
+  "y": {
+   "box": [
+    1360,
+    149,
+    2660,
+    1449
+   ],
+   "name": "병풍 전경(4폭)",
+   "note": "10폭 중 5~8폭 × 위 3단: 책갑·주전자·병·과일 그릇·향로·꽃 화분 등 칸 12개 안팎이 한 번에 보임"
+  }
+ },
+ "recommended": "bx",
+ "variants": [
+  {
+   "key": "ax",
+   "text": "책가도",
+   "method": "code_render",
+   "font": {
+    "family": "Nanum Myeongjo",
+    "style": "ExtraBold",
+    "kind": "명조·세리프",
+    "license": "SIL OFL 1.1",
+    "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanummyeongjo/NanumMyeongjo-ExtraBold.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanummyeongjo/OFL.txt",
+    "sha256": "60c0077fce069ba90ae97c0a3679f6eb3712e0ca637bdd0c15b72d335ec46db7",
+    "size_px": 300,
+    "synthetic_bold": false
+   },
+   "background_art": {
+    "title": "Books and Scholars' Accoutrements",
+    "title_ko": "책가도",
+    "institution": "클리블랜드미술관",
+    "accession": "2011.37",
+    "object_url": "https://clevelandart.org/art/2011.37",
+    "url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_print.jpg",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+    "crop": [
+     2677,
+     595,
+     3272,
+     1190
+    ],
+    "crop_note": "10폭 중 9~10폭 가운데 단: 왼쪽 아래 붓 꽂힌 필통·붉은 합·보자기 함, 오른쪽 청화 화병(분홍 꽃)·붉은 잔, 위 책갑 일부",
+    "src_sha256": "d108f0bcae36a5a573e7c4c03367124c22a91a24e6cce129af9b37989a294b8a",
+    "visibility": 0.75,
+    "saturation": -0.2,
+    "lut": "render_avatar_v3.common_lut (lut-v1)",
+    "crop_name": "필통·화병 칸"
+   },
+   "halo": {
+    "dilate": 41,
+    "blur": 12,
+    "alpha": 1.0
+   },
+   "halo_steps": [
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 0.82,
+     "contrast_110": 4.04,
+     "pass": false
+    },
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 0.88,
+     "contrast_110": 4.11,
+     "pass": false
+    },
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 0.94,
+     "contrast_110": 4.17,
+     "pass": false
+    },
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 1.0,
+     "contrast_110": 4.24,
+     "pass": false
+    },
+    {
+     "dilate": 41,
+     "blur": 12,
+     "alpha": 1.0,
+     "contrast_110": 5.01,
+     "pass": true
+    }
+   ],
+   "steps": [
+    "paper #F7F3EA",
+    "hanji multiply 15% (procedural)",
+    "sepia warm R x1.035 G x1.005 B x0.94 (estimate)",
+    "art crop saturation -20% + lut-v1, opacity 75%",
+    "halo: paper color under text, mask max41+blur12, alpha 1.0",
+    "ink: render_avatar_v4.ink_layer (Nanum Myeongjo ExtraBold, weight 1 = no dilation, bleed 22%, grain)",
+    "seal: none"
+   ],
+   "max_radius": {
+    "ink": 418,
+    "limit": 430
+   },
+   "legibility_110": {
+    "contrast": 5.01,
+    "threshold": 4.5,
+    "pass": true
+   },
+   "detail_std": 21.4,
+   "ai_generated": false,
+   "content_changed": false
+  },
+  {
+   "key": "bx",
+   "text": "책가도",
+   "method": "code_render",
+   "font": {
+    "family": "Song Myung",
+    "style": "Regular",
+    "kind": "붓 획 명조(궁체 느낌)",
+    "license": "SIL OFL 1.1",
+    "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/songmyung/SongMyung-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/songmyung/OFL.txt",
+    "sha256": "7f90ab20250911560212cc5819c7b205f9c6644bb96b65095d89fcae096bbf58",
+    "size_px": 320,
+    "synthetic_bold": false
+   },
+   "background_art": {
+    "title": "Books and Scholars' Accoutrements",
+    "title_ko": "책가도",
+    "institution": "클리블랜드미술관",
+    "accession": "2011.37",
+    "object_url": "https://clevelandart.org/art/2011.37",
+    "url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_print.jpg",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+    "crop": [
+     2677,
+     595,
+     3272,
+     1190
+    ],
+    "crop_note": "10폭 중 9~10폭 가운데 단: 왼쪽 아래 붓 꽂힌 필통·붉은 합·보자기 함, 오른쪽 청화 화병(분홍 꽃)·붉은 잔, 위 책갑 일부",
+    "src_sha256": "d108f0bcae36a5a573e7c4c03367124c22a91a24e6cce129af9b37989a294b8a",
+    "visibility": 0.75,
+    "saturation": -0.2,
+    "lut": "render_avatar_v3.common_lut (lut-v1)",
+    "crop_name": "필통·화병 칸"
+   },
+   "halo": {
+    "dilate": 41,
+    "blur": 12,
+    "alpha": 1.0
+   },
+   "halo_steps": [
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 0.82,
+     "contrast_110": 4.04,
+     "pass": false
+    },
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 0.88,
+     "contrast_110": 4.11,
+     "pass": false
+    },
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 0.94,
+     "contrast_110": 4.18,
+     "pass": false
+    },
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 1.0,
+     "contrast_110": 4.25,
+     "pass": false
+    },
+    {
+     "dilate": 41,
+     "blur": 12,
+     "alpha": 1.0,
+     "contrast_110": 5.05,
+     "pass": true
+    }
+   ],
+   "steps": [
+    "paper #F7F3EA",
+    "hanji multiply 15% (procedural)",
+    "sepia warm R x1.035 G x1.005 B x0.94 (estimate)",
+    "art crop saturation -20% + lut-v1, opacity 75%",
+    "halo: paper color under text, mask max41+blur12, alpha 1.0",
+    "ink: render_avatar_v4.ink_layer (Song Myung Regular, weight 1 = no dilation, bleed 22%, grain)",
+    "seal: none"
+   ],
+   "max_radius": {
+    "ink": 405,
+    "limit": 430
+   },
+   "legibility_110": {
+    "contrast": 5.05,
+    "threshold": 4.5,
+    "pass": true
+   },
+   "detail_std": 21.3,
+   "ai_generated": false,
+   "content_changed": false
+  },
+  {
+   "key": "cx",
+   "text": "책가도",
+   "method": "code_render",
+   "font": {
+    "family": "Black Han Sans",
+    "style": "Regular",
+    "kind": "굵은 고딕",
+    "license": "SIL OFL 1.1",
+    "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/blackhansans/BlackHanSans-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/blackhansans/OFL.txt",
+    "sha256": "31960809284026681774a8e52dc19ebcad26cf69b0ad9d560f288296fbb52739",
+    "size_px": 270,
+    "synthetic_bold": false
+   },
+   "background_art": {
+    "title": "Books and Scholars' Accoutrements",
+    "title_ko": "책가도",
+    "institution": "클리블랜드미술관",
+    "accession": "2011.37",
+    "object_url": "https://clevelandart.org/art/2011.37",
+    "url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_print.jpg",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+    "crop": [
+     2677,
+     595,
+     3272,
+     1190
+    ],
+    "crop_note": "10폭 중 9~10폭 가운데 단: 왼쪽 아래 붓 꽂힌 필통·붉은 합·보자기 함, 오른쪽 청화 화병(분홍 꽃)·붉은 잔, 위 책갑 일부",
+    "src_sha256": "d108f0bcae36a5a573e7c4c03367124c22a91a24e6cce129af9b37989a294b8a",
+    "visibility": 0.75,
+    "saturation": -0.2,
+    "lut": "render_avatar_v3.common_lut (lut-v1)",
+    "crop_name": "필통·화병 칸"
+   },
+   "halo": {
+    "dilate": 31,
+    "blur": 16,
+    "alpha": 0.82
+   },
+   "halo_steps": [
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 0.82,
+     "contrast_110": 4.65,
+     "pass": true
+    }
+   ],
+   "steps": [
+    "paper #F7F3EA",
+    "hanji multiply 15% (procedural)",
+    "sepia warm R x1.035 G x1.005 B x0.94 (estimate)",
+    "art crop saturation -20% + lut-v1, opacity 75%",
+    "halo: paper color under text, mask max31+blur16, alpha 0.82",
+    "ink: render_avatar_v4.ink_layer (Black Han Sans Regular, weight 1 = no dilation, bleed 22%, grain)",
+    "seal: none"
+   ],
+   "max_radius": {
+    "ink": 406,
+    "limit": 430
+   },
+   "legibility_110": {
+    "contrast": 4.65,
+    "threshold": 4.5,
+    "pass": true
+   },
+   "detail_std": 21.2,
+   "ai_generated": false,
+   "content_changed": false
+  },
+  {
+   "key": "ay",
+   "text": "책가도",
+   "method": "code_render",
+   "font": {
+    "family": "Nanum Myeongjo",
+    "style": "ExtraBold",
+    "kind": "명조·세리프",
+    "license": "SIL OFL 1.1",
+    "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanummyeongjo/NanumMyeongjo-ExtraBold.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanummyeongjo/OFL.txt",
+    "sha256": "60c0077fce069ba90ae97c0a3679f6eb3712e0ca637bdd0c15b72d335ec46db7",
+    "size_px": 300,
+    "synthetic_bold": false
+   },
+   "background_art": {
+    "title": "Books and Scholars' Accoutrements",
+    "title_ko": "책가도",
+    "institution": "클리블랜드미술관",
+    "accession": "2011.37",
+    "object_url": "https://clevelandart.org/art/2011.37",
+    "url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_print.jpg",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+    "crop": [
+     1360,
+     149,
+     2660,
+     1449
+    ],
+    "crop_note": "10폭 중 5~8폭 × 위 3단: 책갑·주전자·병·과일 그릇·향로·꽃 화분 등 칸 12개 안팎이 한 번에 보임",
+    "src_sha256": "d108f0bcae36a5a573e7c4c03367124c22a91a24e6cce129af9b37989a294b8a",
+    "visibility": 0.75,
+    "saturation": -0.2,
+    "lut": "render_avatar_v3.common_lut (lut-v1)",
+    "crop_name": "병풍 전경(4폭)"
+   },
+   "halo": {
+    "dilate": 41,
+    "blur": 12,
+    "alpha": 1.0
+   },
+   "halo_steps": [
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 0.82,
+     "contrast_110": 4.21,
+     "pass": false
+    },
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 0.88,
+     "contrast_110": 4.27,
+     "pass": false
+    },
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 0.94,
+     "contrast_110": 4.32,
+     "pass": false
+    },
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 1.0,
+     "contrast_110": 4.38,
+     "pass": false
+    },
+    {
+     "dilate": 41,
+     "blur": 12,
+     "alpha": 1.0,
+     "contrast_110": 5.11,
+     "pass": true
+    }
+   ],
+   "steps": [
+    "paper #F7F3EA",
+    "hanji multiply 15% (procedural)",
+    "sepia warm R x1.035 G x1.005 B x0.94 (estimate)",
+    "art crop saturation -20% + lut-v1, opacity 75%",
+    "halo: paper color under text, mask max41+blur12, alpha 1.0",
+    "ink: render_avatar_v4.ink_layer (Nanum Myeongjo ExtraBold, weight 1 = no dilation, bleed 22%, grain)",
+    "seal: none"
+   ],
+   "max_radius": {
+    "ink": 418,
+    "limit": 430
+   },
+   "legibility_110": {
+    "contrast": 5.11,
+    "threshold": 4.5,
+    "pass": true
+   },
+   "detail_std": 23.3,
+   "ai_generated": false,
+   "content_changed": false
+  },
+  {
+   "key": "by",
+   "text": "책가도",
+   "method": "code_render",
+   "font": {
+    "family": "Song Myung",
+    "style": "Regular",
+    "kind": "붓 획 명조(궁체 느낌)",
+    "license": "SIL OFL 1.1",
+    "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/songmyung/SongMyung-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/songmyung/OFL.txt",
+    "sha256": "7f90ab20250911560212cc5819c7b205f9c6644bb96b65095d89fcae096bbf58",
+    "size_px": 320,
+    "synthetic_bold": false
+   },
+   "background_art": {
+    "title": "Books and Scholars' Accoutrements",
+    "title_ko": "책가도",
+    "institution": "클리블랜드미술관",
+    "accession": "2011.37",
+    "object_url": "https://clevelandart.org/art/2011.37",
+    "url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_print.jpg",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+    "crop": [
+     1360,
+     149,
+     2660,
+     1449
+    ],
+    "crop_note": "10폭 중 5~8폭 × 위 3단: 책갑·주전자·병·과일 그릇·향로·꽃 화분 등 칸 12개 안팎이 한 번에 보임",
+    "src_sha256": "d108f0bcae36a5a573e7c4c03367124c22a91a24e6cce129af9b37989a294b8a",
+    "visibility": 0.75,
+    "saturation": -0.2,
+    "lut": "render_avatar_v3.common_lut (lut-v1)",
+    "crop_name": "병풍 전경(4폭)"
+   },
+   "halo": {
+    "dilate": 41,
+    "blur": 12,
+    "alpha": 1.0
+   },
+   "halo_steps": [
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 0.82,
+     "contrast_110": 4.27,
+     "pass": false
+    },
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 0.88,
+     "contrast_110": 4.34,
+     "pass": false
+    },
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 0.94,
+     "contrast_110": 4.4,
+     "pass": false
+    },
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 1.0,
+     "contrast_110": 4.46,
+     "pass": false
+    },
+    {
+     "dilate": 41,
+     "blur": 12,
+     "alpha": 1.0,
+     "contrast_110": 5.25,
+     "pass": true
+    }
+   ],
+   "steps": [
+    "paper #F7F3EA",
+    "hanji multiply 15% (procedural)",
+    "sepia warm R x1.035 G x1.005 B x0.94 (estimate)",
+    "art crop saturation -20% + lut-v1, opacity 75%",
+    "halo: paper color under text, mask max41+blur12, alpha 1.0",
+    "ink: render_avatar_v4.ink_layer (Song Myung Regular, weight 1 = no dilation, bleed 22%, grain)",
+    "seal: none"
+   ],
+   "max_radius": {
+    "ink": 405,
+    "limit": 430
+   },
+   "legibility_110": {
+    "contrast": 5.25,
+    "threshold": 4.5,
+    "pass": true
+   },
+   "detail_std": 23.2,
+   "ai_generated": false,
+   "content_changed": false
+  },
+  {
+   "key": "cy",
+   "text": "책가도",
+   "method": "code_render",
+   "font": {
+    "family": "Black Han Sans",
+    "style": "Regular",
+    "kind": "굵은 고딕",
+    "license": "SIL OFL 1.1",
+    "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/blackhansans/BlackHanSans-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/blackhansans/OFL.txt",
+    "sha256": "31960809284026681774a8e52dc19ebcad26cf69b0ad9d560f288296fbb52739",
+    "size_px": 270,
+    "synthetic_bold": false
+   },
+   "background_art": {
+    "title": "Books and Scholars' Accoutrements",
+    "title_ko": "책가도",
+    "institution": "클리블랜드미술관",
+    "accession": "2011.37",
+    "object_url": "https://clevelandart.org/art/2011.37",
+    "url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_print.jpg",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+    "crop": [
+     1360,
+     149,
+     2660,
+     1449
+    ],
+    "crop_note": "10폭 중 5~8폭 × 위 3단: 책갑·주전자·병·과일 그릇·향로·꽃 화분 등 칸 12개 안팎이 한 번에 보임",
+    "src_sha256": "d108f0bcae36a5a573e7c4c03367124c22a91a24e6cce129af9b37989a294b8a",
+    "visibility": 0.75,
+    "saturation": -0.2,
+    "lut": "render_avatar_v3.common_lut (lut-v1)",
+    "crop_name": "병풍 전경(4폭)"
+   },
+   "halo": {
+    "dilate": 31,
+    "blur": 16,
+    "alpha": 0.82
+   },
+   "halo_steps": [
+    {
+     "dilate": 31,
+     "blur": 16,
+     "alpha": 0.82,
+     "contrast_110": 4.95,
+     "pass": true
+    }
+   ],
+   "steps": [
+    "paper #F7F3EA",
+    "hanji multiply 15% (procedural)",
+    "sepia warm R x1.035 G x1.005 B x0.94 (estimate)",
+    "art crop saturation -20% + lut-v1, opacity 75%",
+    "halo: paper color under text, mask max31+blur16, alpha 0.82",
+    "ink: render_avatar_v4.ink_layer (Black Han Sans Regular, weight 1 = no dilation, bleed 22%, grain)",
+    "seal: none"
+   ],
+   "max_radius": {
+    "ink": 406,
+    "limit": 430
+   },
+   "legibility_110": {
+    "contrast": 4.95,
+    "threshold": 4.5,
+    "pass": true
+   },
+   "detail_std": 23.5,
+   "ai_generated": false,
+   "content_changed": false
+  }
+ ]
+}

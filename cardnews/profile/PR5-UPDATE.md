@@ -13,5 +13,6 @@ DM
 **③ 프로필 사진 확정 = v4 A (코드 렌더 붓글씨)** — `cardnews/profile/avatar-v4-A.png`(320판 `-320.png`). v3 A/B/C는 보류(기록 유지), AI 생성 안은 추후 비교해 교체 검토.
 - 그림: 클리블랜드미술관 〈책가도〉 2011.37 CC0 · 서체 Nanum Brush Script OFL 1.1 · AI 0
 - **v5 대기(대표 피드백 "낙관 별로·바탕 희미" 반영)**: v5-A 낙관 없음·바탕 75% / v5-B 먹색 소인 '노트' / v5-C 바탕 85%+한지 띠 → `contact-profile-v5.png`, 추천 C. 승인 전까지 v4 A 유지.
+- **v6 대기(대표 피드백 "서체·크롭 변경" 반영)**: 서체 3(Nanum Myeongjo XB / Song Myung / Black Han Sans) × 크롭 2(필통·화병 칸 / 병풍 전경), 낙관 없음·바탕 75%·110px 전부 ≥4.65:1 → `contact-profile-v6.png`, 추천 v6-bx.
 
 **④ 남은 대표 결정**: 링크 허브 URL (대표: 나중에)
