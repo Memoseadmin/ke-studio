@@ -22,7 +22,7 @@
 2. [A] 키 입력: TTS_API_KEY, IMAGE_API_KEY, YOUTUBE_* 3개(scripts/youtube_auth.py), 선택 MUAPI_API_KEY
 3. [A] Amazon Associates 가입 + 트래킹 ID, 제휴 상품 확정
 4. [A] 채널 마스코트 캐릭터 도입 여부(민화 소재 시안 3개 제안 중)
-5. [B] ~~언어~~ KR 확정. 계정 이름·소개는 리서치 후 3안 중 선택(대표). **게시 = Meta Graph API 자동 예약 확정**(썸네일·문구는 PR에서 대표가 고름) → 인스타 비즈니스 계정 + `IG_ACCESS_TOKEN`·`IG_USER_ID` 필요. **제휴 = 가능한 프로그램 전부 등록해 두고 필요할 때 사용(대표 결정)** → docs/AFFILIATE_PROGRAMS.md 완성(28개: 지금 가입 15 / 첫 업로드 직전 2(Amazon·쿠팡) / 필요 시)
+5. [B] ~~언어~~ KR 확정. **계정 이름 선택: ①책가도 노트(추천) ②알고보니 한국 ③민화 위클리**(핸들·상표는 대표가 앱에서 확인). 플랫폼: 무료 체험단 4곳+IG 크리에이터 마켓플레이스(기본안), 공동구매 보류. 사업자 등록은 첫 유료 협찬 전 3.3% 원천징수(기본안). **게시 = Meta Graph API 자동 예약 확정**(썸네일·문구는 PR에서 대표가 고름) → 인스타 비즈니스 계정 + `IG_ACCESS_TOKEN`·`IG_USER_ID` 필요. **제휴 = 가능한 프로그램 전부 등록해 두고 필요할 때 사용(대표 결정)** → docs/AFFILIATE_PROGRAMS.md 완성(28개: 지금 가입 15 / 첫 업로드 직전 2(Amazon·쿠팡) / 필요 시)
 6. [공통] 월 비용 배정: A 15만 + B 5만(기본)
 
 ## 세션 위생 규칙 (대표 지시 2026-10-02, 매 세션 시작·종료 때 반드시)
@@ -36,10 +36,10 @@
 |---|---|---|---|---|
 | [B] C1-1 한국 트렌드 리서치 `session_01RNNuzoB3dzZumkcKBTL7Hc` | Opus 5.5 | cardnews/main | cardnews/research/C1-1-trends.md | **완료(아카이브)** 커밋 30a94c4·bb54a77. 후보 14(EP 재활용 2 + 한국 트렌드 12, 전부 KR). 수집 25건 중 교차확인 8/단일 14/미검증 3 → 게시 전 원문 대조 필요(§5). 한국 소스는 WebSearch 대체, 인스타 해시태그 반응 미측정 |
 | [A] EP003 기획 리서치 `session_0145scVsCxXku3zsXuRne9dq` | Opus 5.5 | ep/EP003 | episodes/EP003/research.md, trends-last30days.md | **완료(아카이브)** 커밋 1479ba1. 1위 "The Weekend All of Korea Makes Kimchi — and Why It's Disappearing"(서사형, 시리즈 "Korea's Calendar" 1편, 11/22 김치의 날). 후보 10(서사 7/구매 3), 사실 ✅11/△5/단일3/미검증1. 주의: 건강 효능·한중 김치 논쟁 회피 조건 |
-| [공통] 오픈소스·무료 제작 도구 리서치 `session_0154P65p56MnDyX5xpf1hu4H` | Opus 5.5 | research/tooling-opensource | docs/TOOLING_OPENSOURCE.md | 2026-10-02 생성(대표: 상용 2안 대신 획기적·오픈소스 조사) |
+| [공통] 오픈소스·무료 제작 도구 리서치 `session_0154P65p56MnDyX5xpf1hu4H` | Opus 5.5 | research/tooling-opensource | docs/TOOLING_OPENSOURCE.md | 10-02 00:50 블록(키 대기) → 키 없이 문서 완성·푸시 지시, 01:11 재확인 예약 |
 | [공통] ECC 선별 스킬 10개 복사 설치 → 검수 PR `session_01QPhC1w7MVYrkXSAuq2pL8X` | Fable | ecc/install | .claude/skills/ecc-*, SKILLS.md | **완료(아카이브)** PR #3 https://github.com/Memoseadmin/ke-studio/pull/3 (10개, diff 0, ≈900토큰/턴). 대표 approved 대기 |
-| [A] 구독자 급성장 전략 리서치 `session_01RWSgtzvYa76kJvHhx68VBX` | Opus 5.5 | research/growth | docs/GROWTH_STRATEGY.md(90일 플레이북) | 2026-10-02 생성(대표: 빠른 구독자 확보 방안) |
-| [B] 한국 협찬 시장·단가·벤치마크 리서치 `session_015bpAd3rWkKHmBQvWjZJdXy` | Opus 5.5 | research/cardnews-sponsorship | cardnews/docs/SPONSORSHIP_MARKET.md(단가·계정 이름 3안) | 2026-10-02 생성(COO 추론으로 추가) |
+| [A] 구독자 급성장 전략 리서치 `session_01RWSgtzvYa76kJvHhx68VBX` | Opus 5.5 | research/growth | docs/GROWTH_STRATEGY.md(90일 플레이북) | 10-02 00:50 블록(결정 3개 대기) → 기본값 적용해 완성·푸시 지시, 01:11 재확인 예약 |
+| [B] 한국 협찬 시장·단가·벤치마크 리서치 `session_015bpAd3rWkKHmBQvWjZJdXy` | Opus 5.5 | research/cardnews-sponsorship → cardnews/main 머지 | cardnews/docs/SPONSORSHIP_MARKET.md(222행) | **완료(아카이브)**. 단가(추정): 1만 팔로워 피드 1건 10~30만, 5만 50~170만. 첫 현금 경로 = 지자체·관광재단 서포터즈(월 10~20만, 팔로워 조건 거의 없음)+체험단. 유료 협찬은 5천~1만 이후. 계정 이름 3안: ①책가도 노트(추천) ②알고보니 한국 ③민화 위클리. 첫 9개 그리드 제안. 규제: 표시는 첫 부분·더보기 금지 + 유료 파트너십 라벨. 참고: 해시태그 5개 상한, 캐러셀 8~10장 권장, 릴스 병행 |
 - 리서치는 대표 지시로 별도 세션·Opus. 제작(writer/designer/marketer/legal)은 COO 세션의 서브에이전트.
 - ECC(Everything Claude Code): 클라우드 세션은 플러그인을 로드하지 않으므로(공식 문서) 복사 설치만 가능. **대표 결정(2026-10-02): 쓸만한 스킬만 도입, 별도 세션·브랜치(`ecc/install`)에서 실행 → 검수 PR → approved 후 작업 브랜치에 병합.** docs/ECC_REVIEW.md(검토 중) 기준으로 선별.
 
