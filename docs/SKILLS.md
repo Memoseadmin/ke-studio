@@ -19,6 +19,7 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 | webapp-testing | https://github.com/anthropics/skills (skills/webapp-testing) | 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4 | Apache-2.0(폴더 LICENSE.txt) | 1 |
 | taste-skill | https://github.com/Leonxlnx/taste-skill (skills/taste-skill만) | ce26fc25c0e5e8cab638f883de62d9a86ee5e45b | MIT(저장소 루트 LICENSE → 폴더에 `LICENSE.upstream`으로 복사) | 1 |
 | ui-ux-pro-max | https://github.com/nextlevelbuilder/ui-ux-pro-max-skill (.claude/skills/ui-ux-pro-max만) | 09170eec67eefd46a7ae85de61b40c194020f997 | MIT(저장소 루트 LICENSE → 폴더에 `LICENSE.upstream`으로 복사) | 1 |
+| ruflo | https://github.com/ruvnet/ruflo (plugins/ruflo-agent/skills/nested-subagents만) | 97de39ed0b2e5dcf0a6e4677398da36fc74e7ad5 | MIT(저장소 루트 LICENSE → 폴더에 `LICENSE.upstream`으로 복사) | 1 |
 
 ## 포함 스킬
 - **finance**: audit-support close-management financial-statements journal-entry journal-entry-prep reconciliation sox-testing variance-analysis 
@@ -146,3 +147,12 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 - 컨텍스트 비용(상시): description 4개 합 ≈ 1,050자 ≈ 260토큰/턴. 본문은 호출 시에만 로드.
 - 직원 `skills:` 지정은 이번에 바꾸지 않음(COO 결정). 후보 지정: designer → frontend-design·taste-skill·ui-ux-pro-max, producer/QA → webapp-testing.
 - 한눈에 보기: **frontend-design**과 **taste-skill**은 "예쁘고 AI 티 안 나게" 만드는 지침, **ui-ux-pro-max**는 서체·색을 고를 때 찾아보는 자료집, **webapp-testing**은 만든 HTML을 브라우저로 찍어 확인하는 도구다.
+
+## ruflo 선별 설치 (2026-10-02, 대표 지시 "ruflo skill 적용 — 자식 세션 에이전트 분리용", 브랜치 `skills/ruflo` → 검수 PR)
+- 확인: ruflo = ruvnet의 Ruflo(구 claude-flow), 에이전트 오케스트레이션·스웜·훅·MCP 플랫폼. npm `ruflo`·`claude-flow` 둘 다 3.50.0, MIT. 저장소 HEAD 97de39e(2026-10-02).
+- 구조: SKILL.md 375개(`.claude/skills/` 38, `plugins/ruflo-*/skills/` ≈160, `.agents/skills/` 135는 Codex용 `$agent-*` 형식, `v3/@claude-flow/` 40). 대부분 `mcp__plugin_ruflo-core_ruflo__*` MCP 도구·`npx @claude-flow/cli`·`agentic-flow`·AgentDB 전제.
+- 설치(1개): `plugins/ruflo-agent/skills/nested-subagents/` → `.claude/skills/ruflo-nested-subagents/` (SKILL.md 4,162B, `diff -r` 차이 0) + 루트 LICENSE를 `LICENSE.upstream`으로(`cmp` 동일). frontmatter 유효(name·description·argument-hint·allowed-tools). 설명 142자 ≈ **40토큰/턴**.
+  - 핵심(네이티브 Task 도구만): 하위 에이전트가 다시 하위 에이전트를 띄우는 트리, 레벨마다 ≈200토큰 구조화 요약만 위로 반환, 리프는 spawn 금지, 불필요한 중첩 금지.
+  - 이 환경에서 무효인 부분(원문 미수정, 무시): `nested-coordinator` 에이전트(플러그인 agents/, 미복사), `pre-task`/`post-task` 훅·AgentDB 기록·`claude-flow.config.json`·`CLAUDE_FLOW_STRICT_NESTING`. 깊이 5 한도(원문 "Anthropic API 2026-06-09 발표")는 미검증.
+- 실행하지 않은 것: `npx ruflo init`(읽기만). 하는 일 = `.claude/settings.json`에 훅 병합, `.claude/helpers/*.cjs`(hook-handler·statusline·auto-memory), `.mcp.json`·`claude mcp add ruflo|ruv-swarm|flow-nexus`, `CLAUDE.md` 생성/덮어쓰기, `.claude/{agents,commands,skills}` 대량 생성, `.claude-flow/`·`.swarm/memory.db` → 우리 규범(설정·CLAUDE.md 덮어쓰기 금지) 위반이라 불가.
+- 보류(런타임 필요): swarm-orchestration·swarm-advanced·hive-mind-advanced·stream-chain·v3-swarm-coordination·hooks-automation(npx/agentic-flow·훅), ruflo-ai-team 6종·workflow-create/run·goal-plan·horizon-track·loop-worker·autopilot-loop(ruflo MCP), managed-agent(ruflo MCP + `ANTHROPIC_API_KEY` + Managed Agents 베타, 컨테이너 과금), flow-nexus-*(외부 클라우드). 순수 문서지만 미설치: skill-builder(이미 `anthropic-skills:skill-creator`와 중복), witness(node 스크립트 필요).
