@@ -14,6 +14,7 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 | design | https://github.com/anthropics/knowledge-work-plugins (design/) | da38ec1ee89d41e5380e652a97382695003396e7 | Apache-2.0 | 7 |
 | example-skills | https://github.com/anthropics/skills (skills/canvas-design, skills/theme-factory만) | 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4 | Apache-2.0 | 2 |
 | last30days | https://github.com/mvanhorn/last30days-skill (skills/last30days) | 5103ba478b380552207a3754b74c7655d64208cd | MIT | 1 |
+| ecc | https://github.com/affaan-m/ECC (skills/ 중 선별 10개) | c05b2d6614f62f6db0047669aa4eefb223d478f9 | MIT | 10 |
 
 ## 포함 스킬
 - **finance**: audit-support close-management financial-statements journal-entry journal-entry-prep reconciliation sox-testing variance-analysis 
@@ -23,6 +24,7 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 - **design**: accessibility-review design-critique design-handoff design-system research-synthesis user-research ux-copy (폴더명 예: `design-design-system`)
 - **example-skills**: canvas-design theme-factory (anthropics/skills 마켓플레이스의 `example-skills` 플러그인 중 이 2개만)
 - **last30days**: last30days (폴더명 `last30days-last30days`)
+- **ecc**: content-engine article-writing agent-self-evaluation growth-log living-docs-governance council market-research strategic-compact context-budget safety-guard (폴더명 `ecc-content-engine` 등, 호출도 폴더명)
 
 ## 직원별 지정 스킬 (.claude/agents/*.md의 skills:)
 | 직원 | 스킬 |
@@ -81,6 +83,29 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 | 후보 | 상태 | 이유 / 메모 |
 |---|---|---|
 | glebis/claude-skills `elevenlabs-tts` @7524dff0c54bb85645b6bb2b0c6c148f4f7c3e29 (MIT) | TTS 공급자 결정 후 설치(HANDOFF 대표 결정 대기 4번) | 스킬 폴더에 `.env.example` 포함(비밀 파일 패턴 `.env*`, `.gitignore`의 `.env.*`에도 걸림, 내용은 열어 보지 않음). 폴더 자체가 플러그인(`.claude-plugin/`, 자체 `.gitignore`). 필요 키 `ELEVENLABS_API_KEY`, pip `elevenlabs==2.23.0`, `python-dotenv==1.0.0` |
+
+## ECC 선별 설치 (2026-10-02, 대표 결정: 쓸만한 스킬만, 별도 세션·브랜치 `ecc/install`)
+- 근거: docs/ECC_REVIEW.md (가) 최소안 5개 + (나) 중간안에서 MCP 의존·경로 불일치·중복이 없는 5개 = 10개. 검토 대상 10개 모두 저장소에 존재하고 frontmatter `origin: ECC` 보유(건너뛴 스킬 없음).
+- 방법: 임시 디렉터리에 `git clone --depth 1` → `git rev-parse HEAD` = c05b2d66…(ECC_REVIEW.md와 동일, 추가 고정 불필요) → `cp -r skills/<s> .claude/skills/ecc-<s>` → `diff -r` 차이 0. 스크립트·install.sh·설치 마법사 실행 없음. 임시 디렉터리는 작업 후 삭제.
+- 복사하지 않은 것: hooks/·scripts/·rules/·commands/·agents/ 전부(ECC_REVIEW.md §3: `~/.claude/plugins/ecc*` 전제라 이 환경에서 무효). `.claude/settings.json`·CLAUDE.md·hooks는 만들지 않음(대표 결정 대기).
+- 비밀 파일 없음(`.env*`·키 파일 0개). `.gitignore`에 걸리는 파일 없음. 필요한 API 키·외부 설치 없음, setup.sh 변경 없음.
+- 컨텍스트 비용: 설명 10개 합 3,381자 + 폴더명 ≈ 3.6k자 ≈ **900토큰/턴** (ECC_REVIEW.md 추정치 기준, 기존 ≈12k토큰의 7~8%).
+
+| 설치 폴더 | 파일 수 | `diff -r` | 한 줄 용도 | 비고 |
+|---|---|---|---|---|
+| ecc-content-engine | 1 | 차이 0 | 플랫폼별(YouTube·TikTok·뉴스레터) 콘텐츠 시스템, 출처 우선, 품질 게이트 | — |
+| ecc-article-writing | 1 | 차이 0 | 예시에서 뽑은 '사람 목소리'로 롱폼 집필, 금지 표현 목록 | — |
+| ecc-agent-self-evaluation | 7 | 차이 0 | 작업 후 5축(정확·완결·명료·실행성·간결) 1~5점 자가 채점 | 부속 `scripts/evaluate.py`(표준 라이브러리만, 네트워크 없음)는 **실행하지 않고 참조만**. 참조 경로 불일치: `references/hook-integration.md`·`templates/evaluation-report.md`가 `hooks/hooks.json`·`skills/agent-self-evaluation/scripts/evaluate.py`(ECC 플러그인 루트 기준)를 가리킴 → 이 저장소에선 `.claude/skills/ecc-agent-self-evaluation/scripts/evaluate.py`. 원문 미수정 |
+| ecc-growth-log | 1 | 차이 0 | 완료 작업에서 '사건'이 아닌 '재사용 규칙'을 뽑는 로그 템플릿 | — |
+| ecc-living-docs-governance | 1 | 차이 0 | 문서를 헌법/지도/상태/이력 역할로 나눠 썩지 않게 관리 | description에 중국어 트리거 문구 포함(원문) |
+| ecc-council | 1 | 차이 0 | 4관점 회의로 모호한 go/no-go 결정 | 본문이 `~/.claude/notes`에 쓰지 말라고 언급(금지 지침이라 영향 없음) |
+| ecc-market-research | 1 | 차이 0 | 출처 표기 시장·경쟁 조사 | — |
+| ecc-strategic-compact | 1 | 차이 0 | 단계 경계에서 수동 /compact 권고 기준 | 참조 경로 불일치: 본문 §설치가 `hooks/hooks.json`의 `suggest-compact.js`, `~/.claude/settings.json`, `~/.claude/scripts/hooks/`, `~/.claude/memory/`, `~/.claude/rules/`, `token-optimizer` MCP를 언급 → 이 환경엔 없음. **지침(언제 compact할지)만 사용**, hook 연동은 하지 않음 |
+| ecc-context-budget | 1 | 차이 0 | 스킬·에이전트·MCP·규칙의 컨텍스트 소비 감사 | 감사 대상에 `.mcp.json`·MCP 서버 포함(없으면 0으로 처리될 뿐, 의존 아님) |
+| ecc-safety-guard | 1 | 차이 0 | 파괴적 명령(rm -rf, push --force, DROP TABLE) 경고 지침 | 참조 경로 불일치: PreToolUse hook 연동과 `~/.claude/safety-guard.log` 기록은 ECC hooks 전제 → 이 환경엔 없음. 지침 패턴만 사용, 실제 차단 hook은 대표 결정(ECC_REVIEW.md §5-2) 대기 |
+
+- 한눈에 보기: ECC는 "콘텐츠·문서·운영 습관" 도구 10종. 작가·마케터는 content-engine·article-writing, COO는 council·living-docs-governance·growth-log·agent-self-evaluation·strategic-compact·context-budget, 리서처는 market-research, 전 직원 공통 주의 지침은 safety-guard.
+- 직원 `skills:` 지정은 이번에 바꾸지 않음(COO 결정). 등록 확인: 복사 직후 설치 세션의 스킬 목록에 `ecc-content-engine` 등 10개가 폴더명으로 올라옴(원문 `name:`은 그대로). 실제 호출 검증은 다음 작업 세션에서.
 
 ## 자체 작성(사내) 스킬 (2026-10-01, Phase 2 EP001, producer 작성)
 외부 원본이 없는 사내 스킬이라 "복사 설치·원본 무수정" 규칙의 대상이 아니다. 고칠 때는 이 저장소에서 PR로 바꾸고 SKILL.md의 사용법도 함께 갱신한다.
