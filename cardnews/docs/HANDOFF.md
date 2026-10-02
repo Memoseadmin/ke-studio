@@ -1,43 +1,28 @@
-# 카드뉴스 HANDOFF — 2026-10-02 (C1-1 14일 세트 검수 PR #4 생성)
+# 카드뉴스 HANDOFF — 2026-10-02 (C1-1 final 머지 · v3 디자인 전환 · 세트 11 첫 게시 준비)
 
 ## 목표
-인스타그램 **한국어** 카드뉴스 계정으로 **한국 브랜드 제휴·협찬 광고** 수익(대표 확정 2026-10-01). 게이트 C1 = 90일 내 팔로워 2,000 + 저장률 3% + 미디어킷 + 협찬 제안 5건, 월 비용 5만원 이하 (`cardnews/docs/PLAN.md`).
+인스타 "책가도 노트" @chaekgado.note(한국어·한국 독자, 당분간 한국어 유지). 정체성: 한국 문화를 축으로 **여행·음식·축제·전시까지 통합한 최신 트렌드 카드뉴스**. 수익 = 한국 브랜드 협찬(보조 쿠팡). 게이트 C1 = 90일 팔로워 2,000 + 저장률 3% + 미디어킷 + 협찬 제안 5건, 월 5만원 이하.
 
 ## 현재 상태
-- 브랜치 `cardnews/main`(작업 브랜치 `claude/admiring-clarke-beyyoi`에서 분기). 산출물 0. 계정 미개설.
-- 재활용 가능한 소재: `episodes/EP001/marketing.md` §7(라면, 7장 캐러셀 1안), `episodes/EP002/marketing.md` §7(사라진 네 글자, 7장). 디자인 토큰 `episodes/EP001/design/design-system.md`.
-- 본 채널 결정: 구독형 혼합, 비주얼 "민화 플랫 × 한지 질감"(docs/TOOLING_TTS_IMAGE.md §D). 이미지 생성 키 UNSET → 카드 이미지는 당분간 Pillow 목업(EP 썸네일 목업 방식)으로 만든다.
-- 환경변수: `IG_ACCESS_TOKEN`·`IG_USER_ID` UNSET(미발급). 자동 게시는 키 전까지 수동 패키지.
+- `cardnews/main`: C1-1 14세트 **final 렌더(v2 Pillow)** + legal v3 BLOCK 0 + F1 반영(293d962) + `cardnews/docs/DESIGN_SOURCES.md`(디자인 소싱 리서치) + `cardnews/publish/C1-1-manual.md`(수동 게시 패키지, v3 전환 후 갱신 필요).
+- `cardnews/c1-1-design`: **v3 렌더러** `cardnews/design/v3/`(HTML/CSS → Playwright Chromium, 서체 세트 B 함렛/마루부리/Black Han Sans + Noto Serif KR 폴백, `render_v3.py --strict`) · 세트 11(2026-10-19) **3안 1판**(사진 1/8, 위키미디어 429) · VISUAL-BRIEF.md · DESIGN-v3.md · PHILOSOPHY-v3.md · 캡션 A안(AI 줄 삭제, 출처만) · 사진 후보 42장 `cardnews/design/photos/`. 사진 원본은 `photos/src/`(gitignore, PHOTOS.json URL로 재다운로드).
+- `cardnews/c1-1b`: PR #5(릴스 14 목업 + 프로필 패키지, legal BLOCK 0/FIX 1 반영). PROFILE.md v3(이름 필드 확정 `책가도 노트 | 민화 원화로 보는 오늘의 한국`, 허브 UTM, 고정 순서) → bio v4(민화 원화 표현 제거) 세션 진행 중. 프로필 사진 A/B/C는 폐기 → v3 톤으로 재제작 예정.
+- 키: IG 경로 B 통과, R2 통과. 게시 게이트 = approved·final·출처 줄·해시태그 ≤5(AI 문구 선택).
+- **대표 결정(2026-10-02)**: v3 = **3안 하이브리드 콜라주**(편집 실사 주인공 + 원화 프레임·낙관·띠) · **이미지는 장 내용에서 출발**(VISUAL-BRIEF 필수) · AI 고지 문구 삭제(카드·캡션 출처만) · 세트 11 = 10/2 첫 게시(3안으로) · 세트 01(10/9) AI 없이 · 02~14 AI 배경 + 편집 실사(원본 그대로 금지) · 릴스는 19:00일 **21:00** · 링크 허브 = 무료 서비스(URL 대표) · 호작도 PD 원화 허용 · 포스트 제작은 Opus 자식 세션 병렬.
 
-## 완료 (Phase C1-1)
-- 계정 "책가도 노트" @chaekgado.note 확정(대표). 인스타 프로페셔널 전환·페이지 연결·토큰 발급은 대표가 완료 보고(환경변수 입력은 미확인 → UNSET).
-- 리서치: C1-1-trends.md(14 소재), SPONSORSHIP_MARKET.md(단가·계정 이름·그리드).
-- 제작: C1-1-plan.md, 14세트(cards.json·caption.txt·PNG 목업 103장·contact·RENDER.json), 템플릿(template.md·render_cards.py `--final` 옵션), MEDIA_KIT.md 초안, C1-1-overview.png.
-- legal risk-C1-1.md v2: BLOCK 0 / FIX 3(승인 후 렌더 단계) / PASS 8. 사실 105건, 출처 없음 0. 13 세트는 넷플릭스→전시 체크리스트로 교체.
-- 검수 PR #4 https://github.com/Memoseadmin/ke-studio/pull/4 (cardnews/c1-1 → cardnews/main). 게시 0건.
-- 게시 도구(작업 브랜치에 머지): scripts/ig_publish.py(dry-run 기본·게이트 4개), r2_upload.py, ig_token_refresh.py, README-ig.md. 이미지 호스팅 = Cloudflare R2 버킷 chaekgado-cards, 공개 URL은 docs/ENV.md.
-- C1-1 트렌드 리서치: `cardnews/research/C1-1-trends.md` — 카드뉴스 후보 14개(EP 재활용 2 + 한국 트렌드 12).
+## 완료 (이번 세션)
+- PR #4 승인 후 final 렌더 → legal v3 → 머지. 릴스 14개 목업 렌더 + 프로필 패키지 + PR #5.
+- v3 렌더러·세트 11 1판·캡션 재초안·사진 후보 42장·디자인 소싱 리서치(원화 31점·서체 실측·스킬 초안 3).
 
 ## 실패한 시도와 이유
-- 렌더러 금지어 필터가 "로고 금지"처럼 부정 맥락도 잡아 모티프가 달·산으로 바뀜 → 절(clause) 단위로 부정어 제외하도록 수정.
-- 공개 카드 마지막 장에 원본 URL·내부 "협찬 슬롯"이 찍힘 → 출처 이름 줄만, 슬롯은 기본 비표시.
-- 13 세트 넷플릭스 공개일이 R22(미검증 재게시)만 근거라 오류 → 소재 교체. 뉴시스 1/29 '가갸'(가제)는 실제 '일구이륙 무한이륙'(대한민국역사박물관)로 확정돼 01·06 정정.
-- 새 하위 세션에서도 IG_ACCESS_TOKEN·IG_USER_ID UNSET → 대표가 환경 설정 저장을 확인해야 함.
+- v2 Pillow 렌더(중국어 대체 서체·클립아트 반복·빈 띠·옛한글 깨짐) → 대표 "품질 불가" → v3 HTML 렌더러로 교체.
+- v3 1안(원화 디테일만) → 주제·이미지 불일치 → "장 내용에서 출발" 규칙.
+- 위키미디어 429 → 사진 소싱 세션이 박물관 CDN·CC0 사이트로 우회 중. 대안: 대표 PC 수동 다운로드.
 
 ## 대표 결정 대기
-1. ~~계정 언어~~ KR 확정(대표). 계정 이름·프로필 소개 문구 확정 필요
-2. 인스타그램 비즈니스 계정 개설 + 프로필 링크 허브 URL
-3. Meta Graph API 토큰 발급 여부(없으면 14일간 수동 게시)
-4. 협찬 금지 품목 추가 여부(기본: 건강·금융·법률·도박·주류) / 쿠팡파트너스 계정 개설 여부(보조 수익)
+bio v4 선택 · 세트 11 캡션 A안 확정 · 프로필 사진 v3 방향 · 링크 허브 URL · PR #5 승인 · 이중언어(C1-2).
 
-## 다음 할 일 (Phase C1-2 — 승인 후 게시 가동)
-1. PR #4 approved 확인 → `render_cards.py --all cardnews/posts --final` 재렌더 → legal PNG·RENDER.json 재점검(risk v3) → cardnews/main 머지.
-2. Sonnet 세션으로 R2 업로드 1장 테스트 + IG 읽기 전용 검증(키 SET 확인) → 성공 시 `r2_upload.py --execute` 14세트 → `ig_publish.py --schedule` 큐 등록 → 게시 루틴(/schedule, 매일 KST 시각) 설정.
-3. 첫 게시 후 analyst 주간 측정 틀(`cardnews/reports/`), 토큰 60일 갱신 알림 루틴.
-4. C1-2 소재: 10/23~11/5(빼빼로데이 11/11·수능 11/19 역산), 8장 기본 검토.
-
-## (기록) Phase C1-1 당시 계획
-1. marketer: 14일치 캐러셀 플랜(소재 14개 = EP 재활용 ≤4 + 한국 트렌드 ≥10, **전부 한국어**), 캡션·해시태그·게시 시각(KST), 게시물별 측정 지표.
-2. designer: 카드 템플릿 1종(1080x1350, 디자인 시스템 토큰) + 14세트 × 7장 Pillow 목업 → `cardnews/posts/YYYY-MM-DD/`.
-3. legal-reviewer: 14세트 일괄 점검(출처·실존 인물·로고·AI 표시·협찬 라벨 규칙) → `cardnews/docs/risk-C1-1.md` BLOCK 0.
-4. 검수 PR(브랜치 `cardnews/c1-1` → base `cardnews/main`): 14세트 1장 썸네일을 한 표로, 캡션 링크. approved 후 수동 게시 패키지 확정.
+## 다음 할 일
+1. 사진 소싱 결과 → 세트 11 2판(Opus 세션) → 대표 확인 → legal → PR → 승인 → 새 Sonnet 세션에서 R2 업로드·게시(10/2).
+2. 세트 01~14 v3 제작을 Opus 세션 5개로 병렬(브랜치 cardnews/v3-sets-A~E) → legal → PR. 릴스 14개 v3 카드로 재렌더(`render_reels.py`). 수동 패키지·MEDIA_KIT 갱신(AI 문구 삭제).
+3. 프로필 사진 v3 재제작, bio v4 반영, 허브 URL 받으면 PROFILE §5 완성. 10/9부터 매일 게시 큐(`ig_publish.py --schedule`) + 루틴.
