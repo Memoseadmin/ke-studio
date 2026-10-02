@@ -24,6 +24,14 @@
 5. [B] ~~언어~~ KR 확정. 계정 이름·프로필 소개, 인스타 비즈니스 계정·링크 허브 URL, Meta API 토큰 여부, 쿠팡파트너스 개설 여부
 6. [공통] 월 비용 배정: A 15만 + B 5만(기본)
 
+## 실행 중인 하위 세션 (COO가 만들고 결과를 회수)
+| 세션 | 모델 | 브랜치 | 산출물 | 상태 |
+|---|---|---|---|---|
+| [B] C1-1 한국 트렌드 리서치 `session_01RNNuzoB3dzZumkcKBTL7Hc` | Opus 5.5 | cardnews/main | cardnews/research/C1-1-trends.md | 2026-10-02 생성 |
+| [A] EP003 기획 리서치 `session_0145scVsCxXku3zsXuRne9dq` | Opus 5.5 | ep/EP003 | episodes/EP003/research.md, trends-last30days.md | 2026-10-02 생성 |
+- 리서치는 대표 지시로 별도 세션·Opus. 제작(writer/designer/marketer/legal)은 COO 세션의 서브에이전트.
+- ECC(Everything Claude Code): 클라우드 세션은 플러그인을 로드하지 않으므로(공식 문서) 복사 설치 가능한 부분만 검토 중(docs/ECC_REVIEW.md 예정).
+
 ## 공용 자원
 - 직원 9명 `.claude/agents/`, 스킬 96개, 디자인 시스템 `episodes/EP001/design/design-system.md`, 비주얼 방향 "민화 플랫 × 한지 질감"(docs/TOOLING_TTS_IMAGE.md §D).
 - 비용 상한 월 20만원(전 프로젝트 합). analyst가 월간 리포트에서 프로젝트별로 나눠 보고.
