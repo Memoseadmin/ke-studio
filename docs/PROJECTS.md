@@ -46,7 +46,7 @@
 - 리서치는 대표 지시로 별도 세션·Opus. 제작(writer/designer/marketer/legal)은 COO 세션의 서브에이전트.
 - ECC(Everything Claude Code): 클라우드 세션은 플러그인을 로드하지 않으므로(공식 문서) 복사 설치만 가능. **대표 결정(2026-10-02): 쓸만한 스킬만 도입, 별도 세션·브랜치(`ecc/install`)에서 실행 → 검수 PR → approved 후 작업 브랜치에 병합.** docs/ECC_REVIEW.md(검토 중) 기준으로 선별.
 
-| ~~`session_0123PjHg4syrrzozsBss7aRr`(Fable, 모델 규칙 위반으로 아카이브)~~ → [B] Instagram API 읽기 전용 연결 테스트 + 게시 스크립트(dry-run) `session_01A3aHmduYXmSGmBrsgyd3gd` | Sonnet 5.5 | tooling/ig-publisher | cardnews/docs/IG_CONNECTION.md, scripts/ig_publish.py, scripts/ig_token_refresh.py | 2026-10-02 01:42 생성. 대표가 IG 프로페셔널 계정·페이지 연결·토큰 입력 완료 보고 → 이 세션은 변수 미인식(세션 시작 후 입력)이라 새 세션에서 검증 |
+| ~~`session_0123PjHg4syrrzozsBss7aRr`(Fable, 모델 규칙 위반으로 아카이브)~~ → [B] Instagram API 읽기 전용 연결 테스트 + 게시 스크립트(dry-run) `session_01A3aHmduYXmSGmBrsgyd3gd` | Sonnet 5.5 | tooling/ig-publisher → 작업 브랜치 머지 | scripts/ig_publish.py·r2_upload.py·ig_token_refresh.py·README-ig.md, cardnews/docs/IG_CONNECTION.md | **완료(아카이브)**. 연결 테스트는 `IG_ACCESS_TOKEN`·`IG_USER_ID` **UNSET이라 건너뜀**(대표가 환경 설정에 저장했는지 확인 필요). dry-run 정상(게이트: approved 라벨·목업 차단 동작). 업로드·게시 0건 |
 
 ## 공용 자원
 - 직원 9명 `.claude/agents/`, 스킬 96개, 디자인 시스템 `episodes/EP001/design/design-system.md`, 비주얼 방향 "민화 플랫 × 한지 질감"(docs/TOOLING_TTS_IMAGE.md §D).
