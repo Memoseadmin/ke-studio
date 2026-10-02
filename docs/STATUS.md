@@ -1,5 +1,5 @@
 # STATUS
-갱신: 2026-10-02
+갱신: 2026-10-02 06:35Z (COO 세션 e90e44c+)
 
 ## 현재 상태
 - 운영: COO 세션 `claude/admiring-clarke-beyyoi`(7e4a4e9). CLAUDE.md에 토큰 절약·세션 관리 규범 추가(10/2). 자식 세션 분배·회수·아카이브 표 = docs/PROJECTS.md "하위 세션". 대표 결정 큐 = PROJECTS.md 1~17.
@@ -8,11 +8,12 @@
 - 디자인 시스템 v1.3(§7 3:4, §9-6 C 틀) ca5f11a. 하우스 스킬 `.claude/skills/cardnews-copy` v1(c1-1-design 6e96cbe).
 - 키: IG·R2 SET. MUAPI·FAL·IMAGE·TTS·YOUTUBE UNSET → AI 생성은 집 PC ComfyUI(docs/LOCAL_GPU_PROMPT.md).
 - 카피 직원 6개 완료(cd03c80: .claude/agents/copy-*.md, cardnews-copy v1.1 §8 사실 밀도·§9 분담표).
-- 진행 중 자식 세션 6: 4판 준비 `session_011twGRGT7mg7mMiMPsHacWy` / 성장 플레이북 `session_016Mgo4LJwXasP64iKJpFTq1` / 참여 설계 `session_013kDvnneJpccpdRACuQCrsU` / 배포 전략 `session_01BCdvrogHr2z9zXdXiV1MmB` / 시각 벤치마크 2차 `session_013t5A9foC3kpm2L1QTFA7fm` / 사업 방향 `session_014Y1ydgCgif4SioLAEiAw7Z`.
+- 자식 세션 6 중 **완료·아카이브 2**(10/2 06:33): 4판 준비 `session_011twGRG…`(c1-1-design cb85a57: RESEARCH-v4·PHOTOS-yun·plates/PROMPTS-v4·VISUAL-BRIEF-v4, 결정 큐 18) / 사업 방향 `session_014Y1ydg…`(research/cn-business a6fb846, B1~B4 = 결정 큐 19). **진행 중 4**: 성장 플레이북 `session_016Mgo4LJwXasP64iKJpFTq1`(research/cn-growth 미푸시) / 참여 설계 `session_013kDvnneJpccpdRACuQCrsU` / 배포 전략 `session_01BCdvrogHr2z9zXdXiV1MmB`(research/cn-distribution 미푸시) / 시각 벤치마크 2차 `session_013t5A9foC3kpm2L1QTFA7fm`. 체크인 trig_01VTSDpJNX4yJwBT2HXC8TBW(06:41Z).
+- 집 PC 플레이트: `plates/v4/*.png` 원격 0장 → 대표 미푸시, 카피 재작성·4판 렌더 보류.
 - A 유튜브: 보류(대표 10/2 "카드뉴스 집중"). 채널명 1·2차 후보 docs/CHANNEL_NAME.md, EP001·002 approved·업로드 0.
 
 ## 다음 할 일
-1. 자식 세션 6개 회수(예약 체크인 없음 → 새 세션이 send_later로 다시 건다): get_session → fetch → PROJECTS 표 갱신 → archive. 각 결과의 대표 결정 목록(G·E·D·V·B)을 **한 번에** AskUserQuestion.
+1. 남은 자식 세션 4개 회수(체크인 06:41Z 예약, 완료 전까지 8분마다 재예약): get_session → fetch → PROJECTS 표 갱신 → archive. 전부 모이면 대표 결정 G1~G4·E1~E4·D1~D5·V1~V3 + 큐 18(P1~P5, 윤동주 PD)·19(B1~B4)를 **한 번에** AskUserQuestion(4개씩) → PROJECTS 결정 큐에 기록.
 2. 대표가 집 PC에서 AI 플레이트 생성·푸시(`cardnews/posts/2026-10-19/plates/`, README-homepc.md) → copy-* 직원으로 카피 재작성 → 4판 렌더(Opus) → contact.png 대표 확인.
 3. 윤동주 사진 PD 판정(PHOTOS-yun.md) + §9-2 v1.4(스톡 L1 ⓑ·L2) legal 세션 → 디자인 시스템 반영.
 4. legal(세트 11) → 검수 PR(cardnews/c1-1-design → cardnews/main) → approved → 새 Sonnet 세션 `r2_upload.py --execute` → `ig_publish.py --pr N --execute`(PR #5 승인 뒤).
