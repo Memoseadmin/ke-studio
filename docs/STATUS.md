@@ -10,12 +10,12 @@
 - 카피 직원 6개 완료(cd03c80: .claude/agents/copy-*.md, cardnews-copy v1.1 §8 사실 밀도·§9 분담표).
 - 자식 세션 6개 **전부 완료·아카이브**(07:00Z). 리서치 3건 cardnews/main 머지(ef699d8). 대표 결정 23건 → PROJECTS 큐 18~21(G1~4·E1~4·D1~6·V1~3·B1~4·P1~5·훅 1안).
 - 세트 11 **카피 v5**(c1-1-design 7718d2d): 띠 본문 사실(P2)·1장 "시집 한 권"(P3)·8장 "윤동주처럼 통째로 옮길 시집은?"(E1 ⑤)·훅 1안 확정. copy-editor 조건부 통과(REVIEW-v5.md: 반려 2 → 리서치 세션). 플레이트 프롬프트 v4.1 한지 콜라주(V2) 같은 커밋. ⚠ 이 작업은 COO 세션 서브에이전트로 했음(규칙 위반, 대표 지적) → 이후 전부 자식 세션 분리.
-- 진행 중 자식 세션 2(Opus, c1-1-design): 캡션 v5 `session_01E93SqXnke1vhVVD9uozPhp` / 반려 2건 사실 확인 `session_01Ephn3SpWFp33KZ6CzVRsZz`. 체크인 trig(07:32Z).
+- 진행 중 자식 세션 2(Opus, c1-1-design): 캡션 v5 `session_01E93SqXnke1vhVVD9uozPhp` / 반려 2건 사실 확인 `session_01Ephn3SpWFp33KZ6CzVRsZz`. 체크인 trig(07:33Z). + 트렌드 리서치 #1 `session_01DbxQMYkMGfeCi785ie99Ez`(Opus, research/trends, 단발 — 대표: 루틴 금지, 매번 문의 후 실행).
 - 집 PC 플레이트: `plates/v4/*.png` 원격 0장 → 대표 미푸시(프롬프트 팩은 v4.1 한지 콜라주로 갱신됨, 집 PC에서 다시 받아 생성). 4판 렌더 보류.
 - A 유튜브: 보류(대표 10/2 "카드뉴스 집중"). 채널명 1·2차 후보 docs/CHANNEL_NAME.md, EP001·002 approved·업로드 0.
 
 ## 다음 할 일
-1. 자식 세션 2개 회수(캡션 v5·반려 2건): get_session → fetch c1-1-design → PROJECTS 표 갱신 → archive. **실작업은 반드시 자식 세션(Opus/Sonnet 명시), COO 세션 서브에이전트 금지(대표 지적 10/2).**
+1. 자식 세션 3개 회수(캡션 v5·반려 2건·트렌드 #1 → AGENDA.md를 cardnews/main에 머지): get_session → fetch c1-1-design → PROJECTS 표 갱신 → archive. **실작업은 반드시 자식 세션(Opus/Sonnet 명시), COO 세션 서브에이전트 금지(대표 지적 10/2).**
 2. 대표가 집 PC에서 AI 플레이트 생성·푸시(`plates/v4/*.png`, README-homepc.md v4.1) → 4판 렌더 **Opus 자식 세션**(cards.v5.json + caption.v5 + V1 35:15:25:25 + V3 소자 + P5 Nanum Brush + Y1 사진 추정 사용) → contact.png SendUserFile → 대표 확인.
 3. 윤동주 사진 PD 판정(PHOTOS-yun.md) + §9-2 v1.4(스톡 L1 ⓑ·L2) legal 세션 → 디자인 시스템 반영.
 4. legal(세트 11) → 검수 PR(cardnews/c1-1-design → cardnews/main) → approved → 새 Sonnet 세션 `r2_upload.py --execute` → `ig_publish.py --pr N --execute`(PR #5 승인 뒤).
