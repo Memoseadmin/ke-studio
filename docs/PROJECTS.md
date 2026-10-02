@@ -11,7 +11,7 @@
 ## 상태 한눈에
 | 항목 | A 유튜브 | B 카드뉴스 |
 |---|---|---|
-| 승인된 PR | #1 EP001, #2 EP002 (approved) · **#3 ECC 설치 승인 대기** | **#4 C1-1 14일 세트 승인 대기** https://github.com/Memoseadmin/ke-studio/pull/4 |
+| 승인된 PR | #1 EP001, #2 EP002 (approved) · **#3 ECC 설치 승인 대기** | **#4 C1-1 14일 세트 approved**(대표 채팅 승인 → COO 라벨, 2026-10-02) https://github.com/Memoseadmin/ke-studio/pull/4 · 대표 결정: 하루 캐러셀 1 + 릴스 1(C1-1b 별도 PR) |
 | 업로드/게시 | 0건 (키 UNSET, FIX 3) | 0건 (계정 미개설) |
 | 막힌 것 | TTS·이미지·YouTube 키, Amazon 트래킹 ID, 공급자 선택 | ~~인스타 비즈니스 계정·Meta 토큰~~(대표 완료 보고, 검증 중) · 링크 허브 URL · **이미지 호스팅 = Cloudflare R2(대표 결정 2026-10-02)** → R2 버킷·API 토큰·공개 URL 입력 대기 |
 | 이번 세션 할 일 | 키 들어오면 샘플 생성→렌더→업로드 게이트, EP003 대본 | C1-2: PR #4 승인 → final 렌더 → R2·IG 검증 → 예약 게시 큐 |
