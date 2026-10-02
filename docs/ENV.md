@@ -17,11 +17,12 @@ bash scripts/setup.sh
 | `IMAGE_API_KEY` | 이미지 생성(공급자 선정 후 이름 확정) | designer, producer | Phase 1~2 |
 | `MUAPI_API_KEY` | 후보 · muapi.ai(이미지·영상 500+ 모델 중계, TTS 없음). CLI `~/.venvs/muapi/bin/muapi`가 읽음. muapi.ai → API Keys에서 발급 | designer, producer | 공급자 확정 시 |
 | `IG_ACCESS_TOKEN` | 카드뉴스 프로젝트 · Meta Graph API 예약 게시(인스타 비즈니스 계정) | cardnews publisher | 카드뉴스 C1 승인 후 |
-| `IG_USER_ID` | 카드뉴스 프로젝트 · 인스타그램 비즈니스 계정 ID(비밀 아님) | cardnews publisher | 동일 |
+| `IG_USER_ID` | 카드뉴스 프로젝트 · 인스타그램 비즈니스 계정 ID(비밀 아님). **페이스북 페이지 ID 아님**(경로 A = `/me/accounts`의 instagram_business_account id, 경로 B = `graph.instagram.com/me?fields=user_id`) | cardnews publisher | 동일 |
+| `IG_API_BASE` | 카드뉴스 · 선택. 게시 API 경로: `https://graph.facebook.com/v21.0`(경로 A, EAA 토큰) / `https://graph.instagram.com/v21.0`(경로 B, IGAA 토큰). 비우면 토큰 접두사로 자동 선택(scripts/README-ig.md) | cardnews publisher | 경로 B 전환 시 |
 | `IMAGE_HOST_BASE_URL` | 카드뉴스 이미지 공개 호스팅 주소 = R2 버킷 공개 URL(r2.dev 또는 커스텀 도메인, 비밀 아님). 인스타가 `<주소>/card-01.png`를 직접 읽을 수 있어야 함 | cardnews publisher | 카드뉴스 C1 승인 후 · **현재 값(비밀 아님): `https://pub-e567e3bf81444a8d9dfe29577c7b3e56.r2.dev`** (버킷 chaekgado-cards, APAC, 2026-10-02 대표 전달) |
 | `R2_ACCOUNT_ID` | 카드뉴스 · Cloudflare 계정 ID(R2 엔드포인트용, 비밀 아님) | cardnews publisher | 카드뉴스 C1 승인 후 |
-| `R2_ACCESS_KEY_ID` | 카드뉴스 · R2 API 토큰 액세스 키 ID(**비밀**) | cardnews publisher | 동일 |
-| `R2_SECRET_ACCESS_KEY` | 카드뉴스 · R2 API 토큰 시크릿(**비밀**) | cardnews publisher | 동일 |
+| `R2_ACCESS_KEY_ID` | 카드뉴스 · R2 API 토큰 액세스 키 ID(**비밀**, **32자**. 20자면 잘못 붙여넣은 값) | cardnews publisher | 동일 |
+| `R2_SECRET_ACCESS_KEY` | 카드뉴스 · R2 API 토큰 시크릿(**비밀**, **64자**) | cardnews publisher | 동일 |
 | `R2_BUCKET` | 카드뉴스 · R2 버킷 이름(비밀 아님) | cardnews publisher | 동일 |
 | `GITHUB_TOKEN` | 루틴에서 approved 라벨 확인·PR 생성(세션 기본 GitHub 연동으로 충분하면 불필요) | publisher | Phase 2~3 |
 | `SCRAPECREATORS_API_KEY` | (보류) TikTok·Instagram·YouTube 트렌드 수집 스킬 | researcher | 대표 OK 후 |

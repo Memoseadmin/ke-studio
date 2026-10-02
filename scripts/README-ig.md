@@ -4,7 +4,11 @@
 - 흐름: 자식 컨테이너 N개(`is_carousel_item`) → 캐러셀 컨테이너(caption) → `media_publish`.
 - 이미지는 `IMAGE_HOST_BASE_URL/<파일명>` 공개 URL이어야 한다(인스타가 직접 받아감). 비공개 저장소 raw URL 불가.
 - **예약**: Content Publishing API는 예약을 직접 지원하지 않는다. `--schedule`은 `cardnews/queue.json`에 `{post_dir, pr, at, status}`를 기록만 하고, Claude Code 루틴(/schedule)이 시각 도래 시 `--execute`를 실행하는 설계.
-- `ig_token_refresh.py` — 장기 토큰 갱신(기본은 안내만, `--run`시 새 토큰을 화면에 찍지 않고 0600 파일로 저장).
+- `ig_token_refresh.py` — 장기 토큰 갱신(기본은 안내만, `--run`시 새 토큰을 화면에 찍지 않고 0600 파일로 저장). 경로 B는 `ig_refresh_token`(앱 시크릿 불필요).
+- **API 경로(2026-10-02 추가)**: `IG_API_BASE`로 고른다. 비어 있으면 토큰 접두사로 자동 선택.
+  - 경로 A 페이스북 로그인: `https://graph.facebook.com/v21.0`, 토큰 `EAA…`, `IG_USER_ID` = `/me/accounts?fields=instagram_business_account`의 IG 계정 ID(페이지 ID 아님).
+  - 경로 B Instagram 로그인: `https://graph.instagram.com/v21.0`, 토큰 `IGAA…`(앱 대시보드 → Instagram 제품 → "Instagram 로그인으로 API 설정" → 계정 추가 → 토큰 생성), `IG_USER_ID` = `me?fields=user_id`. 페이스북 페이지 연결이 필요 없다.
+  - 확인: `python3 scripts/ig_publish.py --check` → 경로·username·IG_USER_ID 일치 여부(값 출력 없음).
 - 키 값은 출력·로그·커밋 금지.
 
 ## 이미지 호스팅: Cloudflare R2 (대표용 설정 5줄)

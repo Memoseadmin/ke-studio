@@ -5,13 +5,30 @@
   python3 scripts/ig_publish.py cardnews/posts/2026-10-09 --pr 12            # dry-run
   python3 scripts/ig_publish.py <post_dir> --pr 12 --schedule "2026-10-09T09:00+09:00"
   python3 scripts/ig_publish.py <post_dir> --pr 12 --execute                 # 실제 호출
+  python3 scripts/ig_publish.py --check                                      # 읽기 전용 연결 확인
 
-환경변수(값은 출력하지 않는다): IG_ACCESS_TOKEN, IG_USER_ID, IMAGE_HOST_BASE_URL, GITHUB_TOKEN
+환경변수(값은 출력하지 않는다): IG_ACCESS_TOKEN, IG_USER_ID, IMAGE_HOST_BASE_URL, GITHUB_TOKEN,
+  IG_API_BASE(선택) — 경로 A(페이스북 로그인, EAA 토큰) https://graph.facebook.com/v21.0
+                     경로 B(Instagram 로그인, IGAA 토큰) https://graph.instagram.com/v21.0
+                     비어 있으면 토큰 접두사로 고른다(IGAA → B, 그 외 → A). 게시 엔드포인트 모양은 같다.
 """
 import argparse, glob, json, os, re, sys, time
 from pathlib import Path
 
-GRAPH = "https://graph.facebook.com/v21.0"
+API_A = "https://graph.facebook.com/v21.0"
+API_B = "https://graph.instagram.com/v21.0"
+
+
+def api_base():
+    """IG_API_BASE 우선, 없으면 토큰 접두사(IGAA = Instagram 로그인)로 판단."""
+    b = os.environ.get("IG_API_BASE", "").strip().rstrip("/")
+    if b:
+        return b
+    return API_B if os.environ.get("IG_ACCESS_TOKEN", "").startswith("IGAA") else API_A
+
+
+GRAPH = api_base()
+ROUTE = "B(graph.instagram.com)" if "graph.instagram.com" in GRAPH else "A(graph.facebook.com)"
 REPO = os.environ.get("GITHUB_REPOSITORY", "memoseadmin/ke-studio")
 AI_MARK = re.compile(r"AI")  # 캡션 AI 표시 문구("AI로 생성" 등)
 QUEUE = Path("cardnews/queue.json")
@@ -117,20 +134,50 @@ def execute(d, cards, cap):
     return post("media_publish", {"creation_id": cid})
 
 
+def check():
+    """읽기 전용: 경로·username·IG_USER_ID 일치 여부만 출력(토큰·ID 값은 출력하지 않는다)."""
+    import requests
+    tok, uid = os.environ.get("IG_ACCESS_TOKEN", ""), os.environ.get("IG_USER_ID", "")
+    print(f"경로 {ROUTE} · IG_ACCESS_TOKEN {'SET' if tok else 'UNSET'} · IG_USER_ID {'SET' if uid else 'UNSET'}")
+    if not tok:
+        sys.exit("IG_ACCESS_TOKEN UNSET — 중단")
+    if "graph.instagram.com" in GRAPH:
+        url, fields = f"{GRAPH}/me", "user_id,username,account_type"
+    else:
+        url, fields = f"{GRAPH}/{uid}", "id,username"
+    try:
+        r = requests.get(url, params={"fields": fields, "access_token": tok}, timeout=30)
+        j = r.json()
+    except Exception as e:
+        sys.exit(f"요청 실패: {type(e).__name__}")
+    if r.status_code != 200:
+        e = j.get("error", {})
+        sys.exit(f"HTTP {r.status_code} code={e.get('code')} {str(e.get('message', '')).replace(tok, '***')[:150]}")
+    got = str(j.get("user_id") or j.get("id") or "")
+    print(f"username={j.get('username')} · IG_USER_ID 일치={got == uid and bool(j.get('username'))}")
+    if not j.get("username"):
+        print("username 없음 → IG_USER_ID가 인스타 계정이 아니다(페이스북 페이지 ID 등)")
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("post_dir")
+    ap.add_argument("post_dir", nargs="?")
+    ap.add_argument("--check", action="store_true", help="읽기 전용 연결 확인(경로·username·ID 일치)")
     ap.add_argument("--schedule", help='"YYYY-MM-DDTHH:MM+09:00" → queue.json 기록(API 예약 미지원)')
     ap.add_argument("--dry-run", action="store_true", help="기본값")
     ap.add_argument("--execute", action="store_true")
     ap.add_argument("--pr", type=int)
     a = ap.parse_args()
+    if a.check:
+        return check()
+    if not a.post_dir:
+        ap.error("post_dir 필요(--check 제외)")
     d = Path(a.post_dir)
     cap = read_caption(d)
     cards, reqs = build_plan(d, cap or "")
     gates = [("approved 라벨", gate_label(a.pr) if a.execute or a.pr else (False, "--pr 없음")),
              ("목업 아님", gate_mockup(d)), ("AI 표시 문구", gate_ai(cap)), ("해시태그 ≤5", gate_tags(cap))]
-    print(f"[{'EXECUTE' if a.execute else 'DRY-RUN'}] {d}  cards={len(cards)}")
+    print(f"[{'EXECUTE' if a.execute else 'DRY-RUN'}] {d}  cards={len(cards)}  경로 {ROUTE}")
     print("게이트:")
     for n, (ok, m) in gates:
         print(f"  {'PASS' if ok else 'FAIL'}  {n}  ({m})")
