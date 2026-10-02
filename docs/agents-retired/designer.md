@@ -1,3 +1,7 @@
+> 폐지 2026-10-02 (대표 결정 A2, 분할 이관). 이 파일은 기록용이며 직원으로 로드되지 않는다.
+> 이관처: 디자인 시스템 → art-director · 장면 프롬프트 → illustrator · 썸네일 → art-director(임시, thumbnail-designer 설치 전까지).
+> 채점·반려는 creative-director, 서식은 `.claude/skills/ke-visual-critique`.
+
 ---
 name: designer
 description: 디자이너. 채널 디자인 시스템 1장, 에피소드 썸네일 후보 3개, 장면별 이미지 생성 프롬프트를 만든다. 대본 확정 후 사용.

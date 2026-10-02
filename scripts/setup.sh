@@ -18,3 +18,8 @@ if command -v python3.12 >/dev/null 2>&1; then
   [ -x "$HOME/.venvs/muapi/bin/muapi" ] || { python3.12 -m venv "$HOME/.venvs/muapi" && "$HOME/.venvs/muapi/bin/pip" install -q muapi-cli; } || echo "WARN: muapi-cli 설치 실패"
   "$HOME/.venvs/muapi/bin/muapi" --version 2>/dev/null || true
 fi
+# --- Remotion(코드 모션그래픽, 대표 결정 A8 2026-10-02). 라이선스 확인 완료: Free License = 개인·직원 ≤3 영리법인(상업 이용 가능), 4명↑이면 Company License($25/석·월) 필요 → docs/SKILLS.md ---
+# 5.0부터 외주(contractor)도 인원에 포함. 프로젝트는 render/(커밋 제외)에 매 세션 설치, 소스만 커밋.
+if command -v npm >/dev/null 2>&1; then
+  [ -d render/remotion-ke/node_modules/remotion ] || { mkdir -p render/remotion-ke && npm install --prefix render/remotion-ke --no-audit --no-fund -s remotion @remotion/cli; } || echo "WARN: Remotion 설치 실패"
+fi
