@@ -76,6 +76,7 @@
 | [A] 채널명 2차 탐색(쉬운 영어 일반어 조합) `session_017JRNZbo75BmGY53YqdFxps` | Opus 5.5 | research/channel-name | docs/CHANNEL_NAME.md §6 | 진행 중 |
 | [B] 디자인 시스템 v1.2(§9 원화 비중 유동화·§8-3 톤 강화, 대표 결정 10/2) `session_01LrJcNB2rBDHVHbfZDN3qo6` | Sonnet 5.5 | claude/admiring-clarke-beyyoi | design-system.md v1.2 | 진행 중 |
 | [공통] ruflo(구 claude-flow) 스킬 조사·복사 설치 → 검수 PR(대표 지시 10/2 "자식 세션 에이전트 분리용") `session_01UQcZmvgEZNEB4oSHKqYKnu` | Opus 5.5 | skills/ruflo | .claude/skills/ruflo-*, docs/SKILLS.md, 검수 PR | 진행 중 |
+| [A] EP002·EP001 publish.log 기록(키 UNSET, 제작 건너뜀) `session_01NwVoCoDaV5L12GALoa3ftZ` | Sonnet 5.5 | ep/EP002·ep/EP001 | publish.log | 진행 중 |
 | [B] 세트 11 v3 3안 **2판** 렌더(글↔이미지 일치, 대조표 MATCH-v3.md) `session_011mFvAibQZu1MTWegZJXMGb` | Opus 5.5 | cardnews/c1-1-design | posts/2026-10-19/card-01~08·contact.png·RENDER.json·MATCH-v3.md | 진행 중 |
 | [B] **세계 수준 카드뉴스 디자인 소싱 리서치**(벤치마크·렌더 파이프라인·OFL 한글 서체(옛한글)·CC0 질감·퍼블릭 도메인 민화·생성 모델 프롬프트·스킬 후보+자체 스킬 초안 3·v3 방향 3안) `session_01QRFKHY6jLwZbZvM1zjf2nX` | Opus 5.5 | research/cardnews-design → cardnews/main 머지 예정 | cardnews/docs/DESIGN_SOURCES.md | **완료(아카이브)** 25f4d10 → cardnews/main 머지. 진단: 중국어 대체 서체+가짜 볼드, 무관한 클립아트 반복, 빈 띠, 위계 없음, 옛한글 깨짐, 질감 소멸. **추천: 렌더러 HTML/CSS→Playwright Chromium(VM 실측 1.1초/장, 옛한글·세로쓰기 OK, Pillow 폐기)** · 서체 세트 B(함렛 Black/마루부리/Black Han Sans, 옛한글은 Noto Serif KR) · 퍼블릭 도메인 원화 31점(Met·Cleveland CC0, e뮤지엄 1유형) · **v3 1안 "원화 아카이브"(AI 0·유료 API 0·월 0원) 추천**, 2안 LoRA 플레이트, 3안 콜라주 · 스킬 후보 4+자체 초안 3(부록 A) · 대표 결정 7건(§8) |
 
