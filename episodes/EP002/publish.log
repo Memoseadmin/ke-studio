@@ -15,3 +15,6 @@
 2026-10-01T09:08:09Z | GATE-3 real 렌더 | 미충족 | - | TTS_API_KEY·IMAGE_API_KEY UNSET
 2026-10-01T09:08:09Z | YouTube | SKIPPED | - | 게이트 1/3 충족 → 업로드 0건 (STOP)
 # 결론: 승인됨. 업로드까지 남은 것 = 키 입력(TTS·이미지·YouTube 3종) → real 렌더 → legal FIX 5 재판정 → Amazon 트래킹 ID·실제 링크(FIX 7)
+2026-10-02T03:02:29Z | PR #2 코멘트·리뷰 | 없음 | - | 반려 0 → 재작업 없음([A1] 변경 없음)
+2026-10-02T03:02:29Z | 키 재확인 | UNSET | - | TTS_API_KEY·IMAGE_API_KEY·GEMINI_API_KEY·FAL_KEY·YOUTUBE_CLIENT_ID·YOUTUBE_CLIENT_SECRET·YOUTUBE_REFRESH_TOKEN 전부 UNSET → S01 샘플·real 렌더·legal FIX 5 재판정 SKIPPED([A2])
+2026-10-02T03:02:29Z | YouTube | SKIPPED | - | 게이트 1/3(approved만 충족) → 업로드 0건 (STOP)
