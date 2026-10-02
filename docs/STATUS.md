@@ -10,7 +10,7 @@
 - 카피 직원 6개 완료(cd03c80: .claude/agents/copy-*.md, cardnews-copy v1.1 §8 사실 밀도·§9 분담표).
 - 자식 세션 6개 **전부 완료·아카이브**(07:00Z). 리서치 3건 cardnews/main 머지(ef699d8). 대표 결정 23건 → PROJECTS 큐 18~21(G1~4·E1~4·D1~6·V1~3·B1~4·P1~5·훅 1안).
 - 세트 11 **카피 v5**(c1-1-design 7718d2d): 띠 본문 사실(P2)·1장 "시집 한 권"(P3)·8장 "윤동주처럼 통째로 옮길 시집은?"(E1 ⑤)·훅 1안 확정. copy-editor 조건부 통과(REVIEW-v5.md: 반려 2 → 리서치 세션). 플레이트 프롬프트 v4.1 한지 콜라주(V2) 같은 커밋. ⚠ 이 작업은 COO 세션 서브에이전트로 했음(규칙 위반, 대표 지적) → 이후 전부 자식 세션 분리.
-- 캡션 v5 완료(77a770f: 1,060자, #필사 #텍스트힙 #책가도노트, AI 문구 0). 반려 2건 해소(3fbb7dc) → **카피 v5 통과**. **트렌드 #1 완료** → cardnews/main 5598f4d: `cardnews/research/trends/2026-10-02.md` 후보 T1~T10 + `AGENDA.md`(24건 누적). 상위: T1 수능×어변성룡도(11/16)·T2 정조의 책가도(10/26)·T3 시의 날 필사 2편(11/1). 진행 중 자식 세션 1: **T1~T10 기획안** `session_014jVBxdKaxYkD7cqc151gCe`(Opus, 출력 cardnews/plan-trends-1, 목업 0). 대표 루트 고정: 리서치 → 기획안 → 검토 → 제작(CLAUDE.md 반영). 체크인 trig(07:49Z).
+- 캡션 v5 완료(77a770f: 1,060자, #필사 #텍스트힙 #책가도노트, AI 문구 0). 반려 2건 해소(3fbb7dc) → **카피 v5 통과**. **트렌드 #1 완료** → cardnews/main 5598f4d: `cardnews/research/trends/2026-10-02.md` 후보 T1~T10 + `AGENDA.md`(24건 누적). 상위: T1 수능×어변성룡도(11/16)·T2 정조의 책가도(10/26)·T3 시의 날 필사 2편(11/1). PR #5 본문에 v4 A 사진 삽입(07:44Z) → 대표 반려(낙관 별로·바탕 희미) → **프로필 v5 세션** `session_01Qd2yYR56MUy2fC1933uZT9`(Opus, c1-1b). 진행 중 자식 세션 2: **T1~T10 기획안** `session_014jVBxdKaxYkD7cqc151gCe`(Opus, 출력 cardnews/plan-trends-1, 목업 0). 대표 루트 고정: 리서치 → 기획안 → 검토 → 제작(CLAUDE.md 반영). 체크인 trig(07:49Z·07:55Z).
 - 집 PC 플레이트: `plates/v4/*.png` 원격 0장 → 대표 미푸시(프롬프트 팩은 v4.1 한지 콜라주로 갱신됨, 집 PC에서 다시 받아 생성). 4판 렌더 보류.
 - A 유튜브: 보류(대표 10/2 "카드뉴스 집중"). 채널명 1·2차 후보 docs/CHANNEL_NAME.md, EP001·002 approved·업로드 0.
 
