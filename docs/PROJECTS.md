@@ -13,7 +13,7 @@
 |---|---|---|
 | 승인된 PR | #1 EP001, #2 EP002 (approved) · **#3 ECC 설치 승인 대기** | 없음 |
 | 업로드/게시 | 0건 (키 UNSET, FIX 3) | 0건 (계정 미개설) |
-| 막힌 것 | TTS·이미지·YouTube 키, Amazon 트래킹 ID, 공급자 선택 | 인스타 비즈니스 계정, 링크 허브 URL, (선택) Meta API 토큰 |
+| 막힌 것 | TTS·이미지·YouTube 키, Amazon 트래킹 ID, 공급자 선택 | ~~인스타 비즈니스 계정·Meta 토큰~~(대표 완료 보고, 검증 중) · 링크 허브 URL · 이미지 공개 호스팅 방식 |
 | 이번 세션 할 일 | 키 들어오면 샘플 생성→렌더→업로드 게이트, EP003 기획 | C1-1: 트렌드 수집 → 14일 세트 → risk → 검수 PR |
 
 ## 대표 결정 큐 (하나로 합침)
@@ -44,6 +44,8 @@
 | [B] 한국 협찬 시장·단가·벤치마크 리서치 `session_015bpAd3rWkKHmBQvWjZJdXy` | Opus 5.5 | research/cardnews-sponsorship → cardnews/main 머지 | cardnews/docs/SPONSORSHIP_MARKET.md(222행) | **완료(아카이브)**. 단가(추정): 1만 팔로워 피드 1건 10~30만, 5만 50~170만. 첫 현금 경로 = 지자체·관광재단 서포터즈(월 10~20만, 팔로워 조건 거의 없음)+체험단. 유료 협찬은 5천~1만 이후. 계정 이름 3안: ①책가도 노트(추천) ②알고보니 한국 ③민화 위클리. 첫 9개 그리드 제안. 규제: 표시는 첫 부분·더보기 금지 + 유료 파트너십 라벨. 참고: 해시태그 5개 상한, 캐러셀 8~10장 권장, 릴스 병행 |
 - 리서치는 대표 지시로 별도 세션·Opus. 제작(writer/designer/marketer/legal)은 COO 세션의 서브에이전트.
 - ECC(Everything Claude Code): 클라우드 세션은 플러그인을 로드하지 않으므로(공식 문서) 복사 설치만 가능. **대표 결정(2026-10-02): 쓸만한 스킬만 도입, 별도 세션·브랜치(`ecc/install`)에서 실행 → 검수 PR → approved 후 작업 브랜치에 병합.** docs/ECC_REVIEW.md(검토 중) 기준으로 선별.
+
+| [B] Instagram API 읽기 전용 연결 테스트 + 게시 스크립트(dry-run) `session_0123PjHg4syrrzozsBss7aRr` | Fable | tooling/ig-publisher | cardnews/docs/IG_CONNECTION.md, scripts/ig_publish.py, scripts/ig_token_refresh.py | 2026-10-02 01:42 생성. 대표가 IG 프로페셔널 계정·페이지 연결·토큰 입력 완료 보고 → 이 세션은 변수 미인식(세션 시작 후 입력)이라 새 세션에서 검증 |
 
 ## 공용 자원
 - 직원 9명 `.claude/agents/`, 스킬 96개, 디자인 시스템 `episodes/EP001/design/design-system.md`, 비주얼 방향 "민화 플랫 × 한지 질감"(docs/TOOLING_TTS_IMAGE.md §D).
