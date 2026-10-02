@@ -1,51 +1,37 @@
-# HANDOFF — 2026-10-01 (Phase 4 EP002 검수 PR 생성 완료)
+# HANDOFF — 2026-10-02 (Phase 4 후반: 카드뉴스 C1-1 PR #4 승인, 도구·전략 리서치 완료, ECC 설치 머지)
 
 ## 목표
-KE Studio: Korea Explained 채널의 기획→대본→디자인→마케팅→업로드를 에이전트로 자동화. 수익 = 제휴·협찬·커머스.
-첫 게이트: 링크 클릭률 1%, 첫 제휴 매출, 월 비용 20만원 이하(docs/PLAN.md).
+KE Studio 통합 운영(docs/PROJECTS.md가 현황판). A 유튜브 Korea Explained(EN, 구독형 혼합) + B 카드뉴스 "책가도 노트"(KR 인스타, 한국 브랜드 협찬). 게이트는 PLAN.md·cardnews/docs/PLAN.md.
 
-## 현재 상태
-- 작업 브랜치 `claude/admiring-clarke-beyyoi`(새 세션은 이걸 체크아웃). EP001 산출물 `ep/EP001`, EP002 산출물 `ep/EP002`.
-- **PR #1 (EP001)** https://github.com/Memoseadmin/ke-studio/pull/1 : **approved 라벨 부착됨**(대표가 Phase 4 끝에 채팅으로 승인 → COO가 라벨 부착). risk v4 BLOCK 0 / FIX 3(1b·5·7).
-- **PR #2 (EP002)** https://github.com/Memoseadmin/ke-studio/pull/2 : Phase 4에 생성, **approved 라벨 부착됨**(동일). risk v1.1 BLOCK 0 / FIX 3(1b·5·7) / PASS 10.
-- 업로드 0건(두 편 모두). 게이트 1(approved)만 충족, 게이트 2(FIX 0)·3(real 렌더) 미충족. GITHUB_TOKEN만 SET, TTS·이미지·YouTube 키 UNSET(두 publish.log에 기록). 승인됐으니 AI 라벨의 "human-reviewed" 문구 재삽입은 다음 세션에서 판단.
-- 대표 답변(Phase 4 채팅): **EN만 진행, KR판 보류**. 제휴 구조 설명함(Amazon Associates 가입은 대표 몫, 링크는 아직 자리표시자).
-- 영상 파일은 어디에도 없다. EP001 재렌더는 `episodes/EP001/render-input/*.json` + ffmpeg-assemble·shorts-cut.
+## 현재 상태 (세부는 docs/PROJECTS.md)
+- 브랜치: 작업 `claude/admiring-clarke-beyyoi`(docs·스킬·scripts) / A 산출물 `ep/EP001`·`ep/EP002`·`ep/EP003`(리서치만) / B `cardnews/main` + 검수 `cardnews/c1-1`(PR #4 approved, 미머지) / `tooling/ig-publisher`(작업 브랜치에 머지됨, 단 마지막 검증 세션 커밋 f2330b5는 미푸시).
+- PR: #1 EP001·#2 EP002 approved(업로드 0, 키 UNSET) · #3 ECC 10개 스킬 approved → 머지 완료(9c97b71) · #4 카드뉴스 14세트 approved → **final 렌더·R2 업로드 전**.
+- 환경변수(새 세션에서 SET 확인): IG_ACCESS_TOKEN·IG_USER_ID·R2 5개 전부 SET이지만 **값 2개가 틀림**: `R2_ACCESS_KEY_ID` 20자(32자 필요), `IG_USER_ID`가 페이스북 페이지 ID. 또 토큰의 `/me/accounts`가 비어 있어(페이지 미연결, 계정 제한 추정) 페이스북 경유 게시 불가 → **Instagram 직접 로그인 API(경로 B)로 전환 권장**(앱 대시보드 Instagram 제품 → "Instagram 로그인으로 API 설정", 토큰은 IGAA…, ID는 `me?fields=user_id`).
+- 대표 결정(이번 세션): 구독형 혼합 전략, ECC 선별 도입, 리서치는 별도 Opus 세션, 하위 세션 모델 규칙(Opus/Sonnet), 카드뉴스 KR·한국 협찬 중심, 계정 "책가도 노트", Meta API 자동 예약(썸네일·문구는 PR에서 선택), 제휴 프로그램 전부 등록, 이미지 호스팅 Cloudflare R2, 하루 캐러셀 1 + 릴스 1.
+- 릴스 플랜(C1-1b): marketer 서브에이전트가 `cardnews/posts/C1-1b-reels-plan.md`·`reel.json`×14를 작성 중이었음 → 세션 종료 시점에 미완이면 `cardnews/c1-1` 워킹트리에 없을 수 있다. 새 세션에서 `git status`로 확인, 없으면 같은 지시로 재실행(PROJECTS.md 하위 세션 표 아래 "릴스 지시 요지" 참고).
 
-## Phase 4 후반 추가 작업 (대표 요청, 같은 세션)
-- 대표 답: EN만 진행·KR 보류. 제휴 구조 설명(Amazon Associates 가입은 대표 몫).
-- `docs/TOOLING_TTS_IMAGE.md`: TTS·이미지 공급자 3+3안(출처 61건). COO 추천 = ElevenLabs Creator + Gemini Nano Banana 2(≈48,000원/월) / 가성비 = Google Chirp3 + Recraft V4(≈8,000원/월). 비주얼 방향 "민화 플랫 × 한지 질감". **대표 선택 대기.**
-- `docs/OPEN_GENERATIVE_AI_SETUP.md`: 대표가 준 설치 템플릿을 클라우드 기준으로 수행. muapi-cli 0.2.7 설치(venv, setup.sh 반영), `muapi image models` 103개 출력 ✅. muapi에 TTS 없음. 계정·키 없어 생성 검증 ❌, 웹 앱 빌드는 분류기 차단. ENV.md에 `MUAPI_API_KEY` 후보 행.
-- **카드뉴스 프로젝트 분리(대표 결정)**: 협찬·광고 수익 목표, 별도 폴더·브랜치 `cardnews/main`이되 **관리는 이 COO 세션 하나가 통합**(docs/PROJECTS.md 현황판, 진입점은 루트 NEXT_PROMPT 하나), 문서 `cardnews/docs/`(PLAN·HANDOFF·NEXT_PROMPT). 본 채널 세션은 `cardnews/` 수정 금지. HANDOFF의 "인스타 캐러셀 2주 테스트" 항목은 그 프로젝트로 이관.
-- MiniMax H3 `h3-prompt-writing` 스킬: 대표 요청으로 검토 → **설치 불가**(라이선스가 한국·미국·EU 제외, 출력물 표시도 금지). docs/SKILL_CANDIDATES.md에 기록. H3를 쓰려면 공식 API 약관 지역 조항을 legal-reviewer가 먼저 확인.
-- `scripts/youtube_auth.py`: 대표 PC에서 1회 실행해 YOUTUBE_* 3개를 얻는 스크립트(미테스트, 실행은 대표 PC).
+## 완료 (이번 세션)
+- 리서치 6건(EP003 김장 1위, 카드뉴스 소재 14, 협찬 시장·단가·계정 이름, 오픈소스 도구 OSS-③ 하이브리드, 성장 90일 플레이북·YPP 2027-02 문턱 2배, 제휴 프로그램 28개) 전부 문서화·머지.
+- 카드뉴스 C1-1: 템플릿·렌더러(`--final`, RENDER.json), 14세트 목업 103장, 캡션, 미디어킷, legal v2 BLOCK 0, PR #4 approved.
+- 게시 도구: scripts/ig_publish.py(게이트 4개, dry-run 기본)·r2_upload.py·ig_token_refresh.py·README-ig.md.
+- 통합 현황판 docs/PROJECTS.md + 세션 위생 규칙 + 하위 세션 모델 규칙.
 
-- **전략 결정(대표, 2026-10-01): 구독형 혼합.** 서사형 60~70% + 구매 의도형 30~40%, 게이트 = 90일 내 구독 1,000명 + 첫 제휴 매출 1건 + 월 비용 20만원. 수익 3겹(제휴→YPP 광고→멤버십). PLAN.md·CLAUDE.md·analyst.md 반영 완료. EP003부터 적용: 시리즈 기획(예: "한국이 금지했던 것들")과 건당 수수료 높은 제휴(여행·eSIM·숙소).
+## 실패한 시도와 이유
+- ECC 플러그인: 클라우드 세션은 플러그인을 로드하지 않음(공식 문서) → 복사 설치 10개만.
+- MiniMax H3 스킬: 라이선스가 한국·미국·EU 제외(출력물 표시까지) → 보류(docs/SKILL_CANDIDATES.md).
+- 하위 세션이 `git push`를 권한 분류기에 막힘(검증 세션) → 보고는 list_events로 회수, 코드 변경(ENV.md 메모·IG_CONNECTION.md)은 미반영. COO가 대신 푸시하지 않음(권한 우회 금지).
+- 페이스북 경유 IG 연결: 페이지 옵트인·권한 전부 정상인데 `/me/accounts` 빈 배열 → 계정 일시 제한 추정. 경로 B 전환이 빠름.
+- 렌더러 금지어 필터 오탐, 공개 카드에 URL·협찬 슬롯 노출 → 수정.
 
-## 완료 (Phase 4, 성공 기준 5/5)
-1. ep/EP002 writer: script.en.md S01~S13, 낭독문 1,580단어(wc -w 실측), 사실 18건 전부 F번호 출처, 금지 수치 0, 제휴 2개 S12에만, 고지·AI 라벨 낭독 포함. script.kr.md 1:1.
-2. designer: 썸네일 3안 목업(WHO WROTE THESE? / 4 LETTERS VANISHED / WHY OCTOBER 9?) + scene-prompts S01~S13. marketer: 제목 5안, EN 설명란(첫 줄 고지), 태그 15, 숏폼 5개(42~55초), 캡션, 캐러셀 7장, 제휴 표(Amazon 4.5%/4.0%).
-3. legal v1: BLOCK 0 / FIX 5 / PASS 8, 사실 주장 45건 중 출처 없음 0. COO가 FIX 8(AI 라벨 "사람이 검수" 문구 삭제)·FIX 6(S07 한 문장)·S11 과거형을 반영 → v1.1 FIX 3.
-4. PR #2 생성, 업로드 0건, publish.log 기록.
-5. EP001 publish.log에 Phase 4 게이트 STOP 추가(ep/EP001 ebffb9f).
+## 대표 결정 대기 (docs/PROJECTS.md "대표 결정 큐"와 동일)
+1. R2_ACCESS_KEY_ID 재입력(32자), IG 경로 B 전환 후 `IG_ACCESS_TOKEN`(IGAA…)·`IG_USER_ID` 교체
+2. [A] 제작 도구: OSS-③ 하이브리드 채택 / 음성 Gemini / LoRA 학습 — 전부 기본값 추천
+3. [A] 성장 D1~D3(숏폼 주 7, 커뮤니티 범위, 콜라보) 기본값 / PLAN.md YPP 개정 PR 승인
+4. [B] 호작도 모티프 예외, 8장 기본, 링크 허브 URL, 쿠팡파트너스·체험단 가입
+5. [A] 키: TTS·IMAGE(GEMINI_API_KEY·FAL_KEY)·YOUTUBE_* 3개, Amazon 트래킹 ID
+6. ECC 자작 hooks 2개·CLAUDE.md "위임 완결 계약" 반영 여부
 
-## 실패한 시도와 이유 / 주의
-- writer 서브에이전트는 Bash가 없어 단어 수를 수기 집계 → COO가 `wc -w`로 실측해 메타 표 교체(1,590→1,580).
-- 대본 S04 폐지 4자 유니코드 오기(ㆁ U+3181, ㅿ U+317F, ㆆ U+3186, ㆍ U+318D가 맞음) → COO 수정. WenQuanYi Zen Hei는 4자 글리프 지원, 최종 KR 폰트는 설치 후 확인.
-- AI 라벨에 "written and fact-checked by a human editor"는 대표 검수 기록 없이는 불성립(EP001과 같은 기준) → 두 편 모두 "generated with AI"로 축소. 검수 기록이 PR에 남으면 재삽입 검토.
-- F11(1938~42 식민기 탄압)은 2차 출처 미확보로 대본에서 제외. KR 재개 전 S09 1문장 추가 권고.
-- 병렬 작업은 `.worktrees/ep001`, `.worktrees/ep002`(git worktree, `.git/info/exclude`)로 분리. 새 세션은 새로 클론하므로 다시 만든다.
-- GitHub MCP: 라벨은 `list_pull_requests fields=[labels]`(빈 배열이면 키 자체가 빠짐) + `search_pull_requests label:approved`로 교차 확인.
-
-## 대표 결정 대기
-1. ~~PR #1·#2 승인~~ 완료. 이제 업로드를 막는 건 키와 Amazon 계정뿐
-2. **공급자 선택**(TOOLING_TTS_IMAGE.md 1안 또는 가성비안) → 키 입력: TTS_API_KEY·IMAGE_API_KEY(+ 선택 MUAPI_API_KEY), YOUTUBE_* 3개(scripts/youtube_auth.py). ElevenLabs면 elevenlabs-tts 설치. muapi 계정은 대표가 사이트에서 가입(OTP 메일)
-3. Amazon Associates 가입·트래킹 ID(가입 후 180일 내 3건 판매 조건 → 첫 업로드 직전 권장), 제휴 상품 확정(EP001 멀티팩·양은냄비, EP002 워크북·붓펜), 링크 허브
-4. EP002 썸네일 1안 "WHO WROTE THESE?" 유지 여부, F11 식민기 1문장 추가 여부
-5. (이월) ~~인스타 캐러셀 2주 테스트~~(카드뉴스 프로젝트로 이관), risk #9 publisher 게이트 확장, 지정 폰트 setup.sh 추가, PLAN.md 비진정성 정책 날짜 정정, PLAN.md 결정 1~4, 보류 스킬 nano-banana·ScrapeCreators
-
-## 다음 할 일 (Phase 5 — 승인·키 대기 처리 + EP003 기획)
-1. PR #1·#2는 approved. 새 코멘트만 확인 → 키 SET이면 바로 EP001·EP002 real 렌더 → legal FIX 5 재판정 → FIX 7(링크)까지 끝나면 publisher 비공개 업로드.
-2. 키 SET이면 EP001(승인 시 EP002도) producer real 렌더 → render-log → legal FIX 5 재판정 → 게이트 충족 시 publisher 비공개 업로드.
-3. EP003 기획(구독형 혼합 기준): 서사형 시리즈 1편 또는 구매 의도형 1편을 researcher가 제안(소재 10개, 시리즈 묶음 가능성·건당 수수료 높은 제휴 후보 표시) → research.md → ep/EP003 분기.
-4. (여유 시) analyst 주간 리포트 템플릿을 reports/에 1회 돌려 보기(데이터 0이라 형식 확인만).
+## 다음 할 일 (Phase 5 — docs/NEXT_PROMPT.md)
+1. 세션 위생(하위 세션 표 확인·아카이브) → PR 라벨 확인 → 환경변수 SET/UNSET.
+2. [B] 키가 고쳐졌으면 Sonnet 세션으로 R2 왕복·IG(경로 B) 검증 → `render_cards.py --all cardnews/posts --final` → legal PNG 재점검(v3) → cardnews/c1-1 → cardnews/main 머지 → R2 업로드 → 10/9부터 게시 큐·루틴. 릴스 플랜 확인/재실행 → producer 렌더(무음, 자막) → C1-1b PR. 프로필 패키지(사진·소개·허브 구성) designer·marketer.
+3. [A] 키 SET이면 EP002 S01 샘플(OSS-③: Remotion+Z-Image+Gemini TTS) → 대표 A/B → EP001·EP002 real 렌더 → FIX 5 재판정 → 업로드. EP003 writer(김장) 시작. PLAN.md YPP 개정 PR.

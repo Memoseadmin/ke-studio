@@ -1,6 +1,6 @@
 # KE Studio 통합 현황판 (COO 세션이 매 세션 시작·종료 때 갱신)
 
-갱신: 2026-10-02 · 운영 원칙: **세션 1개(COO)가 모든 프로젝트를 관리**한다. 프로젝트마다 폴더·브랜치만 분리하고, 작업은 `.worktrees/<project>`(git worktree)로 병렬 진행한다. 대표는 PR 승인·반려와 결정 항목만 본다.
+갱신: 2026-10-02 03:00 · 운영 원칙: **세션 1개(COO)가 모든 프로젝트를 관리**한다. 프로젝트마다 폴더·브랜치만 분리하고, 작업은 `.worktrees/<project>`(git worktree)로 병렬 진행한다. 대표는 PR 승인·반려와 결정 항목만 본다.
 
 ## 프로젝트
 | 프로젝트 | 목적·수익 | 폴더 | 브랜치 | 문서 | 현재 Phase | 게이트 |
@@ -11,9 +11,9 @@
 ## 상태 한눈에
 | 항목 | A 유튜브 | B 카드뉴스 |
 |---|---|---|
-| 승인된 PR | #1 EP001, #2 EP002 (approved) · **#3 ECC 설치 승인 대기** | **#4 C1-1 14일 세트 approved**(대표 채팅 승인 → COO 라벨, 2026-10-02) https://github.com/Memoseadmin/ke-studio/pull/4 · 대표 결정: 하루 캐러셀 1 + 릴스 1(C1-1b 별도 PR) |
+| 승인된 PR | #1 EP001, #2 EP002 (approved) · #3 ECC 설치 approved → **작업 브랜치에 머지(9c97b71)** | **#4 C1-1 14일 세트 approved**(대표 채팅 승인 → COO 라벨, 2026-10-02) https://github.com/Memoseadmin/ke-studio/pull/4 · 대표 결정: 하루 캐러셀 1 + 릴스 1(C1-1b 별도 PR) |
 | 업로드/게시 | 0건 (키 UNSET, FIX 3) | 0건 (계정 미개설) |
-| 막힌 것 | TTS·이미지·YouTube 키, Amazon 트래킹 ID, 공급자 선택 | ~~인스타 비즈니스 계정·Meta 토큰~~(대표 완료 보고, 검증 중) · 링크 허브 URL · **이미지 호스팅 = Cloudflare R2(대표 결정 2026-10-02)** → R2 버킷·API 토큰·공개 URL 입력 대기 |
+| 막힌 것 | TTS·이미지·YouTube 키, Amazon 트래킹 ID, 공급자 선택 | **R2_ACCESS_KEY_ID 재입력(32자)** · **IG_USER_ID 교체(IG 계정 ID) + 페이지↔IG 연결 또는 Instagram 직접 로그인 경로(B)로 전환** · 링크 허브 URL |
 | 이번 세션 할 일 | 키 들어오면 샘플 생성→렌더→업로드 게이트, EP003 대본 | C1-2: PR #4 승인 → final 렌더 → R2·IG 검증 → 예약 게시 큐 |
 
 ## 대표 결정 큐 (하나로 합침)
@@ -48,7 +48,7 @@
 
 | ~~`session_0123PjHg4syrrzozsBss7aRr`(Fable, 모델 규칙 위반으로 아카이브)~~ → [B] Instagram API 읽기 전용 연결 테스트 + 게시 스크립트(dry-run) `session_01A3aHmduYXmSGmBrsgyd3gd` | Sonnet 5.5 | tooling/ig-publisher → 작업 브랜치 머지 | scripts/ig_publish.py·r2_upload.py·ig_token_refresh.py·README-ig.md, cardnews/docs/IG_CONNECTION.md | **완료(아카이브)**. 연결 테스트는 `IG_ACCESS_TOKEN`·`IG_USER_ID` **UNSET이라 건너뜀**(대표가 환경 설정에 저장했는지 확인 필요). dry-run 정상(게이트: approved 라벨·목업 차단 동작). 업로드·게시 0건 |
 
-| [B] 환경변수 검증 — R2 왕복 테스트 + IG 읽기 전용(경로 A/B 판정) `session_01JSpa9BYvBC9XNTLrdgMyCy` | Sonnet 5.5 | tooling/ig-publisher | cardnews/docs/IG_CONNECTION.md 갱신, IG_API_BASE 지원 | 2026-10-02 02:43 생성(대표 "환경변수 다 넣었어") |
+| [B] 환경변수 검증 — R2 왕복 테스트 + IG 읽기 전용 `session_01JSpa9BYvBC9XNTLrdgMyCy` | Sonnet 5.5 | tooling/ig-publisher(**미푸시**: 그 세션의 git push가 권한 분류기에 막힘, 커밋 f2330b5 로컬만) | 보고는 list_events로 회수 | **완료(아카이브)**. 변수 8개 전부 SET. **R2 실패**: `R2_ACCESS_KEY_ID`가 20자(32자여야 함 → 잘못된 값 붙여넣음). **IG 실패**: `IG_USER_ID`=1336287509569193은 페이스북 페이지 ID(IG 계정 ID 아님), `/me/accounts` 빈 목록(토큰에 페이지 미연결, 계정 제한 추정). 토큰 자체는 유효·권한 5개 granted. 경로 B(graph.instagram.com)는 페이스북 토큰이라 불가 |
 
 ## 공용 자원
 - 직원 9명 `.claude/agents/`, 스킬 96개, 디자인 시스템 `episodes/EP001/design/design-system.md`, 비주얼 방향 "민화 플랫 × 한지 질감"(docs/TOOLING_TTS_IMAGE.md §D).
