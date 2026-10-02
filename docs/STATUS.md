@@ -10,7 +10,7 @@
 - 카피 직원 6개 완료(cd03c80: .claude/agents/copy-*.md, cardnews-copy v1.1 §8 사실 밀도·§9 분담표).
 - 자식 세션 6개 **전부 완료·아카이브**(07:00Z). 리서치 3건 cardnews/main 머지(ef699d8). 대표 결정 23건 → PROJECTS 큐 18~21(G1~4·E1~4·D1~6·V1~3·B1~4·P1~5·훅 1안).
 - 세트 11 **카피 v5**(c1-1-design 7718d2d): 띠 본문 사실(P2)·1장 "시집 한 권"(P3)·8장 "윤동주처럼 통째로 옮길 시집은?"(E1 ⑤)·훅 1안 확정. copy-editor 조건부 통과(REVIEW-v5.md: 반려 2 → 리서치 세션). 플레이트 프롬프트 v4.1 한지 콜라주(V2) 같은 커밋. ⚠ 이 작업은 COO 세션 서브에이전트로 했음(규칙 위반, 대표 지적) → 이후 전부 자식 세션 분리.
-- 프로필 사진: v4 A·v5 반려 → **v6 6안**(c1-1b 30f0fd8, 서체 3×크롭 2, 추천 v6-bx) PR #5 본문 ③ 삽입·컨택트시트 전송 → **대표 반려(전부)** → **v7 세션**: 틀 자체 교체, 전혀 다른 방향 3안(컨셉 문서 + 코드 렌더), Opus, c1-1b. 체크인 09:05Z. **T1~T10 기획안** 검수 **PR #7** 라벨 대기(T-D6 상위 8 확정). **창의 직원 v1 설치 완료**(agents/creative-v1 dd5f0e9: CD·AD·illustrator Opus / photo-editor·typographer Sonnet, designer → docs/agents-retired, ke-visual-critique 스킬, REFERENCE_BOARD 16, Remotion 무료 해당) → 검수 **PR #8** 라벨 대기. 진행 중 자식 세션 0.
+- 프로필 사진: v4 A·v5 반려 → **v6 6안**(c1-1b 30f0fd8, 서체 3×크롭 2, 추천 v6-bx) PR #5 본문 ③ 삽입·컨택트시트 전송 → **대표 반려(전부)** → **v7 세션** `session_01A8UojVYgKPxinWHUCqjsp6`: 틀 자체 교체, 전혀 다른 방향 3안(컨셉 문서 + 코드 렌더), Opus, c1-1b. 체크인 09:05Z. **T1~T10 기획안** 검수 **PR #7** 라벨 대기(T-D6 상위 8 확정). **창의 직원 v1 설치 완료**(agents/creative-v1 dd5f0e9: CD·AD·illustrator Opus / photo-editor·typographer Sonnet, designer → docs/agents-retired, ke-visual-critique 스킬, REFERENCE_BOARD 16, Remotion 무료 해당) → 검수 **PR #8** 라벨 대기. 진행 중 자식 세션 1(프로필 v7).
 - 집 PC 플레이트: `plates/v4/*.png` 원격 0장 → 대표 미푸시(프롬프트 팩은 v4.1 한지 콜라주로 갱신됨, 집 PC에서 다시 받아 생성). 4판 렌더 보류.
 - A 유튜브: 보류(대표 10/2 "카드뉴스 집중"). 채널명 1·2차 후보 docs/CHANNEL_NAME.md, EP001·002 approved·업로드 0.
 
