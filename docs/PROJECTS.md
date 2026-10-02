@@ -53,6 +53,7 @@
 | [B] 환경변수 **재검증** — R2 왕복 + IG 경로 A/B `session_01THknjq4c1h44pboBGRvAWV` | Sonnet 5.5 | 없음(읽기 전용, 파일 변경 0) | 보고는 list_events로 회수 | **완료(아카이브)** 2026-10-02. **대표 수정 전 상태 그대로**: R2 키 ID 20자(32 필요)·시크릿 32자(64 필요) → put `InvalidArgument`(업로드 0). IG 토큰 `EAA`(페이스북 로그인) 유효, 권한 5개 granted, `/me/accounts` 페이지 0개, `IG_USER_ID`=페이지 ID(username 없음). 경로 B `graph.instagram.com/me` 400 code 190(EAA 토큰이라 당연) → **IGAA 토큰 새로 발급 필요**. COO가 `ig_publish.py`에 `IG_API_BASE` 분기·`--check` 추가(9e34674) |
 | [B] R2 키 재검증(대표 재입력 후) — 왕복 + PNG Content-Type `session_01DDLFtMWVtKakRHoPAvY46L` | Sonnet 5.5 | 없음(읽기 전용, 파일 변경 0) | 보고는 list_events로 회수 | **완료(아카이브)**. 길이 KEY_ID 64·SECRET 32(**두 값이 서로 바뀜**). 계정 엔드포인트 SSLError로 put 미실행(업로드 0) |
 | [B] R2 계정 ID 일치 확인 `session_01AL8dBNE2STSUkrwrwxLoLL` | Sonnet 5.5 | 없음(읽기 전용) | list_events | **완료(아카이브)**. 새 `R2_ACCOUNT_ID`(32자 hex)가 이전 정상값과 **다름**, 키 두 값과도 다름 → 존재하지 않는 계정이라 SSL 핸드셰이크 거부(COO 세션의 이전 값은 R2가 400 응답 = 정상 주소). 네트워크 차단 아님 |
+| [B] IG 경로 B 토큰 확인 + R2 재확인 `session_01PgobjmxjLQgda47utgKtdH` | Sonnet 5.5 | 없음(읽기 전용) | list_events | 진행 중 |
 
 ## 공용 자원
 - 직원 9명 `.claude/agents/`, 스킬 96개, 디자인 시스템 `episodes/EP001/design/design-system.md`, 비주얼 방향 "민화 플랫 × 한지 질감"(docs/TOOLING_TTS_IMAGE.md §D).
