@@ -1,0 +1,26 @@
+{
+  "id": "C1-1b-14",
+  "date": "2026-10-22",
+  "carousel_time_kst": "19:00",
+  "reel_time_kst": "01:00",
+  "duration_sec": 28.0,
+  "audio": "none",
+  "size": [1080, 1920],
+  "hook": "23만 9,020명",
+  "segments": [
+    {"card": "card-01.png", "dur": 4.0, "subtitle": "2025년 세종학당 수강생\n역대 최다", "motion": "zoom_in"},
+    {"card": "card-02.png", "dur": 3.5, "subtitle": "2007년 한 곳에서 시작,\n지금은 89개국 273곳", "motion": "pan_down"},
+    {"card": "card-03.png", "dur": 3.5, "subtitle": "퀴즈 1\n한글의 처음 글자 수는?", "motion": "static"},
+    {"card": "card-04.png", "dur": 3.0, "subtitle": "답은 28자\n자음 17, 모음 11", "motion": "zoom_in"},
+    {"card": "card-04.png", "dur": 3.0, "subtitle": "퀴즈 2\n한글날의 첫 이름은?", "motion": "static"},
+    {"card": "card-05.png", "dur": 3.0, "subtitle": "답은 '가갸날'\n1926년에 시작", "motion": "zoom_in"},
+    {"card": "card-05.png", "dur": 3.0, "subtitle": "퀴즈 3\n한글 점자의 이름은?", "motion": "static"},
+    {"card": "card-06.png", "dur": 3.0, "subtitle": "답은 '훈맹정음'\n올해로 100돌", "motion": "zoom_in"}
+  ],
+  "end_card": {"dur": 2.0, "text": "전체 7장은 프로필 캐러셀에서", "sub": "친구에게도 보내 보세요"},
+  "cover": "card-01.png",
+  "caption": "해외에서 23만 명이 배우는 한국어\n\n2025년 세종학당 수강생은 23만 9,020명으로 역대 최다였습니다. 2007년 몽골 울란바토르 한 곳에서 시작해 지금은 89개국 273곳입니다.\n그 한국어를 우리는 얼마나 알까요. 카드에 퀴즈 3개를 넣었습니다. 한글의 처음 글자 수, 한글날의 첫 이름, 한글 점자의 이름.\n답을 다 맞혔다면 친구에게 보내 보세요.\n어느 문제가 어려웠는지 댓글로 알려 주시면 다음 퀴즈에 반영합니다.\n전체 7장은 프로필의 캐러셀 게시물에 있습니다.\n\n출처: 뉴스서울 2026, youthassembly.kr 2026, 뉴시스 2026-01-29, Wikipedia 'Hangul'\n#세종학당 #한국어 #한글퀴즈 #한국어공부 #책가도노트\n이미지·초안은 AI로 생성, 사실 확인은 사람이 했습니다",
+  "hashtags": ["#세종학당", "#한국어", "#한글퀴즈", "#한국어공부", "#책가도노트"],
+  "sponsor": null,
+  "source_check": "hook ← card-01 headline 「23만 9,020명」 / seg1 ← card-01 body(legal v3) 「2025년 세종학당 해외 수강생은 역대 최다였습니다」 / seg2 ← card-02 body 「89개국 273곳. 2007년 몽골 울란바토르 한 곳에서 시작했습니다」 + caption.txt 3행 「지금은 89개국 273곳입니다」 / seg3 ← card-03 headline 「퀴즈 1」 + caption.txt 4행 「한글의 처음 글자 수」 / seg4 ← card-04 headline 「답 ③ 28자」(원문자는 자막 글꼴 깨짐 방지로 뺌) + body 「자음 17, 모음 11」 / seg5 ← card-04 body 「퀴즈 2: 한글날의 첫 이름은?」 / seg6 ← card-05 headline 「답 ① 가갸날」 + body 「1926년 '가갸날'로 시작해」 / seg7 ← card-05 body 「퀴즈 3: 같은 해 나온 한글 점자의 이름은?」 / seg8 ← card-06 headline 「답 · 훈맹정음」 + body 「올해로 100돌입니다」 / end_card ← text는 계정 행동 유도, sub는 card-06 body 「친구에게도 보내 보세요」 / caption ← caption.txt 1·3·4·5·6·8·9행 그대로 + CTA 1줄 / hashtags ← caption.txt 그대로"
+}

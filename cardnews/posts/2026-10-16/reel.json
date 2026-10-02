@@ -1,0 +1,24 @@
+{
+  "id": "C1-1b-08",
+  "date": "2026-10-16",
+  "carousel_time_kst": "12:00",
+  "reel_time_kst": "18:00",
+  "duration_sec": 23.5,
+  "audio": "none",
+  "size": [1080, 1920],
+  "hook": "28 → 24",
+  "segments": [
+    {"card": "card-01.png", "dur": 4.0, "subtitle": "한글은 처음 28자,\n지금은 24자", "motion": "zoom_in"},
+    {"card": "card-02.png", "dur": 4.0, "subtitle": "1443년 세종이 만든 28자\n자음 17자, 모음 11자", "motion": "static"},
+    {"card": "card-03.png", "dur": 4.0, "subtitle": "옛이응·반시옷·여린히읗·아래아\n쓰이지 않게 된 네 글자", "motion": "zoom_in"},
+    {"card": "card-04.png", "dur": 3.5, "subtitle": "소리가 구별되지 않게 되자\n쓰임이 줄었습니다", "motion": "static"},
+    {"card": "card-05.png", "dur": 3.0, "subtitle": "유니코드와 옛한글 글꼴엔\n지금도 있습니다", "motion": "pan_up"},
+    {"card": "card-05.png", "dur": 3.0, "subtitle": "쓰이지 않을 뿐\n지워진 건 아닙니다", "motion": "zoom_in"}
+  ],
+  "end_card": {"dur": 2.0, "text": "전체 7장은 프로필 캐러셀에서", "sub": "저장해 두고 천천히 보세요"},
+  "cover": "card-01.png",
+  "caption": "한글은 원래 28자였습니다\n\n1443년 세종이 만든 글자는 자음 17자, 모음 11자, 모두 28자였습니다. 지금 쓰는 건 24자.\nㆁ ㅿ ㆆ ㆍ 네 글자는 소리가 구별되지 않게 되면서 수백 년에 걸쳐 쓰임이 줄었습니다.\n다만 유니코드와 옛한글 글꼴에는 남아 있습니다. 쓰지 않을 뿐 지워진 건 아닙니다.\n이 이야기의 전체 흐름은 영어 채널 Korea Explained에서 길게 다룹니다. 프로필 링크에 모아 둡니다.\n전체 7장은 프로필의 캐러셀 게시물에 있습니다. 저장해 두고 천천히 보세요.\n\n출처: Wikipedia 'Hangul'·'Hunminjeongeum'·'Hangul Day', 뉴시스 2026-01-29\n#한글 #훈민정음 #옛한글 #한글날 #책가도노트\n이미지·초안은 AI로 생성, 사실 확인은 사람이 했습니다",
+  "hashtags": ["#한글", "#훈민정음", "#옛한글", "#한글날", "#책가도노트"],
+  "sponsor": null,
+  "source_check": "hook ← card-01 headline 「28 → 24」 / seg1 ← card-01 body 「한글은 처음 28자였습니다. 지금은 24자」 / seg2 ← caption.txt 3행 「1443년 세종이 만든 글자는 자음 17자, 모음 11자, 모두 28자였습니다」 / seg3 ← card-03 body 「(옛이응) (반시옷) (여린히읗) (아래아). 이 네 글자가 쓰이지 않게 됐습니다」 — 자막은 옛한글 자모 대신 이름만 씀(자막 글꼴 깨짐 방지, 자모는 카드 이미지에 있음) / seg4 ← card-04 body 「더 이상 구별되지 않게 되자, 수백 년에 걸쳐 쓰임이 줄었습니다」 + caption.txt 4행 「소리가 구별되지 않게 되면서」 / seg5 ← card-05 body 「유니코드와 옛한글 글꼴 안에 지금도 있습니다」 / seg6 ← card-05 body 「쓰이지 않을 뿐 지워진 건 아닙니다」 / end_card ← 계정 행동 유도(사실 주장 없음) / caption ← caption.txt 1·3·4·5·6·8·9행 그대로 + CTA 1줄 / hashtags ← caption.txt 그대로 / 의존: 6행 '프로필 링크'가 10/16 전에 허브에 Korea Explained 링크로 설정돼 있어야 함(risk 권고 12)"
+}
