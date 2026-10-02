@@ -62,6 +62,7 @@
 | [B] R2 재확인 #5(새 토큰 입력 후) `session_01RQWUDFEuckBSLcuiLZBxvq` | Sonnet 5.5 | 없음(읽기 전용) | list_events | **완료(아카이브) — R2 통과**: 계정 ID 정상, 키 32/64, PNG put→head→공개 GET 200(image/png)→delete→404 전부 OK. FAL_KEY UNSET(대표 결정: AI 생성 0안 우선 검토 중이라 보류) |
 | [A] **유튜브 채널 런칭 실행 계획 리서치**(이름·실사+모션그래픽 제작·썸네일·마케팅·유튜브 설정 체크리스트·4주 캘린더·대표 결정 목록) `session_01Yau1J62KqGoxS5vZt9LHYo` | Opus 5.5 | research/youtube-launch | docs/YOUTUBE_LAUNCH_PLAN.md | 진행 중 |
 | [B] 프로필 소개문 재초안(트렌드 앞세움) + 프로필 패키지 정리 `session_01JWwghZRnG8zi1hVX21cKHC` | Opus 5.5 | cardnews/c1-1b | cardnews/profile/PROFILE.md v3 | 진행 중 |
+| [B] 세트 11 장별 실사 사진 소싱(내용 일치) `session_01LN42UszjCU2PRCMQyZiRJV` | Opus 5.5 | cardnews/c1-1-design | posts/2026-10-19/photos/PHOTOS.v3.json·fetch_photos.py | 진행 중 |
 | [B] **세계 수준 카드뉴스 디자인 소싱 리서치**(벤치마크·렌더 파이프라인·OFL 한글 서체(옛한글)·CC0 질감·퍼블릭 도메인 민화·생성 모델 프롬프트·스킬 후보+자체 스킬 초안 3·v3 방향 3안) `session_01QRFKHY6jLwZbZvM1zjf2nX` | Opus 5.5 | research/cardnews-design → cardnews/main 머지 예정 | cardnews/docs/DESIGN_SOURCES.md | **완료(아카이브)** 25f4d10 → cardnews/main 머지. 진단: 중국어 대체 서체+가짜 볼드, 무관한 클립아트 반복, 빈 띠, 위계 없음, 옛한글 깨짐, 질감 소멸. **추천: 렌더러 HTML/CSS→Playwright Chromium(VM 실측 1.1초/장, 옛한글·세로쓰기 OK, Pillow 폐기)** · 서체 세트 B(함렛 Black/마루부리/Black Han Sans, 옛한글은 Noto Serif KR) · 퍼블릭 도메인 원화 31점(Met·Cleveland CC0, e뮤지엄 1유형) · **v3 1안 "원화 아카이브"(AI 0·유료 API 0·월 0원) 추천**, 2안 LoRA 플레이트, 3안 콜라주 · 스킬 후보 4+자체 초안 3(부록 A) · 대표 결정 7건(§8) |
 
 ## 공용 자원
