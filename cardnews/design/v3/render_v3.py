@@ -47,10 +47,9 @@ ALLOWED_FAMILIES = {"Hahmlet", "MaruBuri", "Black Han Sans", "Noto Serif KR"}
 STACKS = {"title": ["Hahmlet[wght].ttf", "NotoSerifKR[wght].ttf"], "body": ["MaruBuri-Regular.ttf", "NotoSerifKR[wght].ttf"],
           "num": ["BlackHanSans-Regular.ttf", "NotoSerifKR[wght].ttf"]}
 BRAND, HANDLE = "책가도 노트", "@chaekgado.note"
-AI_NOTICE_AI = "이미지·초안은 AI로 생성, 사실 확인은 사람이 했습니다"   # legal v3 통과 문구(AI 이미지가 있는 게시물)
-AI_NOTICE_NO_AI = "초안은 AI 도움을 받았고, 사실 확인은 사람이 했습니다"  # 1안(AI 이미지 0) 제안 문구 - 대표 결정 대기(DESIGN_SOURCES §8 #7)
+# AI 표시 라벨은 카드에 넣지 않는다(대표 결정 2026-10-02). AI 고지는 캡션(marketer)이 담당. 마지막 장 = 출처 줄만.
 SAFE = (88, 92, 1080 - 88, 1350 - 92)
-RENDERER_VERSION = "v3.0-proto1 (2026-10-02)"
+RENDERER_VERSION = "v3.1-collage-proto1 (2026-10-02, 3안 하이브리드 콜라주)"
 
 
 def fail_fonts():
@@ -116,6 +115,8 @@ def load_images(post_dir, post, total, work):
     out = {}
     pdir = os.path.join(post_dir, "photos")
     jpath = os.path.join(pdir, "PHOTOS.json")
+    if os.path.isfile(os.path.join(pdir, "PHOTOS.v3.json")):
+        jpath = os.path.join(pdir, "PHOTOS.v3.json")  # COO 별도 세션이 넣는 사진 목록이 우선
     if os.path.isfile(jpath):
         with open(jpath, encoding="utf-8") as fp:
             data = json.load(fp)
@@ -135,6 +136,25 @@ def load_images(post_dir, post, total, work):
             kind = e.get("kind", "photo")
             dst = os.path.join(work, f"img-{n:02d}.jpg")
             rec = imaging.process(src, dst, e.get("edit"), kind=kind)
+            if kind == "photo" and e.get("frame"):
+                # 3안 콜라주: 편집된 사진(찢김 테두리) + 원화 디테일 프레임. 프레임 원화도 라이선스 필수
+                fr = e["frame"]
+                fsrc = os.path.join(pdir, fr["file"])
+                if not os.path.isfile(fsrc):
+                    raise SystemExit(f"{jpath}: card {n} 프레임 원화 없음 {fsrc}")
+                if not fr.get("credit_short") or license_status(fr.get("license", "")) == "blocked":
+                    raise SystemExit(f"{jpath}: card {n} 프레임 원화 credit_short/license 없음 또는 불가 -> 렌더 거부")
+                slot = tuple(fr.get("slot", [904, 584]))
+                inset = int(fr.get("inset", 14))
+                from PIL import Image as _I
+                photo = _I.open(dst).convert("RGB")
+                photo, _ = _cover(photo, slot[0] - 2 * inset, slot[1] - 2 * inset, *rec.get("focus", [0.5, 0.5]))
+                torn = imaging.torn_photo(photo, seed=int(fr.get("seed", n * 7 + 3)), depth=int(fr.get("depth", 18)))
+                fdst = os.path.join(work, f"img-{n:02d}-collage.jpg")
+                imaging.frame_collage(fsrc, torn, slot, inset, frame_edit=fr).save(fdst, quality=92)
+                rec["collage"] = {"frame_file": fr["file"], "frame_credit": fr["credit_short"], "frame_focus": fr.get("focus", [0.5, 0.5]),
+                                  "slot": list(slot), "inset": inset, "torn_edge": {"seed": int(fr.get("seed", n * 7 + 3)), "depth": int(fr.get("depth", 18))}}
+                dst = fdst
             out[n] = {"kind": kind, "path": dst, "entry": e, "edit": rec, "license_status": st}
     for i in range(1, total + 1):
         if i in out:
@@ -154,6 +174,17 @@ def load_images(post_dir, post, total, work):
     return out
 
 
+def _cover(im, bw, bh, fx=0.5, fy=0.5):
+    """비율 유지 확대 후 초점 기준 크롭(늘리기 없음)."""
+    import math as _m
+    iw, ih = im.size
+    sc = max(bw / iw, bh / ih)
+    im = im.resize((max(bw, _m.ceil(iw * sc)), max(bh, _m.ceil(ih * sc))), Image.LANCZOS)
+    left = int(round(min(max(fx * im.width - bw / 2, 0), im.width - bw)))
+    top = int(round(min(max(fy * im.height - bh / 2, 0), im.height - bh)))
+    return im.crop((left, top, left + bw, top + bh)), sc
+
+
 def plate_html(img, cls="plate"):
     if not img:
         return ""
@@ -162,20 +193,34 @@ def plate_html(img, cls="plate"):
     e = img["entry"]
     if img["kind"] == "photo" and e.get("credit_on_image", True):
         pill = f'<span class="credit-pill" data-check="사진 크레딧" data-maxlines="1" data-font>{html.escape(e["credit"])}</span>'
+    if (img.get("edit") or {}).get("collage"):
+        cls += " collage"
+        fx, fy = 0.5, 0.5
     return (f'<figure class="{cls}"><img src="{file_url(img["path"])}" alt="" '
             f'style="object-position:{fx * 100:.1f}% {fy * 100:.1f}%">{pill}</figure>')
 
 
 def art_credit_line(images):
-    """마지막 장 고정 출처 줄: '그림: 메트로폴리탄미술관 〈책가도〉 CC0 · ...' (PHOTOS.json credit_short, 중복 제거)."""
-    seen = []
+    """마지막 장 고정 출처 줄. 원화 '그림: …' + 사진 '사진: …'(이미지 위 크레딧이 없는 것). credit_short 우선, 중복 제거.
+    CC BY 사진은 작가명·라이선스가 credit 문자열에 들어 있어야 한다(PHOTOS.json 작성 규칙)."""
+    arts, photos, frames = [], [], []
     for n in sorted(images):
-        e = images[n]["entry"]
-        if images[n]["kind"] in ("artwork",) or (images[n]["kind"] == "photo" and not e.get("credit_on_image", True)):
-            s = e.get("credit_short") or e.get("credit")
-            if s and s not in seen:
-                seen.append(s)
-    return ("그림: " + " · ".join(seen)) if seen else ""
+        img = images[n]
+        e = img["entry"]
+        s = e.get("credit_short") or e.get("credit")
+        if img["kind"] == "artwork" and s and s not in arts:
+            arts.append(s)
+        elif img["kind"] == "photo" and not e.get("credit_on_image", True) and s and s not in photos:
+            photos.append(s)
+        fr = (e.get("frame") or {}).get("credit_short")
+        if fr and fr not in arts and fr not in frames:
+            frames.append(fr)
+    parts = []
+    if photos:
+        parts.append("사진: " + " · ".join(p.replace("사진: ", "", 1) for p in photos))
+    if arts or frames:
+        parts.append("그림: " + " · ".join(arts + [f for f in frames if f not in arts]))
+    return "\n".join(parts)
 
 
 def build_html(post, card, idx, total, images, css, mockup):
@@ -185,7 +230,6 @@ def build_html(post, card, idx, total, images, css, mockup):
     n = card.get("n", idx + 1)
     img = images.get(n)
     esc = lambda s: re.sub(r"(^|\s)([□☑→·(『「①②③④⑤]) ", lambda m: m.group(1) + m.group(2) + "\u00a0", html.escape(s or ""))  # 줄 끝 금칙(기호를 다음 단어에 붙임)
-    any_ai = any(v["kind"] == "ai_plate" for v in images.values())
     credit = art_credit_line(images)
     vals = {
         "css": css, "brand": BRAND, "handle": HANDLE, "num": f"{n:02d}", "total": f"{total:02d}",
@@ -193,12 +237,11 @@ def build_html(post, card, idx, total, images, css, mockup):
         "kind": f'<span class="kind" data-font>{esc(post.get("type"))}</span>' if post.get("type") else "",
         "plate": plate_html(img, "plate band" if tpl_name == "last" else "plate"),
         "extra": "" if img else "no-image",
-        "credit": f'<p class="credit" data-check="그림 출처 줄" data-maxlines="2" data-font>{esc(credit)}</p>' if credit else "",
-        "ai": esc(AI_NOTICE_AI if any_ai else AI_NOTICE_NO_AI),
+        "credit": f'<p class="credit" data-check="그림·사진 출처 줄" data-maxlines="4" data-font>{esc(credit).replace(chr(10), "<br>")}</p>' if credit else "",
         "mockup": "" if not mockup else '<div class="mockup">MOCKUP</div>',
     }
     texts = {"title": card.get("headline", ""), "body": card.get("body", "") + BRAND + HANDLE + (post.get("type") or "") + credit
-             + vals["ai"] + "".join(images[k]["entry"].get("credit", "") for k in images if images[k]["kind"] == "photo"),
+             + "".join(images[k]["entry"].get("credit", "") for k in images if images[k]["kind"] == "photo"),
              "num": f"{n:02d}{total:02d}"}
     return tpl.substitute(vals), texts, tpl_name
 
@@ -299,13 +342,11 @@ def render_post(post_dir, out_dir, final, keep_html):
     paths = [c["png"] for c in job["cards"]]
     cpath = os.path.join(out_dir, "contact.png")
     contact_sheet(paths, f"{post.get('post_id', date)}  v3 contact (360x450 = feed width)  {'final' if final else 'MOCKUP'}", cpath)
-    any_ai = any(v["kind"] == "ai_plate" for v in images.values())
     log = {"mode": "final" if final else "mockup", "rendered_at": _dt.datetime.utcnow().isoformat() + "Z",
            "renderer": "cardnews/design/v3/render_v3.py", "renderer_version": RENDERER_VERSION,
            "engine": "HTML/CSS + Playwright Chromium (node playwright 1.56.1, /opt/pw-browsers/chromium-1194)",
            "cards": total, "fonts": font_log(), "font_rule": "지정 4서체 외(시스템 폴백) 사용 시 실패",
-           "ai_notice": AI_NOTICE_AI if any_ai else AI_NOTICE_NO_AI,
-           "ai_notice_status": "legal v3 통과 문구" if any_ai else "제안 문구, 대표 결정 대기(DESIGN_SOURCES §8 #7)",
+           "ai_label_on_card": False, "ai_label_note": "AI 표시 라벨은 카드에 없음(대표 결정 2026-10-02). 캡션 담당",
            "art_credit_line": art_credit_line(images), "images_used": sorted(f"card-{k:02d}:{v['kind']}" for k, v in images.items()),
            "checks_failed": fails, "warnings": warns, "per_card": per_card}
     with open(os.path.join(out_dir, "RENDER.json"), "w", encoding="utf-8") as fp:
