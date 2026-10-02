@@ -34,7 +34,7 @@
 ## 하위 세션 (COO가 만들고 결과를 회수)
 | 세션 | 모델 | 브랜치 | 산출물 | 상태 |
 |---|---|---|---|---|
-| [B] C1-1 한국 트렌드 리서치 `session_01RNNuzoB3dzZumkcKBTL7Hc` | Opus 5.5 | cardnews/main | cardnews/research/C1-1-trends.md | 10-02 00:40 idle·미푸시(검증 대기로 멈춤) → 완료·푸시 지시함 |
+| [B] C1-1 한국 트렌드 리서치 `session_01RNNuzoB3dzZumkcKBTL7Hc` | Opus 5.5 | cardnews/main | cardnews/research/C1-1-trends.md | **완료(아카이브)** 커밋 30a94c4·bb54a77. 후보 14(EP 재활용 2 + 한국 트렌드 12, 전부 KR). 수집 25건 중 교차확인 8/단일 14/미검증 3 → 게시 전 원문 대조 필요(§5). 한국 소스는 WebSearch 대체, 인스타 해시태그 반응 미측정 |
 | [A] EP003 기획 리서치 `session_0145scVsCxXku3zsXuRne9dq` | Opus 5.5 | ep/EP003 | episodes/EP003/research.md, trends-last30days.md | **완료(아카이브)** 커밋 1479ba1. 1위 "The Weekend All of Korea Makes Kimchi — and Why It's Disappearing"(서사형, 시리즈 "Korea's Calendar" 1편, 11/22 김치의 날). 후보 10(서사 7/구매 3), 사실 ✅11/△5/단일3/미검증1. 주의: 건강 효능·한중 김치 논쟁 회피 조건 |
 | [공통] 오픈소스·무료 제작 도구 리서치 `session_0154P65p56MnDyX5xpf1hu4H` | Opus 5.5 | research/tooling-opensource | docs/TOOLING_OPENSOURCE.md | 2026-10-02 생성(대표: 상용 2안 대신 획기적·오픈소스 조사) |
 | [공통] ECC 선별 스킬 10개 복사 설치 → 검수 PR `session_01QPhC1w7MVYrkXSAuq2pL8X` | Fable | ecc/install | .claude/skills/ecc-*, SKILLS.md | **완료(아카이브)** PR #3 https://github.com/Memoseadmin/ke-studio/pull/3 (10개, diff 0, ≈900토큰/턴). 대표 approved 대기 |
