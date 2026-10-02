@@ -69,16 +69,16 @@ def read_caption(d):
 
 
 def gate_ai(cap):
-    """(3) 캡션 마지막 줄(해시태그 줄은 제외한 마지막 줄)에 AI 표시 문구."""
+    """(3) 캡션에 출처 줄("출처:")이 있어야 한다. AI 표시 문구는 대표 결정(2026-10-02)으로 필수에서 제외(있어도 통과)."""
     if cap is None:
         return False, "caption.txt 없음"
     lines = [l for l in cap.splitlines() if l.strip()]
     body = [l for l in lines if not l.strip().startswith("#")]
     if not body:
         return False, "본문 없음"
-    ok = bool(AI_MARK.search(body[-1]))
-    note = "마지막 줄" if lines and lines[-1] is body[-1] else "마지막 비해시태그 줄(해시태그가 맨 끝)"
-    return ok, f"{note}: {body[-1][:40]}"
+    src = [l for l in body if l.strip().startswith("출처")]
+    ai = any(AI_MARK.search(l) for l in body)
+    return bool(src), f"출처 줄 {'있음' if src else '없음'} · AI 문구 {'있음' if ai else '없음(선택)'}"
 
 
 def gate_tags(cap):
@@ -176,7 +176,7 @@ def main():
     cap = read_caption(d)
     cards, reqs = build_plan(d, cap or "")
     gates = [("approved 라벨", gate_label(a.pr) if a.execute or a.pr else (False, "--pr 없음")),
-             ("목업 아님", gate_mockup(d)), ("AI 표시 문구", gate_ai(cap)), ("해시태그 ≤5", gate_tags(cap))]
+             ("목업 아님", gate_mockup(d)), ("출처 줄", gate_ai(cap)), ("해시태그 ≤5", gate_tags(cap))]
     print(f"[{'EXECUTE' if a.execute else 'DRY-RUN'}] {d}  cards={len(cards)}  경로 {ROUTE}")
     print("게이트:")
     for n, (ok, m) in gates:
