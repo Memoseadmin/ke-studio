@@ -22,7 +22,7 @@
 2. [A] 키 입력: TTS_API_KEY, IMAGE_API_KEY, YOUTUBE_* 3개(scripts/youtube_auth.py), 선택 MUAPI_API_KEY
 3. [A] Amazon Associates 가입 + 트래킹 ID, 제휴 상품 확정
 4. [A] 채널 마스코트 캐릭터 도입 여부(민화 소재 시안 3개 제안 중)
-5. [B] ~~언어~~ KR 확정. 계정 이름·소개는 리서치 후 3안 중 선택(대표). **게시 = Meta Graph API 자동 예약 확정**(썸네일·문구는 PR에서 대표가 고름) → 인스타 비즈니스 계정 + `IG_ACCESS_TOKEN`·`IG_USER_ID` 필요. **제휴 = 가능한 프로그램 전부 등록해 두고 필요할 때 사용(대표 결정)** → docs/AFFILIATE_PROGRAMS.md(작성 중)
+5. [B] ~~언어~~ KR 확정. 계정 이름·소개는 리서치 후 3안 중 선택(대표). **게시 = Meta Graph API 자동 예약 확정**(썸네일·문구는 PR에서 대표가 고름) → 인스타 비즈니스 계정 + `IG_ACCESS_TOKEN`·`IG_USER_ID` 필요. **제휴 = 가능한 프로그램 전부 등록해 두고 필요할 때 사용(대표 결정)** → docs/AFFILIATE_PROGRAMS.md 완성(28개: 지금 가입 15 / 첫 업로드 직전 2(Amazon·쿠팡) / 필요 시)
 6. [공통] 월 비용 배정: A 15만 + B 5만(기본)
 
 ## 실행 중인 하위 세션 (COO가 만들고 결과를 회수)
@@ -31,6 +31,9 @@
 | [B] C1-1 한국 트렌드 리서치 `session_01RNNuzoB3dzZumkcKBTL7Hc` | Opus 5.5 | cardnews/main | cardnews/research/C1-1-trends.md | 2026-10-02 생성 |
 | [A] EP003 기획 리서치 `session_0145scVsCxXku3zsXuRne9dq` | Opus 5.5 | ep/EP003 | episodes/EP003/research.md, trends-last30days.md | 2026-10-02 생성 |
 | [공통] 오픈소스·무료 제작 도구 리서치 `session_0154P65p56MnDyX5xpf1hu4H` | Opus 5.5 | research/tooling-opensource | docs/TOOLING_OPENSOURCE.md | 2026-10-02 생성(대표: 상용 2안 대신 획기적·오픈소스 조사) |
+| [공통] ECC 선별 스킬 10개 복사 설치 → 검수 PR `session_01QPhC1w7MVYrkXSAuq2pL8X` | Fable | ecc/install | .claude/skills/ecc-*, SKILLS.md, PR | 2026-10-02 생성 |
+| [A] 구독자 급성장 전략 리서치 `session_01RWSgtzvYa76kJvHhx68VBX` | Opus 5.5 | research/growth | docs/GROWTH_STRATEGY.md(90일 플레이북) | 2026-10-02 생성(대표: 빠른 구독자 확보 방안) |
+| [B] 한국 협찬 시장·단가·벤치마크 리서치 `session_015bpAd3rWkKHmBQvWjZJdXy` | Opus 5.5 | research/cardnews-sponsorship | cardnews/docs/SPONSORSHIP_MARKET.md(단가·계정 이름 3안) | 2026-10-02 생성(COO 추론으로 추가) |
 - 리서치는 대표 지시로 별도 세션·Opus. 제작(writer/designer/marketer/legal)은 COO 세션의 서브에이전트.
 - ECC(Everything Claude Code): 클라우드 세션은 플러그인을 로드하지 않으므로(공식 문서) 복사 설치만 가능. **대표 결정(2026-10-02): 쓸만한 스킬만 도입, 별도 세션·브랜치(`ecc/install`)에서 실행 → 검수 PR → approved 후 작업 브랜치에 병합.** docs/ECC_REVIEW.md(검토 중) 기준으로 선별.
 
