@@ -1,0 +1,270 @@
+{
+ "episode": "EP001",
+ "language": "en",
+ "title": "Why Ramyeon Keeps Showing Up on Korean Screens",
+ "source": "episodes/EP001/script.en.md (S01-S12) + design/scene-prompts.md (요약 -> plate)",
+ "note": "Draft from script_to_scenes.py; screen.cards/bars added by producer from each scene's 화면/텍스트 notes. image/audio null = mockup until AI plates and TTS exist.",
+ "output": "render/EP001/long.mp4",
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 30,
+ "wpm": 150,
+ "mode": "auto",
+ "scenes": [
+  {
+   "id": "S01",
+   "title": "Hook",
+   "narration": "In a Korean film from 2001, a woman asks a man: \"Do you want to eat some ramyeon?\" In Korea, that line has meant more than noodles ever since. So why does ramyeon keep showing up on Korean screens?",
+   "screen": {
+    "heading": "Do you want to eat some ramyeon?",
+    "lines": [
+     "라면 먹을래요?"
+    ]
+   },
+   "image": null,
+   "image_vertical": null,
+   "audio": null,
+   "plate": "밤의 작은 부엌, 가스레인지 위 냄비에서 김이 오르고 문가에 뒷모습 실루엣 둘. \"라면 먹을래요?\" 질문으로 연다."
+  },
+  {
+   "id": "S02",
+   "title": "Roadmap",
+   "narration": "I'm going to walk you through three scenes: a film from 2001, a 2019 film that made a translator invent a new English word, and the most-watched film in Netflix history. Then we'll follow the noodles off the screen, into convenience stores, export figures, and a ramyeon brand that turns 40 this month. And at the end, I'll show you the simplest way to bring one of these scenes into your own kitchen.",
+   "screen": {
+    "cards": [
+     "2001",
+     "2019",
+     "Netflix"
+    ]
+   },
+   "image": null,
+   "image_vertical": null,
+   "audio": null,
+   "plate": "3칸 타이틀 카드(2001 / 2019 / Netflix, 글자만) 뒤 지도 위로 점선이 편의점·수출·40주년으로 뻗는다."
+  },
+  {
+   "id": "S03",
+   "title": "Scene one: One Fine Spring Day",
+   "narration": "Scene one: One Fine Spring Day, a 2001 film directed by Hur Jin-ho. Eun-su, played by Lee Young-ae, asks Sang-woo, played by Yoo Ji-tae: \"Ramyeon meogeullaeyo?\" Do you want to eat some ramyeon?\n\nOn the surface, it's an offer of food. But over the years, the line picked up a second meaning. In Korea, it became a playful way of inviting someone to stay a little longer.\n\nHere's what I find interesting. The line only works because ramyeon is so ordinary. Nobody needs an excuse to make a pot of instant noodles. That makes it the perfect cover for a question that's really about something else. You can say it out loud and still leave the other person room to answer, \"Sure, I'm a bit hungry.\"\n\nAnd the two actors are back in the news. In March 2026, it was announced that Lee Young-ae and Yoo Ji-tae would reunite in a new drama, their first project together in 25 years.",
+   "screen": {
+    "heading": "One Fine Spring Day (2001) · dir. Hur Jin-ho",
+    "lines": [
+     "라면 먹을래요? / Ramyeon meogeullaeyo?",
+     "Announced March 2026"
+    ]
+   },
+   "image": null,
+   "image_vertical": null,
+   "audio": null,
+   "plate": "봄 저녁 골목 → 현관 불빛 → 냄비. 2001년 대사가 \"초대\"의 뜻을 얻게 된 이야기. 인물 없음."
+  },
+  {
+   "id": "S04",
+   "title": "The shortcut theory",
+   "narration": "So why do Korean stories reach for ramyeon so often? Here's my theory, and it starts with a number.\n\nAccording to the World Instant Noodles Association, as reported by the Korea Times, South Koreans ate 79.2 servings of instant noodles per person in 2024. That's the second-highest figure in the world, just behind Vietnam at 81. Do the math, and it works out to about one and a half servings a week for every person in the country.\n\nWhen something is that familiar, it turns into shorthand. A character opening a packet of ramyeon tells a Korean audience a lot without a single line of dialogue: it's late, it's casual, this is everyday life. Nobody watching needs ramyeon explained. You just put the pot on the stove.\n\nAnd because everyone knows what ramyeon usually means, a story can twist that meaning. That's exactly what the line from 2001 does.",
+   "screen": {
+    "bars": [
+     {
+      "label": "Vietnam",
+      "value": 81,
+      "display": "81"
+     },
+     {
+      "label": "South Korea (2024)",
+      "value": 79.2,
+      "display": "79.2",
+      "highlight": true
+     }
+    ],
+    "lines": [
+     "1.5 a week (79.2 ÷ 52)"
+    ],
+    "note": "WINA, via Korea Times",
+    "order": [
+     "bars",
+     "lines",
+     "note"
+    ]
+   },
+   "image": null,
+   "image_vertical": null,
+   "audio": null,
+   "plate": "1인당 79.2개(2024, 베트남 81개에 이은 2위), 주 1.5개. 익숙하니까 설명 없이 통하는 \"약어\"가 된다."
+  },
+  {
+   "id": "S05",
+   "title": "Scene two: Parasite",
+   "narration": "Scene two: Parasite, from 2019. The film features a dish called jjapaguri, a combination of two Nongshim instant noodles, Chapagetti and Neoguri.\n\nNow picture the job of whoever is writing the English subtitles. You have a Korean nickname built out of two brand names, and an audience around the world, many of whom may never have seen either packet. What do you write?\n\nTranslator Darcy Paquet's answer was to make up a word. In the English subtitles, jjapaguri became \"ram-don\": ramyeon plus udon.\n\nI love this detail. To me, it shows how specific a ramyeon scene can be: the dish needed a brand-new English word just to travel.\n\nAnd travel it did. On February 10 and 11, 2020, right after the Academy Awards, sales of Neoguri and Chapagetti packets at the convenience store chain GS25 rose about 60 percent from the year before, as reported by Asia Economy. People didn't just watch the scene. They went out and bought the noodles.",
+   "screen": {
+    "heading": "ramyeon + udon = ram-don",
+    "lines": [
+     "jjapaguri → ram-don",
+     "GS25 · Feb 10–11, 2020 · about +60% YoY (Asia Economy)"
+    ]
+   },
+   "image": null,
+   "image_vertical": null,
+   "audio": null,
+   "plate": "무지 봉지 두 개가 한 그릇이 되는 짜파구리, 자막에서 \"ram-don\"이 태어남. 오스카 직후 GS25 판매 약 60% 증가(텍스트)."
+  },
+  {
+   "id": "S06",
+   "title": "Scene three: KPop Demon Hunters",
+   "narration": "Scene three is animated. KPop Demon Hunters is the most-watched film in Netflix history. Early in the film, the three members of HUNTR/X, Rumi, Mira and Zoey, eat cup ramyeon.\n\nThink about that for a second. It's a film with \"demon hunters\" right in the title, and it still makes time for instant noodles. It's the same shortcut as before: in a story that is anything but ordinary, a cup of ramyeon is a moment of ordinary life.\n\nAgain, the real world answered. Nongshim made a limited-edition cup ramyeon six-pack modeled on that scene: only 1,000 sets, with pre-orders opening on August 28, 2025.\n\nThe effect showed up at the convenience store counter, too. As reported by the Korea Herald, in July and August 2025, amid the buzz around the film, payments by foreign customers at CU convenience stores rose 185 percent. By category, ramyeon was up 99 percent. Gimbap, the seaweed rice roll, was up 231 percent. So the noodles weren't the biggest winner, but they made the list.",
+   "screen": {
+    "heading": "1,000 sets · pre-order Aug 28, 2025",
+    "bars": [
+     {
+      "label": "CU foreign payments",
+      "value": 185,
+      "display": "+185%"
+     },
+     {
+      "label": "gimbap",
+      "value": 231,
+      "display": "+231%"
+     },
+     {
+      "label": "ramyeon",
+      "value": 99,
+      "display": "+99%",
+      "highlight": true
+     }
+    ],
+    "note": "Jul–Aug 2025, Korea Herald"
+   },
+   "image": null,
+   "image_vertical": null,
+   "audio": null,
+   "plate": "애니메이션 영화 초반의 컵라면 장면 → 한정 6개입 1,000세트, CU 외국인 결제 +185%(라면 +99%, 김밥 +231%).",
+   "note": "TTS pronunciation: read HUNTR/X as 'Huntrix'. Subtitle/on-screen text keeps HUNTR/X."
+  },
+  {
+   "id": "S07",
+   "title": "Off script: Han River ramyeon",
+   "narration": "Not every ramyeon moment on Korean TV is scripted. Han River ramyeon, which means buying instant noodles at a convenience store in one of the Han River parks and cooking them in the store's instant cooker, became known through shows like I Live Alone and Running Man. Today it's one of the signature K-food experiences for visitors, Korean and foreign alike.\n\nThis is a scene you can actually step into. No script, no actors. Just a river, a convenience store and a machine that does the cooking.",
+   "screen": {
+    "heading": "Han River ramyeon",
+    "lines": [
+     "I Live Alone · Running Man"
+    ]
+   },
+   "image": null,
+   "image_vertical": null,
+   "audio": null,
+   "plate": "대본 없는 장면. 한강 공원 편의점에서 산 라면을 즉석 조리기로 끓여 강가에서 먹는 체험."
+  },
+  {
+   "id": "S08",
+   "title": "The Ramyeon Library",
+   "narration": "If you'd rather browse a whole wall of options, there's the Ramyeon Library. CU opened the first one in Hongdae, Seoul, in December 2023. As of 2024, it stocked more than 200 kinds of ramyeon, with instant cookers so you can make them on the spot. In reports from that year, foreign customers made up roughly 65 to 68 percent of its sales. In other words, a store built around instant noodles was doing most of its business with foreign customers.",
+   "screen": {
+    "heading": "Hongdae · Dec 2023 · 200+ kinds",
+    "lines": [
+     "foreign customers ~65–68% of sales (2024 reports)"
+    ]
+   },
+   "image": null,
+   "image_vertical": null,
+   "audio": null,
+   "plate": "홍대 1호점(2023.12), 200종 이상, 즉석 조리기. 매출의 약 65~68%가 외국인 손님(2024 보도)."
+  },
+  {
+   "id": "S09",
+   "title": "The bigger picture",
+   "narration": "Zoom out to the whole country, and the numbers keep climbing. In 2025, Korea's ramyeon exports passed 1.5 billion dollars for the first time, up about 22 percent, as reported by the Korea Times. Then in the first half of 2026 alone, exports reached $935.39 million, up 28 percent, the highest for any half-year on record, according to Asia Economy.\n\nTo be clear, these numbers can't tell us how much of that growth came from films and shows, and I won't pretend they can. What they do show is that the market for Korean ramyeon now reaches far beyond Korea.",
+   "screen": {
+    "bars": [
+     {
+      "label": "2025",
+      "value": 1500,
+      "display": "$1.5B+ (about +22%)"
+     },
+     {
+      "label": "H1 2026",
+      "value": 935.39,
+      "display": "$935.39M (+28%, half-year record)",
+      "highlight": true
+     }
+    ],
+    "note": "Korea Times / Asia Economy"
+   },
+   "image": null,
+   "image_vertical": null,
+   "audio": null,
+   "plate": "2025년 라면 수출 첫 15억 달러 돌파(약 +22%), 2026년 상반기 9억 3,539만 달러(+28%, 반기 최대). 인과는 주장하지 않음."
+  },
+  {
+   "id": "S10",
+   "title": "Shin Ramyun at 40",
+   "narration": "Which brings us to this month. Nongshim launched Shin Ramyun in October 1986, so October 2026 marks its 40th anniversary. Its developers started from sogogi jangguk, a Korean beef soup, when they designed the broth. It took first place in Korea's ramyeon market in 1991 and held it for 35 years straight, through 2025. By the end of 2025, it had sold about 42.5 billion packs. It's sold in more than 100 countries, and about 40 percent of its roughly 20 trillion won in cumulative sales has come from outside Korea.\n\nFor the anniversary, Nongshim released Shin Ramyun Rosé, an idea that came from customers' own recipes. It went on sale in Korea and Japan first, in May 2026. And in late August, at Gamescom 2026 in Cologne, the company set up a hands-on \"Shin Ramyun factory\" booth.\n\nNotice a pattern? Jjapaguri is two packets combined. Rosé started as a customer recipe. Ramyeon is something people keep remixing, on screen and at home.",
+   "screen": {
+    "heading": "1986 → 1991 → 2025 → 2026",
+    "cards": [
+     "42.5B packs",
+     "100+ countries",
+     "~40% overseas"
+    ],
+    "lines": [
+     "Oct 1986 · No. 1 in Korea's market 1991–2025"
+    ],
+    "note": "Gamescom 2026 · Cologne",
+    "order": [
+     "heading",
+     "cards",
+     "lines",
+     "note"
+    ]
+   },
+   "image": null,
+   "image_vertical": null,
+   "audio": null,
+   "plate": "1986년 10월 출시 → 2026년 10월 40주년. 소고기 장국에서 출발한 국물, 35년 1위, 약 425억 봉. 제품·패키지는 보여주지 않음."
+  },
+  {
+   "id": "S11",
+   "title": "Bring the scene home (affiliate)",
+   "narration": "So if you want to recreate one of these scenes, what do you actually need? At its simplest: a packet of noodles and the right pot.\n\nQuick note before I name anything: the product links in the description are affiliate links, which means I may earn a commission if you buy through them.\n\nThe pot first. In Korea, there's a go-to pot for ramyeon: the yangeun naembi. It's actually aluminum. The name comes from an older alloy called yangeun, and it's used for ramyeon because it heats up fast. The one I've linked is a yellow aluminum ramyeon pot.\n\nThen the noodles. Instead of one brand, I've linked a mixed multipack of Korean instant noodles, so you can try several and pick your own favorite. What's inside depends on the listing, so check before you buy. And if you end up with a Chapagetti and a Neoguri, you've got the pairing from Parasite.\n\nThat's the whole list: one pot, one box of noodles. And again, as an Amazon Associate I earn from qualifying purchases, so I may earn a commission if you buy through those links.",
+   "screen": {
+    "heading": "one pot, one box of noodles",
+    "lines": [
+     "yangeun naembi · yellow aluminum ramyeon pot",
+     "mixed multipack of Korean instant noodles"
+    ]
+   },
+   "image": null,
+   "image_vertical": null,
+   "audio": null,
+   "bottom_bar": "Affiliate links · I may earn a commission",
+   "plate": "장면을 집에서 재현하는 최소 준비물 = 양은냄비 1개 + 라면 혼합 멀티팩 1상자. 구간 내내 하단 제휴 고지."
+  },
+  {
+   "id": "S12",
+   "title": "Wrap-up and CTA",
+   "narration": "So why does ramyeon keep showing up on Korean screens? My answer: because it's a prop the audience already understands. That's what lets it carry other meanings. An invitation in 2001. A translation puzzle in 2019. A moment of normal life in a story about demon hunters.\n\nLinks to the pot and the multipack are in the description. And tell me in the comments: which ramyeon scene would you recreate first? The invitation, the ram-don, or the cup noodles?\n\nIf you want more stories about the food, places and products behind Korean films and shows, subscribe for the next one.\n\nThis video uses an AI-generated voice and AI-generated images.",
+   "screen": {
+    "heading": "Links in the description",
+    "cards": [
+     "The invitation",
+     "The ram-don",
+     "The cup noodles"
+    ],
+    "lines": [
+     "AI-generated voice & images"
+    ],
+    "order": [
+     "heading",
+     "cards",
+     "lines"
+    ]
+   },
+   "image": null,
+   "image_vertical": null,
+   "audio": null,
+   "plate": "세 장면 회상(초대 · ram-don · 컵라면) → 댓글 질문 → 엔드카드. 마지막 줄 AI 생성 고지."
+  }
+ ],
+ "mockup_label": "MOCKUP — final AI plate pending"
+}
