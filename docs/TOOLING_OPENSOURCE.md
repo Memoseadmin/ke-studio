@@ -65,6 +65,41 @@
 | 4 합성 | producer | ffmpeg: 플레이트(Ken Burns) + 모션 알파 overlay + 한지 그레인 multiply + TTS + 자막 번인. 현 `ffmpeg-assemble` JSON에 장면별 `overlay_video` 필드를 추가하는 것은 **스킬 수정 제안**이고 이번 범위 밖 | `render/EP002/s01.mp4` + 컨택트시트 |
 | 5 비교 | COO | 같은 S01을 상용 1안(생성 이미지 + ElevenLabs)으로도 렌더해 대표에게 2개 프레임 + 오디오를 PR로 블라인드 비교 | PR 코멘트 1개 |
 
+#### 명령어 수준 절차 (이 세션에서는 실행하지 않음 — 키 입력과 setup.sh 반영 후 producer가 실행)
+- 키 값은 저장소·채팅에 적지 않는다. 대표가 클라우드 환경 설정에 이름만 맞춰 넣는다:
+  - `FAL_KEY` ← fal.ai 대시보드 → API Keys
+  - `GEMINI_API_KEY` ← aistudio.google.com/apikey, 결제가 연결된 프로젝트
+- 모델 ID·옵션명은 공식 문서 기준이다. 실행 직전에 링크를 다시 확인한다 [O3][O22][O30].
+```bash
+# 0) 준비 (setup.sh에 추가할 항목 — 대표 OK 후): Node 22 기존, Chromium 사전 설치됨
+#    npx create-video@latest render/remotion-ke --template blank   # Remotion 프로젝트(커밋은 소스만)
+#    python3 -m pip install kokoro soundfile; apt-get install -y espeak-ng   # Kokoro 백업용
+mkdir -p render/EP002 episodes/EP002/design
+# 1) 플레이트 (fal, Z-Image Turbo, 동기 엔드포인트) — 응답 JSON의 images[0].url을 내려받는다
+curl -sS https://fal.run/fal-ai/z-image/turbo -H "Authorization: Key $FAL_KEY" -H "Content-Type: application/json" \
+  -d '{"prompt":"Korean minhwa folk-painting flat illustration, night, old stone wall with three blank hanji paper sheets pasted on it, bold ink outlines, obangsaek palette muted, hanji paper texture, no text, no people, no logos","image_size":"landscape_16_9","num_images":4,"seed":1504}' \
+  > render/EP002/s01-plate.json
+# 2a) 음성 (Gemini TTS, 응답은 base64 PCM 24kHz mono s16le). 모델 ID는 GEMINI_TTS_MODEL로 분리(예: gemini-2.5-flash-preview-tts, 최신 ID는 [O3]에서 확인)
+curl -sS "https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_TTS_MODEL}:generateContent" \
+  -H "x-goog-api-key: $GEMINI_API_KEY" -H "Content-Type: application/json" \
+  -d '{"contents":[{"parts":[{"text":"Read in a calm documentary tone: In the summer of 1504, three anonymous notices appeared in the Korean capital. ..."}]}],
+       "generationConfig":{"responseModalities":["AUDIO"],"speechConfig":{"voiceConfig":{"prebuiltVoiceConfig":{"voiceName":"Kore"}}}}}' \
+  | python3 -c 'import sys,json,base64;d=json.load(sys.stdin);sys.stdout.buffer.write(base64.b64decode(d["candidates"][0]["content"]["parts"][0]["inlineData"]["data"]))' > render/EP002/s01.gemini.pcm
+ffmpeg -f s16le -ar 24000 -ac 1 -i render/EP002/s01.gemini.pcm render/EP002/s01.gemini.wav
+# 2b) 음성 백업 (Kokoro, CPU, 키 불필요): KPipeline(lang_code="a")(text, voice="af_heart") → 24kHz wav, 고유명사는 [word](/IPA/) 인라인
+# 3) 모션 (Remotion, 알파 출력). S01Hook 컴포지션의 durationInFrames = ceil(TTS초 × 30)
+npx remotion render S01Hook render/EP002/s01-motion.mov --codec=prores --prores-profile=4444   # 알파 픽셀 포맷은 [O30] 문서대로
+# 4) 합성 (플레이트 Ken Burns + 모션 알파 + 음성). 한지 그레인·자막은 ffmpeg-assemble 규칙을 따른다
+ffmpeg -loop 1 -i render/EP002/s01-plate.png -i render/EP002/s01-motion.mov -i render/EP002/s01.gemini.wav \
+  -filter_complex "[0:v]scale=2112:1188,zoompan=z='min(zoom+0.0005,1.08)':d=1:s=1920x1080:fps=30[bg];[bg][1:v]overlay=0:0:shortest=1[v]" \
+  -map "[v]" -map 2:a -c:v libx264 -crf 20 -pix_fmt yuv420p -c:a aac -shortest render/EP002/s01.mp4
+```
+성공 기준(샘플)
+- 14초 ±1초, 1920×1080 30fps
+- 화면에 읽히는 한글 문장 0개
+- 인물·로고 0개
+- 컨택트시트 1장 + 오디오 2종(Gemini/Kokoro)을 PR 코멘트로 블라인드 비교
+
 Remotion 대신 쓸 대안: **HyperFrames**(HeyGen, Apache-2.0, HTML/CSS → 헤드리스 Chrome → FFmpeg, 인원 제한 없음) [O33]. 저장소가 2026년 신생이라 안정성은 미확인이다. 그래서 1순위는 성숙도가 높은 Remotion(★61k, 2026-10 활동)으로 둔다.
 
 ## 3. 대표가 결정할 것 (3개)
