@@ -40,7 +40,7 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
 |---|---|
 | researcher | social-media-skills-niche-research |
 | writer | marketing-skills-copywriting, marketing-skills-copy-editing, marketing-skills-video |
-| designer | social-media-skills-youtube-thumbnail, social-media-skills-graphic-designer, marketing-skills-image |
+| designer (폐지 2026-10-02) | social-media-skills-youtube-thumbnail, social-media-skills-graphic-designer, marketing-skills-image |
 | marketer | marketing-skills-copywriting, -social, -video; social-media-skills-hook-generator, -post-writer, -reels-scripting, -pinned-comment |
 | publisher | social-media-skills-post-formatter |
 | legal-reviewer | legal-review-contract, legal-legal-risk-assessment, legal-compliance-check |
@@ -163,3 +163,28 @@ SKILL.md 내용(`name` 포함)은 원본 그대로지만, 이 환경의 Skill �
   - 이 환경에서 무효인 부분(원문 미수정, 무시): `nested-coordinator` 에이전트(플러그인 agents/, 미복사), `pre-task`/`post-task` 훅·AgentDB 기록·`claude-flow.config.json`·`CLAUDE_FLOW_STRICT_NESTING`. 깊이 5 한도(원문 "Anthropic API 2026-06-09 발표")는 미검증.
 - 실행하지 않은 것: `npx ruflo init`(읽기만). 하는 일 = `.claude/settings.json`에 훅 병합, `.claude/helpers/*.cjs`(hook-handler·statusline·auto-memory), `.mcp.json`·`claude mcp add ruflo|ruv-swarm|flow-nexus`, `CLAUDE.md` 생성/덮어쓰기, `.claude/{agents,commands,skills}` 대량 생성, `.claude-flow/`·`.swarm/memory.db` → 우리 규범(설정·CLAUDE.md 덮어쓰기 금지) 위반이라 불가.
 - 보류(런타임 필요): swarm-orchestration·swarm-advanced·hive-mind-advanced·stream-chain·v3-swarm-coordination·hooks-automation(npx/agentic-flow·훅), ruflo-ai-team 6종·workflow-create/run·goal-plan·horizon-track·loop-worker·autopilot-loop(ruflo MCP), managed-agent(ruflo MCP + `ANTHROPIC_API_KEY` + Managed Agents 베타, 컨테이너 과금), flow-nexus-*(외부 클라우드). 순수 문서지만 미설치: skill-builder(이미 `anthropic-skills:skill-creator`와 중복), witness(node 스크립트 필요).
+
+## 크리에이티브 직원·ke-visual-critique·Remotion 확인 (2026-10-02, 대표 결정 A1~A10, 브랜치 `agents/creative-v1`)
+- 직원 5명 설치(`.claude/agents/`): creative-director(Opus)·art-director(Opus)·illustrator(Opus)·photo-editor(Sonnet, 최종 크롭은 CD)·typographer(Sonnet). 근거 `docs/CREATIVE_AGENTS.md`·`docs/agents-draft/`(research/creative-agents). motion-designer·video-editor·thumbnail-designer는 유튜브 재개 때.
+- designer 폐지(A2): `docs/agents-retired/designer.md`로 이동. 디자인 시스템·썸네일(임시) → art-director, 장면 프롬프트 → illustrator. 위 "직원별 지정 스킬" 표의 designer 행은 기록용.
+
+| 팩 | 출처 | 커밋 SHA | 라이선스 | 스킬 수 |
+|---|---|---|---|---|
+| 사내 · ke-visual-critique v1 | 자체 작성 `.claude/skills/ke-visual-critique/SKILL.md`(루브릭 30항 = CREATIVE_AGENTS §4-2 원문, 통과선 A4 평균 7·최저 6, CRITIQUE-vN 서식, best-of-4 기록) | 외부 원본 없음 | 사내 전용(KE Studio) | 1 |
+
+| 직원 | 스킬 |
+|---|---|
+| creative-director | ke-visual-critique, design-design-critique, design-accessibility-review, frontend-design |
+| art-director | example-skills-canvas-design, frontend-design, taste-skill, social-media-skills-youtube-thumbnail |
+| photo-editor | design-accessibility-review |
+| illustrator | example-skills-canvas-design, marketing-skills-image |
+| typographer | design-accessibility-review, frontend-design |
+
+### Remotion 라이선스 확인 (A8)
+- 판정: **무료 해당.** Free License 자격 = "an individual" / "a for-profit organization with up to 3 employees" / 비영리 / 평가 중. 허용 = "non-commercially or commercially for the purpose of creating videos and images". KE Studio(1인 회사)는 해당.
+- 금지: Remotion 코드를 복제·수정해 파생물을 판매·재라이선스.
+- 회사 라이선스(4명↑): Creators **$25/석·월**, Automators $0.01/렌더(월 최소 $100), Enterprise 월 $500부터.
+- 주의: 5.0 라이선스 변경(PR #3750)으로 **외주(contractor)도 인원에 포함**. 외주 포함 4명이 되면 재확인.
+- 출처(확인 2026-10-02): https://www.remotion.dev/license → https://github.com/remotion-dev/remotion/blob/main/LICENSE.md · 가격 https://www.remotion.pro/license · 5.0 변경 https://github.com/remotion-dev/remotion/pull/3750
+- 설치: 클라우드 세션은 매번 새 클론이라 이번엔 npm 설치 안 함. `scripts/setup.sh`에 `render/remotion-ke/`(커밋 제외) 설치 줄 추가.
+- 외부 스킬 팩 `remotion-dev/skills` @0b5db9daae40f42c73544d1cc0a8c733bd530eaa(SKILL.md 12개, 279파일): **LICENSE 파일 없음**(루트·package.json·스킬 폴더 모두 라이선스 표기 0) → **복사 설치 보류**. 라이선스가 명시되면 motion-designer 설치 때 재검토.

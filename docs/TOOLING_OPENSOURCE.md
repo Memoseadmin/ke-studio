@@ -108,6 +108,7 @@ Remotion 대신 쓸 대안: **HyperFrames**(HeyGen, Apache-2.0, HTML/CSS → 헤
 3. **자체 스타일 LoRA 학습:** 1회 약 3천~1.3만원 지출 여부와 학습 소재. 공개 민화 LoRA는 상업 권한이 불명확하거나 비상업이어서 쓰지 않는다. 학습 소재는 둘 중 하나다:
    - 승인된 자체 플레이트
    - 공공누리 1유형 등 상업 이용 가능한 퍼블릭 도메인 민화(해당 여부는 미확인, legal-reviewer 확인 필요)
+- (2026-10-02, 대표 결정 A8) **Remotion 라이선스 확인 완료**: 1인 회사 = Free License 해당(개인·직원 ≤3 영리법인, 상업 이용 가능). 근거·가격은 docs/SKILLS.md "Remotion 라이선스 확인", 설치 줄은 scripts/setup.sh.
 
 ---
 

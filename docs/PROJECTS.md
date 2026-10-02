@@ -121,4 +121,5 @@
 ## 공용 자원
 - 직원 15명 `.claude/agents/`, 스킬 96개, 디자인 시스템 `episodes/EP001/design/design-system.md`, 비주얼 방향 "민화 플랫 × 한지 질감"(docs/TOOLING_TTS_IMAGE.md §D).
 - 카피 직원 6명(2026-10-02 추가): copy-hook(표지 훅·제목 10안) · copy-carousel(캐러셀 8장) · copy-caption(캡션) · copy-reels(릴스) · copy-story(스토리·하이라이트) · copy-editor(편집장 검수). 하우스 스킬 cardnews-copy v1.1.
+- 크리에이티브 직원 5명(2026-10-02 추가, A1): creative-director(채점·반려, ke-visual-critique) · art-director · photo-editor · illustrator · typographer. designer는 폐지·분할 이관(`docs/agents-retired/designer.md`). 레퍼런스 `docs/REFERENCE_BOARD.md`.
 - 비용 상한 월 20만원(전 프로젝트 합). analyst가 월간 리포트에서 프로젝트별로 나눠 보고.
