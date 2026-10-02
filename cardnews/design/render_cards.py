@@ -36,6 +36,7 @@ GRID_TOP, GRID_BOTTOM = 135, 1215  # 프로필 1:1 크롭 범위(헤드라인은
 HANDLE = "@chaekgado.note"
 ACCOUNT = "책가도 노트"
 MOCKUP_TAG = "MOCKUP"
+FINAL = False  # --final: 게시용 렌더(MOCKUP 표기 생략, RENDER.json에 mode=final 기록). approved 전에는 쓰지 않는다 (COO 2026-10-02)
 
 # 타이포 크기(px). 헤드라인 >=72, 본문 >=40 (폰 가독)
 SIZE = {
@@ -299,6 +300,8 @@ def signature_bar(d, x, y, w):
 
 
 def mockup_tag(img, fonts):
+    if FINAL:
+        return
     d = ImageDraw.Draw(img)
     f = font(fonts["latin"], SIZE["mockup"])
     tw = text_w(d, MOCKUP_TAG, f)
@@ -529,6 +532,10 @@ def render_post(post_dir, fonts, verbose=True):
         print(f"[{post_dir}] {len(outputs)} cards -> card-01..{total:02d}.png, contact.png")
         for w in warns:
             print("  warn:", w)
+    import datetime as _dt
+    with open(os.path.join(post_dir, "RENDER.json"), "w", encoding="utf-8") as fp:
+        json.dump({"mode": "final" if FINAL else "mockup", "rendered_at": _dt.datetime.utcnow().isoformat() + "Z",
+                   "fonts": {k: str(v) for k, v in fonts.items()}, "cards": total, "renderer": "render_cards.py"}, fp, ensure_ascii=False, indent=2)
     return outputs, cpath, warns
 
 
@@ -556,9 +563,11 @@ def main():
     ap.add_argument("post_dir", nargs="?", help="cards.json 이 있는 게시물 폴더")
     ap.add_argument("--all", metavar="POSTS_DIR", help="하위 폴더 중 cards.json 이 있는 것 전부 렌더")
     ap.add_argument("--rgb", action="store_true", help="PNG-24로 저장(기본은 PNG-8 적응 팔레트)")
+    ap.add_argument("--final", action="store_true", help="게시용 렌더: MOCKUP 표기 생략, RENDER.json mode=final (approved 후에만)")
     args = ap.parse_args()
-    global SAVE_RGB
+    global SAVE_RGB, FINAL
     SAVE_RGB = args.rgb
+    FINAL = args.final
     fonts = load_fonts()
     print("fonts:", {k: v for k, v in fonts.items()})
     targets = []

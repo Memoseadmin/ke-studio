@@ -1,0 +1,12 @@
+{
+  "mode": "mockup",
+  "rendered_at": "2026-10-02T01:49:22.950349Z",
+  "fonts": {
+    "head": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+    "body": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+    "latin": "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+    "fake_bold": "True"
+  },
+  "cards": 7,
+  "renderer": "render_cards.py"
+}
