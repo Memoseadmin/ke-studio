@@ -6,15 +6,15 @@
 | 프로젝트 | 목적·수익 | 폴더 | 브랜치 | 문서 | 현재 Phase | 게이트 |
 |---|---|---|---|---|---|---|
 | A. Korea Explained (유튜브 롱폼+숏폼) | 구독형 혼합: 제휴 → YPP 광고 → 멤버십 | `episodes/`, `docs/` | 산출물 `ep/EPxxx`, 문서 `claude/admiring-clarke-beyyoi` | docs/PLAN.md · HANDOFF.md | Phase 5 대기(키·공급자) | 90일 구독 1,000 + 첫 제휴 매출 + 월 20만원 |
-| B. 카드뉴스 (인스타그램 캐러셀, **한국어·한국 독자**) | **한국 브랜드 제휴·협찬 광고 게시물**(보조: 쿠팡파트너스) | `cardnews/` | `cardnews/main`(검수 PR은 `cardnews/c1-x`) | cardnews/docs/PLAN.md · HANDOFF.md | C1-1 시작 | 90일 팔로워 2,000 + 저장률 3% + 미디어킷 + 제안 5건 + 월 5만원 |
+| B. 카드뉴스 "책가도 노트" (인스타그램 캐러셀, **한국어·한국 독자**) | **한국 브랜드 제휴·협찬 광고 게시물**(보조: 쿠팡파트너스) | `cardnews/` | `cardnews/main`(검수 PR은 `cardnews/c1-x`) | cardnews/docs/PLAN.md · HANDOFF.md | C1-1 완료(PR #4) → C1-2 | 90일 팔로워 2,000 + 저장률 3% + 미디어킷 + 제안 5건 + 월 5만원 |
 
 ## 상태 한눈에
 | 항목 | A 유튜브 | B 카드뉴스 |
 |---|---|---|
-| 승인된 PR | #1 EP001, #2 EP002 (approved) · **#3 ECC 설치 승인 대기** | 없음 |
+| 승인된 PR | #1 EP001, #2 EP002 (approved) · **#3 ECC 설치 승인 대기** | **#4 C1-1 14일 세트 승인 대기** https://github.com/Memoseadmin/ke-studio/pull/4 |
 | 업로드/게시 | 0건 (키 UNSET, FIX 3) | 0건 (계정 미개설) |
 | 막힌 것 | TTS·이미지·YouTube 키, Amazon 트래킹 ID, 공급자 선택 | ~~인스타 비즈니스 계정·Meta 토큰~~(대표 완료 보고, 검증 중) · 링크 허브 URL · **이미지 호스팅 = Cloudflare R2(대표 결정 2026-10-02)** → R2 버킷·API 토큰·공개 URL 입력 대기 |
-| 이번 세션 할 일 | 키 들어오면 샘플 생성→렌더→업로드 게이트, EP003 기획 | C1-1: 트렌드 수집 → 14일 세트 → risk → 검수 PR |
+| 이번 세션 할 일 | 키 들어오면 샘플 생성→렌더→업로드 게이트, EP003 대본 | C1-2: PR #4 승인 → final 렌더 → R2·IG 검증 → 예약 게시 큐 |
 
 ## 대표 결정 큐 (하나로 합침)
 1. ~~ECC 도입 범위~~ → 결정됨: 선별 도입, 별도 세션·브랜치
