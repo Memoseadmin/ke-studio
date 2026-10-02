@@ -1,0 +1,226 @@
+{
+ "feedback": "2026-10-02 대표: 낙관 '책' 별로, 책가도 바탕 너무 희미",
+ "visibility_def": "원화 크롭 블렌드 불투명도(v4 = 0.15)",
+ "legibility_def": "110px 축소본 획 vs 획 바깥 고리 WCAG 대비비, 문턱 4.5(추정)",
+ "halo": {
+  "dilate": 31,
+  "blur": 16,
+  "alpha": 0.82
+ },
+ "variants": [
+  {
+   "key": "A",
+   "name": "낙관 없음(세로 책가도)",
+   "text": "책가도",
+   "method": "code_render",
+   "fonts": [
+    {
+     "family": "Nanum Brush Script",
+     "license": "SIL OFL 1.1",
+     "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanumbrushscript/NanumBrushScript-Regular.ttf",
+     "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanumbrushscript/OFL.txt",
+     "sha256": "27ceaf578c96f594cdf07fe0181b251790acbb746a164e45c1f6473f89911a31"
+    }
+   ],
+   "background_art": {
+    "title": "Books and Scholars' Accoutrements",
+    "title_ko": "책가도",
+    "institution": "클리블랜드미술관",
+    "accession": "2011.37",
+    "object_url": "https://clevelandart.org/art/2011.37",
+    "url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_print.jpg",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+    "crop": [
+     1372,
+     182,
+     2028,
+     838
+    ],
+    "crop_note": "10폭 중 5~6폭 위 2단(v3 A·v4 A와 같음): 왼쪽 위 책갑 5권, 오른쪽 위 쌓인 책, 왼쪽 아래 찬합·붉은 항아리·빙렬 병, 오른쪽 아래 책갑",
+    "src_sha256": "d108f0bcae36a5a573e7c4c03367124c22a91a24e6cce129af9b37989a294b8a",
+    "visibility": 0.75,
+    "saturation": -0.2,
+    "lut": "render_avatar_v3.common_lut (lut-v1)"
+   },
+   "visibility_steps": [
+    {
+     "visibility": 0.45,
+     "contrast_110": 6.39,
+     "detail_std": 13.5,
+     "pass": true
+    },
+    {
+     "visibility": 0.6,
+     "contrast_110": 5.42,
+     "detail_std": 18.0,
+     "pass": true
+    },
+    {
+     "visibility": 0.75,
+     "contrast_110": 4.55,
+     "detail_std": 22.4,
+     "pass": true
+    }
+   ],
+   "adopted_visibility": 0.75,
+   "steps": [
+    "paper #F7F3EA",
+    "hanji multiply 15% (procedural)",
+    "sepia warm R x1.035 G x1.005 B x0.94 (estimate)",
+    "art crop saturation -20% + lut-v1, opacity 75%",
+    "halo: paper color under text, mask max31+blur16, alpha 0.82",
+    "ink: render_avatar_v4.ink_layer (Nanum Brush, dilate 9px, bleed 22%, dry-brush grain)",
+    "seal: none"
+   ],
+   "max_radius": {
+    "ink": 426,
+    "limit": 430
+   },
+   "legibility_110": {
+    "contrast": 4.55,
+    "threshold": 4.5
+   },
+   "ai_generated": false,
+   "content_changed": false
+  },
+  {
+   "key": "B",
+   "name": "먹색 소인 '노트'",
+   "text": "책가도 + 소인 노트",
+   "method": "code_render",
+   "fonts": [
+    {
+     "family": "Nanum Brush Script",
+     "license": "SIL OFL 1.1",
+     "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanumbrushscript/NanumBrushScript-Regular.ttf",
+     "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanumbrushscript/OFL.txt",
+     "sha256": "27ceaf578c96f594cdf07fe0181b251790acbb746a164e45c1f6473f89911a31"
+    }
+   ],
+   "background_art": {
+    "title": "Books and Scholars' Accoutrements",
+    "title_ko": "책가도",
+    "institution": "클리블랜드미술관",
+    "accession": "2011.37",
+    "object_url": "https://clevelandart.org/art/2011.37",
+    "url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_print.jpg",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+    "crop": [
+     1372,
+     182,
+     2028,
+     838
+    ],
+    "crop_note": "10폭 중 5~6폭 위 2단(v3 A·v4 A와 같음): 왼쪽 위 책갑 5권, 오른쪽 위 쌓인 책, 왼쪽 아래 찬합·붉은 항아리·빙렬 병, 오른쪽 아래 책갑",
+    "src_sha256": "d108f0bcae36a5a573e7c4c03367124c22a91a24e6cce129af9b37989a294b8a",
+    "visibility": 0.75,
+    "saturation": -0.2,
+    "lut": "render_avatar_v3.common_lut (lut-v1)"
+   },
+   "seal": {
+    "type": "먹색 백문 소인(세로 2자 '노트')",
+    "color": "#221E1C, 알파 0.80~0.95 얼룩",
+    "center": [
+     660,
+     800
+    ],
+    "size_px": [
+     84,
+     113
+    ],
+    "red": false
+   },
+   "steps": [
+    "paper #F7F3EA",
+    "hanji multiply 15% (procedural)",
+    "sepia warm R x1.035 G x1.005 B x0.94 (estimate)",
+    "art crop saturation -20% + lut-v1, opacity 75% (= v5-A 채택값)",
+    "halo alpha 0.82 (글자 + 소인 둘레)",
+    "ink: render_avatar_v4.ink_layer (Nanum Brush, dilate 9px, bleed 22%, dry-brush grain)",
+    "seal: mono_seal 노트 (Nanum Brush 글자를 백문으로 뚫음)"
+   ],
+   "max_radius": {
+    "ink": 426,
+    "seal": 354,
+    "limit": 430
+   },
+   "legibility_110": {
+    "contrast": 5.97,
+    "threshold": 4.5,
+    "seal_note": "소인 '노트'는 110px에서 장식(판독 대상 아님), 320px에서 판독"
+   },
+   "ai_generated": false,
+   "content_changed": false
+  },
+  {
+   "key": "C",
+   "name": "바탕 주인공(한지 띠 가로)",
+   "text": "책가도",
+   "method": "code_render",
+   "fonts": [
+    {
+     "family": "Nanum Brush Script",
+     "license": "SIL OFL 1.1",
+     "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanumbrushscript/NanumBrushScript-Regular.ttf",
+     "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanumbrushscript/OFL.txt",
+     "sha256": "27ceaf578c96f594cdf07fe0181b251790acbb746a164e45c1f6473f89911a31"
+    }
+   ],
+   "background_art": {
+    "title": "Books and Scholars' Accoutrements",
+    "title_ko": "책가도",
+    "institution": "클리블랜드미술관",
+    "accession": "2011.37",
+    "object_url": "https://clevelandart.org/art/2011.37",
+    "url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_print.jpg",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+    "crop": [
+     1388,
+     262,
+     1948,
+     822
+    ],
+    "crop_note": "같은 원화 5~6폭, 위·왼쪽을 조금 잘라 아래 칸 기물(찬합·붉은 항아리·빙렬 병)과 책갑 붉은 책끈을 크게",
+    "src_sha256": "d108f0bcae36a5a573e7c4c03367124c22a91a24e6cce129af9b37989a294b8a",
+    "visibility": 0.85,
+    "saturation": -0.2,
+    "lut": "render_avatar_v3.common_lut (lut-v1)"
+   },
+   "band": {
+    "y": [
+     425,
+     655
+    ],
+    "color": "paper #F7F3EA x hanji 15% x sepia",
+    "alpha": 0.92,
+    "feather_px": 10
+   },
+   "steps": [
+    "paper #F7F3EA",
+    "hanji multiply 15% (procedural)",
+    "sepia warm R x1.035 G x1.005 B x0.94 (estimate)",
+    "art crop saturation -20% + lut-v1, opacity 85%",
+    "hanji band y425-655 alpha 0.92",
+    "ink: render_avatar_v4.ink_layer (Nanum Brush, dilate 9px, bleed 22%, dry-brush grain)",
+    "seal: none"
+   ],
+   "max_radius": {
+    "ink": 274,
+    "limit": 430
+   },
+   "legibility_110": {
+    "contrast": 8.12,
+    "threshold": 4.5
+   },
+   "detail_std": 51.1,
+   "ai_generated": false,
+   "content_changed": false
+  }
+ ]
+}
