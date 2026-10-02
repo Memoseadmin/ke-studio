@@ -1,0 +1,103 @@
+{
+  "_doc": "gen_plates.py 세트 주제(theme, 영어) + 장별 주제 덮어쓰기(cards). 덮어쓰기는 cards.json visual이 금지 소재(호랑이·까치·포스터 등)이거나 글자·숫자가 주인공이라 그대로 넣으면 이미지 안에 글자가 생길 위험이 있는 장만 쓴다. 글(cards.json)은 바꾸지 않는다. DESIGN-v2.md §3",
+  "sets": {
+    "2026-10-09": {
+      "theme": "Hangul Day and the history of the Korean alphabet",
+      "cards": {
+        "1": "a single pine branch under a full moon over hanji paper, calm and festive",
+        "3": "peony and lotus blossoms woven into an ornamental minhwa pattern, orange accents",
+        "4": "a blank hanji calendar sheet under a minhwa band of sun and stylized clouds",
+        "6": "a simplified palace wall and gate tower silhouette on hanji paper"
+      }
+    },
+    "2026-10-10": {
+      "theme": "autumn royal palace culture festival in Seoul",
+      "cards": {
+        "7": "a hanji panel divided into three compartments, each with a palace roofline silhouette"
+      }
+    },
+    "2026-10-11": {
+      "theme": "how to read Korean minhwa folk paintings",
+      "cards": {
+        "1": "a gnarled pine branch with a red sun and stylized clouds, minhwa composition without animals",
+        "3": "close-up of a traditional wooden gate door with ink-brush wood grain and a blank paper amulet sheet",
+        "4": "a pine twig holding a small folded letter envelope, celadon accents"
+      }
+    },
+    "2026-10-12": {
+      "theme": "autumn foliage calendar of Korean mountains",
+      "cards": {
+        "6": "four small mountain icons in a row along a thin horizontal line"
+      }
+    },
+    "2026-10-13": {
+      "theme": "convenience store bread that comes with literary bookmarks",
+      "cards": {}
+    },
+    "2026-10-14": {
+      "theme": "autumn weekend outings in Korea",
+      "cards": {
+        "2": "a bookshelf niche holding a blank framed rectangle and a few stalks of silver grass"
+      }
+    },
+    "2026-10-15": {
+      "theme": "Korean ramyeon noodles travelling the world",
+      "cards": {
+        "5": "two rows of plain noodle bowls in celadon"
+      }
+    },
+    "2026-10-16": {
+      "theme": "the four lost letters of the original Korean alphabet",
+      "cards": {
+        "1": "a grid of twenty-eight blank square tiles on hanji paper, four of them faded to pale grey",
+        "3": "four large blank square frames with orange borders on hanji paper",
+        "5": "a chaekgado cabinet with one drawer slightly open, the drawer empty",
+        "4": "large and small blank square tiles gradually overlapping, soft grey mist",
+        "6": "three small paper lanterns along a thin horizontal line"
+      }
+    },
+    "2026-10-17": {
+      "theme": "convenience store collaboration goods",
+      "cards": {
+        "2": "a single bookmark resting on an open book with blank pages"
+      }
+    },
+    "2026-10-18": {
+      "theme": "museum souvenir goods inspired by Korean heritage",
+      "cards": {
+        "2": "a red seal impression with an abstract geometric pattern on hanji, beside the outline of a seal handle"
+      }
+    },
+    "2026-10-19": {
+      "theme": "hand-copying favourite books as a quiet hobby",
+      "cards": {
+        "6": "two bands of abstract brush strokes, one upright and one flowing, stacked on hanji"
+      }
+    },
+    "2026-10-20": {
+      "theme": "a bowl of ramyeon as a quiet symbol of comfort",
+      "cards": {
+        "4": "an empty night landscape with low hills and a crescent moon, wide calm sky",
+        "5": "two rows of plain noodle bowls in celadon"
+      }
+    },
+    "2026-10-21": {
+      "theme": "autumn museum and art exhibitions in Korea",
+      "cards": {
+        "5": "a bookshelf with plain blank book spines in muted colors",
+        "7": "a quiet hanji panel with a plain two-column grid and a small ink brush"
+      }
+    },
+    "2026-10-22": {
+      "theme": "learning the Korean language around the world",
+      "cards": {
+        "1": "a flat world map with scattered small dots in celadon and red",
+        "3": "three empty bookshelf compartments over a faint blank grid",
+        "5": "six raised braille-like dots beside an ornamental peony",
+        "6": "a braille dot pattern and a folded paper airplane",
+        "2": "a single dot on the left and a cluster of dots on the right, linked by a thin line",
+        "4": "an orange circle above three empty compartments"
+      }
+    }
+  }
+}

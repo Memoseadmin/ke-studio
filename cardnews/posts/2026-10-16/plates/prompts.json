@@ -1,0 +1,184 @@
+{
+  "style_version": "v2-provisional-2026-10-02",
+  "model": "Tongyi-MAI/Z-Image-Turbo (6B)",
+  "model_card": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+  "model_license": "Apache-2.0",
+  "endpoint": "fal-ai/z-image/turbo",
+  "endpoint_url": "https://fal.run/fal-ai/z-image/turbo",
+  "terms_url": "https://fal.ai/terms",
+  "terms_note": "fal Terms of Service Last Updated 2026-09-08 (2026-10-02 확인): fal은 Output Content에 대한 IP를 주장하지 않으며 비침해를 보증하지 않음(사용자 책임). 생성물 검수는 사람이 한다",
+  "price_estimate": "USD 0.005 / megapixel (docs/TOOLING_OPENSOURCE.md [O22], 추정치. 실행 전 https://fal.ai/pricing 재확인)",
+  "seed_rule": "seed = MMDD*1000 + card*10 + variant (예: 10/09 1장 시안0 = 1009010). 같은 프롬프트+seed+모델 버전이면 같은 그림",
+  "negative_note": "fal-ai/z-image/turbo 입력에 negative_prompt 칸이 없다(OpenAPI 2026-10-02 확인). 네거티브는 constraints 문장으로 프롬프트에 넣고, 이 목록은 기록·검수 체크리스트용",
+  "set": "2026-10-16",
+  "post_id": "C1-1-08",
+  "theme": "the four lost letters of the original Korean alphabet",
+  "request": {
+    "image_size": {
+      "width": 1536,
+      "height": 672
+    },
+    "num_inference_steps": 8,
+    "num_images": 1,
+    "enable_safety_checker": true,
+    "output_format": "png",
+    "acceleration": "regular",
+    "enable_prompt_expansion": false
+  },
+  "negative": [
+    "text",
+    "letters",
+    "numbers",
+    "calligraphy",
+    "captions",
+    "logos",
+    "brand names",
+    "trademarks",
+    "product packaging graphics",
+    "printed labels",
+    "readable signage",
+    "real people",
+    "faces",
+    "human figures",
+    "celebrity likeness",
+    "copyrighted characters",
+    "mascots",
+    "film or TV stills",
+    "posters",
+    "watermarks",
+    "signatures",
+    "artist seal stamps",
+    "tigers",
+    "magpies",
+    "flags",
+    "copy of an existing painting"
+  ],
+  "created_at": "2026-10-02T03:58:03.372727Z",
+  "mode": "dry-run",
+  "cards": [
+    {
+      "card": 1,
+      "role": "cover",
+      "visual": "한지 바탕에 글자 격자 28칸, 그중 4칸만 회색으로 흐리게. 먹색·회색",
+      "subject": "a grid of twenty-eight blank square tiles on hanji paper, four of them faded to pale grey",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "a grid of twenty-eight blank square tiles on hanji paper, four of them faded to pale grey. Theme: the four lost letters of the original Korean alphabet. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one focal motif right of center, calm empty paper on the left. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 100,
+      "prompt_sha256": "8aa15ab2a4bab7a52d65c7ff1a47f953279ce639b52a87d3b69e591617cef309",
+      "seeds": [
+        1016010
+      ],
+      "crop_aspect": [
+        936,
+        410
+      ]
+    },
+    {
+      "card": 2,
+      "role": "body",
+      "visual": "15세기 서재 책가도: 책상·종이·붓·연적. 왕의 얼굴·표준영정·실루엣 없음",
+      "subject": "서재 책가도: 책상· 종이· 붓· 연적 (chaekgado scholar's bookshelf screen, water dropper, ink brush)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "chaekgado scholar's bookshelf screen",
+        "water dropper",
+        "ink brush"
+      ],
+      "prompt": "서재 책가도: 책상· 종이· 붓· 연적 (chaekgado scholar's bookshelf screen, water dropper, ink brush). Theme: the four lost letters of the original Korean alphabet. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 92,
+      "prompt_sha256": "faf45b0b428832588211d27d113cb0ff7f83fc4e470e9165c49a6ea1eac6bc28",
+      "seeds": [
+        1016020
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 3,
+      "role": "body",
+      "visual": "네 글자를 크게 하나씩, 주황 테두리. 옛한글 글꼴 지원 확인 필수(글꼴 미지원 시 글자가 네모로 깨짐)",
+      "subject": "four large blank square frames with orange borders on hanji paper",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "four large blank square frames with orange borders on hanji paper. Theme: the four lost letters of the original Korean alphabet. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 89,
+      "prompt_sha256": "a1975fd4991262456af165f1e1bd71af28fe0a5d1b2e05fee1eb7fab58b4c1f0",
+      "seeds": [
+        1016030
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 4,
+      "role": "body",
+      "visual": "큰 글자가 작은 글자로 서서히 포개지는 평면 타임라인, 안개 같은 회색 번짐",
+      "subject": "large and small blank square tiles gradually overlapping, soft grey mist",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "large and small blank square tiles gradually overlapping, soft grey mist. Theme: the four lost letters of the original Korean alphabet. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 89,
+      "prompt_sha256": "ebb424d73fe6d61cb8e092f6b2d60c10a2732b524f6d4b2ec323b2f8a14b70e7",
+      "seeds": [
+        1016040
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 5,
+      "role": "body",
+      "visual": "서랍이 하나 살짝 열린 책가도 장, 서랍 안에 네 글자가 보임",
+      "subject": "a chaekgado cabinet with one drawer slightly open, the drawer empty",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "a chaekgado cabinet with one drawer slightly open, the drawer empty. Theme: the four lost letters of the original Korean alphabet. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 89,
+      "prompt_sha256": "b1519a28cbb694a9f12279fd5cacfbb0deaccf1af9f8a209d8a7c7350faceb4b",
+      "seeds": [
+        1016050
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 6,
+      "role": "body",
+      "visual": "가로 타임라인 1446 → 1926 → 2026 세 점, 점마다 작은 등불. 행사 사진·동상 없음",
+      "subject": "three small paper lanterns along a thin horizontal line",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "three small paper lanterns along a thin horizontal line. Theme: the four lost letters of the original Korean alphabet. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 87,
+      "prompt_sha256": "c0ebf2a3f397c9ab2bf3b6e2d4a67f12c558e0134662dbb2c3599b2c8b1bc716",
+      "seeds": [
+        1016060
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 7,
+      "role": "last",
+      "visual": "24자가 '한글' 두 글자로 모이는 정지 프레임, 노란 시그니처 바, 핸들 오버레이",
+      "skip": "마지막 장: 렌더러 코드 단청 띠 유지(생성 안 함)"
+    }
+  ]
+}

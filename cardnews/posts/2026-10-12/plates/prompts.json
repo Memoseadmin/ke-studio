@@ -1,0 +1,219 @@
+{
+  "style_version": "v2-provisional-2026-10-02",
+  "model": "Tongyi-MAI/Z-Image-Turbo (6B)",
+  "model_card": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+  "model_license": "Apache-2.0",
+  "endpoint": "fal-ai/z-image/turbo",
+  "endpoint_url": "https://fal.run/fal-ai/z-image/turbo",
+  "terms_url": "https://fal.ai/terms",
+  "terms_note": "fal Terms of Service Last Updated 2026-09-08 (2026-10-02 확인): fal은 Output Content에 대한 IP를 주장하지 않으며 비침해를 보증하지 않음(사용자 책임). 생성물 검수는 사람이 한다",
+  "price_estimate": "USD 0.005 / megapixel (docs/TOOLING_OPENSOURCE.md [O22], 추정치. 실행 전 https://fal.ai/pricing 재확인)",
+  "seed_rule": "seed = MMDD*1000 + card*10 + variant (예: 10/09 1장 시안0 = 1009010). 같은 프롬프트+seed+모델 버전이면 같은 그림",
+  "negative_note": "fal-ai/z-image/turbo 입력에 negative_prompt 칸이 없다(OpenAPI 2026-10-02 확인). 네거티브는 constraints 문장으로 프롬프트에 넣고, 이 목록은 기록·검수 체크리스트용",
+  "set": "2026-10-12",
+  "post_id": "C1-1-04",
+  "theme": "autumn foliage calendar of Korean mountains",
+  "request": {
+    "image_size": {
+      "width": 1536,
+      "height": 672
+    },
+    "num_inference_steps": 8,
+    "num_images": 1,
+    "enable_safety_checker": true,
+    "output_format": "png",
+    "acceleration": "regular",
+    "enable_prompt_expansion": false
+  },
+  "negative": [
+    "text",
+    "letters",
+    "numbers",
+    "calligraphy",
+    "captions",
+    "logos",
+    "brand names",
+    "trademarks",
+    "product packaging graphics",
+    "printed labels",
+    "readable signage",
+    "real people",
+    "faces",
+    "human figures",
+    "celebrity likeness",
+    "copyrighted characters",
+    "mascots",
+    "film or TV stills",
+    "posters",
+    "watermarks",
+    "signatures",
+    "artist seal stamps",
+    "tigers",
+    "magpies",
+    "flags",
+    "copy of an existing painting"
+  ],
+  "created_at": "2026-10-02T03:58:03.366139Z",
+  "mode": "dry-run",
+  "cards": [
+    {
+      "card": 1,
+      "role": "cover",
+      "visual": "한지 바탕 위 산 능선 네 겹을 민화 평면으로, 위에서 아래로 초록→주황→빨강 그라데이션",
+      "subject": "한지 바탕 위 산 능선 네 겹을 민화 평면으로, 위에서 아래로 초록 주황 빨강 그라데이션 (hanji paper, mountain ridges, orange accents, mountains)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "hanji paper",
+        "mountain ridges",
+        "orange accents",
+        "mountains"
+      ],
+      "prompt": "한지 바탕 위 산 능선 네 겹을 민화 평면으로, 위에서 아래로 초록 주황 빨강 그라데이션 (hanji paper, mountain ridges, orange accents, mountains). Theme: autumn foliage calendar of Korean mountains. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one focal motif right of center, calm empty paper on the left. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 102,
+      "prompt_sha256": "d1acb67bd5480d49ba421aafd3a6dc764d6f644290dd1a2ef071f932ca1f9dc6",
+      "seeds": [
+        1012010
+      ],
+      "crop_aspect": [
+        936,
+        410
+      ]
+    },
+    {
+      "card": 2,
+      "role": "body",
+      "visual": "뾰족한 바위 능선과 단풍잎 몇 장, 큰 숫자 '10/25'. 실제 사진 아님",
+      "subject": "뾰족한 바위 능선과 단풍잎 몇 장, 큰 (mountain ridges, rocky peaks)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "mountain ridges",
+        "rocky peaks"
+      ],
+      "prompt": "뾰족한 바위 능선과 단풍잎 몇 장, 큰 (mountain ridges, rocky peaks). Theme: autumn foliage calendar of Korean mountains. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 86,
+      "prompt_sha256": "275cd18ddae31c569096ea89742e80c7028f2a3ebcafce7bc258404a2fc85e6e",
+      "seeds": [
+        1012020
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 3,
+      "role": "body",
+      "visual": "부드러운 능선과 전나무 실루엣, 숫자 '10/16~25'",
+      "subject": "부드러운 능선과 전나무 실루엣 (fir trees, mountain ridges)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "fir trees",
+        "mountain ridges"
+      ],
+      "prompt": "부드러운 능선과 전나무 실루엣 (fir trees, mountain ridges). Theme: autumn foliage calendar of Korean mountains. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 83,
+      "prompt_sha256": "59147f5f0eab1a4dc78d7a7ba73b0d9f57a7dbb66f3a9a79fd7077b02e7c6e9e",
+      "seeds": [
+        1012030
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 4,
+      "role": "body",
+      "visual": "애기단풍 잎 패턴을 촘촘히, 숫자 '11/1'. 빨강 비중 높게",
+      "subject": "애기단풍 잎 패턴을 촘촘히, 빨강 비중 높게 (small maple leaves)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "small maple leaves"
+      ],
+      "prompt": "애기단풍 잎 패턴을 촘촘히, 빨강 비중 높게 (small maple leaves). Theme: autumn foliage calendar of Korean mountains. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 85,
+      "prompt_sha256": "bb93eb49e3bca962bcab4c85174effd79842774dd985076a3c8e28a6d5bac73e",
+      "seeds": [
+        1012040
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 5,
+      "role": "body",
+      "visual": "긴 능선 위 화살표가 북→남으로 흐르는 평면 지도 느낌, 숫자 '11/5~13'",
+      "subject": "긴 능선 위 화살표가 북 남으로 흐르는 평면 지도 느낌 (mountain ridges, map)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "mountain ridges",
+        "map"
+      ],
+      "prompt": "긴 능선 위 화살표가 북 남으로 흐르는 평면 지도 느낌 (mountain ridges, map). Theme: autumn foliage calendar of Korean mountains. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 88,
+      "prompt_sha256": "2757e9ccf6715b693a0809bda3baa9976302e3470bf6d8cf12fefe615afb5c07",
+      "seeds": [
+        1012050
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 6,
+      "role": "body",
+      "visual": "가로 타임라인 한 줄에 네 점, 각 점 위 작은 산 아이콘. 저장용 표 레이아웃",
+      "subject": "four small mountain icons in a row along a thin horizontal line",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "four small mountain icons in a row along a thin horizontal line. Theme: autumn foliage calendar of Korean mountains. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 87,
+      "prompt_sha256": "525fd8fe494675659a12f00963119bad9af4ab51006455e6b00c32dd7e09efe3",
+      "seeds": [
+        1012060
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 7,
+      "role": "body",
+      "visual": "체크리스트 세로 배열, 옆에 민화풍 해·구름·버스 아이콘",
+      "subject": "세로 배열, 옆에 민화풍 해· 구름· 버스 아이콘 (clouds, small bus, sun)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "clouds",
+        "small bus",
+        "sun"
+      ],
+      "prompt": "세로 배열, 옆에 민화풍 해· 구름· 버스 아이콘 (clouds, small bus, sun). Theme: autumn foliage calendar of Korean mountains. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 87,
+      "prompt_sha256": "fafd407553ce6ac71715a50242f07ebc9c8614eefb05007bed5a3adf3da56d2b",
+      "seeds": [
+        1012070
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 8,
+      "role": "last",
+      "visual": "1장 능선 그라데이션을 축소, 노란 시그니처 바, 핸들 오버레이",
+      "skip": "마지막 장: 렌더러 코드 단청 띠 유지(생성 안 함)"
+    }
+  ]
+}

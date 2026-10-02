@@ -1,0 +1,250 @@
+{
+  "style_version": "v2-provisional-2026-10-02",
+  "model": "Tongyi-MAI/Z-Image-Turbo (6B)",
+  "model_card": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+  "model_license": "Apache-2.0",
+  "endpoint": "fal-ai/z-image/turbo",
+  "endpoint_url": "https://fal.run/fal-ai/z-image/turbo",
+  "terms_url": "https://fal.ai/terms",
+  "terms_note": "fal Terms of Service Last Updated 2026-09-08 (2026-10-02 확인): fal은 Output Content에 대한 IP를 주장하지 않으며 비침해를 보증하지 않음(사용자 책임). 생성물 검수는 사람이 한다",
+  "price_estimate": "USD 0.005 / megapixel (docs/TOOLING_OPENSOURCE.md [O22], 추정치. 실행 전 https://fal.ai/pricing 재확인)",
+  "seed_rule": "seed = MMDD*1000 + card*10 + variant (예: 10/09 1장 시안0 = 1009010). 같은 프롬프트+seed+모델 버전이면 같은 그림",
+  "negative_note": "fal-ai/z-image/turbo 입력에 negative_prompt 칸이 없다(OpenAPI 2026-10-02 확인). 네거티브는 constraints 문장으로 프롬프트에 넣고, 이 목록은 기록·검수 체크리스트용",
+  "set": "2026-10-10",
+  "post_id": "C1-1-02",
+  "theme": "autumn royal palace culture festival in Seoul",
+  "request": {
+    "image_size": {
+      "width": 1536,
+      "height": 672
+    },
+    "num_inference_steps": 8,
+    "num_images": 1,
+    "enable_safety_checker": true,
+    "output_format": "png",
+    "acceleration": "regular",
+    "enable_prompt_expansion": false
+  },
+  "negative": [
+    "text",
+    "letters",
+    "numbers",
+    "calligraphy",
+    "captions",
+    "logos",
+    "brand names",
+    "trademarks",
+    "product packaging graphics",
+    "printed labels",
+    "readable signage",
+    "real people",
+    "faces",
+    "human figures",
+    "celebrity likeness",
+    "copyrighted characters",
+    "mascots",
+    "film or TV stills",
+    "posters",
+    "watermarks",
+    "signatures",
+    "artist seal stamps",
+    "tigers",
+    "magpies",
+    "flags",
+    "copy of an existing painting"
+  ],
+  "created_at": "2026-10-02T03:58:03.362249Z",
+  "mode": "dry-run",
+  "cards": [
+    {
+      "card": 1,
+      "role": "cover",
+      "visual": "궁궐 지붕선을 단순화한 민화풍 실루엣 다섯 개를 가로로, 단풍색 점 흩뿌림. 실제 건물 사진 없음",
+      "subject": "궁궐 지붕선을 단순화한 민화풍 실루엣 다섯 개를 가로로, 단풍색 점 흩뿌림 (palace rooflines, palace)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "palace rooflines",
+        "palace"
+      ],
+      "prompt": "궁궐 지붕선을 단순화한 민화풍 실루엣 다섯 개를 가로로, 단풍색 점 흩뿌림 (palace rooflines, palace). Theme: autumn royal palace culture festival in Seoul. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one focal motif right of center, calm empty paper on the left. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 95,
+      "prompt_sha256": "f6698e26be33961425c0c35c4f2a2929fb41350c0a76ace0e9d665eeafe82554",
+      "seeds": [
+        1010010
+      ],
+      "crop_aspect": [
+        936,
+        410
+      ]
+    },
+    {
+      "card": 2,
+      "role": "body",
+      "visual": "한지 지도 느낌의 서울 도심 평면에 다섯 점, 해와 달 아이콘으로 낮·밤 구분",
+      "subject": "한지 지도 느낌의 서울 도심 평면에 다섯 점, 해와 달 아이콘으로 낮· 밤 구분 (hanji paper, map, sun, full moon, night)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "hanji paper",
+        "map",
+        "sun",
+        "full moon",
+        "night"
+      ],
+      "prompt": "한지 지도 느낌의 서울 도심 평면에 다섯 점, 해와 달 아이콘으로 낮· 밤 구분 (hanji paper, map, sun, full moon, night). Theme: autumn royal palace culture festival in Seoul. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 97,
+      "prompt_sha256": "eede23e04fc6cf36d130165cbe443bfa7924545f90a02ac791be06e868641a01",
+      "seeds": [
+        1010020
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 3,
+      "role": "body",
+      "visual": "밤색 배경에 한복 옷감 무늬(색동·단청 패턴)만, 사람 형체 없음. 등불 몇 개",
+      "subject": "밤색 배경에 한복 옷감 무늬(색동· 단청 패턴), 등불 몇 개 (paper lanterns, dancheong pattern, saekdong rainbow stripes, hanbok fabric)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "paper lanterns",
+        "dancheong pattern",
+        "saekdong rainbow stripes",
+        "hanbok fabric"
+      ],
+      "prompt": "밤색 배경에 한복 옷감 무늬(색동· 단청 패턴), 등불 몇 개 (paper lanterns, dancheong pattern, saekdong rainbow stripes, hanbok fabric). Theme: autumn royal palace culture festival in Seoul. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 95,
+      "prompt_sha256": "dd3116c949e0cb5f379eac253d652640407ec70162b172868b091ee8ddfba796",
+      "seeds": [
+        1010030
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 4,
+      "role": "body",
+      "visual": "옷걸이에 걸린 궁중 복식 한 벌을 평면 민화로, 얼굴 없음. 금박 대신 노란 포인트",
+      "subject": "옷걸이에 걸린 궁중 복식 한 벌을 평면 민화로, 금박 노란 포인트 (clothes rack, court robe)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "clothes rack",
+        "court robe"
+      ],
+      "prompt": "옷걸이에 걸린 궁중 복식 한 벌을 평면 민화로, 금박 노란 포인트 (clothes rack, court robe). Theme: autumn royal palace culture festival in Seoul. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 91,
+      "prompt_sha256": "ade307ff2d7894e9d075ffd77a789f635ac4d9187122ca4f9500694a75579307",
+      "seeds": [
+        1010040
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 5,
+      "role": "body",
+      "visual": "낮 하늘 아래 전각 기둥과 돌길, 책가도풍 소반·그릇 소품. 인물 없음",
+      "subject": "낮 하늘 아래 전각 기둥과 돌길, 책가도풍 소반· 그릇 소품 (small wooden tray table, bowls, palace hall, pillars, stone path)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "small wooden tray table",
+        "bowls",
+        "palace hall",
+        "pillars",
+        "stone path"
+      ],
+      "prompt": "낮 하늘 아래 전각 기둥과 돌길, 책가도풍 소반· 그릇 소품 (small wooden tray table, bowls, palace hall, pillars, stone path). Theme: autumn royal palace culture festival in Seoul. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 96,
+      "prompt_sha256": "07f68e35f1443e61edb86c4bda804cb3c34084de29264501e4d98c6cf515a05b",
+      "seeds": [
+        1010050
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 6,
+      "role": "body",
+      "visual": "밤 연못에 연꽃과 빛 번짐을 민화 평면으로, 쪽빛·청자색 그라데이션",
+      "subject": "밤 연못에 연꽃과 빛 번짐을 민화 평면으로, 쪽빛· 청자색 그라데이션 (celadon accents, lotus, pond, indigo, light rays, night)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "celadon accents",
+        "lotus",
+        "pond",
+        "indigo",
+        "light rays",
+        "night"
+      ],
+      "prompt": "밤 연못에 연꽃과 빛 번짐을 민화 평면으로, 쪽빛· 청자색 그라데이션 (celadon accents, lotus, pond, indigo, light rays, night). Theme: autumn royal palace culture festival in Seoul. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 94,
+      "prompt_sha256": "29ea528cc3c54f6e2ab846a85fe387ccd2f1362448a8214004c3e13c57d04cfa",
+      "seeds": [
+        1010060
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 7,
+      "role": "body",
+      "visual": "세 칸으로 나눈 한지 패널, 각 칸에 지붕선 실루엣과 물음표 대신 빈 체크박스",
+      "subject": "a hanji panel divided into three compartments, each with a palace roofline silhouette",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "a hanji panel divided into three compartments, each with a palace roofline silhouette. Theme: autumn royal palace culture festival in Seoul. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 89,
+      "prompt_sha256": "72b754f91d75e1024afb0f7332a2c181fd568c90f0cc9e113a90638ec254bd12",
+      "seeds": [
+        1010070
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 8,
+      "role": "body",
+      "visual": "세로 체크리스트 레이아웃, 왼쪽에 민화풍 등불 아이콘 다섯 개",
+      "subject": "세로, 왼쪽에 민화풍 등불 아이콘 다섯 개 (paper lanterns)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "paper lanterns"
+      ],
+      "prompt": "세로, 왼쪽에 민화풍 등불 아이콘 다섯 개 (paper lanterns). Theme: autumn royal palace culture festival in Seoul. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 85,
+      "prompt_sha256": "e43cc031366c40fb2f54918278c5fe239562bcc6abc57cfd780967bd26e5ef58",
+      "seeds": [
+        1010080
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 9,
+      "role": "last",
+      "visual": "다섯 지붕선 실루엣을 작게 반복, 노란 시그니처 바, 핸들 오버레이",
+      "skip": "마지막 장: 렌더러 코드 단청 띠 유지(생성 안 함)"
+    }
+  ]
+}

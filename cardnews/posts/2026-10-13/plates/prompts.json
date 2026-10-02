@@ -1,0 +1,201 @@
+{
+  "style_version": "v2-provisional-2026-10-02",
+  "model": "Tongyi-MAI/Z-Image-Turbo (6B)",
+  "model_card": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+  "model_license": "Apache-2.0",
+  "endpoint": "fal-ai/z-image/turbo",
+  "endpoint_url": "https://fal.run/fal-ai/z-image/turbo",
+  "terms_url": "https://fal.ai/terms",
+  "terms_note": "fal Terms of Service Last Updated 2026-09-08 (2026-10-02 확인): fal은 Output Content에 대한 IP를 주장하지 않으며 비침해를 보증하지 않음(사용자 책임). 생성물 검수는 사람이 한다",
+  "price_estimate": "USD 0.005 / megapixel (docs/TOOLING_OPENSOURCE.md [O22], 추정치. 실행 전 https://fal.ai/pricing 재확인)",
+  "seed_rule": "seed = MMDD*1000 + card*10 + variant (예: 10/09 1장 시안0 = 1009010). 같은 프롬프트+seed+모델 버전이면 같은 그림",
+  "negative_note": "fal-ai/z-image/turbo 입력에 negative_prompt 칸이 없다(OpenAPI 2026-10-02 확인). 네거티브는 constraints 문장으로 프롬프트에 넣고, 이 목록은 기록·검수 체크리스트용",
+  "set": "2026-10-13",
+  "post_id": "C1-1-05",
+  "theme": "convenience store bread that comes with literary bookmarks",
+  "request": {
+    "image_size": {
+      "width": 1536,
+      "height": 672
+    },
+    "num_inference_steps": 8,
+    "num_images": 1,
+    "enable_safety_checker": true,
+    "output_format": "png",
+    "acceleration": "regular",
+    "enable_prompt_expansion": false
+  },
+  "negative": [
+    "text",
+    "letters",
+    "numbers",
+    "calligraphy",
+    "captions",
+    "logos",
+    "brand names",
+    "trademarks",
+    "product packaging graphics",
+    "printed labels",
+    "readable signage",
+    "real people",
+    "faces",
+    "human figures",
+    "celebrity likeness",
+    "copyrighted characters",
+    "mascots",
+    "film or TV stills",
+    "posters",
+    "watermarks",
+    "signatures",
+    "artist seal stamps",
+    "tigers",
+    "magpies",
+    "flags",
+    "copy of an existing painting"
+  ],
+  "created_at": "2026-10-02T03:58:03.368188Z",
+  "mode": "dry-run",
+  "cards": [
+    {
+      "card": 1,
+      "role": "cover",
+      "visual": "무지 크라프트 봉지 하나와 그 옆에 더 크게 그린 책갈피 한 장. 로고·실제 포장 디자인 금지. 한지 바탕",
+      "subject": "무지 크라프트 봉지 하나와 그 옆에 더 크게 그린 책갈피 한 장, 한지 바탕 (bookmarks, hanji paper, plain kraft bag)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "bookmarks",
+        "hanji paper",
+        "plain kraft bag"
+      ],
+      "prompt": "무지 크라프트 봉지 하나와 그 옆에 더 크게 그린 책갈피 한 장, 한지 바탕 (bookmarks, hanji paper, plain kraft bag). Theme: convenience store bread that comes with literary bookmarks. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one focal motif right of center, calm empty paper on the left. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 102,
+      "prompt_sha256": "dfac9ad1a9f29d1c14a8a93f62c56bf61a311adf66a675f098ac18d29ad977eb",
+      "seeds": [
+        1013010
+      ],
+      "crop_aspect": [
+        936,
+        410
+      ]
+    },
+    {
+      "card": 2,
+      "role": "body",
+      "visual": "책가도 서가 한 칸에 책 네 권 등만 보이게, 제목은 글자로만. 표지 디자인 모사 금지",
+      "subject": "책가도 서가 한 칸에 책 네 권 등만 보이게 (chaekgado scholar's bookshelf screen, bookshelf, books)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "chaekgado scholar's bookshelf screen",
+        "bookshelf",
+        "books"
+      ],
+      "prompt": "책가도 서가 한 칸에 책 네 권 등만 보이게 (chaekgado scholar's bookshelf screen, bookshelf, books). Theme: convenience store bread that comes with literary bookmarks. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 92,
+      "prompt_sha256": "406c28ec4b9df39032a11c564ddd15999d0c84638146ac3c4763af73f0699c9f",
+      "seeds": [
+        1013020
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 3,
+      "role": "body",
+      "visual": "책갈피 20장을 부채처럼 펼친 평면 구도, 각 장은 색 띠와 짧은 획으로만 표현",
+      "subject": "책갈피 부채처럼 펼친 평면 구도, 각 장은 색 띠와 짧은 획으로만 표현 (bookmarks)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "bookmarks"
+      ],
+      "prompt": "책갈피 부채처럼 펼친 평면 구도, 각 장은 색 띠와 짧은 획으로만 표현 (bookmarks). Theme: convenience store bread that comes with literary bookmarks. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 90,
+      "prompt_sha256": "b870eea2d95bef90e31b14abe55cab9981ce69205253f0b213b17c1aca96d49a",
+      "seeds": [
+        1013030
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 4,
+      "role": "body",
+      "visual": "반쯤 열린 봉지에서 빛 한 줄이 나오는 민화풍 평면, 안쪽은 비워 둠(내용물 미표시)",
+      "subject": "반쯤 열린 봉지에서 빛 한 줄이 나오는 민화풍 평면, 안쪽은 비워 둠(내용물 미표시) (light rays)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "light rays"
+      ],
+      "prompt": "반쯤 열린 봉지에서 빛 한 줄이 나오는 민화풍 평면, 안쪽은 비워 둠(내용물 미표시) (light rays). Theme: convenience store bread that comes with literary bookmarks. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 92,
+      "prompt_sha256": "034014e39e5bb55c3e0afe46e158205289beb58dc0d0ecabaad4e48ef00d1054",
+      "seeds": [
+        1013040
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 5,
+      "role": "body",
+      "visual": "책 한 권 위에 빵 한 덩이가 올라앉은 정물, 책가도 소반 구도. 청자색 포인트",
+      "subject": "책 한 권 위에 빵 한 덩이가 올라앉은 정물, 책가도 소반 구도, 청자색 포인트 (chaekgado scholar's bookshelf screen, celadon accents, small wooden tray table, books, bread loaf)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "chaekgado scholar's bookshelf screen",
+        "celadon accents",
+        "small wooden tray table",
+        "books",
+        "bread loaf"
+      ],
+      "prompt": "책 한 권 위에 빵 한 덩이가 올라앉은 정물, 책가도 소반 구도, 청자색 포인트 (chaekgado scholar's bookshelf screen, celadon accents, small wooden tray table, books, bread loaf). Theme: convenience store bread that comes with literary bookmarks. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 104,
+      "prompt_sha256": "0a34427c0a98b21c547d00d9e86f2869b52362963b9d1380b1237d44d8e0d500",
+      "seeds": [
+        1013050
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 6,
+      "role": "body",
+      "visual": "두 칸 비교표, 왼쪽 책갈피 아이콘·오른쪽 카드 아이콘. 선수·팀 로고 금지, 빈 카드 테두리만",
+      "subject": "두 칸, 왼쪽 책갈피 아이콘· 오른쪽 카드 아이콘, 빈 카드 테두리만 (bookmarks, blank cards)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "bookmarks",
+        "blank cards"
+      ],
+      "prompt": "두 칸, 왼쪽 책갈피 아이콘· 오른쪽 카드 아이콘, 빈 카드 테두리만 (bookmarks, blank cards). Theme: convenience store bread that comes with literary bookmarks. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 91,
+      "prompt_sha256": "932556596f07a0f6a3447f6b07eedcaa6f1b8845167355f6b1e89398fe4e57d8",
+      "seeds": [
+        1013060
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 7,
+      "role": "last",
+      "visual": "책갈피 한 장을 작게, 노란 시그니처 바, 핸들 오버레이",
+      "skip": "마지막 장: 렌더러 코드 단청 띠 유지(생성 안 함)"
+    }
+  ]
+}

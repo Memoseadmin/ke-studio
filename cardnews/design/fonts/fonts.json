@@ -1,0 +1,36 @@
+{
+  "_doc": "render_cards.py 글꼴 설정. roles = 역할별 글꼴 체인(앞에서부터, 기본 글꼴에 없는 글자만 다음 글꼴로). 항목은 이 폴더의 파일명 또는 'system:<패밀리>[:<스타일>]'(fc-list). 글꼴을 바꾸려면 OFL 등 상업 사용 가능 글꼴 파일 + 라이선스 파일을 이 폴더에 넣고 files·roles만 고친다. 다른 설정 파일은 render_cards.py --fonts PATH. DESIGN-v2.md §2",
+  "name": "v2 Black Han Sans + Pretendard (2026-10-02)",
+  "roles": {
+    "head": ["BlackHanSans-Regular.ttf", "Pretendard-Black.otf", "system:WenQuanYi Zen Hei"],
+    "body": ["Pretendard-Regular.otf", "system:WenQuanYi Zen Hei"],
+    "bold": ["Pretendard-Bold.otf", "system:WenQuanYi Zen Hei"],
+    "latin": ["system:Liberation Sans:Bold", "Pretendard-Bold.otf"]
+  },
+  "spacing": {
+    "cover_head_lh": 1.15, "cover_sub_lh": 1.45, "body_head_lh": 1.15, "body_lh": 1.5, "check_lh": 1.4,
+    "last_cta_lh": 1.15, "src_lh": 1.45, "head_track": -0.02, "body_track": -0.01
+  },
+  "files": {
+    "BlackHanSans-Regular.ttf": {
+      "family": "Black Han Sans", "version": "1.001", "license": "OFL-1.1", "license_file": "OFL-BlackHanSans.txt",
+      "source": "https://github.com/zesstype/Black-Han-Sans",
+      "sha256": "31960809284026681774a8e52dc19ebcad26cf69b0ad9d560f288296fbb52739"
+    },
+    "Pretendard-Regular.otf": {
+      "family": "Pretendard", "version": "1.309", "license": "OFL-1.1 (Reserved Font Name 'Pretendard')", "license_file": "OFL-Pretendard.txt",
+      "source": "https://github.com/orioncactus/pretendard",
+      "sha256": "3ffbacde6ab8411f1d2db54bb9b1f0b3ee2a738932033722cf0388c06aed1c93"
+    },
+    "Pretendard-Bold.otf": {
+      "family": "Pretendard", "version": "1.309", "license": "OFL-1.1 (Reserved Font Name 'Pretendard')", "license_file": "OFL-Pretendard.txt",
+      "source": "https://github.com/orioncactus/pretendard",
+      "sha256": "2e91915fab54df71cc9598ebf608b2bdb54c6fe3c066ac61dff0bc44fca71cc7"
+    },
+    "Pretendard-Black.otf": {
+      "family": "Pretendard", "version": "1.309", "license": "OFL-1.1 (Reserved Font Name 'Pretendard')", "license_file": "OFL-Pretendard.txt",
+      "source": "https://github.com/orioncactus/pretendard",
+      "sha256": "94628b0bcea8936b6e5c30d98d685eb9bbaffb0fe2ed255542ecc656c248e021"
+    }
+  }
+}

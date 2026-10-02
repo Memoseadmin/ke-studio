@@ -1,0 +1,189 @@
+{
+  "style_version": "v2-provisional-2026-10-02",
+  "model": "Tongyi-MAI/Z-Image-Turbo (6B)",
+  "model_card": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+  "model_license": "Apache-2.0",
+  "endpoint": "fal-ai/z-image/turbo",
+  "endpoint_url": "https://fal.run/fal-ai/z-image/turbo",
+  "terms_url": "https://fal.ai/terms",
+  "terms_note": "fal Terms of Service Last Updated 2026-09-08 (2026-10-02 확인): fal은 Output Content에 대한 IP를 주장하지 않으며 비침해를 보증하지 않음(사용자 책임). 생성물 검수는 사람이 한다",
+  "price_estimate": "USD 0.005 / megapixel (docs/TOOLING_OPENSOURCE.md [O22], 추정치. 실행 전 https://fal.ai/pricing 재확인)",
+  "seed_rule": "seed = MMDD*1000 + card*10 + variant (예: 10/09 1장 시안0 = 1009010). 같은 프롬프트+seed+모델 버전이면 같은 그림",
+  "negative_note": "fal-ai/z-image/turbo 입력에 negative_prompt 칸이 없다(OpenAPI 2026-10-02 확인). 네거티브는 constraints 문장으로 프롬프트에 넣고, 이 목록은 기록·검수 체크리스트용",
+  "set": "2026-10-18",
+  "post_id": "C1-1-10",
+  "theme": "museum souvenir goods inspired by Korean heritage",
+  "request": {
+    "image_size": {
+      "width": 1536,
+      "height": 672
+    },
+    "num_inference_steps": 8,
+    "num_images": 1,
+    "enable_safety_checker": true,
+    "output_format": "png",
+    "acceleration": "regular",
+    "enable_prompt_expansion": false
+  },
+  "negative": [
+    "text",
+    "letters",
+    "numbers",
+    "calligraphy",
+    "captions",
+    "logos",
+    "brand names",
+    "trademarks",
+    "product packaging graphics",
+    "printed labels",
+    "readable signage",
+    "real people",
+    "faces",
+    "human figures",
+    "celebrity likeness",
+    "copyrighted characters",
+    "mascots",
+    "film or TV stills",
+    "posters",
+    "watermarks",
+    "signatures",
+    "artist seal stamps",
+    "tigers",
+    "magpies",
+    "flags",
+    "copy of an existing painting"
+  ],
+  "created_at": "2026-10-02T03:58:03.376153Z",
+  "mode": "dry-run",
+  "cards": [
+    {
+      "card": 1,
+      "role": "cover",
+      "visual": "도장 한 개를 민화 평면으로 크게, 옆에 작은 키캡 실루엣. 실제 상품 사진·박물관 로고 금지. 주황·먹색",
+      "subject": "도장 한 개를 민화 평면으로 크게, 옆에 작은 키캡 실루엣, 주황· 먹색 (seal, keycap, ink black, orange accents)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "seal",
+        "keycap",
+        "ink black",
+        "orange accents"
+      ],
+      "prompt": "도장 한 개를 민화 평면으로 크게, 옆에 작은 키캡 실루엣, 주황· 먹색 (seal, keycap, ink black, orange accents). Theme: museum souvenir goods inspired by Korean heritage. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one focal motif right of center, calm empty paper on the left. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 99,
+      "prompt_sha256": "97730e8769e741b06e854e7d5332954e2a8eb03342fd9aa02f0563aceccccf9e",
+      "seeds": [
+        1018010
+      ],
+      "crop_aspect": [
+        936,
+        410
+      ]
+    },
+    {
+      "card": 2,
+      "role": "body",
+      "visual": "한지 문서 위에 찍힌 붉은 인장 자국(글자 없는 문양), 옆에 도장 손잡이 윤곽",
+      "subject": "a red seal impression with an abstract geometric pattern on hanji, beside the outline of a seal handle",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "a red seal impression with an abstract geometric pattern on hanji, beside the outline of a seal handle. Theme: museum souvenir goods inspired by Korean heritage. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 94,
+      "prompt_sha256": "1064ca527ad3e1a7c5ebe3e9f1fd26f8a922c7bf9716bae931a523e236928908",
+      "seeds": [
+        1018020
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 3,
+      "role": "body",
+      "visual": "색동 배색 공깃돌 다섯 개를 책가도 소반 위에, 뒤로 산 능선 실루엣. 상품 패키지 모사 금지",
+      "subject": "색동 배색 공깃돌 다섯 개를 책가도 소반 위에, 뒤로 산 능선 실루엣 (chaekgado scholar's bookshelf screen, gonggi stones, small wooden tray table, mountain ridges, saekdong rainbow stripes, mountains)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "chaekgado scholar's bookshelf screen",
+        "gonggi stones",
+        "small wooden tray table",
+        "mountain ridges",
+        "saekdong rainbow stripes",
+        "mountains"
+      ],
+      "prompt": "색동 배색 공깃돌 다섯 개를 책가도 소반 위에, 뒤로 산 능선 실루엣 (chaekgado scholar's bookshelf screen, gonggi stones, small wooden tray table, mountain ridges, saekdong rainbow stripes, mountains). Theme: museum souvenir goods inspired by Korean heritage. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 104,
+      "prompt_sha256": "31f963f890d51ca5824a62b3247e2f5d4690778375a5c7981645cd77a84c3769",
+      "seeds": [
+        1018030
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 4,
+      "role": "body",
+      "visual": "책가도 서가 칸마다 유물 실루엣(항아리·향로·반가사유상 윤곽)과 그 아래 작은 상자 하나씩. 로고 금지",
+      "subject": "책가도 서가 칸마다 유물 실루엣(항아리· 향로· 반가사유상 윤곽) 그 아래 작은 상자 하나씩 (chaekgado scholar's bookshelf screen, jar, bookshelf, incense burner, plain boxes, museum artifacts)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "chaekgado scholar's bookshelf screen",
+        "jar",
+        "bookshelf",
+        "incense burner",
+        "plain boxes",
+        "museum artifacts"
+      ],
+      "prompt": "책가도 서가 칸마다 유물 실루엣(항아리· 향로· 반가사유상 윤곽) 그 아래 작은 상자 하나씩 (chaekgado scholar's bookshelf screen, jar, bookshelf, incense burner, plain boxes, museum artifacts). Theme: museum souvenir goods inspired by Korean heritage. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 101,
+      "prompt_sha256": "1cfd4ed7dd0fbc5c867cb968c465dd13f83c2793733a8c1e8f2b5bffe0021fa0",
+      "seeds": [
+        1018040
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 5,
+      "role": "body",
+      "visual": "프로그램으로 그린 막대 하나와 숫자 413, 청자색. 전년 비교는 넣지 않음",
+      "skip": "visual 이 프로그램 도형(막대 등)을 지정: 코드 도형 유지(생성 안 함)"
+    },
+    {
+      "card": 6,
+      "role": "body",
+      "visual": "세로 체크리스트, 옆에 돋보기·전시 케이스·종·책 아이콘",
+      "subject": "세로, 옆에 돋보기· 전시 케이스· 종· 책 아이콘 (magnifying glass, books)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "magnifying glass",
+        "books"
+      ],
+      "prompt": "세로, 옆에 돋보기· 전시 케이스· 종· 책 아이콘 (magnifying glass, books). Theme: museum souvenir goods inspired by Korean heritage. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 87,
+      "prompt_sha256": "f1ceb0e60f46c4c379473a9721445898fbfd622552477e1dda7abc6dcc5b5caf",
+      "seeds": [
+        1018060
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 7,
+      "role": "last",
+      "visual": "1장 도장 실루엣을 축소, 노란 시그니처 바, 핸들 오버레이",
+      "skip": "마지막 장: 렌더러 코드 단청 띠 유지(생성 안 함)"
+    }
+  ]
+}

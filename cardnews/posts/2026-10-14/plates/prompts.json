@@ -1,0 +1,222 @@
+{
+  "style_version": "v2-provisional-2026-10-02",
+  "model": "Tongyi-MAI/Z-Image-Turbo (6B)",
+  "model_card": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+  "model_license": "Apache-2.0",
+  "endpoint": "fal-ai/z-image/turbo",
+  "endpoint_url": "https://fal.run/fal-ai/z-image/turbo",
+  "terms_url": "https://fal.ai/terms",
+  "terms_note": "fal Terms of Service Last Updated 2026-09-08 (2026-10-02 확인): fal은 Output Content에 대한 IP를 주장하지 않으며 비침해를 보증하지 않음(사용자 책임). 생성물 검수는 사람이 한다",
+  "price_estimate": "USD 0.005 / megapixel (docs/TOOLING_OPENSOURCE.md [O22], 추정치. 실행 전 https://fal.ai/pricing 재확인)",
+  "seed_rule": "seed = MMDD*1000 + card*10 + variant (예: 10/09 1장 시안0 = 1009010). 같은 프롬프트+seed+모델 버전이면 같은 그림",
+  "negative_note": "fal-ai/z-image/turbo 입력에 negative_prompt 칸이 없다(OpenAPI 2026-10-02 확인). 네거티브는 constraints 문장으로 프롬프트에 넣고, 이 목록은 기록·검수 체크리스트용",
+  "set": "2026-10-14",
+  "post_id": "C1-1-06",
+  "theme": "autumn weekend outings in Korea",
+  "request": {
+    "image_size": {
+      "width": 1536,
+      "height": 672
+    },
+    "num_inference_steps": 8,
+    "num_images": 1,
+    "enable_safety_checker": true,
+    "output_format": "png",
+    "acceleration": "regular",
+    "enable_prompt_expansion": false
+  },
+  "negative": [
+    "text",
+    "letters",
+    "numbers",
+    "calligraphy",
+    "captions",
+    "logos",
+    "brand names",
+    "trademarks",
+    "product packaging graphics",
+    "printed labels",
+    "readable signage",
+    "real people",
+    "faces",
+    "human figures",
+    "celebrity likeness",
+    "copyrighted characters",
+    "mascots",
+    "film or TV stills",
+    "posters",
+    "watermarks",
+    "signatures",
+    "artist seal stamps",
+    "tigers",
+    "magpies",
+    "flags",
+    "copy of an existing painting"
+  ],
+  "created_at": "2026-10-02T03:58:03.370006Z",
+  "mode": "dry-run",
+  "cards": [
+    {
+      "card": 1,
+      "role": "cover",
+      "visual": "한지 달력 격자에 주말 세 칸만 주황으로 칠함, 위에 민화풍 기러기 세 마리",
+      "subject": "한지 달력 격자에 주말 세 칸만 주황으로 칠함, 위에 민화풍 기러기 세 마리 (wild geese, hanji paper, paper calendar grid)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "wild geese",
+        "hanji paper",
+        "paper calendar grid"
+      ],
+      "prompt": "한지 달력 격자에 주말 세 칸만 주황으로 칠함, 위에 민화풍 기러기 세 마리 (wild geese, hanji paper, paper calendar grid). Theme: autumn weekend outings in Korea. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one focal motif right of center, calm empty paper on the left. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 99,
+      "prompt_sha256": "9ce9d58ba0aa876d88e4d80ff7ef441fa9272f9ea2e594db55ae0e8327508055",
+      "seeds": [
+        1014010
+      ],
+      "crop_aspect": [
+        936,
+        410
+      ]
+    },
+    {
+      "card": 2,
+      "role": "body",
+      "visual": "책가도 칸에 전시 포스터 모양 빈 사각형(글자 없음)과 억새 줄기 몇 가닥. 기관 로고 금지",
+      "subject": "a bookshelf niche holding a blank framed rectangle and a few stalks of silver grass",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "a bookshelf niche holding a blank framed rectangle and a few stalks of silver grass. Theme: autumn weekend outings in Korea. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 89,
+      "prompt_sha256": "9815eb9b57d978415c78508aeb9728c14b7c5a3c1299a5586186357e64285dc3",
+      "seeds": [
+        1014020
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 3,
+      "role": "body",
+      "visual": "부드러운 능선과 전나무, 달력 두 칸에 체크 표시",
+      "subject": "부드러운 능선과 전나무, 달력 두 칸에 (fir trees, paper calendar grid, mountain ridges)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "fir trees",
+        "paper calendar grid",
+        "mountain ridges"
+      ],
+      "prompt": "부드러운 능선과 전나무, 달력 두 칸에 (fir trees, paper calendar grid, mountain ridges). Theme: autumn weekend outings in Korea. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 87,
+      "prompt_sha256": "fc4c7d7e1eead77576f31dcbd26fd3d6d777d512138e68b948ea19b2b75fb147",
+      "seeds": [
+        1014030
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 4,
+      "role": "body",
+      "visual": "바위 능선 위로 뜨는 해, 아래 작은 버스 아이콘 한 줄",
+      "subject": "바위 능선 위로 뜨는 해, 아래 작은 버스 아이콘 한 줄 (mountain ridges, rocky peaks, small bus, sun)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "mountain ridges",
+        "rocky peaks",
+        "small bus",
+        "sun"
+      ],
+      "prompt": "바위 능선 위로 뜨는 해, 아래 작은 버스 아이콘 한 줄 (mountain ridges, rocky peaks, small bus, sun). Theme: autumn weekend outings in Korea. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 92,
+      "prompt_sha256": "f3715a42082d38149c1ca6ab5fe5caa9e55b85ea86c4608b0a0d2d34103fb7ae",
+      "seeds": [
+        1014040
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 5,
+      "role": "body",
+      "visual": "애기단풍 잎 패턴, 달력에서 10월→11월로 넘어가는 모서리 표현",
+      "subject": "애기단풍 잎 패턴, 달력에서 넘어가는 모서리 표현 (small maple leaves)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "small maple leaves"
+      ],
+      "prompt": "애기단풍 잎 패턴, 달력에서 넘어가는 모서리 표현 (small maple leaves). Theme: autumn weekend outings in Korea. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 84,
+      "prompt_sha256": "49ab01fc066941b2cc332fe8eeee5e9af9a3cf44e192cd63854519ecf5b87e7f",
+      "seeds": [
+        1014050
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 6,
+      "role": "body",
+      "visual": "빗줄기 아래 우산 하나와 박물관 입구를 단순화한 문 모양. 실제 건물·로고 금지",
+      "subject": "빗줄기 아래 우산 하나와 박물관 입구를 단순화한 문 모양 (rain, umbrella, door)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "rain",
+        "umbrella",
+        "door"
+      ],
+      "prompt": "빗줄기 아래 우산 하나와 박물관 입구를 단순화한 문 모양 (rain, umbrella, door). Theme: autumn weekend outings in Korea. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 86,
+      "prompt_sha256": "64af1b5adb73db73c00f63a1e77f85e363cd9b974bee02c9d1d6cfa0072c0786",
+      "seeds": [
+        1014060
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 7,
+      "role": "body",
+      "visual": "세로 체크리스트, 옆에 해·버스·우산 아이콘",
+      "subject": "세로, 옆에 해· 버스· 우산 아이콘 (umbrella, small bus, sun)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "umbrella",
+        "small bus",
+        "sun"
+      ],
+      "prompt": "세로, 옆에 해· 버스· 우산 아이콘 (umbrella, small bus, sun). Theme: autumn weekend outings in Korea. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 84,
+      "prompt_sha256": "d4755d597fae6d7a3e1ad3568259073472ed3b5a58344761bcc772977d16373c",
+      "seeds": [
+        1014070
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 8,
+      "role": "last",
+      "visual": "주말 세 칸 달력을 축소, 노란 시그니처 바, 핸들 오버레이",
+      "skip": "마지막 장: 렌더러 코드 단청 띠 유지(생성 안 함)"
+    }
+  ]
+}

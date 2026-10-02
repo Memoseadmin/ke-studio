@@ -1,0 +1,194 @@
+{
+  "style_version": "v2-provisional-2026-10-02",
+  "model": "Tongyi-MAI/Z-Image-Turbo (6B)",
+  "model_card": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+  "model_license": "Apache-2.0",
+  "endpoint": "fal-ai/z-image/turbo",
+  "endpoint_url": "https://fal.run/fal-ai/z-image/turbo",
+  "terms_url": "https://fal.ai/terms",
+  "terms_note": "fal Terms of Service Last Updated 2026-09-08 (2026-10-02 확인): fal은 Output Content에 대한 IP를 주장하지 않으며 비침해를 보증하지 않음(사용자 책임). 생성물 검수는 사람이 한다",
+  "price_estimate": "USD 0.005 / megapixel (docs/TOOLING_OPENSOURCE.md [O22], 추정치. 실행 전 https://fal.ai/pricing 재확인)",
+  "seed_rule": "seed = MMDD*1000 + card*10 + variant (예: 10/09 1장 시안0 = 1009010). 같은 프롬프트+seed+모델 버전이면 같은 그림",
+  "negative_note": "fal-ai/z-image/turbo 입력에 negative_prompt 칸이 없다(OpenAPI 2026-10-02 확인). 네거티브는 constraints 문장으로 프롬프트에 넣고, 이 목록은 기록·검수 체크리스트용",
+  "set": "2026-10-11",
+  "post_id": "C1-1-03",
+  "theme": "how to read Korean minhwa folk paintings",
+  "request": {
+    "image_size": {
+      "width": 1536,
+      "height": 672
+    },
+    "num_inference_steps": 8,
+    "num_images": 1,
+    "enable_safety_checker": true,
+    "output_format": "png",
+    "acceleration": "regular",
+    "enable_prompt_expansion": false
+  },
+  "negative": [
+    "text",
+    "letters",
+    "numbers",
+    "calligraphy",
+    "captions",
+    "logos",
+    "brand names",
+    "trademarks",
+    "product packaging graphics",
+    "printed labels",
+    "readable signage",
+    "real people",
+    "faces",
+    "human figures",
+    "celebrity likeness",
+    "copyrighted characters",
+    "mascots",
+    "film or TV stills",
+    "posters",
+    "watermarks",
+    "signatures",
+    "artist seal stamps",
+    "tigers",
+    "magpies",
+    "flags",
+    "copy of an existing painting"
+  ],
+  "created_at": "2026-10-02T03:58:03.364017Z",
+  "mode": "dry-run",
+  "cards": [
+    {
+      "card": 1,
+      "role": "cover",
+      "visual": "자체 민화풍 호랑이(웃는 듯한 평면 얼굴)와 소나무 가지 위 까치. 기존 작품·애니 캐릭터 모사 금지. 한지 바탕, 주황·먹색",
+      "subject": "a gnarled pine branch with a red sun and stylized clouds, minhwa composition without animals",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "a gnarled pine branch with a red sun and stylized clouds, minhwa composition without animals. Theme: how to read Korean minhwa folk paintings. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one focal motif right of center, calm empty paper on the left. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 96,
+      "prompt_sha256": "d66227616033e1db9fd261d9997d4e169ba42d5190832a334f6a04a48071a192",
+      "seeds": [
+        1011010
+      ],
+      "crop_aspect": [
+        936,
+        410
+      ]
+    },
+    {
+      "card": 2,
+      "role": "body",
+      "visual": "책가도·화조도·문자도 세 장이 벽에 걸린 사랑방 평면 구도, 인물 없음",
+      "subject": "책가도· 화조도· 문자도 세 장이 벽에 걸린 사랑방 평면 구도 (chaekgado scholar's bookshelf screen, scholar's room)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "chaekgado scholar's bookshelf screen",
+        "scholar's room"
+      ],
+      "prompt": "책가도· 화조도· 문자도 세 장이 벽에 걸린 사랑방 평면 구도 (chaekgado scholar's bookshelf screen, scholar's room). Theme: how to read Korean minhwa folk paintings. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 92,
+      "prompt_sha256": "bcdcf81bc91a20d0f10763c9261ed4035fb177475a8ca99074908bb0423c049d",
+      "seeds": [
+        1011020
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 3,
+      "role": "body",
+      "visual": "대문 한 짝에 붙은 호랑이 그림을 클로즈업, 줄무늬는 먹색 붓선",
+      "subject": "close-up of a traditional wooden gate door with ink-brush wood grain and a blank paper amulet sheet",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "close-up of a traditional wooden gate door with ink-brush wood grain and a blank paper amulet sheet. Theme: how to read Korean minhwa folk paintings. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 93,
+      "prompt_sha256": "e9ff9b84593561ae5f8b0ec4ba30f28a7144aac85b70d1c5c5febe62db3ed8fb",
+      "seeds": [
+        1011030
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 4,
+      "role": "body",
+      "visual": "까치 한 마리를 크게, 부리 쪽에 작은 편지 봉투 모티프. 청자색 포인트",
+      "subject": "a pine twig holding a small folded letter envelope, celadon accents",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "a pine twig holding a small folded letter envelope, celadon accents. Theme: how to read Korean minhwa folk paintings. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 87,
+      "prompt_sha256": "12a893f09dace1ea64216eb13cbc2c8d6bb11ca2e135d4132d826af9f11be806",
+      "seeds": [
+        1011040
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 5,
+      "role": "body",
+      "visual": "소나무 가지 패턴과 색 견본 세 칸(쪽빛·먹색·주황)을 나란히",
+      "subject": "소나무 가지 패턴과 색 견본 세 칸(쪽빛· 먹색· 주황) 나란히 (color swatches, pine branch, indigo, ink black, orange accents)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "color swatches",
+        "pine branch",
+        "indigo",
+        "ink black",
+        "orange accents"
+      ],
+      "prompt": "소나무 가지 패턴과 색 견본 세 칸(쪽빛· 먹색· 주황) 나란히 (color swatches, pine branch, indigo, ink black, orange accents). Theme: how to read Korean minhwa folk paintings. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 95,
+      "prompt_sha256": "6e7466ef1fa4b9c334d346f7cd7bf610fca7bda1e9d7851588b15ec413ca8131",
+      "seeds": [
+        1011050
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 6,
+      "role": "body",
+      "visual": "붓·물감 접시·한지 뭉치를 책가도 칸에 배치, 체크박스 셋",
+      "subject": "붓· 물감 접시· 한지 뭉치를 책가도 칸에 배치, 셋 (chaekgado scholar's bookshelf screen, hanji paper, paint dishes, ink brush)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "chaekgado scholar's bookshelf screen",
+        "hanji paper",
+        "paint dishes",
+        "ink brush"
+      ],
+      "prompt": "붓· 물감 접시· 한지 뭉치를 책가도 칸에 배치, 셋 (chaekgado scholar's bookshelf screen, hanji paper, paint dishes, ink brush). Theme: how to read Korean minhwa folk paintings. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 95,
+      "prompt_sha256": "2bd25bf8656f45d24710a3057c6628b65299cdd454805b8ea2d7ae6055aefbd6",
+      "seeds": [
+        1011060
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 7,
+      "role": "last",
+      "visual": "1장 호랑이·까치를 작게 재배치, 노란 시그니처 바, 핸들 오버레이",
+      "skip": "마지막 장: 렌더러 코드 단청 띠 유지(생성 안 함)"
+    }
+  ]
+}

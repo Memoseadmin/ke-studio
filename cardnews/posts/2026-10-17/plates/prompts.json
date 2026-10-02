@@ -1,0 +1,195 @@
+{
+  "style_version": "v2-provisional-2026-10-02",
+  "model": "Tongyi-MAI/Z-Image-Turbo (6B)",
+  "model_card": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+  "model_license": "Apache-2.0",
+  "endpoint": "fal-ai/z-image/turbo",
+  "endpoint_url": "https://fal.run/fal-ai/z-image/turbo",
+  "terms_url": "https://fal.ai/terms",
+  "terms_note": "fal Terms of Service Last Updated 2026-09-08 (2026-10-02 확인): fal은 Output Content에 대한 IP를 주장하지 않으며 비침해를 보증하지 않음(사용자 책임). 생성물 검수는 사람이 한다",
+  "price_estimate": "USD 0.005 / megapixel (docs/TOOLING_OPENSOURCE.md [O22], 추정치. 실행 전 https://fal.ai/pricing 재확인)",
+  "seed_rule": "seed = MMDD*1000 + card*10 + variant (예: 10/09 1장 시안0 = 1009010). 같은 프롬프트+seed+모델 버전이면 같은 그림",
+  "negative_note": "fal-ai/z-image/turbo 입력에 negative_prompt 칸이 없다(OpenAPI 2026-10-02 확인). 네거티브는 constraints 문장으로 프롬프트에 넣고, 이 목록은 기록·검수 체크리스트용",
+  "set": "2026-10-17",
+  "post_id": "C1-1-09",
+  "theme": "convenience store collaboration goods",
+  "request": {
+    "image_size": {
+      "width": 1536,
+      "height": 672
+    },
+    "num_inference_steps": 8,
+    "num_images": 1,
+    "enable_safety_checker": true,
+    "output_format": "png",
+    "acceleration": "regular",
+    "enable_prompt_expansion": false
+  },
+  "negative": [
+    "text",
+    "letters",
+    "numbers",
+    "calligraphy",
+    "captions",
+    "logos",
+    "brand names",
+    "trademarks",
+    "product packaging graphics",
+    "printed labels",
+    "readable signage",
+    "real people",
+    "faces",
+    "human figures",
+    "celebrity likeness",
+    "copyrighted characters",
+    "mascots",
+    "film or TV stills",
+    "posters",
+    "watermarks",
+    "signatures",
+    "artist seal stamps",
+    "tigers",
+    "magpies",
+    "flags",
+    "copy of an existing painting"
+  ],
+  "created_at": "2026-10-02T03:58:03.374519Z",
+  "mode": "dry-run",
+  "cards": [
+    {
+      "card": 1,
+      "role": "cover",
+      "visual": "편의점 진열대를 책가도 서가처럼 그린 평면 구도, 상품은 무지 상자·봉지로만. 간판·로고·브랜드 색 금지",
+      "subject": "편의점 진열대를 책가도 서가처럼 그린 평면 구도, 상품은 무지 상자· 봉지로만 (chaekgado scholar's bookshelf screen, store shelves, plain boxes)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "chaekgado scholar's bookshelf screen",
+        "store shelves",
+        "plain boxes"
+      ],
+      "prompt": "편의점 진열대를 책가도 서가처럼 그린 평면 구도, 상품은 무지 상자· 봉지로만 (chaekgado scholar's bookshelf screen, store shelves, plain boxes). Theme: convenience store collaboration goods. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one focal motif right of center, calm empty paper on the left. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 97,
+      "prompt_sha256": "48db197f37f2026e7c531c20a750426fb4792dc243ded60f772e7e1695d3de94",
+      "seeds": [
+        1017010
+      ],
+      "crop_aspect": [
+        936,
+        410
+      ]
+    },
+    {
+      "card": 2,
+      "role": "body",
+      "visual": "책갈피 한 장과 펼친 책, 글자는 획 느낌의 가짜 텍스트. 실제 표지 모사 금지",
+      "subject": "a single bookmark resting on an open book with blank pages",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "a single bookmark resting on an open book with blank pages. Theme: convenience store collaboration goods. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 84,
+      "prompt_sha256": "6caf102169f4f928adcc208e183dbaffd8099c542f2953d00bee229b3fce20a5",
+      "seeds": [
+        1017020
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 3,
+      "role": "body",
+      "visual": "봉투에서 반쯤 나온 빈 카드 테두리 세 장. 선수·팀 로고·얼굴 금지",
+      "subject": "봉투에서 반쯤 나온 빈 카드 테두리 세 장 (blank cards)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "blank cards"
+      ],
+      "prompt": "봉투에서 반쯤 나온 빈 카드 테두리 세 장 (blank cards). Theme: convenience store collaboration goods. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 83,
+      "prompt_sha256": "41f7c23ac4c4a9a7492f24cb8c05f3382a32767dcdd4cd6dd85432a6b8f7e676",
+      "seeds": [
+        1017030
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 4,
+      "role": "body",
+      "visual": "비어 있는 진열 선반 한 칸과 '재입고' 쪽지를 민화풍으로. 청자색 포인트",
+      "subject": "비어 있는 진열 선반 한 칸과 쪽지를 민화풍으로, 청자색 포인트 (celadon accents, paper notes)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "celadon accents",
+        "paper notes"
+      ],
+      "prompt": "비어 있는 진열 선반 한 칸과 쪽지를 민화풍으로, 청자색 포인트 (celadon accents, paper notes). Theme: convenience store collaboration goods. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 87,
+      "prompt_sha256": "7dba0b2c4ac8f7695bbb532183be29735bc7c37b4b4f684a00f1ef32d9cd479c",
+      "seeds": [
+        1017040
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 5,
+      "role": "body",
+      "visual": "세로 체크리스트, 왼쪽에 작은 아이콘(달력·휴대폰·봉투·숫자·책)",
+      "subject": "세로, 왼쪽에 작은 아이콘(달력· 휴대폰· 봉투, 책) (paper calendar grid, envelope, books)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "paper calendar grid",
+        "envelope",
+        "books"
+      ],
+      "prompt": "세로, 왼쪽에 작은 아이콘(달력· 휴대폰· 봉투, 책) (paper calendar grid, envelope, books). Theme: convenience store collaboration goods. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 85,
+      "prompt_sha256": "c5fab1f1bde6c827a3f308ba21303a8250f102b15965d8c60659f5cffc835e42",
+      "seeds": [
+        1017050
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 6,
+      "role": "body",
+      "visual": "빈 비교표 격자(3열) 위에 붓 하나, 표 안은 비워 둠. 협찬 비교표 자리 시연",
+      "subject": "빈 격자 위에 붓 하나, 표 안은 비워 둠 (ink brush)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "ink brush"
+      ],
+      "prompt": "빈 격자 위에 붓 하나, 표 안은 비워 둠 (ink brush). Theme: convenience store collaboration goods. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 84,
+      "prompt_sha256": "7434578f25b71b5b2a6f01a9aabe367de611fe43ce42c9fd04e3271829df50ae",
+      "seeds": [
+        1017060
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 7,
+      "role": "last",
+      "visual": "1장 진열대를 축소, 노란 시그니처 바, 핸들 오버레이",
+      "skip": "마지막 장: 렌더러 코드 단청 띠 유지(생성 안 함)"
+    }
+  ]
+}

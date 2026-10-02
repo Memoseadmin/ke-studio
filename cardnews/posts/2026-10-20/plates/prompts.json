@@ -1,0 +1,197 @@
+{
+  "style_version": "v2-provisional-2026-10-02",
+  "model": "Tongyi-MAI/Z-Image-Turbo (6B)",
+  "model_card": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+  "model_license": "Apache-2.0",
+  "endpoint": "fal-ai/z-image/turbo",
+  "endpoint_url": "https://fal.run/fal-ai/z-image/turbo",
+  "terms_url": "https://fal.ai/terms",
+  "terms_note": "fal Terms of Service Last Updated 2026-09-08 (2026-10-02 확인): fal은 Output Content에 대한 IP를 주장하지 않으며 비침해를 보증하지 않음(사용자 책임). 생성물 검수는 사람이 한다",
+  "price_estimate": "USD 0.005 / megapixel (docs/TOOLING_OPENSOURCE.md [O22], 추정치. 실행 전 https://fal.ai/pricing 재확인)",
+  "seed_rule": "seed = MMDD*1000 + card*10 + variant (예: 10/09 1장 시안0 = 1009010). 같은 프롬프트+seed+모델 버전이면 같은 그림",
+  "negative_note": "fal-ai/z-image/turbo 입력에 negative_prompt 칸이 없다(OpenAPI 2026-10-02 확인). 네거티브는 constraints 문장으로 프롬프트에 넣고, 이 목록은 기록·검수 체크리스트용",
+  "set": "2026-10-20",
+  "post_id": "C1-1-12",
+  "theme": "a bowl of ramyeon as a quiet symbol of comfort",
+  "request": {
+    "image_size": {
+      "width": 1536,
+      "height": 672
+    },
+    "num_inference_steps": 8,
+    "num_images": 1,
+    "enable_safety_checker": true,
+    "output_format": "png",
+    "acceleration": "regular",
+    "enable_prompt_expansion": false
+  },
+  "negative": [
+    "text",
+    "letters",
+    "numbers",
+    "calligraphy",
+    "captions",
+    "logos",
+    "brand names",
+    "trademarks",
+    "product packaging graphics",
+    "printed labels",
+    "readable signage",
+    "real people",
+    "faces",
+    "human figures",
+    "celebrity likeness",
+    "copyrighted characters",
+    "mascots",
+    "film or TV stills",
+    "posters",
+    "watermarks",
+    "signatures",
+    "artist seal stamps",
+    "tigers",
+    "magpies",
+    "flags",
+    "copy of an existing painting"
+  ],
+  "created_at": "2026-10-02T03:58:03.379531Z",
+  "mode": "dry-run",
+  "cards": [
+    {
+      "card": 1,
+      "role": "cover",
+      "visual": "필름 프레임 두 칸과 그 사이 면 한 가닥, 민화 평면. 배우·포스터·스틸 모사 금지. 한지 바탕, 빨강 포인트",
+      "subject": "필름 프레임 두 칸과 그 사이 면 한 가닥, 민화 평면, 한지 바탕, 빨강 포인트 (hanji paper, film frames, noodles)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "hanji paper",
+        "film frames",
+        "noodles"
+      ],
+      "prompt": "필름 프레임 두 칸과 그 사이 면 한 가닥, 민화 평면, 한지 바탕, 빨강 포인트 (hanji paper, film frames, noodles). Theme: a bowl of ramyeon as a quiet symbol of comfort. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one focal motif right of center, calm empty paper on the left. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 104,
+      "prompt_sha256": "73475f5f944c72579939a31475c926c8ab4a094654504b0da678001346684640",
+      "seeds": [
+        1020010
+      ],
+      "crop_aspect": [
+        936,
+        410
+      ]
+    },
+    {
+      "card": 2,
+      "role": "body",
+      "visual": "밤 부엌: 냄비 하나, 그릇 두 개, 살짝 열린 문. 인물·실루엣 없음. 밤색 배경",
+      "subject": "밤 부엌: 냄비 하나, 그릇 두 개, 살짝 열린 문, 밤색 배경 (bowls, pot, kitchen, door, night)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "bowls",
+        "pot",
+        "kitchen",
+        "door",
+        "night"
+      ],
+      "prompt": "밤 부엌: 냄비 하나, 그릇 두 개, 살짝 열린 문, 밤색 배경 (bowls, pot, kitchen, door, night). Theme: a bowl of ramyeon as a quiet symbol of comfort. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 96,
+      "prompt_sha256": "ab92c7bf51ab044b4c7c622874d38813734ab1e324c73f115c8147d900cd6d15",
+      "seeds": [
+        1020020
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 3,
+      "role": "body",
+      "visual": "무지 봉지 두 개(크라프트·오프화이트) + 더하기 기호 → 그릇 하나. 빨강+검정 등 브랜드 연상 배색 금지",
+      "subject": "무지 봉지 두 개(크라프트· 오프화이트) 더하기 기호 그릇 하나 (bowls, plain kraft bag)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "bowls",
+        "plain kraft bag"
+      ],
+      "prompt": "무지 봉지 두 개(크라프트· 오프화이트) 더하기 기호 그릇 하나 (bowls, plain kraft bag). Theme: a bowl of ramyeon as a quiet symbol of comfort. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 92,
+      "prompt_sha256": "7d2d4679700f9483e2f0431fb0fbaf931cbcbe74e1e37556404b5328e8b5a36f",
+      "seeds": [
+        1020030
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 4,
+      "role": "body",
+      "visual": "자막 자리처럼 화면 아래 'ram-don' 글자만, 위는 빈 밤 풍경. 사람 없음",
+      "subject": "an empty night landscape with low hills and a crescent moon, wide calm sky",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "an empty night landscape with low hills and a crescent moon, wide calm sky. Theme: a bowl of ramyeon as a quiet symbol of comfort. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 93,
+      "prompt_sha256": "269bdd7df2e9b173cb075d59f488c82cf4e6eda640ce24591728cb0065ce4201",
+      "seeds": [
+        1020040
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 5,
+      "role": "body",
+      "visual": "그릇 아이콘 두 줄로 81 대 79.2 비율, 청자색. 국기 금지",
+      "subject": "two rows of plain noodle bowls in celadon",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "two rows of plain noodle bowls in celadon. Theme: a bowl of ramyeon as a quiet symbol of comfort. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 87,
+      "prompt_sha256": "2cbb991b2858ee50a12dafd44ff199543ff4b5f0f7da9bf7d1673d414905ce23",
+      "seeds": [
+        1020050
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 6,
+      "role": "body",
+      "visual": "김이 오르는 냄비 하나를 화면 중앙에 크게, 주변은 비움",
+      "subject": "김이 오르는 냄비 하나를 화면 중앙에 크게, 주변은 비움 (pot, curved screen, steam)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "pot",
+        "curved screen",
+        "steam"
+      ],
+      "prompt": "김이 오르는 냄비 하나를 화면 중앙에 크게, 주변은 비움 (pot, curved screen, steam). Theme: a bowl of ramyeon as a quiet symbol of comfort. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 92,
+      "prompt_sha256": "bd548a7020b0d1eb22a6b9407834ecfd45ab19d550d2cf4432b86e1e300aa21f",
+      "seeds": [
+        1020060
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 7,
+      "role": "last",
+      "visual": "냄비 실루엣을 작게, 노란 시그니처 바, 핸들 오버레이. 본편 링크는 캡션에서 안내",
+      "skip": "마지막 장: 렌더러 코드 단청 띠 유지(생성 안 함)"
+    }
+  ]
+}

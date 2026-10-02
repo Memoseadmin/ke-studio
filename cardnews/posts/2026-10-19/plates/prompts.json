@@ -1,0 +1,221 @@
+{
+  "style_version": "v2-provisional-2026-10-02",
+  "model": "Tongyi-MAI/Z-Image-Turbo (6B)",
+  "model_card": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+  "model_license": "Apache-2.0",
+  "endpoint": "fal-ai/z-image/turbo",
+  "endpoint_url": "https://fal.run/fal-ai/z-image/turbo",
+  "terms_url": "https://fal.ai/terms",
+  "terms_note": "fal Terms of Service Last Updated 2026-09-08 (2026-10-02 확인): fal은 Output Content에 대한 IP를 주장하지 않으며 비침해를 보증하지 않음(사용자 책임). 생성물 검수는 사람이 한다",
+  "price_estimate": "USD 0.005 / megapixel (docs/TOOLING_OPENSOURCE.md [O22], 추정치. 실행 전 https://fal.ai/pricing 재확인)",
+  "seed_rule": "seed = MMDD*1000 + card*10 + variant (예: 10/09 1장 시안0 = 1009010). 같은 프롬프트+seed+모델 버전이면 같은 그림",
+  "negative_note": "fal-ai/z-image/turbo 입력에 negative_prompt 칸이 없다(OpenAPI 2026-10-02 확인). 네거티브는 constraints 문장으로 프롬프트에 넣고, 이 목록은 기록·검수 체크리스트용",
+  "set": "2026-10-19",
+  "post_id": "C1-1-11",
+  "theme": "hand-copying favourite books as a quiet hobby",
+  "request": {
+    "image_size": {
+      "width": 1536,
+      "height": 672
+    },
+    "num_inference_steps": 8,
+    "num_images": 1,
+    "enable_safety_checker": true,
+    "output_format": "png",
+    "acceleration": "regular",
+    "enable_prompt_expansion": false
+  },
+  "negative": [
+    "text",
+    "letters",
+    "numbers",
+    "calligraphy",
+    "captions",
+    "logos",
+    "brand names",
+    "trademarks",
+    "product packaging graphics",
+    "printed labels",
+    "readable signage",
+    "real people",
+    "faces",
+    "human figures",
+    "celebrity likeness",
+    "copyrighted characters",
+    "mascots",
+    "film or TV stills",
+    "posters",
+    "watermarks",
+    "signatures",
+    "artist seal stamps",
+    "tigers",
+    "magpies",
+    "flags",
+    "copy of an existing painting"
+  ],
+  "created_at": "2026-10-02T03:58:03.378035Z",
+  "mode": "dry-run",
+  "cards": [
+    {
+      "card": 1,
+      "role": "cover",
+      "visual": "펼친 노트와 펜 하나를 책가도 소반 위에, 노트 안은 획 느낌의 가짜 글줄. 손·인물 없음",
+      "subject": "펼친 노트와 펜 하나를 책가도 소반 위에, 노트 (chaekgado scholar's bookshelf screen, small wooden tray table, notebook, pen)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "chaekgado scholar's bookshelf screen",
+        "small wooden tray table",
+        "notebook",
+        "pen"
+      ],
+      "prompt": "펼친 노트와 펜 하나를 책가도 소반 위에, 노트 (chaekgado scholar's bookshelf screen, small wooden tray table, notebook, pen). Theme: hand-copying favourite books as a quiet hobby. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one focal motif right of center, calm empty paper on the left. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 99,
+      "prompt_sha256": "91573d16b11ae51cc0953cf00e61608206b071bdffaa1a378f837da4dc7c0cae",
+      "seeds": [
+        1019010
+      ],
+      "crop_aspect": [
+        936,
+        410
+      ]
+    },
+    {
+      "card": 2,
+      "role": "body",
+      "visual": "책 세 권 위에 쪽지(문장 메모) 여러 장이 꽂힌 정물, 청자색 포인트",
+      "subject": "책 세 권 위에 쪽지(문장 메모) 여러 장이 꽂힌 정물, 청자색 포인트 (celadon accents, paper notes, books)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "celadon accents",
+        "paper notes",
+        "books"
+      ],
+      "prompt": "책 세 권 위에 쪽지(문장 메모) 여러 장이 꽂힌 정물, 청자색 포인트 (celadon accents, paper notes, books). Theme: hand-copying favourite books as a quiet hobby. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 93,
+      "prompt_sha256": "2cb0b1c138021c9c2473310aeec4f291b3b6865fad4691666caa144b5861c8d7",
+      "seeds": [
+        1019020
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 3,
+      "role": "body",
+      "visual": "노트·펜·책 세 가지만 나란히, 책가도 한 칸 구도. 브랜드 로고 없는 무지 문구",
+      "subject": "노트· 펜· 책 세 가지만 나란히, 책가도 한 칸 구도 (chaekgado scholar's bookshelf screen, notebook, books, pen)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "chaekgado scholar's bookshelf screen",
+        "notebook",
+        "books",
+        "pen"
+      ],
+      "prompt": "노트· 펜· 책 세 가지만 나란히, 책가도 한 칸 구도 (chaekgado scholar's bookshelf screen, notebook, books, pen). Theme: hand-copying favourite books as a quiet hobby. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 93,
+      "prompt_sha256": "5a1643c1e92d3bb7988061bda5da034f710e71b50de8ee5b58d059708612a5b6",
+      "seeds": [
+        1019030
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 4,
+      "role": "body",
+      "visual": "책 한 쪽에 밑줄 한 줄이 주황으로, 글자는 읽히지 않는 획",
+      "subject": "책 한 쪽에 밑줄 한 줄이 주황으로, 읽히지 않는 획 (books)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "books"
+      ],
+      "prompt": "책 한 쪽에 밑줄 한 줄이 주황으로, 읽히지 않는 획 (books). Theme: hand-copying favourite books as a quiet hobby. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 87,
+      "prompt_sha256": "e32561d6e3fa13d8d1d352ea92c195c0a5d7912986e300745d9e6e8fac42740b",
+      "seeds": [
+        1019040
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 5,
+      "role": "body",
+      "visual": "민화풍 해시계 또는 모래시계 하나와 달력 체크 표시 7개",
+      "subject": "민화풍 해시계 또는 모래시계 하나와 달력 (hourglass, sundial, paper calendar grid)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "hourglass",
+        "sundial",
+        "paper calendar grid"
+      ],
+      "prompt": "민화풍 해시계 또는 모래시계 하나와 달력 (hourglass, sundial, paper calendar grid). Theme: hand-copying favourite books as a quiet hobby. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 87,
+      "prompt_sha256": "32c84272b112bdf3a5f3283d2910a3ae869d2eca95bcfb940a0c52252ab14258",
+      "seeds": [
+        1019050
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 6,
+      "role": "body",
+      "visual": "같은 가짜 글줄을 두 가지 획 스타일(정자·흘림)로 위아래 배치",
+      "subject": "two bands of abstract brush strokes, one upright and one flowing, stacked on hanji",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "two bands of abstract brush strokes, one upright and one flowing, stacked on hanji. Theme: hand-copying favourite books as a quiet hobby. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 90,
+      "prompt_sha256": "8be8bff7dc6151647ef7cef8efd5db5886c0f5f689dae80d8e899c32750a8fdc",
+      "seeds": [
+        1019060
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 7,
+      "role": "body",
+      "visual": "노트 표지에 날짜 칸, 아래 체크박스 다섯 개 한 줄",
+      "subject": "노트 표지에 날짜 칸, 아래 다섯 개 한 줄 (notebook)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "notebook"
+      ],
+      "prompt": "노트 표지에 날짜 칸, 아래 다섯 개 한 줄 (notebook). Theme: hand-copying favourite books as a quiet hobby. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 86,
+      "prompt_sha256": "a0574f73e6922186c6929771fd16d076178e6c132915694c8a1265487a4621a5",
+      "seeds": [
+        1019070
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 8,
+      "role": "last",
+      "visual": "1장 노트·펜 정물을 축소, 노란 시그니처 바, 핸들 오버레이",
+      "skip": "마지막 장: 렌더러 코드 단청 띠 유지(생성 안 함)"
+    }
+  ]
+}

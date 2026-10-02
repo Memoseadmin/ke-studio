@@ -1,0 +1,216 @@
+{
+  "style_version": "v2-provisional-2026-10-02",
+  "model": "Tongyi-MAI/Z-Image-Turbo (6B)",
+  "model_card": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+  "model_license": "Apache-2.0",
+  "endpoint": "fal-ai/z-image/turbo",
+  "endpoint_url": "https://fal.run/fal-ai/z-image/turbo",
+  "terms_url": "https://fal.ai/terms",
+  "terms_note": "fal Terms of Service Last Updated 2026-09-08 (2026-10-02 확인): fal은 Output Content에 대한 IP를 주장하지 않으며 비침해를 보증하지 않음(사용자 책임). 생성물 검수는 사람이 한다",
+  "price_estimate": "USD 0.005 / megapixel (docs/TOOLING_OPENSOURCE.md [O22], 추정치. 실행 전 https://fal.ai/pricing 재확인)",
+  "seed_rule": "seed = MMDD*1000 + card*10 + variant (예: 10/09 1장 시안0 = 1009010). 같은 프롬프트+seed+모델 버전이면 같은 그림",
+  "negative_note": "fal-ai/z-image/turbo 입력에 negative_prompt 칸이 없다(OpenAPI 2026-10-02 확인). 네거티브는 constraints 문장으로 프롬프트에 넣고, 이 목록은 기록·검수 체크리스트용",
+  "set": "2026-10-21",
+  "post_id": "C1-1-13",
+  "theme": "autumn museum and art exhibitions in Korea",
+  "request": {
+    "image_size": {
+      "width": 1536,
+      "height": 672
+    },
+    "num_inference_steps": 8,
+    "num_images": 1,
+    "enable_safety_checker": true,
+    "output_format": "png",
+    "acceleration": "regular",
+    "enable_prompt_expansion": false
+  },
+  "negative": [
+    "text",
+    "letters",
+    "numbers",
+    "calligraphy",
+    "captions",
+    "logos",
+    "brand names",
+    "trademarks",
+    "product packaging graphics",
+    "printed labels",
+    "readable signage",
+    "real people",
+    "faces",
+    "human figures",
+    "celebrity likeness",
+    "copyrighted characters",
+    "mascots",
+    "film or TV stills",
+    "posters",
+    "watermarks",
+    "signatures",
+    "artist seal stamps",
+    "tigers",
+    "magpies",
+    "flags",
+    "copy of an existing painting"
+  ],
+  "created_at": "2026-10-02T03:58:03.381191Z",
+  "mode": "dry-run",
+  "cards": [
+    {
+      "card": 1,
+      "role": "cover",
+      "visual": "책가도 서가에 책등 5권, 그중 3권이 비스듬히 기울어 닫히는 느낌, 주황 포인트. 포스터·작품·로고·인물 모사 금지, 전시명은 글자로만",
+      "subject": "책가도 서가에 책등, 그중 비스듬히 기울어 닫히는 느낌, 주황 포인트 (chaekgado scholar's bookshelf screen, bookshelf, orange accents)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "chaekgado scholar's bookshelf screen",
+        "bookshelf",
+        "orange accents"
+      ],
+      "prompt": "책가도 서가에 책등, 그중 비스듬히 기울어 닫히는 느낌, 주황 포인트 (chaekgado scholar's bookshelf screen, bookshelf, orange accents). Theme: autumn museum and art exhibitions in Korea. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one focal motif right of center, calm empty paper on the left. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 98,
+      "prompt_sha256": "7fb9cc47409e67ceab65995892f95c22795d59e836c39f60c12d10d48efaafed",
+      "seeds": [
+        1021010
+      ],
+      "crop_aspect": [
+        936,
+        410
+      ]
+    },
+    {
+      "card": 2,
+      "role": "body",
+      "visual": "책가도 선반 위 밥상·그릇 실루엣을 민화 평면으로, 달력 숫자 25. 실제 유물·회화 모사 금지, 인물 없음",
+      "subject": "책가도 선반 위 밥상· 그릇 실루엣을 민화 평면으로, 달력 (chaekgado scholar's bookshelf screen, bowls, paper calendar grid)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "chaekgado scholar's bookshelf screen",
+        "bowls",
+        "paper calendar grid"
+      ],
+      "prompt": "책가도 선반 위 밥상· 그릇 실루엣을 민화 평면으로, 달력 (chaekgado scholar's bookshelf screen, bowls, paper calendar grid). Theme: autumn museum and art exhibitions in Korea. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 93,
+      "prompt_sha256": "2c99e25067b0e66144fb8dfe0ab04ad8092551c67d7ba7ca254d5af916d1282d",
+      "seeds": [
+        1021020
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 3,
+      "role": "body",
+      "visual": "서가 사이로 빛줄기 평면 도형 세 가닥(로비·전시실·야외). 특정 작가 작품 형태 모사 금지, 전시명은 글자로만",
+      "subject": "서가 사이로 빛줄기 평면 도형 세 가닥(로비· 전시실· 야외) (bookshelf)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "bookshelf"
+      ],
+      "prompt": "서가 사이로 빛줄기 평면 도형 세 가닥(로비· 전시실· 야외) (bookshelf). Theme: autumn museum and art exhibitions in Korea. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 86,
+      "prompt_sha256": "3466c98b33036a23c2fc4b56322e7d0525f6c5ac7c742b8abcca6e2061013329",
+      "seeds": [
+        1021030
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 4,
+      "role": "body",
+      "visual": "책가도 선반 위 곡면 화면 실루엣 하나, 화면 안은 단색. LG·MMCA 로고 금지, 작품 모사 금지, 전시명은 글자로만",
+      "subject": "책가도 선반 위 곡면 화면 실루엣 하나, 화면 안은 단색 (chaekgado scholar's bookshelf screen, curved screen)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "chaekgado scholar's bookshelf screen",
+        "curved screen"
+      ],
+      "prompt": "책가도 선반 위 곡면 화면 실루엣 하나, 화면 안은 단색 (chaekgado scholar's bookshelf screen, curved screen). Theme: autumn museum and art exhibitions in Korea. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 92,
+      "prompt_sha256": "645f67c124ea8f44a0ce8a4ac276dc4aec0e04200dbf877c860e4a48d38a4fe7",
+      "seeds": [
+        1021040
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 5,
+      "role": "body",
+      "visual": "서가 책등에 '가갸' 두 글자와 1926·2026 숫자. 전시 자료·사진 모사 금지, 인물 없음",
+      "subject": "a bookshelf with plain blank book spines in muted colors",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "a bookshelf with plain blank book spines in muted colors. Theme: autumn museum and art exhibitions in Korea. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 86,
+      "prompt_sha256": "efdc39d6c56479113aca9a1997c29131467f97227ef5ae0e63ee382124c740f4",
+      "seeds": [
+        1021050
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 6,
+      "role": "body",
+      "visual": "서가 위 눈 덮인 산 실루엣 평면(알프스 모티프), 전시명 글자 오버레이. 작품 모사 금지, 무기·전투 묘사 금지",
+      "subject": "서가 위 눈 덮인 산 실루엣 평면(알프스 모티프) (snow-capped mountains, bookshelf, mountains)",
+      "subject_source": "visual(cards.json, 정리)",
+      "subject_quality": "ok",
+      "english_hints": [
+        "snow-capped mountains",
+        "bookshelf",
+        "mountains"
+      ],
+      "prompt": "서가 위 눈 덮인 산 실루엣 평면(알프스 모티프) (snow-capped mountains, bookshelf, mountains). Theme: autumn museum and art exhibitions in Korea. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 88,
+      "prompt_sha256": "04483bd317904b9667ea958d9e61c8c21ee547fc26159e9ee36e3cee319f4466",
+      "seeds": [
+        1021060
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 7,
+      "role": "body",
+      "visual": "2열 표(전시 / 마감) 저장용 레이아웃, 체크박스는 비움. 11월 개막전은 표 아래 한 줄 메모",
+      "subject": "a quiet hanji panel with a plain two-column grid and a small ink brush",
+      "subject_source": "override(plate_subjects.json)",
+      "subject_quality": "ok",
+      "english_hints": [],
+      "prompt": "a quiet hanji panel with a plain two-column grid and a small ink brush. Theme: autumn museum and art exhibitions in Korea. Korean minhwa folk painting, flat colors, bold even ink outlines, hanji paper texture, muted palette of cream paper, ink black, cinnabar red, ochre yellow, celadon green and kraft brown. flat even light. wide panoramic banner, one clear focal motif, empty paper margins. no text, no letters, no numbers, no calligraphy, no people, no faces, no logos, no signatures or artist seals, no brand packaging, no tigers, no magpies.",
+      "prompt_words": 90,
+      "prompt_sha256": "42c69261c785fdbfeab066bf16da20316880f87984ac5bb45d469542c8bdadc4",
+      "seeds": [
+        1021070
+      ],
+      "crop_aspect": [
+        936,
+        408
+      ]
+    },
+    {
+      "card": 8,
+      "role": "last",
+      "visual": "책등 5권 서가를 축소, 노란 시그니처 바, 핸들 오버레이",
+      "skip": "마지막 장: 렌더러 코드 단청 띠 유지(생성 안 함)"
+    }
+  ]
+}
