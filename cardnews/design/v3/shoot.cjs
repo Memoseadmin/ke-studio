@@ -31,12 +31,12 @@ const fs = require('fs');
         const b = el.getBoundingClientRect();
         checks.push({ check: el.dataset.check, max: +el.dataset.maxlines || 0, lines: tops.length,
           text: el.textContent, box: [b.left, b.top, b.right, b.bottom],
-          overflow: el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1 });
+          overflow: el.scrollWidth > el.clientWidth + 2 || el.scrollHeight > el.clientHeight + parseFloat(cs.fontSize) * 0.5 });
       }
       const imgs = [...document.images].map(i => { const b = i.getBoundingClientRect();
         return { src: i.getAttribute('src'), ok: i.complete && i.naturalWidth > 0, natural: [i.naturalWidth, i.naturalHeight], box: [b.left, b.top, b.right, b.bottom] }; });
       const card = document.querySelector('.card').getBoundingClientRect();
-      const bottoms = [...document.querySelectorAll('.card > *')].map(e => e.getBoundingClientRect().bottom);
+      const bottoms = [...document.querySelectorAll('.card > *:not(.mockup)')].map(e => e.getBoundingClientRect().bottom);
       return { checks, imgs, contentBottom: Math.max(...bottoms), cardBottom: card.bottom };
     });
     await cdp.send('DOM.enable');

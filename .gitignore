@@ -27,3 +27,6 @@ tmp/
 __pycache__/
 node_modules/
 .DS_Store
+
+# 사진·원화 원본(재다운로드 가능, PHOTOS.json에 URL)
+cardnews/posts/*/photos/src/

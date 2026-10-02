@@ -1,12 +1,633 @@
 {
-  "mode": "final",
-  "rendered_at": "2026-10-02T03:13:22.321165Z",
-  "fonts": {
-    "head": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
-    "body": "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
-    "latin": "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
-    "fake_bold": "True"
-  },
+  "mode": "mockup",
+  "rendered_at": "2026-10-02T04:17:54.190039Z",
+  "renderer": "cardnews/design/v3/render_v3.py",
+  "renderer_version": "v3.0-proto1 (2026-10-02)",
+  "engine": "HTML/CSS + Playwright Chromium (node playwright 1.56.1, /opt/pw-browsers/chromium-1194)",
   "cards": 8,
-  "renderer": "render_cards.py"
+  "fonts": [
+    {
+      "family": "Hahmlet",
+      "file": "Hahmlet[wght].ttf",
+      "weight": "100 900",
+      "version": "Version 1.002",
+      "license": "OFL-1.1 (OFL-Hahmlet.txt)",
+      "source": "https://github.com/google/fonts/tree/main/ofl/hahmlet",
+      "sha256": "892bffe530255770a7435226154a02f519055ff6bedf64254f37f21d15a59279"
+    },
+    {
+      "family": "MaruBuri",
+      "file": "MaruBuri-Regular.ttf",
+      "weight": "400",
+      "version": "Version 1.000;hotconv 1.0.118;makeotfexe 2.5.65603",
+      "license": "네이버 글꼴 오픈 라이선스(상업적 사용 허용, OFL 기반)",
+      "source": "https://hangeul.naver.com/fonts/search?f=maru",
+      "sha256": "803429881927c79dbb49497274244e72b672c56e0503f28262503f77524cba7a"
+    },
+    {
+      "family": "MaruBuri",
+      "file": "MaruBuri-Bold.ttf",
+      "weight": "700",
+      "version": "Version 1.000;hotconv 1.0.118;makeotfexe 2.5.65603",
+      "license": "네이버 글꼴 오픈 라이선스(상업적 사용 허용, OFL 기반)",
+      "source": "https://hangeul.naver.com/fonts/search?f=maru",
+      "sha256": "13aa1058c135e8f0b2c41de4e5e7866b18f970a15db2b1a290227e52dc02aba8"
+    },
+    {
+      "family": "Black Han Sans",
+      "file": "BlackHanSans-Regular.ttf",
+      "weight": "400",
+      "version": "Version 1.001",
+      "license": "OFL-1.1 (OFL-BlackHanSans.txt)",
+      "source": "https://github.com/google/fonts/tree/main/ofl/blackhansans",
+      "sha256": "31960809284026681774a8e52dc19ebcad26cf69b0ad9d560f288296fbb52739"
+    },
+    {
+      "family": "Noto Serif KR",
+      "file": "NotoSerifKR[wght].ttf",
+      "weight": "200 900",
+      "version": "Version 2.003-H1;hotconv 1.1.1;makeotfexe 2.6.0",
+      "license": "OFL-1.1 (OFL-NotoSerifKR.txt)",
+      "source": "https://github.com/google/fonts/tree/main/ofl/notoserifkr",
+      "sha256": "11f8d5de6f1b79195efba3828aaa2ec95c1178f5ae976fb23c8d53250a9938f3"
+    }
+  ],
+  "font_rule": "지정 4서체 외(시스템 폴백) 사용 시 실패",
+  "ai_notice": "초안은 AI 도움을 받았고, 사실 확인은 사람이 했습니다",
+  "ai_notice_status": "제안 문구, 대표 결정 대기(DESIGN_SOURCES §8 #7)",
+  "art_credit_line": "그림: 메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0 · 클리블랜드미술관 〈책가도〉 CC0",
+  "images_used": [
+    "card-01:artwork",
+    "card-02:artwork",
+    "card-03:artwork",
+    "card-04:artwork",
+    "card-05:artwork",
+    "card-06:artwork",
+    "card-07:artwork",
+    "card-08:artwork"
+  ],
+  "checks_failed": [],
+  "warnings": [
+    "card-02: 이미지 1.87배 확대(해상도 낮음)",
+    "card-03: 이미지 1.98배 확대(해상도 낮음)",
+    "card-04: 이미지 1.82배 확대(해상도 낮음)",
+    "card-05: 이미지 3.44배 확대(해상도 낮음)",
+    "card-06: 이미지 2.38배 확대(해상도 낮음)",
+    "card-07: 이미지 1.87배 확대(해상도 낮음)"
+  ],
+  "per_card": {
+    "card-01": {
+      "template": "cover",
+      "fonts_used": {
+        "MaruBuri": 62,
+        "Hahmlet": 10
+      },
+      "checks": [
+        {
+          "check": "표지 헤드라인",
+          "lines": 2,
+          "max": 2
+        },
+        {
+          "check": "표지 부제",
+          "lines": 2,
+          "max": 2
+        }
+      ],
+      "image": {
+        "kind": "artwork",
+        "file": "src/met-853896.jpg",
+        "title": "Books and Scholarly Accoutrements (two-panel folding screen, 19th century)",
+        "title_ko": "책가도",
+        "institution": "The Metropolitan Museum of Art",
+        "object_url": "https://www.metmuseum.org/art/collection/search/853896",
+        "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP-40204-001.jpg",
+        "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+        "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+        "credit": "그림: 메트로폴리탄미술관 〈책가도〉 CC0",
+        "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+        "accession": "2024.89.6",
+        "license_status": "ok",
+        "edit": {
+          "preset": "archive",
+          "steps": [
+            "levels 35% (0.5~99.5 percentile)",
+            "saturation -10%",
+            "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+            "hanji multiply 8% (procedural seed 2026)"
+          ],
+          "crop_px": [
+            1700,
+            560,
+            2290,
+            920
+          ],
+          "src_size": [
+            3002,
+            4000
+          ],
+          "crop_size": [
+            590,
+            360
+          ],
+          "out_size": [
+            590,
+            360
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "src_sha256": "44b63f71aba65a9c23e3e7447ed089be824161468a5d2aa582b53665517ddab0",
+          "content_changed": false
+        }
+      }
+    },
+    "card-02": {
+      "template": "body",
+      "fonts_used": {
+        "Black Han Sans": 2,
+        "MaruBuri": 73,
+        "Hahmlet": 6
+      },
+      "checks": [
+        {
+          "check": "본문 헤드라인",
+          "lines": 1,
+          "max": 2
+        },
+        {
+          "check": "본문",
+          "lines": 2,
+          "max": 3
+        }
+      ],
+      "image": {
+        "kind": "artwork",
+        "file": "src/met-73134-DP163173.jpg",
+        "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+        "title_ko": "책거리",
+        "institution": "The Metropolitan Museum of Art",
+        "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+        "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163173.jpg",
+        "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+        "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+        "credit": "그림: 메트로폴리탄미술관 〈책가도〉 CC0",
+        "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+        "accession": "2005.385",
+        "license_status": "ok",
+        "edit": {
+          "preset": "archive",
+          "steps": [
+            "levels 35% (0.5~99.5 percentile)",
+            "saturation -10%",
+            "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+            "hanji multiply 8% (procedural seed 2026)"
+          ],
+          "crop_px": [
+            790,
+            1500,
+            1400,
+            1850
+          ],
+          "src_size": [
+            3001,
+            4000
+          ],
+          "crop_size": [
+            610,
+            350
+          ],
+          "out_size": [
+            610,
+            350
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "src_sha256": "d6cb51d3b764d7676d67eabeb3ae2a31e4950be947f1f9b9835e2d42bd56a109",
+          "content_changed": false
+        }
+      }
+    },
+    "card-03": {
+      "template": "body",
+      "fonts_used": {
+        "Black Han Sans": 2,
+        "MaruBuri": 76,
+        "Hahmlet": 9
+      },
+      "checks": [
+        {
+          "check": "본문 헤드라인",
+          "lines": 1,
+          "max": 2
+        },
+        {
+          "check": "본문",
+          "lines": 2,
+          "max": 3
+        }
+      ],
+      "image": {
+        "kind": "artwork",
+        "file": "src/met-73134-DP163173.jpg",
+        "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+        "title_ko": "책거리",
+        "institution": "The Metropolitan Museum of Art",
+        "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+        "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163173.jpg",
+        "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+        "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+        "credit": "그림: 메트로폴리탄미술관 〈책가도〉 CC0",
+        "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+        "accession": "2005.385",
+        "license_status": "ok",
+        "edit": {
+          "preset": "archive",
+          "steps": [
+            "levels 35% (0.5~99.5 percentile)",
+            "saturation -10%",
+            "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+            "hanji multiply 8% (procedural seed 2026)"
+          ],
+          "crop_px": [
+            780,
+            2230,
+            1240,
+            2560
+          ],
+          "src_size": [
+            3001,
+            4000
+          ],
+          "crop_size": [
+            460,
+            330
+          ],
+          "out_size": [
+            460,
+            330
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "src_sha256": "d6cb51d3b764d7676d67eabeb3ae2a31e4950be947f1f9b9835e2d42bd56a109",
+          "content_changed": false
+        }
+      }
+    },
+    "card-04": {
+      "template": "body",
+      "fonts_used": {
+        "Black Han Sans": 2,
+        "MaruBuri": 67,
+        "Hahmlet": 10
+      },
+      "checks": [
+        {
+          "check": "본문 헤드라인",
+          "lines": 1,
+          "max": 2
+        },
+        {
+          "check": "본문",
+          "lines": 2,
+          "max": 3
+        }
+      ],
+      "image": {
+        "kind": "artwork",
+        "file": "src/met-853896.jpg",
+        "title": "Books and Scholarly Accoutrements (two-panel folding screen, 19th century)",
+        "title_ko": "책가도",
+        "institution": "The Metropolitan Museum of Art",
+        "object_url": "https://www.metmuseum.org/art/collection/search/853896",
+        "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP-40204-001.jpg",
+        "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+        "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+        "credit": "그림: 메트로폴리탄미술관 〈책가도〉 CC0",
+        "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+        "accession": "2024.89.6",
+        "license_status": "ok",
+        "edit": {
+          "preset": "archive",
+          "steps": [
+            "levels 35% (0.5~99.5 percentile)",
+            "saturation -10%",
+            "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+            "hanji multiply 8% (procedural seed 2026)"
+          ],
+          "crop_px": [
+            690,
+            930,
+            1280,
+            1290
+          ],
+          "src_size": [
+            3002,
+            4000
+          ],
+          "crop_size": [
+            590,
+            360
+          ],
+          "out_size": [
+            590,
+            360
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "src_sha256": "44b63f71aba65a9c23e3e7447ed089be824161468a5d2aa582b53665517ddab0",
+          "content_changed": false
+        }
+      }
+    },
+    "card-05": {
+      "template": "body",
+      "fonts_used": {
+        "Black Han Sans": 2,
+        "MaruBuri": 61,
+        "Hahmlet": 12
+      },
+      "checks": [
+        {
+          "check": "본문 헤드라인",
+          "lines": 1,
+          "max": 2
+        },
+        {
+          "check": "본문",
+          "lines": 2,
+          "max": 3
+        }
+      ],
+      "image": {
+        "kind": "artwork",
+        "file": "src/met-73134-DP163174.jpg",
+        "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+        "title_ko": "책거리",
+        "institution": "The Metropolitan Museum of Art",
+        "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+        "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163174.jpg",
+        "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+        "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+        "credit": "그림: 메트로폴리탄미술관 〈책가도〉 CC0",
+        "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+        "accession": "2005.385",
+        "license_status": "ok",
+        "edit": {
+          "preset": "archive",
+          "steps": [
+            "levels 35% (0.5~99.5 percentile)",
+            "saturation -10%",
+            "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+            "hanji multiply 8% (procedural seed 2026)"
+          ],
+          "crop_px": [
+            1660,
+            1770,
+            2020,
+            1960
+          ],
+          "src_size": [
+            3001,
+            4000
+          ],
+          "crop_size": [
+            360,
+            190
+          ],
+          "out_size": [
+            360,
+            190
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "src_sha256": "79e516d118c57ea141a4f98a3f0301d0fb6cb116da9506b24b926a65341eb818",
+          "content_changed": false
+        }
+      }
+    },
+    "card-06": {
+      "template": "body",
+      "fonts_used": {
+        "Black Han Sans": 2,
+        "MaruBuri": 73,
+        "Hahmlet": 12
+      },
+      "checks": [
+        {
+          "check": "본문 헤드라인",
+          "lines": 1,
+          "max": 2
+        },
+        {
+          "check": "본문",
+          "lines": 2,
+          "max": 3
+        }
+      ],
+      "image": {
+        "kind": "artwork",
+        "file": "src/met-73134-DP163174.jpg",
+        "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+        "title_ko": "책거리",
+        "institution": "The Metropolitan Museum of Art",
+        "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+        "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163174.jpg",
+        "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+        "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+        "credit": "그림: 메트로폴리탄미술관 〈책가도〉 CC0",
+        "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+        "accession": "2005.385",
+        "license_status": "ok",
+        "edit": {
+          "preset": "archive",
+          "steps": [
+            "levels 35% (0.5~99.5 percentile)",
+            "saturation -10%",
+            "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+            "hanji multiply 8% (procedural seed 2026)"
+          ],
+          "crop_px": [
+            820,
+            960,
+            1300,
+            1235
+          ],
+          "src_size": [
+            3001,
+            4000
+          ],
+          "crop_size": [
+            480,
+            275
+          ],
+          "out_size": [
+            480,
+            275
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "src_sha256": "79e516d118c57ea141a4f98a3f0301d0fb6cb116da9506b24b926a65341eb818",
+          "content_changed": false
+        }
+      }
+    },
+    "card-07": {
+      "template": "body",
+      "fonts_used": {
+        "Black Han Sans": 2,
+        "MaruBuri": 77,
+        "Hahmlet": 12
+      },
+      "checks": [
+        {
+          "check": "본문 헤드라인",
+          "lines": 1,
+          "max": 2
+        },
+        {
+          "check": "본문",
+          "lines": 2,
+          "max": 3
+        }
+      ],
+      "image": {
+        "kind": "artwork",
+        "file": "src/met-73134-DP163173.jpg",
+        "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+        "title_ko": "책거리",
+        "institution": "The Metropolitan Museum of Art",
+        "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+        "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163173.jpg",
+        "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+        "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+        "credit": "그림: 메트로폴리탄미술관 〈책가도〉 CC0",
+        "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+        "accession": "2005.385",
+        "license_status": "ok",
+        "edit": {
+          "preset": "archive",
+          "steps": [
+            "levels 35% (0.5~99.5 percentile)",
+            "saturation -10%",
+            "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+            "hanji multiply 8% (procedural seed 2026)"
+          ],
+          "crop_px": [
+            1690,
+            2080,
+            2300,
+            2430
+          ],
+          "src_size": [
+            3001,
+            4000
+          ],
+          "crop_size": [
+            610,
+            350
+          ],
+          "out_size": [
+            610,
+            350
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "src_sha256": "d6cb51d3b764d7676d67eabeb3ae2a31e4950be947f1f9b9835e2d42bd56a109",
+          "content_changed": false
+        }
+      }
+    },
+    "card-08": {
+      "template": "last",
+      "fonts_used": {
+        "Black Han Sans": 2,
+        "MaruBuri": 158,
+        "Hahmlet": 12
+      },
+      "checks": [
+        {
+          "check": "CTA",
+          "lines": 1,
+          "max": 2
+        },
+        {
+          "check": "출처 줄",
+          "lines": 2,
+          "max": 3
+        },
+        {
+          "check": "그림 출처 줄",
+          "lines": 2,
+          "max": 2
+        },
+        {
+          "check": "AI 고지",
+          "lines": 1,
+          "max": 1
+        }
+      ],
+      "image": {
+        "kind": "artwork",
+        "file": "src/cma-2011.37-print.jpg",
+        "title": "Books and Scholars' Accoutrements (ten-panel folding screen, late 1800s)",
+        "title_ko": "책가도",
+        "institution": "Cleveland Museum of Art",
+        "object_url": "https://clevelandart.org/art/2011.37",
+        "image_url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_print.jpg",
+        "license": "CC0 1.0 (Cleveland Open Access, API share_license_status=CC0, 2026-10-02 확인)",
+        "license_url": "https://www.clevelandart.org/open-access",
+        "credit": "그림: 클리블랜드미술관 〈책가도〉 CC0",
+        "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+        "accession": "2011.37",
+        "license_status": "ok",
+        "edit": {
+          "preset": "archive",
+          "steps": [
+            "levels 35% (0.5~99.5 percentile)",
+            "saturation -10%",
+            "lut-v1 (contrast x1.06, highlight warm R+3 G+1 B-4)",
+            "hanji multiply 8% (procedural seed 2026)"
+          ],
+          "crop_px": [
+            126,
+            143,
+            3282,
+            1463
+          ],
+          "src_size": [
+            3400,
+            1915
+          ],
+          "crop_size": [
+            3156,
+            1320
+          ],
+          "out_size": [
+            2200,
+            920
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "src_sha256": "d108f0bcae36a5a573e7c4c03367124c22a91a24e6cce129af9b37989a294b8a",
+          "content_changed": false
+        }
+      }
+    }
+  }
 }

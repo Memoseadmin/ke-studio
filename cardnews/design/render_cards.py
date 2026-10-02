@@ -674,7 +674,7 @@ def load_photos(post_dir, date=None):
             raise PhotoError(f"{jpath}: card {n} license '{lic}' 는 상업 이용·변경 가능 목록에 없다 -> 렌더 거부")
         fname = e.get("file")
         if fname:
-            path = os.path.join(pdir, os.path.basename(fname))
+            path = os.path.normpath(os.path.join(pdir, fname))  # "src/card-NN.jpg"(v3 배치) 도 허용
         else:
             hits = [f for f in loose if os.path.basename(f).lower().startswith(f"card-{n:02d}.")]
             path = hits[0] if hits else None

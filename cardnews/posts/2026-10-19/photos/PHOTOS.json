@@ -1,0 +1,255 @@
+{
+  "set": "2026-10-19",
+  "schema": "v3 (render_v3.py): card, kind(artwork|photo), file(photos/ 기준), credit, credit_short, license, edit{preset, crop(px 또는 0~1), focus}, credit_on_image",
+  "note": "원본은 src/ 에 그대로 둔다. 편집 사본은 렌더 때 render/cardnews-v3/ 에만 생성(내용 변형 없음: 크롭·톤·질감만)",
+  "photos": [
+    {
+      "kind": "artwork",
+      "file": "src/met-853896.jpg",
+      "title": "Books and Scholarly Accoutrements (two-panel folding screen, 19th century)",
+      "title_ko": "책가도",
+      "institution": "The Metropolitan Museum of Art",
+      "accession": "2024.89.6",
+      "object_url": "https://www.metmuseum.org/art/collection/search/853896",
+      "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP-40204-001.jpg",
+      "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+      "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "credit": "그림: 메트로폴리탄미술관 〈책가도〉 CC0",
+      "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+      "date": "2026-10-19",
+      "card": 1,
+      "crop_note": "오른쪽 폭 윗부분: 두루마리·붓·부채(필사 도구)",
+      "edit": {
+        "preset": "archive",
+        "crop": [
+          1700,
+          560,
+          2290,
+          920
+        ],
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "credit_on_image": false
+    },
+    {
+      "kind": "artwork",
+      "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+      "title_ko": "책거리",
+      "institution": "The Metropolitan Museum of Art",
+      "accession": "2005.385",
+      "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+      "file": "src/met-73134-DP163173.jpg",
+      "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163173.jpg",
+      "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+      "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "credit": "그림: 메트로폴리탄미술관 〈책가도〉 CC0",
+      "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+      "date": "2026-10-19",
+      "card": 2,
+      "crop_note": "둘째 폭: 책 더미·두루마리 꽂이·청화 항아리(문장을 모으는 정물)",
+      "edit": {
+        "preset": "archive",
+        "crop": [
+          790,
+          1500,
+          1400,
+          1850
+        ],
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "credit_on_image": false
+    },
+    {
+      "kind": "artwork",
+      "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+      "title_ko": "책거리",
+      "institution": "The Metropolitan Museum of Art",
+      "accession": "2005.385",
+      "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+      "file": "src/met-73134-DP163173.jpg",
+      "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163173.jpg",
+      "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+      "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "credit": "그림: 메트로폴리탄미술관 〈책가도〉 CC0",
+      "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+      "date": "2026-10-19",
+      "card": 3,
+      "crop_note": "둘째 폭 아래: 소반 위 벼루함(준비물)",
+      "edit": {
+        "preset": "archive",
+        "crop": [
+          780,
+          2230,
+          1240,
+          2560
+        ],
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "credit_on_image": false
+    },
+    {
+      "kind": "artwork",
+      "file": "src/met-853896.jpg",
+      "title": "Books and Scholarly Accoutrements (two-panel folding screen, 19th century)",
+      "title_ko": "책가도",
+      "institution": "The Metropolitan Museum of Art",
+      "accession": "2024.89.6",
+      "object_url": "https://www.metmuseum.org/art/collection/search/853896",
+      "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP-40204-001.jpg",
+      "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+      "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "credit": "그림: 메트로폴리탄미술관 〈책가도〉 CC0",
+      "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+      "date": "2026-10-19",
+      "card": 4,
+      "crop_note": "왼쪽 폭 가운데: 쌓인 책갑(첫 문장을 고를 책)",
+      "edit": {
+        "preset": "archive",
+        "crop": [
+          690,
+          930,
+          1280,
+          1290
+        ],
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "credit_on_image": false
+    },
+    {
+      "kind": "artwork",
+      "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+      "title_ko": "책거리",
+      "institution": "The Metropolitan Museum of Art",
+      "accession": "2005.385",
+      "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+      "file": "src/met-73134-DP163174.jpg",
+      "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163174.jpg",
+      "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+      "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "credit": "그림: 메트로폴리탄미술관 〈책가도〉 CC0",
+      "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+      "date": "2026-10-19",
+      "card": 5,
+      "crop_note": "셋째 폭: 자명종 문자판(10분 루틴). 그릇의 한자·시계 상표 글자는 크롭 밖",
+      "edit": {
+        "preset": "archive",
+        "crop": [
+          1660,
+          1770,
+          2020,
+          1960
+        ],
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "credit_on_image": false
+    },
+    {
+      "kind": "artwork",
+      "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+      "title_ko": "책거리",
+      "institution": "The Metropolitan Museum of Art",
+      "accession": "2005.385",
+      "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+      "file": "src/met-73134-DP163174.jpg",
+      "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163174.jpg",
+      "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+      "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "credit": "그림: 메트로폴리탄미술관 〈책가도〉 CC0",
+      "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+      "date": "2026-10-19",
+      "card": 6,
+      "crop_note": "둘째 폭 위: 붓대·술 장식·매화 가지(획과 서체)",
+      "edit": {
+        "preset": "archive",
+        "crop": [
+          820,
+          960,
+          1300,
+          1235
+        ],
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "credit_on_image": false
+    },
+    {
+      "kind": "artwork",
+      "title": "Books and Scholars' Possessions (ten-panel folding screen, early 20th century)",
+      "title_ko": "책거리",
+      "institution": "The Metropolitan Museum of Art",
+      "accession": "2005.385",
+      "object_url": "https://www.metmuseum.org/art/collection/search/73134",
+      "file": "src/met-73134-DP163173.jpg",
+      "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP163173.jpg",
+      "license": "CC0 1.0 (Met Open Access, API isPublicDomain=true, 2026-10-02 확인)",
+      "license_url": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "credit": "그림: 메트로폴리탄미술관 〈책가도〉 CC0",
+      "credit_short": "메트로폴리탄미술관 〈책가도〉·〈책거리〉 CC0",
+      "date": "2026-10-19",
+      "card": 7,
+      "crop_note": "셋째 폭 아래: 문갑과 책(기록 남기기)",
+      "edit": {
+        "preset": "archive",
+        "crop": [
+          1690,
+          2080,
+          2300,
+          2430
+        ],
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "credit_on_image": false
+    },
+    {
+      "kind": "artwork",
+      "file": "src/cma-2011.37-print.jpg",
+      "title": "Books and Scholars' Accoutrements (ten-panel folding screen, late 1800s)",
+      "title_ko": "책가도",
+      "institution": "Cleveland Museum of Art",
+      "accession": "2011.37",
+      "object_url": "https://clevelandart.org/art/2011.37",
+      "image_url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_print.jpg",
+      "license": "CC0 1.0 (Cleveland Open Access, API share_license_status=CC0, 2026-10-02 확인)",
+      "license_url": "https://www.clevelandart.org/open-access",
+      "credit": "그림: 클리블랜드미술관 〈책가도〉 CC0",
+      "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+      "date": "2026-10-19",
+      "card": 8,
+      "crop_note": "10폭 전경 띠(마지막 장)",
+      "edit": {
+        "preset": "archive",
+        "crop": [
+          126,
+          143,
+          3282,
+          1463
+        ],
+        "focus": [
+          0.5,
+          0.5
+        ]
+      },
+      "credit_on_image": false
+    }
+  ]
+}

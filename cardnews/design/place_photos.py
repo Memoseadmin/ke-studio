@@ -3,7 +3,7 @@
 
 기본은 점검만(dry-run): 필수 필드·라이선스를 검사하고 배치 계획을 출력한다. 파일을 쓰지 않는다.
   --write     게시물별 photos/PHOTOS.json 작성(해당 날짜 항목만, 렌더러가 읽는 형식)
-  --download  file_url 을 photos/card-NN.<ext> 로 내려받고 크기·sha256 기록(--write 포함)
+  --download  file_url 을 photos/src/card-NN.<ext> 로 내려받고 크기·sha256 기록(--write 포함)
 
 목록 형식: [ {date, card, file_url | file, credit, license, source?, source_url?, author?, license_url?, focus?, pick?, rank?}, ... ]
 또는 {"photos": [...]}. 같은 (date, card)에 후보가 여러 개면 pick=true -> rank 가 가장 작은 것 -> 첫 항목 순으로 하나만 쓴다.
@@ -44,7 +44,8 @@ def choose(entries):
         if picked:
             chosen[k] = picked[0]
         else:
-            chosen[k] = sorted(cands, key=lambda c: (c.get("rank") is None, c.get("rank") or 0))[0]
+            mains = [c for c in cands if c.get("role") == "main"]
+            chosen[k] = mains[0] if mains else sorted(cands, key=lambda c: (c.get("rank") is None, c.get("rank") or 0))[0]
         chosen[k]["_candidates"] = len(cands)
     return chosen
 
@@ -98,25 +99,26 @@ def main():
         print("dry-run: 파일을 쓰지 않았다(--write / --download)"); return 0 if not bad else 3
     for date, es in sorted(ok.items()):
         pdir = os.path.join(args.posts, date, "photos")
-        os.makedirs(pdir, exist_ok=True)
+        sdir = os.path.join(pdir, "src")  # 원본 보관(렌더 때만 편집 사본 생성, v3)
+        os.makedirs(sdir, exist_ok=True)
         out = []
         for e in es:
             rec = {k: v for k, v in e.items() if not k.startswith("_") and k not in ("pick", "rank")}
             n = int(e["card"])
             if args.download and e.get("file_url"):
-                tmp = os.path.join(pdir, f".card-{n:02d}.part")
+                tmp = os.path.join(sdir, f".card-{n:02d}.part")
                 with urllib.request.urlopen(e["file_url"], timeout=120) as r, open(tmp, "wb") as fp:
                     ctype = r.headers.get("Content-Type")
                     shutil.copyfileobj(r, fp)
                 name = f"card-{n:02d}{ext_from(e['file_url'], ctype)}"
-                os.replace(tmp, os.path.join(pdir, name))
-                rec["file"] = name
+                os.replace(tmp, os.path.join(sdir, name))
+                rec["file"] = "src/" + name
             elif e.get("file"):
                 src = e["file"] if os.path.isabs(e["file"]) else os.path.join(os.path.dirname(os.path.abspath(args.list)), e["file"])
                 if os.path.isfile(src):
                     name = f"card-{n:02d}{os.path.splitext(src)[1].lower()}"
-                    shutil.copyfile(src, os.path.join(pdir, name))
-                    rec["file"] = name
+                    shutil.copyfile(src, os.path.join(sdir, name))
+                    rec["file"] = "src/" + name
             if rec.get("file") and os.path.isfile(os.path.join(pdir, rec["file"])):
                 from PIL import Image
                 p = os.path.join(pdir, rec["file"])
@@ -125,6 +127,8 @@ def main():
                 with open(p, "rb") as fp:
                     rec["sha256"] = hashlib.sha256(fp.read()).hexdigest()
             rec.setdefault("focus", [0.5, 0.5])
+            rec.setdefault("kind", "photo")
+            rec.setdefault("edit", {"preset": "muted-warm", "focus": rec["focus"]})  # 실사는 반드시 편집본(대표 지시)
             out.append(rec)
         doc = {"set": date, "source_list": os.path.relpath(args.list, os.path.join(HERE, "..", "..")),
                "placed_at": _dt.datetime.utcnow().isoformat() + "Z", "photos": out}

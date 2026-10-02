@@ -50,9 +50,10 @@ body { -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; 
 .body .text { font-size: 36px; line-height: 1.62; letter-spacing: -0.012em; margin-top: 28px; }
 .body .plate { flex: 1 1 auto; min-height: 340px; margin-top: 44px; }
 .body.no-image .text { font-size: 40px; }
+.body .foot { margin-top: 20px; }
 
 /* 마지막 장 */
-.last .plate.band { height: 330px; margin-top: 28px; }
+.last .plate.band { height: 380px; margin-top: 28px; }
 .last .cta { font-size: 84px; font-weight: 900; line-height: 1.12; letter-spacing: -0.03em; text-align: center; margin-top: 56px; }
 .last .rule { margin: 30px auto 0; }
 .last .sources { margin-top: 52px; border-top: 2px solid var(--ink); padding-top: 26px; }
