@@ -13,7 +13,7 @@
 |---|---|---|
 | 승인된 PR | #1 EP001, #2 EP002 (approved) · #3 ECC 설치 approved → **작업 브랜치에 머지(9c97b71)** | **#4 C1-1 14일 세트 approved → cardnews/main 머지(98d2a96, final 렌더·legal v3 BLOCK 0)** · **#5 C1-1b 릴스 14개+프로필 패키지 검수 중** https://github.com/Memoseadmin/ke-studio/pull/5 · **디자인 v2(AI 민화 배경+실사 사진) 작업 중, 브랜치 cardnews/c1-1-design** |
 | 업로드/게시 | 0건 (키 UNSET, FIX 3) | 0건 (계정 미개설) |
-| 막힌 것 | TTS·이미지·YouTube 키, Amazon 트래킹 ID, 공급자 선택 | **R2_ACCESS_KEY_ID 재입력(32자)** · **IG_USER_ID 교체(IG 계정 ID) + 페이지↔IG 연결 또는 Instagram 직접 로그인 경로(B)로 전환** · 링크 허브 URL |
+| 막힌 것 | TTS·이미지·YouTube 키, Amazon 트래킹 ID, 공급자 선택 | ~~R2·IG 키~~ **둘 다 통과(2026-10-02)** · 남은 것: **디자인 v3**(대표: 현재 품질 불가, 리서치 중) · 링크 허브 URL · PR #5 결정 5개 |
 | 이번 세션 할 일 | 키 들어오면 샘플 생성→렌더→업로드 게이트, EP003 대본 | C1-2: PR #4 승인 → final 렌더 → R2·IG 검증 → 예약 게시 큐 |
 
 ## 대표 결정 큐 (하나로 합침)
@@ -56,7 +56,7 @@
 | [B] IG 경로 B 토큰 확인 + R2 재확인 `session_01PgobjmxjLQgda47utgKtdH` | Sonnet 5.5 | 없음(읽기 전용) | list_events | **완료(아카이브)**. **IG 통과**: 토큰 IGAA, `ig_publish.py --check` 경로 B·username=chaekgado.note·IG_USER_ID 일치, BUSINESS, content_publishing_limit 0/100(24h). 쓰기 API 미호출. R2는 대표 재입력 전 값이라 미통과(32/64/32, 계정 불일치) |
 | [B] R2 재확인 #3 `session_014VArU1639pxzGs4QGvyY94` | Sonnet 5.5 | 없음(읽기 전용) | list_events | **완료(아카이브)**. 계정 ID는 **정상값으로 복구됨**(이전 정상 계정과 일치). 키는 여전히 KEY_ID 64자/SECRET 32자(**서로 바뀜**) → put `InvalidArgument`. 하위 세션이 값을 바꿔 넣어 보는 시도는 권한 분류기에 차단(자격증명 탐색) → COO도 하지 않음, 대표가 두 칸을 맞바꿔야 함 |
 | [B] R2 재확인 #4(키 맞바꾼 후) `session_011HdKKY5mUKiwMzarqftQqF` | Sonnet 5.5 | 없음(읽기 전용) | list_events | **완료(아카이브)**. 더 나빠짐: `R2_ACCESS_KEY_ID` **UNSET**, `R2_SECRET_ACCESS_KEY` **63자**(1자 누락), `R2_ACCOUNT_ID` 32자이나 정상값과 **다시 불일치** → put SSLError(존재하지 않는 계정). FAL_KEY UNSET. 대표가 세 값을 처음부터 다시 입력해야 함 |
-| [B] R2 재확인 #5(새 토큰 입력 후) `session_01RQWUDFEuckBSLcuiLZBxvq` | Sonnet 5.5 | 없음(읽기 전용) | list_events | 진행 중 |
+| [B] R2 재확인 #5(새 토큰 입력 후) `session_01RQWUDFEuckBSLcuiLZBxvq` | Sonnet 5.5 | 없음(읽기 전용) | list_events | **완료(아카이브) — R2 통과**: 계정 ID 정상, 키 32/64, PNG put→head→공개 GET 200(image/png)→delete→404 전부 OK. FAL_KEY UNSET(대표 결정: AI 생성 0안 우선 검토 중이라 보류) |
 | [B] **세계 수준 카드뉴스 디자인 소싱 리서치**(벤치마크·렌더 파이프라인·OFL 한글 서체(옛한글)·CC0 질감·퍼블릭 도메인 민화·생성 모델 프롬프트·스킬 후보+자체 스킬 초안 3·v3 방향 3안) `session_01QRFKHY6jLwZbZvM1zjf2nX` | Opus 5.5 | research/cardnews-design → cardnews/main 머지 예정 | cardnews/docs/DESIGN_SOURCES.md | 진행 중(대표 지시 2026-10-02: "지금 품질 너무 낮음, 완벽에 가까운 계정, 무료 소스 최대 활용") |
 
 ## 공용 자원
