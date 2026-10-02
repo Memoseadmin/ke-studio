@@ -8,13 +8,15 @@
 - 디자인 시스템 v1.3(§7 3:4, §9-6 C 틀) ca5f11a. 하우스 스킬 `.claude/skills/cardnews-copy` v1(c1-1-design 6e96cbe).
 - 키: IG·R2 SET. MUAPI·FAL·IMAGE·TTS·YOUTUBE UNSET → AI 생성은 집 PC ComfyUI(docs/LOCAL_GPU_PROMPT.md).
 - 카피 직원 6개 완료(cd03c80: .claude/agents/copy-*.md, cardnews-copy v1.1 §8 사실 밀도·§9 분담표).
-- 자식 세션 6 중 **완료·아카이브 2**(10/2 06:33): 4판 준비 `session_011twGRG…`(c1-1-design cb85a57: RESEARCH-v4·PHOTOS-yun·plates/PROMPTS-v4·VISUAL-BRIEF-v4, 결정 큐 18) / 사업 방향 `session_014Y1ydg…`(research/cn-business a6fb846, B1~B4 = 결정 큐 19). **진행 중 4**: 성장 플레이북 `session_016Mgo4LJwXasP64iKJpFTq1`(research/cn-growth 미푸시) / 참여 설계 `session_013kDvnneJpccpdRACuQCrsU` / 배포 전략 `session_01BCdvrogHr2z9zXdXiV1MmB`(research/cn-distribution 미푸시) / 시각 벤치마크 2차 `session_013t5A9foC3kpm2L1QTFA7fm`. 체크인 trig_01VTSDpJNX4yJwBT2HXC8TBW(06:41Z).
-- 집 PC 플레이트: `plates/v4/*.png` 원격 0장 → 대표 미푸시, 카피 재작성·4판 렌더 보류.
+- 자식 세션 6개 **전부 완료·아카이브**(07:00Z). 리서치 3건 cardnews/main 머지(ef699d8). 대표 결정 23건 → PROJECTS 큐 18~21(G1~4·E1~4·D1~6·V1~3·B1~4·P1~5·훅 1안).
+- 세트 11 **카피 v5**(c1-1-design 7718d2d): 띠 본문 사실(P2)·1장 "시집 한 권"(P3)·8장 "윤동주처럼 통째로 옮길 시집은?"(E1 ⑤)·훅 1안 확정. copy-editor 조건부 통과(REVIEW-v5.md: 반려 2 → 리서치 세션). 플레이트 프롬프트 v4.1 한지 콜라주(V2) 같은 커밋. ⚠ 이 작업은 COO 세션 서브에이전트로 했음(규칙 위반, 대표 지적) → 이후 전부 자식 세션 분리.
+- 진행 중 자식 세션 2(Opus, c1-1-design): 캡션 v5 `session_01E93SqXnke1vhVVD9uozPhp` / 반려 2건 사실 확인 `session_01Ephn3SpWFp33KZ6CzVRsZz`. 체크인 trig(07:32Z).
+- 집 PC 플레이트: `plates/v4/*.png` 원격 0장 → 대표 미푸시(프롬프트 팩은 v4.1 한지 콜라주로 갱신됨, 집 PC에서 다시 받아 생성). 4판 렌더 보류.
 - A 유튜브: 보류(대표 10/2 "카드뉴스 집중"). 채널명 1·2차 후보 docs/CHANNEL_NAME.md, EP001·002 approved·업로드 0.
 
 ## 다음 할 일
-1. 남은 자식 세션 4개 회수(체크인 06:41Z 예약, 완료 전까지 8분마다 재예약): get_session → fetch → PROJECTS 표 갱신 → archive. 전부 모이면 대표 결정 G1~G4·E1~E4·D1~D5·V1~V3 + 큐 18(P1~P5, 윤동주 PD)·19(B1~B4)를 **한 번에** AskUserQuestion(4개씩) → PROJECTS 결정 큐에 기록.
-2. 대표가 집 PC에서 AI 플레이트 생성·푸시(`cardnews/posts/2026-10-19/plates/`, README-homepc.md) → copy-* 직원으로 카피 재작성 → 4판 렌더(Opus) → contact.png 대표 확인.
+1. 자식 세션 2개 회수(캡션 v5·반려 2건): get_session → fetch c1-1-design → PROJECTS 표 갱신 → archive. **실작업은 반드시 자식 세션(Opus/Sonnet 명시), COO 세션 서브에이전트 금지(대표 지적 10/2).**
+2. 대표가 집 PC에서 AI 플레이트 생성·푸시(`plates/v4/*.png`, README-homepc.md v4.1) → 4판 렌더 **Opus 자식 세션**(cards.v5.json + caption.v5 + V1 35:15:25:25 + V3 소자 + P5 Nanum Brush + Y1 사진 추정 사용) → contact.png SendUserFile → 대표 확인.
 3. 윤동주 사진 PD 판정(PHOTOS-yun.md) + §9-2 v1.4(스톡 L1 ⓑ·L2) legal 세션 → 디자인 시스템 반영.
 4. legal(세트 11) → 검수 PR(cardnews/c1-1-design → cardnews/main) → approved → 새 Sonnet 세션 `r2_upload.py --execute` → `ig_publish.py --pr N --execute`(PR #5 승인 뒤).
 5. 리서치 5건 결과를 cardnews/main에 머지, 세트 01~14 병렬 5세션(cardnews/v3-sets-A~E)은 4판 승인 후.
