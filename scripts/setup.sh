@@ -18,3 +18,9 @@ if command -v python3.12 >/dev/null 2>&1; then
   [ -x "$HOME/.venvs/muapi/bin/muapi" ] || { python3.12 -m venv "$HOME/.venvs/muapi" && "$HOME/.venvs/muapi/bin/pip" install -q muapi-cli; } || echo "WARN: muapi-cli 설치 실패"
   "$HOME/.venvs/muapi/bin/muapi" --version 2>/dev/null || true
 fi
+# --- 붓글씨 서체(OFL 1.1, 프로필 사진 v4 코드 렌더용. 서체 파일은 커밋하지 않고 여기서 받는다. OFL 원문은 cardnews/design/fonts/) ---
+mkdir -p "$HOME/.fonts/ke"
+for f in nanumbrushscript/NanumBrushScript-Regular.ttf eastseadokdo/EastSeaDokdo-Regular.ttf; do
+  dst="$HOME/.fonts/ke/$(echo "$f" | tr / _)"
+  [ -s "$dst" ] || curl -sSfL -o "$dst" "https://raw.githubusercontent.com/google/fonts/main/ofl/$f" || echo "WARN: 서체 다운로드 실패 $f"
+done

@@ -1,0 +1,112 @@
+[
+ {
+  "key": "A",
+  "name": "책가도(세로)",
+  "text": "책가도",
+  "method": "code_render",
+  "fonts": [
+   {
+    "family": "Nanum Brush Script",
+    "license": "SIL OFL 1.1",
+    "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanumbrushscript/NanumBrushScript-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanumbrushscript/OFL.txt",
+    "sha256": "27ceaf578c96f594cdf07fe0181b251790acbb746a164e45c1f6473f89911a31"
+   }
+  ],
+  "background_art": {
+   "title": "Books and Scholars' Accoutrements",
+   "title_ko": "책가도",
+   "institution": "클리블랜드미술관",
+   "accession": "2011.37",
+   "object_url": "https://clevelandart.org/art/2011.37",
+   "url": "https://openaccess-cdn.clevelandart.org/2011.37/2011.37_print.jpg",
+   "license": "CC0",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "credit_short": "클리블랜드미술관 〈책가도〉 CC0",
+   "crop": [
+    1372,
+    182,
+    2028,
+    838
+   ],
+   "src_sha256": "d108f0bcae36a5a573e7c4c03367124c22a91a24e6cce129af9b37989a294b8a",
+   "opacity": 0.15,
+   "saturation": -0.2
+  },
+  "steps": [
+   "paper #F7F3EA",
+   "hanji multiply 15% (procedural)",
+   "sepia warm R x1.035 G x1.005 B x0.94 (estimate)",
+   "original crop (v3 A) saturation -20% + lut-v1, opacity 15%",
+   "ink: brush font mask dilate 9px, bleed halo 22% (max5+blur6), dry-brush grain",
+   "seal: render_avatar_v3.seal_layer (red #C8102E, '책' 도형 조립)"
+  ],
+  "max_radius": {
+   "ink": 426,
+   "seal": 373,
+   "limit": 430
+  },
+  "ai_generated": false,
+  "content_changed": false
+ },
+ {
+  "key": "B",
+  "name": "책가도 노트",
+  "text": "책가도 노트",
+  "method": "code_render",
+  "fonts": [
+   {
+    "family": "Nanum Brush Script",
+    "license": "SIL OFL 1.1",
+    "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanumbrushscript/NanumBrushScript-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nanumbrushscript/OFL.txt",
+    "sha256": "27ceaf578c96f594cdf07fe0181b251790acbb746a164e45c1f6473f89911a31"
+   }
+  ],
+  "background_art": null,
+  "steps": [
+   "paper #F7F3EA",
+   "hanji multiply 15% (procedural)",
+   "sepia warm R x1.035 G x1.005 B x0.94 (estimate)",
+   "ink: brush font mask dilate 9px, bleed halo 22% (max5+blur6), dry-brush grain",
+   "seal: render_avatar_v3.seal_layer (red #C8102E, '책' 도형 조립)"
+  ],
+  "max_radius": {
+   "ink": 403,
+   "seal": 379,
+   "limit": 430
+  },
+  "ai_generated": false,
+  "content_changed": false
+ },
+ {
+  "key": "C",
+  "name": "노트",
+  "text": "노트",
+  "method": "code_render",
+  "fonts": [
+   {
+    "family": "East Sea Dokdo",
+    "license": "SIL OFL 1.1",
+    "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/eastseadokdo/EastSeaDokdo-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/eastseadokdo/OFL.txt",
+    "sha256": "8cebb39d375134fdbcedef9bf4ec4f6c3f02c39ed0aacd6e83f7a0f435e593b2"
+   }
+  ],
+  "background_art": null,
+  "steps": [
+   "paper #F7F3EA",
+   "hanji multiply 15% (procedural)",
+   "sepia warm R x1.035 G x1.005 B x0.94 (estimate)",
+   "ink: brush font mask dilate 3px, bleed halo 22% (max5+blur6), dry-brush grain",
+   "seal: render_avatar_v3.seal_layer (red #C8102E, '책' 도형 조립)"
+  ],
+  "max_radius": {
+   "ink": 314,
+   "seal": 426,
+   "limit": 430
+  },
+  "ai_generated": false,
+  "content_changed": false
+ }
+]
