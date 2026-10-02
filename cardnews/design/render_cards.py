@@ -257,7 +257,10 @@ def pick_motif(visual: str):
     """visual 문자열 -> (모티프 함수, 경고). 디자인 시스템 §6-3(호랑이·까치 조수 모티프 금지)에 걸리면 달·산으로 대체."""
     v = (visual or "").lower()
     warn = None
-    if any(w in v for w in BANNED_MOTIF_WORDS):
+    # "로고 금지", "얼굴 없음"처럼 금지·부정 맥락의 언급은 소재가 아니라 제약이므로 매칭에서 뺀다 (COO 2026-10-02)
+    import re as _re
+    v_pos = " ".join(c for c in _re.split(r"[.,\n]", v) if not _re.search(r"금지|없음|없이|제외|않음", c))
+    if any(w in v_pos for w in BANNED_MOTIF_WORDS):
         warn = f"visual '{visual}' 에 금지 소재(인물/로고/IP 또는 호랑이·까치) 포함 -> 달·산 모티프로 대체"
         return motif_moon_mountain, warn
     if any(w in v for w in ["책가도", "책장", "책", "chaekgado", "bookshelf", "book"]):
