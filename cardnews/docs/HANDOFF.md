@@ -11,6 +11,7 @@
 
 ## 완료
 - PLAN.md·HANDOFF·NEXT_PROMPT 작성, 브랜치 생성.
+- C1-1 트렌드 리서치: `cardnews/research/C1-1-trends.md` — 카드뉴스 후보 14개(EP 재활용 2 + 한국 트렌드 12).
 
 ## 실패한 시도와 이유
 - 없음(첫 세션 전).
