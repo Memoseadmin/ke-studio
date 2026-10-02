@@ -17,7 +17,8 @@
 | 이번 세션 할 일 | 키 들어오면 샘플 생성→렌더→업로드 게이트, EP003 기획 | C1-1: 트렌드 수집 → 14일 세트 → risk → 검수 PR |
 
 ## 대표 결정 큐 (하나로 합침)
-1. [A] TTS·이미지 공급자: "1안(ElevenLabs+Nano Banana)" / "가성비(Google TTS+Recraft)"
+1. ~~ECC 도입 범위~~ → 결정됨: 선별 도입, 별도 세션·브랜치
+2. [A] TTS·이미지 공급자: "1안(ElevenLabs+Nano Banana)" / "가성비(Google TTS+Recraft)"
 2. [A] 키 입력: TTS_API_KEY, IMAGE_API_KEY, YOUTUBE_* 3개(scripts/youtube_auth.py), 선택 MUAPI_API_KEY
 3. [A] Amazon Associates 가입 + 트래킹 ID, 제휴 상품 확정
 4. [A] 채널 마스코트 캐릭터 도입 여부(민화 소재 시안 3개 제안 중)
@@ -30,7 +31,7 @@
 | [B] C1-1 한국 트렌드 리서치 `session_01RNNuzoB3dzZumkcKBTL7Hc` | Opus 5.5 | cardnews/main | cardnews/research/C1-1-trends.md | 2026-10-02 생성 |
 | [A] EP003 기획 리서치 `session_0145scVsCxXku3zsXuRne9dq` | Opus 5.5 | ep/EP003 | episodes/EP003/research.md, trends-last30days.md | 2026-10-02 생성 |
 - 리서치는 대표 지시로 별도 세션·Opus. 제작(writer/designer/marketer/legal)은 COO 세션의 서브에이전트.
-- ECC(Everything Claude Code): 클라우드 세션은 플러그인을 로드하지 않으므로(공식 문서) 복사 설치 가능한 부분만 검토 중(docs/ECC_REVIEW.md 예정).
+- ECC(Everything Claude Code): 클라우드 세션은 플러그인을 로드하지 않으므로(공식 문서) 복사 설치만 가능. **대표 결정(2026-10-02): 쓸만한 스킬만 도입, 별도 세션·브랜치(`ecc/install`)에서 실행 → 검수 PR → approved 후 작업 브랜치에 병합.** docs/ECC_REVIEW.md(검토 중) 기준으로 선별.
 
 ## 공용 자원
 - 직원 9명 `.claude/agents/`, 스킬 96개, 디자인 시스템 `episodes/EP001/design/design-system.md`, 비주얼 방향 "민화 플랫 × 한지 질감"(docs/TOOLING_TTS_IMAGE.md §D).
