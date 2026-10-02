@@ -44,5 +44,5 @@
 - 다운로드 시각과 원본 URL은 PHOTOS.v4.json에 기록한다(STOCK_PHOTO_LICENSES §4 증거 필드).
 
 ## 6. 다운로드 상태
-이번 세션에는 셸(curl) 도구가 없어 **원본을 내려받지 못했다**(downloaded_at=null). COO가 아래 명령으로 받은 뒤 시각을 JSON에 채워 넣으면 된다.
-`curl -sS -A "KEStudio-research/1.0" -o /home/user/ke-studio/cardnews/posts/2026-10-19/photos/src/Y1_Yun_Dong-ju.jpg https://upload.wikimedia.org/wikipedia/commons/4/4f/Yun_Dong-ju.jpg` (Y2·Y3도 같은 형식, 프록시 환경변수는 그대로 둔다)
+- COO가 2026-10-02 받음: **Y1** → `photos/src/Y1_Yun_Dong-ju.jpg`(1666×2184, `downloaded_at` 기록, 커밋 제외).
+- **Y2~Y5 미다운로드**: upload.wikimedia.org·Special:FilePath 모두 HTTP 429(요청 제한). 렌더 세션에서 `Special:FilePath/<파일명>`으로 간격을 두고 다시 받는다(`downloaded_at`은 null 유지).
